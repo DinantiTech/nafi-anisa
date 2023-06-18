@@ -9,10 +9,10 @@ export default function Welcome() {
                 <img src={PatternBatik} className="h-[100px] absolute left-0" />
                 <img src={PatternBatik} className="h-[100px] absolute right-0 transform rotate-90"/>
             </div>
-            <div className="px-12">
+            <div className="sm:px-12 px-2">
                 {/* Dear Section */}
                 <div className="animate">
-                <div>
+                <div className='sm:pt-20 pt-16'>
                     <p className="text-center font-light text-main-color-text serif">
                         Kepada Yth.
                     </p>
@@ -22,9 +22,9 @@ export default function Welcome() {
                 </div>
                 </div>
                 {/* Greetings Text */}
-                <div className="pt-20">
+                <div className="sm:pt-16 pt-10">
                 <div className="animate">
-                    <p className="text-uppercase font-body-alternative text-main-color-text text-sm text-center">
+                    <p className="text-uppercase font-body-alternative text-main-color-text text-sm sm:text-base text-center">
                         Assalamualaikum Warahmatullahi Wabarakatuh.
                         <br />
                         Dengan memohon anugerah dan berkat Tuhan, kami bermaksud mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan kami:
@@ -32,44 +32,28 @@ export default function Welcome() {
                 </div>
                 </div>
                 <div className="animate">
-                <div className="pb-10 text-center text-main-color-text">
-                    <h1 className="m-16 text-uppercase text-xl">{GIRL_NAME_NO_TITLE}</h1>
-                    <p className="font-heading-alternative text-2xl">Dan</p>
-                    <h1 className="m-16 text-uppercase text-xl">{BOY_NAME_NO_TITLE}</h1>
-                    <p className="mt-16 text-center font-light text-main-color-text">
-                        27-08-2025
+                <div className="py-10 text-center text-main-color-text">
+                    <h1 className="text-uppercase text-xl">{GIRL_NAME_NO_TITLE}</h1>
+
+                    <p className="font-heading-alternative italic text-2xl sm:my-10 my-7">Dan</p>
+
+                    <h1 className="text-uppercase text-xl">{BOY_NAME_NO_TITLE}</h1>
+                    <p className="sm:mt-16 mt-7 text-center font-light text-main-color-text">
+                        {DATE_RESEPSI}
                     </p>
                 </div>
                 </div>
                 {/* Quotes Section */}
-                <div className="font-heading">
+                <div className="font-heading text-sm sm:text-base">
                     {/* <p className="text-center mt-16 text-main-color-text text-xl">
                     {`وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ ٢١`}
                     </p> */}
-                {/* {!MUSLIM_INVITATION && (
-                    <p className="text-center font-light text-main-color-text text-lg">
-                    {txt.ayat[lang]}
+                    <p className="text-center text-main-color-text text-md">
+                         "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."
                     </p>
-                )}
-                {!MUSLIM_INVITATION && (
-                    <p className="text-center mt-16 text-main-color-text text-md">
-                    {txt.nameayat[lang]}
+                    <p className="text-center mt-10 text-main-color-text text-md">
+                        [Matius 19:6]
                     </p>
-                )}
-                {MUSLIM_INVITATION && (
-                    <p className="text-center font-light text-main-color-text text-lg">
-                    {txt.ayatquran[lang]}
-                    </p>
-                )}
-                {MUSLIM_INVITATION && (
-                    <p className="text-center mt-16 text-main-color-text text-md">
-                    {txt.nameayatquran[lang]}
-                    </p>
-                )} */}
-
-                    {/* <p className="text-center mt-16 text-main-color-text text-md">
-                    {txt.nameayatquran[lang]}
-                    </p> */}
                 </div>
             </div>
             <div className="absolute w-full">
