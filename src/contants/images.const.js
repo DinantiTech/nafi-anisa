@@ -1,0 +1,2 @@
+export const BGWELCOME = "https://user-images.githubusercontent.com/10141928/153970645-2592cfd2-c0cc-494c-b5c1-d91286dedba5.jpg";
+// export const BGWELCOME = "https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80";
