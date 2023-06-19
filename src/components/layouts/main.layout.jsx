@@ -1,5 +1,7 @@
 import { BGWELCOME } from "../../contants/images.const";
-import Couples from "../sections/couple/couple.section";
+import Couples from "../sections/couples/couple.section";
+import Event from "../sections/event.section";
+import LoveStory from "../sections/stories";
 import Welcome from "../sections/welcome.section";
 
 export default function MainLayout() {
@@ -9,6 +11,7 @@ export default function MainLayout() {
                 <div className="w-full ">
                     <Welcome />
                     <Couples />
+                    <Event />
                 </div>
             </div>
             <div className="w-3/5 hidden md:block mx-auto relative text-white">

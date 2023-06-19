@@ -12,3 +12,9 @@ export const BOY_NAME_NO_TITLE = 'Alfa Rufaro Bumhira';
 export const BOY_NAME_SHORT = 'Alfa';
 export const BOY_FATHER_NAME = `Parents Man`;
 export const BOY_MOTHER_NAME = `Parents Lady`;
+
+export const THE_BRIDE = `${BOY_NAME_SHORT} & ${GIRL_NAME_SHORT}`;
+
+
+// Location
+export const GOOGLE_MAPS_ADDRESS = "Candi Sari, Semarang";

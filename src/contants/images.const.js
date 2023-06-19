@@ -1,6 +1,10 @@
+// Section image
 export const BGWELCOME = "https://user-images.githubusercontent.com/10141928/153970645-2592cfd2-c0cc-494c-b5c1-d91286dedba5.jpg";
 // export const BGWELCOME = "https://images.unsplash.com/photo-1591604466107-ec97de577aff?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80";
+export const BG_COUNTING_DOWN = `https://user-images.githubusercontent.com/10141928/153717192-506d8d19-ec0c-40b4-80ae-dc397ecf0bea.jpg`;
 
+
+// BG
 export const IMG_PATTERN_SQUARE = `https://user-images.githubusercontent.com/10141928/155886147-1d56ce31-c90a-4748-8320-51fb6f90b52a.png`;
 
 
