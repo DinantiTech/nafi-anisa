@@ -5,10 +5,9 @@ import FrameLayout from '../layouts/frame.layout';
 export default function Welcome() {
     return (
         <FrameLayout>
-            <div className="sm:px-12 px-2">
+            <div className="sm:px-12 px-3.5">
                 {/* Dear Section */}
-                <div className="animate">
-                <div className='sm:pt-20 pt-16'>
+                <div className='sm:pt-16 pt-10 xs:pt-16'>
                     <p className="text-center font-light text-main-color-text serif">
                         Kepada Yth.
                     </p>
@@ -16,28 +15,23 @@ export default function Welcome() {
                         Bapak/Ibu/Saudara/i
                     </p>
                 </div>
-                </div>
                 {/* Greetings Text */}
-                <div className="sm:pt-16 pt-10">
-                <div className="animate">
+                <div className="pt-7">
                     <p className="text-uppercase font-body-alternative text-main-color-text text-sm sm:text-base text-center">
                         Assalamualaikum Warahmatullahi Wabarakatuh.
                         <br />
                         Dengan memohon anugerah dan berkat Tuhan, kami bermaksud mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan kami:
                     </p>
                 </div>
-                </div>
-                <div className="animate">
-                <div className="py-10 text-center text-main-color-text">
+                <div className="xs:py-8 py-6 text-center text-main-color-text">
                     <h1 className="text-uppercase text-xl">{GIRL_NAME_NO_TITLE}</h1>
 
-                    <p className="font-heading-alternative italic text-2xl sm:my-10 my-7">Dan</p>
+                    <p className="font-heading-alternative italic text-xl xs:text-2xl sm:my-7 xs:my-5 my-4">Dan</p>
 
                     <h1 className="text-uppercase text-xl">{BOY_NAME_NO_TITLE}</h1>
-                    <p className="sm:mt-16 mt-7 text-center font-light text-main-color-text">
+                    <p className="sm:mt-8 mt-7 text-center font-light text-main-color-text">
                         {DATE_RESEPSI}
                     </p>
-                </div>
                 </div>
                 {/* Quotes Section */}
                 <div className="font-heading text-sm sm:text-base">
@@ -47,7 +41,7 @@ export default function Welcome() {
                     <p className="text-center text-main-color-text text-md">
                             "Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."
                     </p>
-                    <p className="text-center mt-10 text-main-color-text text-md">
+                    <p className="text-center xs:mt-7 mt-5 text-main-color-text text-sm">
                         [Matius 19:6]
                     </p>
                 </div>

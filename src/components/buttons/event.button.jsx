@@ -20,11 +20,11 @@ export default function EventButton({ rounded }) {
       };
 
     return (
-        <button onClick={handleAddEvent} className={`${rounded ? 'rounded-full' : 'rounded-lg'} group mx-auto px-4 py-1 bg-amber-400 hover:bg-amber-100 duration-300 w-fit flex items-center justify-center shadow shadow-amber-500`}>
+        <button onClick={handleAddEvent} className={`${rounded ? 'rounded-full' : 'rounded-lg'} group mx-auto px-4 py-1 border-2 bg-amber-700 hover:bg-amber-100 duration-300 w-fit flex items-center justify-center shadow shadow-amber-900`}>
             <div className="flex items-center justify-center">
                 <div className="flex items-center justify-center gap-x-2">
-                    <Icon className="group-hover:text-rose-600" icon={CALENDAR_ICON} />
-                    <span className="group-hover:text-amber-900">Ingatkan acara</span>
+                    <Icon className="text-white group-hover:text-rose-600 text-sm xs:text-base" icon={CALENDAR_ICON} />
+                    <span className="text-white group-hover:text-amber-900 text-sm xs:text-base">Ingatkan acara</span>
                 </div>
             </div>
         </button>

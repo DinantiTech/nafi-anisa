@@ -18,19 +18,23 @@ export default function MainLayout() {
                     <Event />
                 </div>
             </div>
-            <div className="w-3/5 hidden md:block mx-auto relative text-white">
-                <div className="bg-primary h-full fixed bg-cover" style={{ backgroundImage: `url(${BGWELCOME})` }}>
-                    <div className="animate-[animation-class]">
-                        <p className="text-md text-mainColorText uppercase tracking-wider">
-                            {/* {isInvitation ? 'THE WEDDING OF' : 'WEDDING ANNOUNCEMENT'} */}
-                            WEDDING ANNOUNCEMENT
-                        </p>
-                    </div>
-                    <div className="animate-[animation-class] h-screen max-h-screen">
-                        <p className="italic max-w-600px text-mainColorText tracking-wider">
-                            {"\"Indonesia’s diversity is formidable: some thirteen and a half thousand islands, two hundred and fifty million people, around three hundred and sixty ethnic groups, and more than seven hundred languages.\""}
-                            <br />- Pankaj Mishra
-                        </p>
+            <div className="w-3/5 hidden md:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>
+                <div className="bg-primary relative bg-gradient-to-b from-transparent via-lime-300/5 to-amber-900/90 h-full" >
+                    <div className="absolute top-[27rem]">
+                        <div className="flex items-center justify-center text-center flex-col px-20">
+                            <div className="relative w-full">
+                                <p className="text-md text-mainColorText uppercase tracking-wider">
+                                    {/* {isInvitation ? 'THE WEDDING OF' : 'WEDDING ANNOUNCEMENT'} */}
+                                    WEDDING ANNOUNCEMENT
+                                </p>
+                            </div>
+                            <div className="">
+                                <p className="italic max-w-600px text-mainColorText tracking-wider">
+                                    {"\"Indonesia’s diversity is formidable: some thirteen and a half thousand islands, two hundred and fifty million people, around three hundred and sixty ethnic groups, and more than seven hundred languages.\""}
+                                    <br />- Pankaj Mishra
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

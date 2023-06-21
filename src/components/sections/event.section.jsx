@@ -8,11 +8,11 @@ export default function Event() {
 
                 <h2 className="py-5 capitalize text-xl">Akad Nikah</h2>
 
-                <p className="text-center">
+                <p className="text-center text-sm xs:text-base">
                     Akad nikah akan dilaksanakan secara terbatas dan hanya dihadiri oleh keluarga dan kerabat dekat pada:
                 </p>
 
-                <div className="text-center mt-8 font-bold">
+                <div className="text-center mt-8 font-bold text-sm xs:text-base">
                     <p>Minggu, 23 Agustus 2025</p>
                     <p>Pukul 08:00 - <span className="italic">Sampai Selesai</span></p>
                 </div>
