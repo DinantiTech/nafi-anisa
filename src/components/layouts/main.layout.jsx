@@ -1,4 +1,5 @@
 import { BGWELCOME } from "../../contants/images.const";
+import CountingDown from "../sections/counting_down.section";
 import Couples from "../sections/couples/couple.section";
 import Event from "../sections/event.section";
 import LoveStory from "../sections/stories";
@@ -11,6 +12,9 @@ export default function MainLayout() {
                 <div className="w-full ">
                     <Welcome />
                     <Couples />
+                    <div className="mt-16">
+                        <CountingDown />
+                    </div>
                     <Event />
                 </div>
             </div>

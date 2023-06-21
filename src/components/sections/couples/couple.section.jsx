@@ -1,18 +1,17 @@
-import { FACEBOOK_ICON, INSTAGRAM_ICON, TWITTER_ICON } from "../../../contants/icon.const";
+import { INSTAGRAM_ICON, TWITTER_ICON } from "../../../contants/icon.const";
 import { BOY_FATHER_NAME, BOY_MOTHER_NAME, BOY_NAME, BOY_NAME_SHORT, GIRL_FATHER_NAME, GIRL_MOTHER_NAME, GIRL_NAME, GIRL_NAME_SHORT } from "../../../contants/identity.const";
-import { IMG_GIRL, IMG_MAN, IMG_PATTERN_SQUARE } from "../../../contants/images.const";
+import { IMG_GIRL, IMG_MAN } from "../../../contants/images.const";
 import { SocialType } from "../../../enums/social_type.enum";
-import CustomAnimation from "../../animations/custom.animation";
-import ButtonSocial from "../../buttons/social.button";
+import CustomAnimation from "../../animations/custom.animation"
 import DetailCouple from "./detail.couple";
 
 export default function Couples() {
     return (
         <div className="pt-32">
             <CustomAnimation>
-                <h4 className="uppercase sm:text-2xl text-sm text-center font-semibold">
+                <h1 className="uppercase sm:text-2xl text-sm text-center font-semibold">
                     Sang Mempelai
-                </h4>
+                </h1>
             </CustomAnimation>
 
             <DetailCouple
