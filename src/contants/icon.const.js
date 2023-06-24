@@ -6,3 +6,4 @@ export const FACEBOOK_ICON = "uim:facebook-messenger-alt";
 export const CALENDAR_ICON = "mdi:calendar-heart";
 
 export const PAPER_ICON = "pepicons-print:paper-plane";
+export const COPY_ICON = "ic:twotone-content-copy";

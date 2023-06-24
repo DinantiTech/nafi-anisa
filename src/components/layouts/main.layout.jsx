@@ -4,6 +4,7 @@ import CountingDown from "../sections/counting_down.section";
 import Couples from "../sections/couples/couple.section";
 import Event from "../sections/event.section";
 import LiveStreaming from "../sections/live_streaming.section";
+import PaymentSection from "../sections/payment.section";
 import Welcome from "../sections/welcome.section";
 
 export default function MainLayout() {
@@ -21,6 +22,10 @@ export default function MainLayout() {
                         <LiveStreaming />
                     </div>
                     <RSVP />
+
+                    <div className="mt-24">
+                        <PaymentSection />
+                    </div>
                 </div>
             </div>
             <div className="w-3/5 hidden md:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>

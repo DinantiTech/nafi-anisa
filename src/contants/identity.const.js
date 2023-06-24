@@ -29,11 +29,11 @@ export const VICTORIA_PAYMENT = "";
 export const JATIM_PAYMENT = "324123123123";
 
 export const ALL_PAYMENT = [
-    { name: "BCA", value: BCA_PAYMENT, code: "014" },
-    { name: "BRI", value: BRI_PAYMENT, code: "002" },
-    { name: "Mandiri", value: MANDIRI_PAYMENT, code: "008" },
-    { name: "BNI", value: BNI_PAYMENT, code: "009" },
-    { name: "BSI", value: BSI_PAYMENT, code: "451" },
-    { name: "Victoria", value: VICTORIA_PAYMENT, code: "566" },
-    { name: "Jatim", value: JATIM_PAYMENT, code: "114" }
+    { name: "BCA", value: BCA_PAYMENT, code: "014", nameAccount: "Wkwkwkwk", url: "https://www.bca.co.id/-/media/Feature/Header/Header-Logo/logo-bca.svg?v=1" },
+    { name: "BRI", value: BRI_PAYMENT, code: "002", nameAccount: "Wkwkwkwk", url: "https://bri.co.id/o/bri-corporate-theme/images/bri-logo.png" },
+    { name: "Mandiri", value: MANDIRI_PAYMENT, code: "008", nameAccount: "Wkwkwkwk", url: "https://www.bankmandiri.co.id/image/layout_set_logo?img_id=31567&t=1687453426131" },
+    { name: "BNI", value: BNI_PAYMENT, code: "009", nameAccount: "Wkwkwkwk", url: "https://www.bni.co.id/Portals/1/bni-logo-id.png" },
+    { name: "BSI", value: BSI_PAYMENT, code: "451", nameAccount: "Wkwkwkwk" },
+    { name: "Victoria", value: VICTORIA_PAYMENT, code: "566", nameAccount: "Wkwkwkwk" },
+    { name: "Jatim", value: JATIM_PAYMENT, code: "114", nameAccount: "Wkwkwkwk", url: "https://www.bankjatim.co.id/themes/bjtm07/assets/img/logo.png" }
 ]
