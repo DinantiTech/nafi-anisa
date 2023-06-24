@@ -18,3 +18,22 @@ export const THE_BRIDE = `${BOY_NAME_SHORT} & ${GIRL_NAME_SHORT}`;
 
 // Location
 export const GOOGLE_MAPS_ADDRESS = "Candi Sari, Semarang";
+
+// Payment
+export const BCA_PAYMENT = "324123123123";
+export const BRI_PAYMENT = "324123123123";
+export const MANDIRI_PAYMENT = "324123123123";
+export const BNI_PAYMENT = "324123123123";
+export const BSI_PAYMENT = "";
+export const VICTORIA_PAYMENT = "";
+export const JATIM_PAYMENT = "324123123123";
+
+export const ALL_PAYMENT = [
+    { name: "BCA", value: BCA_PAYMENT, code: "014" },
+    { name: "BRI", value: BRI_PAYMENT, code: "002" },
+    { name: "Mandiri", value: MANDIRI_PAYMENT, code: "008" },
+    { name: "BNI", value: BNI_PAYMENT, code: "009" },
+    { name: "BSI", value: BSI_PAYMENT, code: "451" },
+    { name: "Victoria", value: VICTORIA_PAYMENT, code: "566" },
+    { name: "Jatim", value: JATIM_PAYMENT, code: "114" }
+]
