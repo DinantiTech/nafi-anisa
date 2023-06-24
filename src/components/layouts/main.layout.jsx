@@ -1,5 +1,5 @@
 import { BGWELCOME } from "../../contants/images.const";
-import RSVP from "../sections/RSVP.section";
+import RSVP from "../sections/RSVP/RSVP.section";
 import CountingDown from "../sections/counting_down.section";
 import Couples from "../sections/couples/couple.section";
 import Event from "../sections/event.section";

@@ -1,15 +1,16 @@
-import { PAPER_ICON } from "../../contants/icon.const";
-import CustomAnimation from "../animations/custom.animation";
-import CustomButton from "../buttons/custom.button";
-import AttendanceInput from "../forms/attendance.form";
-import CustomInput from "../forms/input.form";
-import CustomTextarea from "../forms/textarea.textare";
-import FrameLayout from "../layouts/frame.layout";
+import { PAPER_ICON } from "../../../contants/icon.const";
+import CustomAnimation from "../../animations/custom.animation";
+import CustomButton from "../../buttons/custom.button";
+import AttendanceInput from "../../forms/attendance.form";
+import CustomInput from "../../forms/input.form";
+import CustomTextarea from "../../forms/textarea.textare";
+import FrameLayout from "../../layouts/frame.layout";
+import ListRSVP from "./list_rsvp";
 
 export default function RSVP() {
     return (
         <FrameLayout>
-            <div className="w-full pt-10 flex flex-col justify-center items-center px-">
+            <div className="w-full pt-10 flex flex-col justify-center items-center ">
                 <CustomAnimation>
                     <h2 className="uppercase sm:text-2xl text-xl">
                         Harapan & Doa
@@ -24,6 +25,8 @@ export default function RSVP() {
                     <AttendanceInput label="Kehadiran" />
                     <CustomButton label="Kirim ucapan" name="Kirim ucapan" icon={PAPER_ICON} />
                 </form>
+
+                <ListRSVP />
             </div>
         </FrameLayout>
     )
