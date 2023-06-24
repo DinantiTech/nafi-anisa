@@ -6,13 +6,13 @@ const EFFECT_TYPE = {
 };
 
 export default function CustomAnimation({ type, children, ...rest }) {
-    if (type === EFFECT_TYPE.bounce) {
-        return (
-            <Bounce bottom {...rest}>
-                {children}
-            </Bounce>
-        );
-    }
+    // if (type === EFFECT_TYPE.bounce) {
+    //     return (
+    //         <Bounce bottom {...rest}>
+    //             {children}
+    //         </Bounce>
+    //     );
+    // }
 
     return (
         <Fade bottom {...rest}>

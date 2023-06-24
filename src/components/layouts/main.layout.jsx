@@ -2,6 +2,7 @@ import { BGWELCOME } from "../../contants/images.const";
 import CountingDown from "../sections/counting_down.section";
 import Couples from "../sections/couples/couple.section";
 import Event from "../sections/event.section";
+import LiveStreaming from "../sections/live_streaming.section";
 import LoveStory from "../sections/stories";
 import Welcome from "../sections/welcome.section";
 
@@ -16,6 +17,9 @@ export default function MainLayout() {
                         <CountingDown />
                     </div>
                     <Event />
+                    <div className="mt-[6.5rem]">
+                        <LiveStreaming />
+                    </div>
                 </div>
             </div>
             <div className="w-3/5 hidden md:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>

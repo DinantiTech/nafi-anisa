@@ -12,3 +12,6 @@ export const WEDDING_RESEPSI_TIME = '18:00 GMT+8';
 export const WEDDING_RESEPSI_LOC_NAME = `Ritz-Carlton Hotel, Mega Kuningan`;
 export const WEDDING_RESEPSI_LOC_ROAD = `Jl. DR. Ide Anak Agung Gde Agung, West Kuningan, Jakarta, Indonesia`;
 export const WEDDING_RESEPSI_DRESSCODE = ` Brown with a touch of Ethnicity (Indonesian/African)`;
+
+// Live Youtube or any other
+export const DATE_LIVE_STREAMING = "Minggu, 23 Juli 2025" 
