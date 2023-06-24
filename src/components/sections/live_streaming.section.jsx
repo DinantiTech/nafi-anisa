@@ -5,6 +5,7 @@ import { THE_BRIDE } from "../../contants/identity.const";
 import { IMG_PATTERN_SQUARE } from "../../contants/images.const";
 import CustomAnimation from "../animations/custom.animation";
 import CustomButton from "../buttons/custom.button";
+import { YOUTUBE_ICON } from "../../contants/icon.const";
 
 export default function LiveStreaming() {
     return (
@@ -36,7 +37,7 @@ export default function LiveStreaming() {
                 <CustomAnimation>
                     <Link to={YOUTUBE_LINK}>
                         <div className="py-4">
-                            <CustomButton label="Menuju Youtube"  />
+                            <CustomButton label="Menuju Youtube" name="Menuju Youtube" icon={YOUTUBE_ICON}  />
                         </div>
                     </Link>
                 </CustomAnimation>
