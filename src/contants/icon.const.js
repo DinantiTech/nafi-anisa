@@ -9,3 +9,5 @@ export const CALENDAR_ICON = "mdi:calendar-heart";
 export const PAPER_ICON = "pepicons-print:paper-plane";
 export const COPY_ICON = "ic:twotone-content-copy";
 export const SUCCESS_ICON = "ep:success-filled";
+
+export const ARROW_ROUNDED_ICON = "emojione-monotone:right-arrow";

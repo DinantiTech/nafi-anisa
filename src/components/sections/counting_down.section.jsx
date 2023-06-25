@@ -1,9 +1,10 @@
+import { START_EVENT } from "../../contants/date.const"
 import { BG_COUNTING_DOWN, IMG_PATTERN_SQUARE } from "../../contants/images.const"
 import useTimer from "../../hooks/timer.hook"
 import EventButton from "../buttons/event.button"
 
 export default function CountingDown() {
-    const timeRemaining = useTimer(new Date("2023-08-19T00:00:00Z"))
+    const timeRemaining = useTimer(new Date(START_EVENT))
 
     return (
         <div className="bg-repeat w-full" style={{ backgroundImage: `url(${IMG_PATTERN_SQUARE})`}}>

@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { BRAND } from "../../contants/brand.const";
 import { CALENDAR_ICON } from "../../contants/icon.const";
 import { GOOGLE_MAPS_ADDRESS, THE_BRIDE } from "../../contants/identity.const";
+import { END_EVENT, START_EVENT } from "../../contants/date.const";
 
 export default function EventButton({ rounded }) {
     const handleAddEvent = () => {
@@ -10,8 +11,8 @@ export default function EventButton({ rounded }) {
         const finalURL = `text=${eventTitle}&details=${eventDescription}`;
         const location = `location=${GOOGLE_MAPS_ADDRESS}`;
     
-        const startDate = encodeURIComponent('2024-06-20T10:00:00Z');
-        const endDate = encodeURIComponent('2024-07-20T12:00:00Z');    
+        const startDate = encodeURIComponent(START_EVENT);
+        const endDate = encodeURIComponent(END_EVENT);    
     
         window.open(
           `https://www.google.com/calendar/render?action=TEMPLATE&${finalURL}&dates=${startDate}/${endDate}&${location}`,
