@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { ALL_PAYMENT } from "../../contants/identity.const";
 import { Icon } from "@iconify/react";
 import { COPY_ICON, SUCCESS_ICON } from "../../contants/icon.const";
@@ -16,6 +16,10 @@ export default function PaymentSection() {
     );
     setSelectedPayment(selectedPayment);
   };
+
+  useMemo(() => {
+    setSelectedPayment(filteredPayments[0] ?? '')
+  }, [])
 
   const copyToClipboard = () => {
     if (selectedPayment) {
