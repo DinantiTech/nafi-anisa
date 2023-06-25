@@ -9,7 +9,7 @@ export default function Couples() {
     return (
         <div className="pt-32">
             <CustomAnimation>
-                <h1 className="uppercase sm:text-2xl text-xl text-center font-semibold">
+                <h1 className="uppercase sm:text-2xl text-xl text-center font-semibold font-primary">
                     Sang Mempelai
                 </h1>
             </CustomAnimation>

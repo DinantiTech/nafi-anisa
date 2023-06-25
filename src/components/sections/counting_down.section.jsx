@@ -12,7 +12,7 @@ export default function CountingDown() {
                 <div className="relative w-full border-8 border-amber-100 shadow-lg shadow-amber-600/40">
                     <img src={BG_COUNTING_DOWN} alt="" className="aspect-[1/1.2] w-full object-center object-cover" />
                     <div className="w-full absolute sm:bottom-10 xs:bottom-7 bottom-3 mx-auto flex flex-col justify-center items-center gap-y-3 xs:gap-y-4 sm:gap-y-5">
-                        <div className="flex items-center justify-center w-full gap-x-0.5">
+                        <div className="flex items-center justify-center w-full gap-x-0.5 font-cta">
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
                                 <h5 className="xs:text-2xl text-sm">{timeRemaining.days}</h5>
                                 <p className="text-sm xs:text-base">Hari</p>

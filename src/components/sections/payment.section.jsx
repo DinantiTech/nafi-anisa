@@ -57,12 +57,12 @@ export default function PaymentSection() {
       <Toaster position="top-center"
         reverseOrder={false} />
 
-      <h2 className="mb-2 uppercase sm:text-2xl text-xl">
+      <h2 className="mb-2 uppercase sm:text-2xl text-xl font-primary">
         Tanda Kasih
       </h2>
       <select
         id="payment"
-        className="border border-gray-300 rounded px-3 py-2 w-full focus:border-none"
+        className="border border-gray-300 rounded px-3 py-2 w-full focus:border-none font-secondary"
         onChange={handlePaymentChange}
       >
         <option value="">Pilih BANK Transfer</option>
@@ -74,7 +74,7 @@ export default function PaymentSection() {
       </select>
 
       {selectedPayment && (
-        <div className="text-center mt-3 flex flex-col items-center justify-center">
+        <div className="text-center mt-3 flex flex-col items-center justify-center font-secondary">
           {selectedPayment?.url ? (
             <img src={selectedPayment?.url} alt={selectedPayment?.name} className="mb-5 sm:w-32 w-24" />
           ) : null}

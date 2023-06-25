@@ -3,12 +3,12 @@ import FrameLayout from "../layouts/frame.layout";
 export default function Event() {
     return (
         <FrameLayout>
-            <div className="mx-auto w-full flex justify-center items-center flex-col px-3">
+            <div className="mx-auto w-full flex justify-center items-center flex-col px-3 font-primary">
                 <h1 className="uppercase sm:text-2xl text-xl text-center font-semibold pt-14 pb-4 border-b-4">Detail Acara</h1>
 
                 <h2 className="py-5 capitalize text-xl">Akad Nikah</h2>
 
-                <p className="text-center text-sm xs:text-base">
+                <p className="text-center text-sm xs:text-base font-secondary">
                     Akad nikah akan dilaksanakan secara terbatas dan hanya dihadiri oleh keluarga dan kerabat dekat pada:
                 </p>
 

@@ -10,7 +10,7 @@ import { YOUTUBE_ICON } from "../../contants/icon.const";
 export default function LiveStreaming() {
     return (
         <div className="w-full flex flex-col items-center justify-center bg-repeat" style={{ backgroundImage: `url(${IMG_PATTERN_SQUARE})`}}>
-            <div className=" w-full flex flex-col items-center justify-center border-8 border-amber-100 bg-black/50 sm:py-7 py-5">
+            <div className="font-primary w-full flex flex-col items-center justify-center border-8 border-amber-100 bg-black/50 sm:py-7 py-5">
                 <CustomAnimation>
                     <h2 className="font-semibold text-white uppercase sm:text-2xl text-xl">Siaran Langsung</h2>
                 </CustomAnimation>
@@ -30,13 +30,13 @@ export default function LiveStreaming() {
                     />
                 </CustomAnimation>
                 <CustomAnimation>
-                    <p className="sm:px-10 px-3.5 text-center text-white text-xs sm:text-sm mt-1">
+                    <p className="sm:px-10 px-3.5 text-center text-white text-xs sm:text-sm mt-1 font-secondary">
                         Jika Anda menghadapi kesulitan saat memutar video live streaming di atas, mohon tekan tombol di bawah ini
                     </p>
                 </CustomAnimation>
                 <CustomAnimation>
                     <Link to={YOUTUBE_LINK}>
-                        <div className="py-4">
+                        <div className="py-4 font-cta">
                             <CustomButton label="Menuju Youtube" name="Menuju Youtube" icon={YOUTUBE_ICON}  />
                         </div>
                     </Link>

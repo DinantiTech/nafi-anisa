@@ -17,7 +17,7 @@ export default function ButtonSocial({ username = "Username", icon, rounded, typ
                 {icon ? (
                     <div className="flex items-center justify-center gap-x-2">
                         <Icon className="group-hover:text-rose-700" icon={icon} />
-                        <span className="group-hover:text-amber-800">{username}</span>
+                        <span className="group-hover:text-amber-800 font-cta">{username}</span>
                     </div>
                 ) : (
                     <span className="group-hover:text-amber-800">@{username}</span>

@@ -28,19 +28,19 @@ export default function DetailCouple({
             </CustomAnimation>
 
             <CustomAnimation>
-                <h4 className="text-4xl border-b-4 text-center pb-4 mx-28 sm:mx-40">
+                <h4 className="text-4xl border-b-4 text-center pb-4 mx-28 sm:mx-40 font-name">
                     {shortName ?? GIRL_NAME_NO_TITLE}
                 </h4>
             </CustomAnimation>
 
             <CustomAnimation>
-                <h4 className="pt-6 text-xl text-center px-3 font-semibold">
+                <h4 className="pt-6 text-xl text-center px-3 font-semibold font-name">
                     {fullName ?? GIRL_NAME}
                 </h4>
             </CustomAnimation>
 
             <CustomAnimation>
-                <div className="pt-5 text-sm">
+                <div className="pt-5 text-sm font-primary">
                     <h4 className="text-center px-3">Putra dari Bapak {fatherName ?? GIRL_FATHER_NAME}</h4>
                     <h4 className="text-center px-3">dan Ibu dari {motherName ?? GIRL_MOTHER_NAME}</h4>
                 </div>

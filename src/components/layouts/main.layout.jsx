@@ -1,3 +1,4 @@
+import { COLOR_PRIMARY } from "../../contants/common.const";
 import { BGWELCOME } from "../../contants/images.const";
 import RSVP from "../sections/RSVP/RSVP.section";
 import CountingDown from "../sections/counting_down.section";
@@ -10,7 +11,7 @@ import Welcome from "../sections/welcome.section";
 export default function MainLayout() {
     return (
         <div className="flex relative w-full h-full justify-between">
-            <div className="w-full md:w-2/5">
+            <div className={`bg-${COLOR_PRIMARY} w-full md:w-2/5`} >
                 <div className="w-full ">
                     <Welcome />
                     <Couples />
@@ -33,13 +34,13 @@ export default function MainLayout() {
                     <div className="absolute top-[27rem]">
                         <div className="flex items-center justify-center text-center flex-col px-20">
                             <div className="relative w-full">
-                                <p className="text-md text-mainColorText uppercase tracking-wider">
+                                <p className="text-md text-mainColorText uppercase tracking-wider font-primary">
                                     {/* {isInvitation ? 'THE WEDDING OF' : 'WEDDING ANNOUNCEMENT'} */}
                                     WEDDING ANNOUNCEMENT
                                 </p>
                             </div>
                             <div className="">
-                                <p className="italic max-w-600px text-mainColorText tracking-wider">
+                                <p className="italic max-w-600px text-mainColorText tracking-wider font-secondary">
                                     {"\"Indonesia’s diversity is formidable: some thirteen and a half thousand islands, two hundred and fifty million people, around three hundred and sixty ethnic groups, and more than seven hundred languages.\""}
                                     <br />- Pankaj Mishra
                                 </p>

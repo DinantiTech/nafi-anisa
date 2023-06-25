@@ -21,7 +21,7 @@ export default function EventButton({ rounded }) {
       };
 
     return (
-        <button onClick={handleAddEvent} className={`${rounded ? 'rounded-full' : 'rounded-lg'} group mx-auto px-4 py-1 border-2 bg-amber-700 hover:bg-amber-100 duration-300 w-fit flex items-center justify-center shadow shadow-amber-900`}>
+        <button onClick={handleAddEvent} className={`${rounded ? 'rounded-full' : 'rounded-lg'} font-cta group mx-auto px-4 py-1 border-2 bg-amber-700 hover:bg-amber-100 duration-300 w-fit flex items-center justify-center shadow shadow-amber-900`}>
             <div className="flex items-center justify-center">
                 <div className="flex items-center justify-center gap-x-2">
                     <Icon className="text-white group-hover:text-rose-600 text-sm xs:text-base" icon={CALENDAR_ICON} />

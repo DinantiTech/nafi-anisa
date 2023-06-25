@@ -7,7 +7,7 @@ export default function Welcome() {
         <FrameLayout>
             <div className="sm:px-12 px-3.5">
                 {/* Dear Section */}
-                <div className='sm:pt-16 pt-10 xs:pt-16'>
+                <div className='sm:pt-16 pt-10 xs:pt-16 font-primary'>
                     <p className="text-center font-light text-main-color-text serif">
                         Kepada Yth.
                     </p>
@@ -16,25 +16,25 @@ export default function Welcome() {
                     </p>
                 </div>
                 {/* Greetings Text */}
-                <div className="pt-7">
+                <div className="pt-7 font-primary">
                     <p className="text-uppercase font-body-alternative text-main-color-text text-sm sm:text-base text-center">
                         Assalamualaikum Warahmatullahi Wabarakatuh.
                         <br />
                         Dengan memohon anugerah dan berkat Tuhan, kami bermaksud mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan kami:
                     </p>
                 </div>
-                <div className="xs:py-8 py-6 text-center text-main-color-text">
-                    <h1 className="text-uppercase text-xl">{GIRL_NAME_NO_TITLE}</h1>
+                <div className="xs:py-8 py-6 text-center text-main-color-text font-primary">
+                    <h1 className="text-uppercase text-xl font-name">{GIRL_NAME_NO_TITLE}</h1>
 
                     <p className="font-heading-alternative italic text-xl xs:text-2xl sm:my-7 xs:my-5 my-4">Dan</p>
 
-                    <h1 className="text-uppercase text-xl">{BOY_NAME_NO_TITLE}</h1>
+                    <h1 className="text-uppercase text-xl font-name">{BOY_NAME_NO_TITLE}</h1>
                     <p className="sm:mt-8 mt-7 text-center font-light text-main-color-text">
                         {DATE_RESEPSI}
                     </p>
                 </div>
                 {/* Quotes Section */}
-                <div className="font-heading text-sm sm:text-base">
+                <div className="font-heading text-sm sm:text-base font-primary">
                     {/* <p className="text-center mt-16 text-main-color-text text-xl">
                     {`وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ ٢١`}
                     </p> */}

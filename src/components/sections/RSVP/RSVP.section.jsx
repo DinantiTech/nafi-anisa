@@ -12,13 +12,13 @@ export default function RSVP() {
         <FrameLayout>
             <div className="w-full pt-10 flex flex-col justify-center items-center ">
                 <CustomAnimation>
-                    <h2 className="uppercase sm:text-2xl text-xl">
+                    <h2 className="uppercase sm:text-2xl text-xl font-primary">
                         Harapan & Doa
                     </h2>
-                    <p className="text-gray-500 mt-1">- RSVP -</p>
+                    <p className="text-gray-500 mt-1 font-primary">- RSVP -</p>
                 </CustomAnimation>
 
-                <form className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4">
+                <form className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4 font-primary">
                     <CustomInput label="Nama" placeholder="Masukan Namamu ..." />
                     <CustomTextarea label="Ucapan & doa" placeholder="Masukan ucapan atau doa ..." />
                     
