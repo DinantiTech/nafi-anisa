@@ -14,5 +14,8 @@ export default defineConfig({
     minify: true,
     cssMinify: true,
     target: 'esnext'
+  },
+  define: {
+    'process.env': {}
   }
 })

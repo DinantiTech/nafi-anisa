@@ -1,4 +1,6 @@
+import { SHEET_NAME } from "../../../contants/common.const";
 import { PAPER_ICON } from "../../../contants/icon.const";
+import { useAppScript } from "../../../hooks/useAppScript.hook";
 import CustomAnimation from "../../animations/custom.animation";
 import CustomButton from "../../buttons/custom.button";
 import AttendanceInput from "../../forms/attendance.form";
@@ -8,6 +10,10 @@ import FrameLayout from "../../layouts/frame.layout";
 import ListRSVP from "./list_rsvp";
 
 export default function RSVP() {
+    const [data, loading] = useAppScript(SHEET_NAME);
+
+    console.log(data)
+    console.log(loading)
     return (
         <FrameLayout>
             <div className="w-full pt-10 flex flex-col justify-center items-center ">
