@@ -7,15 +7,18 @@ import AttendanceInput from "../../forms/attendance.form";
 import CustomInput from "../../forms/input.form";
 import CustomTextarea from "../../forms/textarea.textare";
 import FrameLayout from "../../layouts/frame.layout";
+import LoveLoader from "../../loaders/love.loader";
 import ListRSVP from "./list_rsvp";
+import { Formik } from "formik";
 
 export default function RSVP() {
-    const [data, loading] = useAppScript(SHEET_NAME);
+    const [data, loading, error, createData] = useAppScript(SHEET_NAME);
 
     console.log(data)
-    console.log(loading)
+ 
     return (
         <FrameLayout>
+            { loading ? (<LoveLoader />) : null }
             <div className="w-full pt-10 flex flex-col justify-center items-center ">
                 <CustomAnimation>
                     <h2 className="uppercase sm:text-2xl text-xl font-primary">
@@ -24,15 +27,46 @@ export default function RSVP() {
                     <p className="text-gray-500 mt-1 font-primary">- RSVP -</p>
                 </CustomAnimation>
 
-                <form className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4 font-primary">
-                    <CustomInput label="Nama" placeholder="Masukan Namamu ..." />
-                    <CustomTextarea label="Ucapan & doa" placeholder="Masukan ucapan atau doa ..." />
-                    
-                    <AttendanceInput label="Kehadiran" />
-                    <CustomButton label="Kirim ucapan" name="Kirim ucapan" icon={PAPER_ICON} />
-                </form>
+                <Formik
+                    initialValues={{ name: '', message: '', attendance: false }}
+                    validate={values => {
+                        let errors = {};
 
-                <ListRSVP />
+                        if(values.name.length < 1) {
+                            errors.name = "Nama harus diisi"
+                        } else if(values.message < 1) {
+                            errors.message = "Ucapan & doa harus diisi"
+                        }
+
+                        return errors;
+                    }}
+
+                    onSubmit={async (values) => {
+                        if(values?.name?.length > 0 && values?.message?.length > 1) {
+                            const time = new Date().toDateString()
+                            const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
+    
+                            await createData(query);
+                        }
+                    }}
+                >
+                    {({
+                        errors,
+                        handleSubmit
+                    }) => (
+                        <form onSubmit={handleSubmit} className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4 font-primary">
+                            <CustomInput error={errors.name} name="name" label="Nama" placeholder="Masukan Namamu ..." />
+                            <CustomTextarea error={errors.message} name="message" label="Ucapan & doa" placeholder="Masukan ucapan atau doa ..." />
+                            
+                            <AttendanceInput name="attendance" label="Kehadiran" />
+                            <CustomButton type="submit"  label="Kirim ucapan" name="Kirim ucapan" icon={PAPER_ICON} />
+                        </form>
+                    )}
+
+                </Formik>
+
+
+                <ListRSVP data={data} />
             </div>
         </FrameLayout>
     )

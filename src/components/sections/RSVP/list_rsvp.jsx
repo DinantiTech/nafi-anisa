@@ -1,9 +1,9 @@
 import { useState } from "react";
-import { RSVPData } from "../../../datas/list_rsvp.data";
+import moment from "moment/moment";
 
-export default function ListRSVP() {  
+export default function ListRSVP({data}) {  
     const [showFullList, setShowFullList] = useState(false);
-    const limitedRSVPData = RSVPData.slice(0, 5);
+    const limitedRSVPData = data?.slice(0, 5);
   
     const handleShowFullList = () => {
       setShowFullList(true);
@@ -11,33 +11,21 @@ export default function ListRSVP() {
   
     return (
       <div className="w-full px-4 mt-5 flex flex-col items-start justify-center gap-y-3 divide-y">
-        {showFullList ? (
-          RSVPData.map((data) => (
-            <div className="w-full flex flex-col items-start justify-center gap-y-3 pt-2">
+        {
+          limitedRSVPData?.map((data, index) => (
+            <div key={index} className="w-full flex flex-col items-start justify-center gap-y-3 pt-2">
               <div className="flex items-start justify-center flex-col">
                 <h5 className="text-amber-900 font-semibold sm:text-lg">
                   {data.name}
                 </h5>
-                <span className="text-sm text-amber-700">1 Jam yang lalu</span>
+                {/* <span className="text-sm text-amber-700">{moment(new Date(data?.createdAt) ?? new Date()).fromNow()}</span> */}
               </div>
               <p className="text-sm">{data.message}</p>
             </div>
           ))
-        ) : (
-          limitedRSVPData.map((data) => (
-            <div className="w-full flex flex-col items-start justify-center gap-y-3 pt-2">
-              <div className="flex items-start justify-center flex-col">
-                <h5 className="text-amber-900 font-semibold sm:text-lg">
-                  {data.name}
-                </h5>
-                <span className="text-sm text-amber-700">1 Jam yang lalu</span>
-              </div>
-              <p className="text-sm">{data.message}</p>
-            </div>
-          ))
-        )}
+        }
   
-        {!showFullList && RSVPData.length > 5 && (
+        {!showFullList && data?.length > 5 && (
           <button
             className="text-sm text-amber-900 underline pt-3"
             onClick={handleShowFullList}

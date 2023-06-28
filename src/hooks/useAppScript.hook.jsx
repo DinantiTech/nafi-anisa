@@ -12,22 +12,17 @@ export const useAppScript = (SHEET_NAME) => {
         try {
             setLoading(true)
 
-            const options = {
-                headers: {
-                  Accept: 'application/json',
-                  'Content-Type': 'application/x-www-form-urlencoded',
-                  'Access-Control-Allow-Credentials': true
-                },
-                method: 'GET',
-              };
             const result = await fetch(
-                `${HOSTNAME_APP_SCRIPT}?action=${ACTION_SCRIPT.GET_ALL}&tableName=${SHEET_NAME}&sheetId=${SPREADSHEET_ID}`
+                `${HOSTNAME_APP_SCRIPT}?action=${ACTION_SCRIPT.GET_ALL}&tableName=${SHEET_NAME}&sheetId=${SPREADSHEET_ID}`,
+                {
+                    method: "GET"
+                }
             )
-    
-            console.log(await result.json())
-    
-            return setData(result)
-            
+
+            const data = await result.json()
+
+            return setData(data?.data)
+
         } catch (error) {
             console.log(error);
             setError(error)
@@ -36,9 +31,54 @@ export const useAppScript = (SHEET_NAME) => {
         }
     }
 
+    const createData = async (data) => {
+        try {
+            setLoading(true)
+            const response = await fetch(
+                `${HOSTNAME_APP_SCRIPT}?action=${ACTION_SCRIPT.CREATE_RSVP}&tableName=${SHEET_NAME}&sheetId=${SPREADSHEET_ID}` + data,
+                {
+                    headers: {
+                        Accept: 'application/json',
+                        'Content-Type': 'application/x-www-form-urlencoded',
+                    },
+                    method: 'POST',
+                }
+            );
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.log(error);
+            return { success: false, error: error.message };
+        } finally {
+            setLoading(false)
+        }
+    };
+
+    const updateData = async (data) => {
+        try {
+            setLoading(true)
+            const response = await fetch(
+                `${HOSTNAME_APP_SCRIPT}?action=${ACTION_SCRIPT.UPDATE}&tableName=${SHEET_NAME}&sheetId=${SPREADSHEET_ID}`,
+                {
+                    method: "POST",
+                    body: JSON.stringify(data),
+                }
+            );
+
+            const result = await response.json();
+            return result;
+        } catch (error) {
+            console.log(error);
+            return { success: false, error: error.message };
+        } finally {
+            setLoading(false)
+        }
+    };
+
     useEffect(() => {
         getAllData()
     }, [])
 
-    return [data, loading, loading]
+    return [data, loading, error, createData, updateData]
 }
