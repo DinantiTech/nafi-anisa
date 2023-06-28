@@ -4,16 +4,20 @@ import Drawer from 'react-modern-drawer'
 //import styles 👇
 import 'react-modern-drawer/dist/index.css'
 
-export default function DrawerCommon({ isOpen, toggleDrawer, children }) {
-    const [drawerWidth, setDrawerWidth] = useState('40%');
+export default function DrawerCommon({ isOpen, full, toggleDrawer, children }) {
+    const [drawerWidth, setDrawerWidth] = useState(full ? "100%" : '40%');
 
     useMemo(() => {
         const handleResize = () => {
-            if (window.innerWidth <= 768) {
-                setDrawerWidth('100%')
-            } else {
-                setDrawerWidth('40%')
+            if(!full) {
+                if (window.innerWidth <= 768) {
+                    setDrawerWidth('100%')
+                } else {
+                    setDrawerWidth('40%')
+                }
             }
+
+            setDrawerWidth('100%')
         }
 
         window.addEventListener('resize', handleResize)
