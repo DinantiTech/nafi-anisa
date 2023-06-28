@@ -3,6 +3,7 @@ import { BGWELCOME } from "../../contants/images.const";
 import RSVP from "../sections/RSVP/RSVP.section";
 import CountingDown from "../sections/counting_down.section";
 import Couples from "../sections/couples/couple.section";
+import Cover from "../sections/cover.section";
 import Event from "../sections/event.section";
 import LiveStreaming from "../sections/live_streaming.section";
 import PaymentSection from "../sections/payment.section";
@@ -13,6 +14,7 @@ export default function MainLayout() {
         <div className="flex relative w-full h-full justify-between">
             <div className={`bg-${COLOR_PRIMARY} w-full md:w-2/5`} >
                 <div className="w-full ">
+                    <Cover />
                     <Welcome />
                     <Couples />
                     <div className="mt-16">

@@ -11,3 +11,5 @@ export const COPY_ICON = "ic:twotone-content-copy";
 export const SUCCESS_ICON = "ep:success-filled";
 
 export const ARROW_ROUNDED_ICON = "emojione-monotone:right-arrow";
+export const MESSAGE_OUTLINE_ICON = "wpf:message-outline";
+export const ARROW_CLOCKWISE_ICON = "bi:arrow-clockwise";
