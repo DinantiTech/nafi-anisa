@@ -1,5 +1,6 @@
 import { COLOR_PRIMARY } from "../../contants/common.const";
 import { BGWELCOME } from "../../contants/images.const";
+import Footer from "../commons/footer.common";
 import RSVP from "../sections/RSVP/RSVP.section";
 import CountingDown from "../sections/counting_down.section";
 import Couples from "../sections/couples/couple.section";
@@ -29,6 +30,8 @@ export default function MainLayout() {
                     <div className="mt-24">
                         <PaymentSection />
                     </div>
+
+                    <Footer />
                 </div>
             </div>
             <div className="w-3/5 hidden md:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>

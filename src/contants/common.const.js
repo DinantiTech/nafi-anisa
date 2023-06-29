@@ -7,3 +7,5 @@ export const COLOR_PRIMARY = "amber-300";
 export const SPREADSHEET_ID = "1z71V03f36yTH0KLANv3oLUyagLXOUu5LKPrTgcdNm6U";
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
 export const SHEET_NAME = "RSVP";
+
+export const SONG = "Virgoun - Bukti"
