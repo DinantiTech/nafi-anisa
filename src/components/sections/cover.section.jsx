@@ -21,7 +21,8 @@ export default function Cover() {
     return (
         <>
             <DrawerCommon isOpen={isOpen}>
-                <div className="w-full h-full flex items-center justify-center flex-col">
+                <div className="w-full
+                 h-full flex items-center justify-center flex-col">
                     <img src={GununganWayang} alt="gunungan wayang" className="w-52" />
 
 
