@@ -12,7 +12,7 @@ import Welcome from "../sections/welcome.section";
 
 export default function MainLayout() {
     return (
-        <div className="flex relative w-full h-full justify-between">
+        <div className="flex relative w-full h-full justify-between antialiased">
             <div className={`bg-${COLOR_PRIMARY} w-full md:w-2/5`} >
                 <div className="w-full ">
                     <Cover />
