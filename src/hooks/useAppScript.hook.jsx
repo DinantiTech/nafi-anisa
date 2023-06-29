@@ -5,6 +5,7 @@ import { useEffect } from "react";
 
 export const useAppScript = (SHEET_NAME) => {
     const [loading, setLoading] = useState(false);
+    const [startFetching, setStartFetching] = useState(true);
     const [error, setError] = useState(null);
     const [data, setData] = useState(null)
 
@@ -21,12 +22,13 @@ export const useAppScript = (SHEET_NAME) => {
 
             const data = await result.json()
 
-            return setData(data?.data)
+            return setData(data?.data?.sort((a, b) => new Date(b?.createdAt) - new Date(a?.createdAt)))
 
         } catch (error) {
             console.log(error);
             setError(error)
         } finally {
+            setStartFetching(false)
             setLoading(false)
         }
     }
@@ -77,8 +79,10 @@ export const useAppScript = (SHEET_NAME) => {
     };
 
     useEffect(() => {
-        getAllData()
-    }, [])
+        if(startFetching) {
+            getAllData()
+        }
+    }, [startFetching])
 
-    return [data, loading, error, createData, updateData]
+    return [data, loading, error, createData, setStartFetching, updateData]
 }

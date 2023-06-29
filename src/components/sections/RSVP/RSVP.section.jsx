@@ -1,3 +1,4 @@
+import { useMemo } from "react";
 import { SHEET_NAME } from "../../../contants/common.const";
 import { PAPER_ICON } from "../../../contants/icon.const";
 import { useAppScript } from "../../../hooks/useAppScript.hook";
@@ -12,10 +13,8 @@ import ListRSVP from "./list_rsvp";
 import { Formik } from "formik";
 
 export default function RSVP() {
-    const [data, loading, error, createData] = useAppScript(SHEET_NAME);
+    const [data, loading, error, createData, setStartFetching] = useAppScript(SHEET_NAME);
 
-    console.log(data)
- 
     return (
         <FrameLayout>
             { loading ? (<LoveLoader />) : null }
@@ -41,12 +40,15 @@ export default function RSVP() {
                         return errors;
                     }}
 
-                    onSubmit={async (values) => {
+                    onSubmit={async (values, {resetForm}) => {
                         if(values?.name?.length > 0 && values?.message?.length > 1) {
-                            const time = new Date().toDateString()
+                            const time = new Date()
                             const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
     
                             await createData(query);
+                            
+                            setStartFetching(true)
+                            resetForm()
                         }
                     }}
                 >
