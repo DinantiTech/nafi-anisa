@@ -1,3 +1,5 @@
+import { DATA_BANK } from "../datas/bank.data";
+
 // GIRL
 export const GIRL_NAME = 'Maria Alda Prawitera, B.Com, M.Com';
 export const GIRL_NAME_NO_TITLE = 'Maria Alda Prawitera';
@@ -24,18 +26,18 @@ export const BCA_PAYMENT = "324123123123";
 export const BRI_PAYMENT = "324123123123";
 export const MANDIRI_PAYMENT = "324123123123";
 export const BNI_PAYMENT = "324123123123";
-export const BSI_PAYMENT = "";
-export const VICTORIA_PAYMENT = "";
+export const BSI_PAYMENT = "asdsad";
+export const VICTORIA_PAYMENT = "asdasd";
 export const JATIM_PAYMENT = "324123123123";
 
 export const ALL_PAYMENT = [
-    { name: "BCA", value: BCA_PAYMENT, code: "014", nameAccount: "sdfsdfsdf", url: "https://www.bca.co.id/-/media/Feature/Header/Header-Logo/logo-bca.svg?v=1" },
-    { name: "BRI", value: BRI_PAYMENT, code: "002", nameAccount: "sdfsdfs", url: "https://bri.co.id/o/bri-corporate-theme/images/bri-logo.png" },
-    { name: "Mandiri", value: MANDIRI_PAYMENT, code: "008", nameAccount: "Wkwkwkwk", url: "https://www.bankmandiri.co.id/image/layout_set_logo?img_id=31567&t=1687453426131" },
-    { name: "BNI", value: BNI_PAYMENT, code: "009", nameAccount: "Wkwkwkwk", url: "https://www.bni.co.id/Portals/1/bni-logo-id.png" },
-    { name: "BSI", value: BSI_PAYMENT, code: "451", nameAccount: "Wkwkwkwk" },
-    { name: "Victoria", value: VICTORIA_PAYMENT, code: "566", nameAccount: "Wkwkwkwk" },
-    { name: "Jatim", value: JATIM_PAYMENT, code: "114", nameAccount: "Wkwkwkwk", url: "https://www.bankjatim.co.id/themes/bjtm07/assets/img/logo.png" }
+    { name: DATA_BANK.BCA.NAME, value: BCA_PAYMENT, code: DATA_BANK.BCA.CODE, nameAccount: "sdfsdfsdf", url: DATA_BANK.BCA.URL },
+    { name: DATA_BANK.BRI.NAME, value: BRI_PAYMENT, code: DATA_BANK.BRI.CODE, nameAccount: "sdfsdfs", url: DATA_BANK.BRI.URL },
+    { name: DATA_BANK.MANDIRI.NAME, value: MANDIRI_PAYMENT, code: DATA_BANK.MANDIRI.CODE, nameAccount: "Wkwkwkwk", url: DATA_BANK.MANDIRI.URL },
+    { name: DATA_BANK.BNI.NAME, value: BNI_PAYMENT, code: DATA_BANK.BNI.CODE, nameAccount: "Wkwkwkwk", url: DATA_BANK.BNI.URL },
+    { name: DATA_BANK.BSI.NAME, value: BSI_PAYMENT, code: DATA_BANK.BSI.CODE, nameAccount: "Wkwkwkwk", url: DATA_BANK.BSI.URL },
+    { name: DATA_BANK.VICTORIA.NAME, value: VICTORIA_PAYMENT, code: DATA_BANK.VICTORIA.CODE, nameAccount: "Wkwkwkwk", url: DATA_BANK.VICTORIA.URL },
+    { name: DATA_BANK.JATIM.NAME, value: JATIM_PAYMENT, code: DATA_BANK.JATIM.CODE, nameAccount: "Wkwkwkwk", url: DATA_BANK.JATIM.URL },
 ]
 
 
