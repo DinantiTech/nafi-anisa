@@ -1,3 +1,4 @@
+import { DAY_COUNTING, HOURS_COUNTING, MINUTE_COUNTING, SECOND_COUNTING } from "../../contants/common.const"
 import { START_EVENT } from "../../contants/date.const"
 import { BG_COUNTING_DOWN, IMG_PATTERN_SQUARE } from "../../contants/images.const"
 import useTimer from "../../hooks/timer.hook"
@@ -15,19 +16,19 @@ export default function CountingDown() {
                         <div className="flex items-center justify-center w-full gap-x-0.5 font-cta">
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
                                 <h5 className="xs:text-2xl text-sm">{timeRemaining.days}</h5>
-                                <p className="text-sm xs:text-base">Hari</p>
+                                <p className="text-sm xs:text-base">{DAY_COUNTING}</p>
                             </div>
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
                                 <h5 className="xs:text-2xl text-sm">{timeRemaining.hours}</h5>
-                                <p className="text-sm xs:text-base">Jam</p>
+                                <p className="text-sm xs:text-base">{HOURS_COUNTING}</p>
                             </div>
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
                                 <h5 className="xs:text-2xl text-sm">{timeRemaining.minutes}</h5>
-                                <p className="text-sm xs:text-base">Menit</p>
+                                <p className="text-sm xs:text-base">{MINUTE_COUNTING}</p>
                             </div>
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
                                 <h5 className="xs:text-2xl text-sm">{timeRemaining.seconds}</h5>
-                                <p className="text-sm xs:text-base">Detik</p>
+                                <p className="text-sm xs:text-base">{SECOND_COUNTING}</p>
                             </div>
                         </div>
                         <EventButton />

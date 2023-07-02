@@ -1,4 +1,5 @@
 import { Field } from "formik";
+import { PRESENT_LABEL_RSVP } from "../../contants/common.const";
 
 export default function CustomCheckbox({ label, name }) {
     return (
@@ -13,7 +14,7 @@ export default function CustomCheckbox({ label, name }) {
                 htmlFor="default-checkbox"
                 className="ml-2 text-sm font-medium dark:text-gray-300 text-amber-900"
             >
-                {label ?? "Akan hadir"}
+                {label ?? PRESENT_LABEL_RSVP}
             </label>
         </div>
     );

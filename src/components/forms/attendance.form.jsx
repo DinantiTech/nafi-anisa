@@ -1,3 +1,4 @@
+import { PRESENT_LABEL_RSVP } from "../../contants/common.const";
 import CustomCheckbox from "./checkbox.form";
 
 export default function AttendanceInput({ label, name }) {

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { SHEET_NAME } from "../../../contants/common.const";
+import { ATTENDANCE_LABEL_RSVP, NAME_LABEL_RSVP, NAME_PLACEHOLDER_RSVP, RSVP_LABEL, SEND_RSVP, SHEET_NAME, WISH_AND_PRAY_RSVP, WISH_LABEL_RSVP, WISH_PLACEHOLDER_RSVP } from "../../../contants/common.const";
 import { PAPER_ICON } from "../../../contants/icon.const";
 import { useAppScript } from "../../../hooks/useAppScript.hook";
 import CustomAnimation from "../../animations/custom.animation";
@@ -11,6 +11,7 @@ import FrameLayout from "../../layouts/frame.layout";
 import LoveLoader from "../../loaders/love.loader";
 import ListRSVP from "./list_rsvp";
 import { Formik } from "formik";
+import HeadingCustom from "../../commons/heading.common";
 
 export default function RSVP() {
     const [data, loading, error, createData, setStartFetching] = useAppScript(SHEET_NAME);
@@ -20,10 +21,13 @@ export default function RSVP() {
             { loading ? (<LoveLoader />) : null }
             <div className="w-full pt-10 flex flex-col justify-center items-center ">
                 <CustomAnimation>
-                    <h2 className="uppercase sm:text-2xl text-xl font-primary">
+                    {/* <h2 className="uppercase sm:text-2xl text-xl font-primary">
                         Harapan & Doa
-                    </h2>
-                    <p className="text-gray-500 mt-1 font-primary">- RSVP -</p>
+                    </h2> */}
+                    <HeadingCustom>
+                        { WISH_AND_PRAY_RSVP }
+                    </HeadingCustom>
+                    <p className="uppercase text-gray-500 mt-1 font-primary">- {RSVP_LABEL} -</p>
                 </CustomAnimation>
 
                 <Formik
@@ -57,11 +61,11 @@ export default function RSVP() {
                         handleSubmit
                     }) => (
                         <form onSubmit={handleSubmit} className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4 font-primary">
-                            <CustomInput error={errors.name} name="name" label="Nama" placeholder="Masukan Namamu ..." />
-                            <CustomTextarea error={errors.message} name="message" label="Ucapan & doa" placeholder="Masukan ucapan atau doa ..." />
+                            <CustomInput error={errors.name} name="name" label={NAME_LABEL_RSVP} placeholder={NAME_PLACEHOLDER_RSVP} />
+                            <CustomTextarea error={errors.message} name="message" label={WISH_LABEL_RSVP} placeholder={WISH_PLACEHOLDER_RSVP} />
                             
-                            <AttendanceInput name="attendance" label="Kehadiran" />
-                            <CustomButton type="submit"  label="Kirim ucapan" name="Kirim ucapan" icon={PAPER_ICON} />
+                            <AttendanceInput name="attendance" label={ATTENDANCE_LABEL_RSVP} />
+                            <CustomButton type="submit"  label={SEND_RSVP} name={SEND_RSVP} icon={PAPER_ICON} />
                         </form>
                     )}
 

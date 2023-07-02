@@ -3,6 +3,7 @@ import { BRAND } from "../../contants/brand.const";
 import { CALENDAR_ICON } from "../../contants/icon.const";
 import { GOOGLE_MAPS_ADDRESS, THE_BRIDE } from "../../contants/identity.const";
 import { END_EVENT, START_EVENT } from "../../contants/date.const";
+import { REMIND_EVENT_COUNTING } from "../../contants/common.const";
 
 export default function EventButton({ rounded }) {
     const handleAddEvent = () => {
@@ -25,7 +26,7 @@ export default function EventButton({ rounded }) {
             <div className="flex items-center justify-center">
                 <div className="flex items-center justify-center gap-x-2">
                     <Icon className="text-white group-hover:text-rose-600 text-sm xs:text-base" icon={CALENDAR_ICON} />
-                    <span className="text-white group-hover:text-amber-900 text-sm xs:text-base">Ingatkan acara</span>
+                    <span className="text-white group-hover:text-amber-900 text-sm xs:text-base">{REMIND_EVENT_COUNTING}</span>
                 </div>
             </div>
         </button>

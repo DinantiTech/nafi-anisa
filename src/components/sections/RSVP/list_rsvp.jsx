@@ -1,6 +1,7 @@
 import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { CROSS_ICON } from "../../../contants/icon.const";
+import { GREETINGS_RSVP, SEE_MORE_RSVP } from "../../../contants/common.const";
 
 export default function ListRSVP({ data }) {
   const [showFullList, setShowFullList] = useState(false);
@@ -32,7 +33,7 @@ export default function ListRSVP({ data }) {
           onClick={handleShowFullList}
           className="text-sm text-amber-900 underline pt-3"
         >
-          Lihat Lebih Lengkap
+          {SEE_MORE_RSVP}
         </button>
       )}
     </div>
@@ -48,7 +49,7 @@ function PopupListRsvp({ isOpen, handleClose, data }) {
           <Icon icon={CROSS_ICON} />
         </button>
         <div className="p-4 divide-y-2">
-          <div className="w-44 py-2 font-semibold">Ucapan & doa dari yang terkasih</div>
+          <div className="w-44 py-2 font-semibold">{GREETINGS_RSVP}</div>
           <div className="h-96 overflow-y-auto overflow-x-hidden">
           {
             data?.map((data, index) => (

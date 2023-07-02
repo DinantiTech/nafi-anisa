@@ -4,6 +4,7 @@ import ButtonSocial from "../../buttons/social.button";
 import { SocialType } from "../../../enums/social_type.enum";
 import CustomAnimation from "../../animations/custom.animation";
 import { GIRL_FATHER_NAME, GIRL_MOTHER_NAME, GIRL_NAME, GIRL_NAME_NO_TITLE } from "../../../contants/identity.const";
+import TextCustom from "../../commons/text.common";
 
 export default function DetailCouple({ 
     img,
@@ -13,7 +14,9 @@ export default function DetailCouple({
     fatherName,
     icon,
     accountSocial,
-    typeSocial = SocialType.instagram
+    typeSocial = SocialType.instagram,
+    motherOf,
+    fatherOf
  }) {
     return (
         <Fragment>
@@ -41,8 +44,8 @@ export default function DetailCouple({
 
             <CustomAnimation>
                 <div className="pt-5 text-sm font-primary">
-                    <h4 className="text-center px-3">Putra dari Bapak {fatherName ?? GIRL_FATHER_NAME}</h4>
-                    <h4 className="text-center px-3">dan Ibu dari {motherName ?? GIRL_MOTHER_NAME}</h4>
+                    <TextCustom>{ fatherOf } {fatherName ?? GIRL_FATHER_NAME}</TextCustom>
+                    <TextCustom>{ motherOf } {motherName ?? GIRL_MOTHER_NAME}</TextCustom>
                 </div>
             </CustomAnimation>
 

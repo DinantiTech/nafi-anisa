@@ -1,5 +1,6 @@
 // AKAD
 export const DATE_AKAD = '2024-05-07';
+export const START_AKAD = "08:00"
 export const WEDDING_AKAD_TIME = '11:00 GMT+8';
 export const WEDDING_AKAD_LOC_NAME = 'St Theresia Church';
 export const WEDDING_AKAD_LOC_ROAD = `Jl. Gereja Theresia No.2, Menteng, Jakarta Pusat, Indonesia`;
