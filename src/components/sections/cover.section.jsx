@@ -7,16 +7,16 @@ import { MESSAGE_OUTLINE_ICON } from "../../contants/icon.const";
 
 export default function Cover() {
     const [isOpen, setIsOpen] = useState(true);
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(false);
 
     const toggleDrawer = () => {
-        setLoading(true)
+    setLoading(true)
 
-        setTimeout(() => {
-            setLoading(false);
-            setIsOpen((prevState) => !prevState)
-          }, 1500);
-        }
+    setTimeout(() => {
+        setLoading(false);
+        setIsOpen((prevState) => !prevState)
+        }, 1500);
+    }
 
     return (
         <>

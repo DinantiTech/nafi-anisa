@@ -8,7 +8,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Icon } from "@iconify/react";
-import { ARROW_ROUNDED_ICON } from "../contants/icon.const";
+import { ARROW_ROUNDED_ICON, ARROW_TICK_ICON } from "../contants/icon.const";
+import { useNavigate } from "react-router-dom";
 
 const Galeries = lazy(() => import('../components/sections/galeries'));
 const PhotoboxModal = lazy(() => import('../components/commons/modal_photobox.common'));
@@ -21,6 +22,8 @@ export default function Stories() {
     currentIndexPhoto: null
   })
 
+  const navigate = useNavigate();
+
   useMemo(() => {
     setSelectedStory(STORIES[currentIndex])
   }, [currentIndex])
@@ -32,7 +35,13 @@ export default function Stories() {
 
   return (
     <section>
-      <div className="wrapper flex flex-col items-center justify-center bg-amber-100 min-h-screen gap-y-7 overflow-hidden">
+      <div className="wrapper flex flex-col items-center justify-center bg-amber-100 min-h-screen gap-y-7 overflow-hidden relative">
+
+        <button onClick={() => navigate(-1)} className="hidden absolute right-20 top-10 md:flex items-center justify-center gap-x-1">
+          <Icon icon={ARROW_TICK_ICON} className="text-4xl"/>
+          <span>Kembali</span>
+        </button>
+
         <div className={`${selectedStory.desc.length >= 300 ? 'items-start md:py-14' : 'items-center'} w-full flex justify-center md:gap-x-10 gap-x-4`}>
           
           <div id="left-side-img-span" className="aspect-auto w-72 md:w-72 h-[26rem]">

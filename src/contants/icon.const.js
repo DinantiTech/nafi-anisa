@@ -14,3 +14,5 @@ export const ARROW_ROUNDED_ICON = "emojione-monotone:right-arrow";
 export const MESSAGE_OUTLINE_ICON = "wpf:message-outline";
 export const ARROW_CLOCKWISE_ICON = "bi:arrow-clockwise";
 export const CROSS_ICON = "mingcute:close-fill";
+export const ARROW_TICK_ICON = "bi:arrow-left";
+export const BOOK_LOVE_ICON = "mdi:notebook-love-outline";

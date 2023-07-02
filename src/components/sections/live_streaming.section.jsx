@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { BROADCAST_LIVE, DISCLAIMER_LIVE, START_LIVE, TO_LIVE, YOUTUBE_EMBED, YOUTUBE_LINK } from "../../contants/common.const";
+import { BROADCAST_LIVE, DISCLAIMER_LIVE, START_LIVE, TO_LIVE } from "../../contants/common.const";
 import { DATE_LIVE_STREAMING } from "../../contants/date.const";
-import { THE_BRIDE } from "../../contants/identity.const";
+import { THE_BRIDE, YOUTUBE_EMBED, YOUTUBE_LINK } from "../../contants/identity.const";
 import { IMG_PATTERN_SQUARE } from "../../contants/images.const";
 import CustomAnimation from "../animations/custom.animation";
 import CustomButton from "../buttons/custom.button";

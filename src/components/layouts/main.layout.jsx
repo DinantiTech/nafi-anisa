@@ -8,16 +8,20 @@ import Cover from "../sections/cover.section";
 import Event from "../sections/event.section";
 import LiveStreaming from "../sections/live_streaming.section";
 import PaymentSection from "../sections/payment.section";
+import LoveStory from "../sections/stories.section";
 import Welcome from "../sections/welcome.section";
 
 export default function MainLayout() {
     return (
         <div className="flex relative w-full h-full justify-between antialiased">
-            <div className={`bg-${COLOR_PRIMARY} w-full md:w-2/5`} >
+            <div className={`bg-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden`} >
                 <div className="w-full ">
                     <Cover />
                     <Welcome />
                     <Couples />
+                    <div className="mt-14">
+                        <LoveStory />
+                    </div>
                     <div className="mt-16">
                         <CountingDown />
                     </div>
@@ -34,7 +38,7 @@ export default function MainLayout() {
                     <Footer />
                 </div>
             </div>
-            <div className="w-3/5 hidden md:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>
+            <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>
                 <div className="bg-primary relative bg-gradient-to-b from-transparent via-lime-300/5 to-amber-900/90 h-full" >
                     <div className="absolute top-[27rem]">
                         <div className="flex items-center justify-center text-center flex-col px-20">

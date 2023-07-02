@@ -70,3 +70,7 @@ export const GALERIES = [
     "https://images.unsplash.com/photo-1674644775649-857a9733293c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=394&q=80",
     "https://images.unsplash.com/photo-1673650400357-f2477323f843?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=875&q=80",
 ]
+
+// Link Youtube
+export const YOUTUBE_LINK = "https://youtu.be/uhXGGYUhkJ8";
+export const YOUTUBE_EMBED = "https://www.youtube.com/embed/uhXGGYUhkJ8";

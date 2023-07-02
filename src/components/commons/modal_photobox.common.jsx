@@ -54,8 +54,8 @@ export default function PhotoboxModal({ isOpen, onClose, indexPhoto }) {
               <Icon icon={ARROW_ROUNDED_ICON} rotate={2} />
             </button>
 
-            <div className="bg-white p-4">
-              <div className="sm:flex sm:items-start h-72 w-[27rem]">
+            <div className="bg-white sm:p-4 p-2">
+              <div className="sm:flex sm:items-start h-52 xxs:h-60 md:w-[26rem] w-52 xxs:w-60 xs:w-72 xs:h-72 sm:h-96 md:h-72">
                 <img src={selectedStory} alt="" loading="lazy" className="w-full h-full object-cover object-center" />
               </div>
 

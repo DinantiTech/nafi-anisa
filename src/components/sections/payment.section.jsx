@@ -87,7 +87,7 @@ export default function PaymentSection() {
       </select>
 
       {selectedPayment && (
-        <div className="text-center mt-3 flex flex-col items-center justify-center font-secondary">
+        <div className="text-center mt-3 flex flex-col items-center justify-center font-secondary duration-500">
           {selectedPayment?.url ? (
             <img src={selectedPayment?.url} alt={selectedPayment?.name} className="mb-5 sm:w-32 w-24" />
           ) : null}

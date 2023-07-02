@@ -1,8 +1,5 @@
 // LINK RESOURCE
-export const YOUTUBE_LINK = "https://youtu.be/uhXGGYUhkJ8";
-export const YOUTUBE_EMBED = "https://www.youtube.com/embed/uhXGGYUhkJ8";
-
-export const COLOR_PRIMARY = "amber-300";
+export const COLOR_PRIMARY = "white";
 
 export const SPREADSHEET_ID = "1z71V03f36yTH0KLANv3oLUyagLXOUu5LKPrTgcdNm6U";
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
@@ -24,6 +21,10 @@ export const FATHER_SON_COUPLE = "Putra dari Bapak";
 export const MOTHER_SON_COUPLE = "dan Ibu dari ";
 export const FATHER_DAUGHTER_COUPLE = "Putri dari Bapak";
 export const MOTHER_DAUGHTER_COUPLE = "dan dari Ibu";
+
+// STORY section
+export const HEADING_STORY = "Our Story";
+export const NOTE_STORY = "Beberapa moment tentang kami";
 
 // Counting down setion
 export const DAY_COUNTING = "Hari";
