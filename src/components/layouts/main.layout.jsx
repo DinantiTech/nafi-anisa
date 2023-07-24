@@ -40,8 +40,8 @@ export default function MainLayout() {
             </div>
             <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>
                 <div className="bg-primary relative bg-gradient-to-b from-transparent via-lime-300/5 to-amber-900/90 h-full" >
-                    <div className="absolute top-[27rem]">
-                        <div className="flex items-center justify-center text-center flex-col px-20">
+                    <div className="absolute top-[70%]">
+                        <div className="flex flex-col justify-end text-center px-20">
                             <div className="relative w-full">
                                 <p className="text-md text-mainColorText uppercase tracking-wider font-primary">
                                     {/* {isInvitation ? 'THE WEDDING OF' : 'WEDDING ANNOUNCEMENT'} */}

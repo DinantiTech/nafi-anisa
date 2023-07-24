@@ -9,14 +9,14 @@ export default function Welcome() {
         <FrameLayout>
             <div className="sm:px-12 px-3.5">
                 {/* Dear Section */}
-                <div className='sm:pt-16 pt-10 xs:pt-16 font-primary'>
+                <div className='sm:pt-16 pt-10 xs:pt-16 font-title font-bold'>
                     <TextCustom>{REGARD_WELCOME}</TextCustom>
-                    <div className='font-semibold'>
+                    <div className='font-primary font-medium'>
                         <TextCustom>{INVITE_TO_WELCOME}</TextCustom>
                     </div>
                 </div>
                 {/* Greetings Text */}
-                <div className="pt-7 font-primary">
+                <div className="pt-2 font-primary">
                     <TextCustom>
                         {GREETING_WELCOME}
                     </TextCustom>
@@ -24,12 +24,12 @@ export default function Welcome() {
                         {OPENING_WELCOME}
                     </TextCustom>
                 </div>
-                <div className="xs:py-8 py-6 text-center text-main-color-text font-primary">
-                    <h1 className="text-uppercase text-xl font-name">{GIRL_NAME_NO_TITLE}</h1>
+                <div className="xs:py-16 py-6 text-center text-main-color-text font-primary">
+                    <h1 className="text-uppercase text-4xl font-name">{GIRL_NAME_NO_TITLE}</h1>
 
-                    <p className="font-heading-alternative italic text-xl xs:text-2xl sm:my-7 xs:my-5 my-4">{CONJUNCTION_WELCOME}</p>
+                    <p className="font-heading-alternative italic text-xl xs:text-4xl sm:my-1 xs:my-5 my-4">{CONJUNCTION_WELCOME}</p>
 
-                    <h1 className="text-uppercase text-xl font-name">{BOY_NAME_NO_TITLE}</h1>
+                    <h1 className="text-uppercase text-4xl font-name">{BOY_NAME_NO_TITLE}</h1>
                     <p className="sm:mt-8 mt-7 text-center font-light text-main-color-text">
                         {DATE_RESEPSI}
                     </p>

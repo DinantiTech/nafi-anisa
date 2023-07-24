@@ -37,7 +37,7 @@ export default function DetailCouple({
             </CustomAnimation>
 
             <CustomAnimation>
-                <h4 className="pt-6 text-xl text-center px-3 font-semibold font-name">
+                <h4 className="pt-6 text-xl text-center px-3 font-semibold font-name-secondary">
                     {fullName ?? GIRL_NAME}
                 </h4>
             </CustomAnimation>

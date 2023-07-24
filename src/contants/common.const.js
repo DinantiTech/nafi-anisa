@@ -11,7 +11,7 @@ export const REGARD_WELCOME = "Kepada Yth.";
 export const INVITE_TO_WELCOME = "Bapak/Ibu/Saudara/i"
 export const GREETING_WELCOME = "Assalamualaikum Warahmatullahi Wabarakatuh.";
 export const OPENING_WELCOME = "Dengan memohon anugerah dan berkat Tuhan, kami bermaksud mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan kami:";
-export const CONJUNCTION_WELCOME = "dan";
+export const CONJUNCTION_WELCOME = "&";
 export const QUOTE_WELCOME = '"Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."';
 export const VERSE_WELCOME = "Matius 19:6";
 
@@ -39,7 +39,7 @@ export const DETAIL_EVENT = "Detail Acara";
 export const MARRIAGE_CONTRACT_EVENT = "Akad Nikah";
 export const INVITE_EVENT = "Akad nikah akan dilaksanakan secara terbatas dan hanya dihadiri oleh keluarga dan kerabat dekat pada:";
 export const CLOCK_EVENT = "Pukul";
-export const FINISH_EVENT = "Smpai Selesai";
+export const FINISH_EVENT = "Sampai Selesai";
 
 // LIVE section
 export const BROADCAST_LIVE = "Siaran Langsung";

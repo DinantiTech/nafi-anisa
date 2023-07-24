@@ -1,4 +1,4 @@
-import { FONT_CTA, FONT_NAME, FONT_PRIMARY, FONT_SECONDARY } from './src/contants/fonts.const';
+import { FONT_CTA, FONT_NAME, FONT_TITLE, FONT_PRIMARY, FONT_SECONDARY, FONT_NAME_SECONDARY } from './src/contants/fonts.const';
 
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -8,10 +8,12 @@ export default {
   ],
   theme: {
     fontFamily: {
+      title: [FONT_TITLE],
       primary: [FONT_PRIMARY],
       secondary: [FONT_SECONDARY],
       cta: [FONT_CTA],
       name: [FONT_NAME],
+      "name-secondary":[FONT_NAME_SECONDARY],
     },
     extend: {
       screens: {

@@ -22,18 +22,18 @@ export default function Cover() {
         <>
             <DrawerCommon isOpen={isOpen}>
                 <div className="w-full
-                 h-full flex items-center justify-center flex-col">
+                h-full flex items-center justify-center flex-col">
                     <img src={GununganWayang} alt="gunungan wayang" className="w-52" />
 
 
-                    <div className="text-center flex flex-col items-center justify-center gap-y-5">
-                        <h4>THE WEDDING OF</h4>
-                        <div className="text-center flex flex-col items-center justify-">
+                    <div className="text-center flex flex-col items-center justify-center gap-y-5 font-title" >
+                        <h4 className="text-3xl italic">THE WEDDING OF</h4>
+                        <div className="text-center flex flex-col items-center font-name text-5xl">
                             <h2>{BOY_NAME_SHORT}</h2>
-                            <span>&</span>
+                            <span className="my-5">&</span>
                             <h2>{GIRL_NAME_SHORT}</h2>
                         </div>
-                        <h2>ANNOUNCEMENT</h2>
+                        {/* <h2>ANNOUNCEMENT</h2> */}
                     </div>
 
                     <div className="mt-10">

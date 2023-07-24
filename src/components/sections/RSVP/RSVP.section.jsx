@@ -27,7 +27,7 @@ export default function RSVP() {
                     <HeadingCustom>
                         { WISH_AND_PRAY_RSVP }
                     </HeadingCustom>
-                    <p className="uppercase text-gray-500 mt-1 font-primary">- {RSVP_LABEL} -</p>
+                    <p className="uppercase text-gray-500 mt-1 font-primary italic">- {RSVP_LABEL} -</p>
                 </CustomAnimation>
 
                 <Formik
