@@ -8,8 +8,9 @@ export default function HeadCommon() {
     return (
         <Helmet prioritizeSeoTags>
             <title>{SEO_TITLE_HEAD}</title>
+            <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
-            <link rel="shortcut icon" href="/vite.svg" type="image/x-icon" />
+            <meta name="description" content={SEO_DESC} />
 
             <meta property="og:title" content={SEO_TITLE_HEAD} />
             <meta property="og:image" content={SEO_IMAGE} />
