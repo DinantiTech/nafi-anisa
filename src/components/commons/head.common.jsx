@@ -22,10 +22,18 @@ export default function HeadCommon() {
             <meta name="twitter:url" content={CURRENT_URL} />
             <meta name="twitter:card" content="summary" />
             <meta name="twitter:creator" content={SEO_CREATORTHEME} />
-
+            
             <link rel="preconnect" href="https://fonts.googleapis.com" />
             <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+
             <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+            <link rel="preconnect" href="https://fonts.googleapis.com" />
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+            <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Playfair+Display&display=swap" rel="stylesheet" />
+            <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"></link>
+
       </Helmet>
     )
 }
