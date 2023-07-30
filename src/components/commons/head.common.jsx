@@ -1,15 +1,15 @@
 import { Helmet } from "react-helmet-async";
-import { TITLE_HEAD } from "../../contants/head.const";
+import { SEO_IMAGE, SEO_TITLE_HEAD } from "../../contants/head.const";
 
 export default function HeadCommon() {
     return (
         <Helmet prioritizeSeoTags>
-            <title>{TITLE_HEAD}</title>
+            <title>{SEO_TITLE_HEAD}</title>
 
             <link rel="shortcut icon" href="/vite.svg" type="image/x-icon" />
 
-            {/* <meta property="og:title" content={finalTitle} /> */}
-            {/* <meta property="og:image" content={SEO_IMAGE} /> */}
+            <meta property="og:title" content={SEO_TITLE_HEAD} />
+            <meta property="og:image" content={SEO_IMAGE} />
             {/* <meta property="og:url" content={SEO_URL} /> */}
             {/* <meta property="og:site_name" content={finalTitle} /> */}
             {/* <meta property="og:description" content={finalDescription} /> */}
