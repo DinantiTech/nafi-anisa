@@ -6,7 +6,7 @@ export default function HeadCommon() {
     const CURRENT_URL = window.location.href;
 
     return (
-        <Helmet>
+        <Helmet defer={false} prioritizeSeoTags>
             <title>{SEO_TITLE_HEAD}</title>
             <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 

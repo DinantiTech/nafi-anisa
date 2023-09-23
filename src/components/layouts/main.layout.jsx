@@ -8,6 +8,7 @@ import Cover from "../sections/cover.section";
 import Event from "../sections/event.section";
 import LiveStreaming from "../sections/live_streaming.section";
 import PaymentSection from "../sections/payment.section";
+import RightSection from "../sections/right.section";
 import LoveStory from "../sections/stories.section";
 import Welcome from "../sections/welcome.section";
 
@@ -39,25 +40,7 @@ export default function MainLayout() {
                 </div>
             </div>
             <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>
-                <div className="bg-primary relative bg-gradient-to-b from-transparent via-lime-300/5 to-amber-900/90 h-full" >
-                    <div className="absolute top-[70%]">
-                        <div className="flex flex-col justify-end text-center px-20">
-                            <div className="relative w-full">
-                                <p className="text-md text-mainColorText uppercase tracking-wider font-primary">
-                                    {/* {isInvitation ? 'THE WEDDING OF' : 'WEDDING ANNOUNCEMENT'} */}
-                                    WEDDING ANNOUNCEMENT
-                                </p>
-                            </div>
-                            <div className="">
-                                <p className="italic max-w-600px text-mainColorText tracking-wider font-secondary">
-                                    {"\"Indonesia’s diversity is formidable: some thirteen and a half thousand islands, two hundred and fifty million people, around three hundred and sixty ethnic groups, and more than seven hundred languages.\""}
-                                    <br />- Pankaj Mishra
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
+                <RightSection />
             </div>
         </div>
     )
