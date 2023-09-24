@@ -29,12 +29,12 @@ export default function MainLayout() {
                         <CountingDown />
                     </div>
                     <Event />
-                    <div className="mt-[6.5rem]">
+                    <div className="">
                         <LiveStreaming />
                     </div>
                     <RSVP />
 
-                    <div className="mt-24">
+                    <div className="mt-5">
                         <PaymentSection />
                     </div>
 

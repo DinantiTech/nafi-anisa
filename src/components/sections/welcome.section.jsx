@@ -10,7 +10,7 @@ export default function Welcome() {
         <FrameLayout>
             <div className="sm:px-12 px-3.5">
                 {/* Dear Section */}
-                <div className='sm:pt-16 pt-10 xs:pt-16 font-title font-bold'>
+                <div className='font-title font-bold'>
                     <TextCustom>{REGARD_WELCOME}</TextCustom>
                     <div className='font-primary font-medium'>
                         <TextCustom>{INVITE_TO_WELCOME}</TextCustom>

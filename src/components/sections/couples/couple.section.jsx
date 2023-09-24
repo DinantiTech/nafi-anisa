@@ -9,7 +9,7 @@ import DetailCouple from "./detail.couple";
 
 export default function Couples() {
     return (
-        <div className="pt-32">
+        <div className="mt-14">
             <CustomAnimation>
                 <HeadingCustom>{THE_BRIDE_COUPLE}</HeadingCustom>
             </CustomAnimation>

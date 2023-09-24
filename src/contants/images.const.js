@@ -6,6 +6,7 @@ export const BG_COUNTING_DOWN = `https://user-images.githubusercontent.com/10141
 
 // BG
 export const IMG_PATTERN_SQUARE = `https://user-images.githubusercontent.com/10141928/155886147-1d56ce31-c90a-4748-8320-51fb6f90b52a.png`;
+export const PATTERN_BATIK = '../assets/patterns/batikpattern_batik2.png';
 
 
 // couple image

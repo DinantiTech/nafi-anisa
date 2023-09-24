@@ -19,7 +19,7 @@ export default function RSVP() {
     return (
         <FrameLayout>
             { loading ? (<LoveLoader />) : null }
-            <div className="w-full pt-10 flex flex-col justify-center items-center ">
+            <div className="w-full flex flex-col justify-center items-center pb-8">
                 <CustomAnimation>
                     {/* <h2 className="uppercase sm:text-2xl text-xl font-primary">
                         Harapan & Doa

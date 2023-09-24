@@ -12,7 +12,7 @@ export default function Event() {
         <FrameLayout>
             <div className="mx-auto w-full flex justify-center items-center flex-col px-3 font-primary">
                 <CustomAnimation>
-                    <div className="pt-14 pb-4 border-b-4">
+                    <div className="border-b-4">
                         <HeadingCustom>{DETAIL_EVENT}</HeadingCustom>
                     </div>
                 </CustomAnimation>

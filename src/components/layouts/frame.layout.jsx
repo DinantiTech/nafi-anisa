@@ -1,26 +1,19 @@
-import PatternBatik from '../../assets/patterns/batik-side.svg';
+import PatternBatik from '../../assets/patterns/pattern_side12.svg';
 
 export default function FrameLayout({ children }) {
     return (
-        <div className="relative">
-            <div className="absolute w-full">
-                <img src={PatternBatik} className="h-[100px] absolute left-0" />
-                <img src={PatternBatik} className="h-[100px] absolute right-0 transform rotate-90"/>
+        <div className="relative bg-gradient-to-bl">
+            <div className="absolute w-full top-0">
+                <img src={PatternBatik} className="h-[100px] absolute left-0 transform rotate-[270deg]" />
+                <img src={PatternBatik} className="h-[100px] absolute right-0" />
             </div>
 
-            {children}
-            <img src={PatternBatik} className="absolute h-[100px] left-0 -mt-100 transform rotate-[270deg]"/>
-            <img src={PatternBatik} className="absolute h-[100px] right-0 -mt-100 transform rotate-180"/>
-        </div>
-        // <div className="relative min-h-screen flex flex-col justify-center">
-        //     <div className="w-full">
-        //         <img src={PatternBatik} className="absolute h-[100px] left-0 top-0" />
-        //         <img src={PatternBatik} className="absolute h-[100px] right-0 top-0 transform rotate-90"/>
-        //         <img src={PatternBatik} className="absolute h-[100px] left-0 bottom-0 transform rotate-[270deg]"/>
-        //         <img src={PatternBatik} className="absolute h-[100px] right-0 bottom-0 transform rotate-180"/>
-        //     </div>
+            <div className='py-20'>
+                {children}
+            </div>
 
-        //     {children}
-        // </div>
+            <img src={PatternBatik} className="absolute bottom-0 h-[100px] left-0 -mt-100 transform rotate-180" />
+            <img src={PatternBatik} className="absolute bottom-0 h-[100px] right-0 -mt-100 transform rotate-90" />
+        </div>
     )
 }

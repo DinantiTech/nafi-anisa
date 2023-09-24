@@ -1,14 +1,16 @@
 import { DAY_COUNTING, HOURS_COUNTING, MINUTE_COUNTING, SECOND_COUNTING } from "../../contants/common.const"
 import { START_EVENT } from "../../contants/date.const"
-import { BG_COUNTING_DOWN, IMG_PATTERN_SQUARE } from "../../contants/images.const"
+import { BG_COUNTING_DOWN } from "../../contants/images.const"
 import useTimer from "../../hooks/timer.hook"
-import EventButton from "../buttons/event.button"
+import EventButton from "../buttons/event.button";
+
+import PATTERN_BATIK from '../../assets/patterns/batik/pattern_batik2.png';
 
 export default function CountingDown() {
     const timeRemaining = useTimer(new Date(START_EVENT))
 
     return (
-        <div className="bg-repeat w-full" style={{ backgroundImage: `url(${IMG_PATTERN_SQUARE})`}}>
+        <div className="bg-repeat w-full" style={{ backgroundImage: `url(${PATTERN_BATIK})`}}>
             <div className="xs:p-10 p-5">
                 <div className="relative w-full border-8 border-amber-100 shadow-lg shadow-amber-600/40">
                     <img src={BG_COUNTING_DOWN} alt="" className="aspect-[1/1.2] w-full object-center object-cover" />

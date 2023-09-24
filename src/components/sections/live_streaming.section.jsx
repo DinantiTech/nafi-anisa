@@ -2,16 +2,17 @@ import { Link } from "react-router-dom";
 import { BROADCAST_LIVE, DISCLAIMER_LIVE, START_LIVE, TO_LIVE } from "../../contants/common.const";
 import { DATE_LIVE_STREAMING } from "../../contants/date.const";
 import { THE_BRIDE, YOUTUBE_EMBED, YOUTUBE_LINK } from "../../contants/identity.const";
-import { IMG_PATTERN_SQUARE } from "../../contants/images.const";
 import CustomAnimation from "../animations/custom.animation";
 import CustomButton from "../buttons/custom.button";
 import { YOUTUBE_ICON } from "../../contants/icon.const";
 import HeadingCustom from "../commons/heading.common";
 import { convert_date } from "../../helpers/convert_date.helper";
 
+import PATTERN_BATIK from '../../assets/patterns/batik/pattern_batik2.png';
+
 export default function LiveStreaming() {
     return (
-        <div className="w-full flex flex-col items-center justify-center bg-repeat" style={{ backgroundImage: `url(${IMG_PATTERN_SQUARE})`}}>
+        <div className="w-full flex flex-col items-center justify-center bg-repeat" style={{ backgroundImage: `url(${PATTERN_BATIK})`}}>
             <div className="font-primary w-full flex flex-col items-center justify-center border-8 border-amber-100 bg-black/50 sm:py-7 py-5">
                 <CustomAnimation>
                     <div className="text-white">

@@ -6,6 +6,8 @@ import CustomAnimation from "../../animations/custom.animation";
 import { GIRL_FATHER_NAME, GIRL_MOTHER_NAME, GIRL_NAME, GIRL_NAME_NO_TITLE } from "../../../contants/identity.const";
 import TextCustom from "../../commons/text.common";
 
+import PATTERN_BATIK from '../../../assets/patterns/batik/pattern_batik2.png';
+
 export default function DetailCouple({ 
     img,
     shortName,
@@ -23,7 +25,7 @@ export default function DetailCouple({
             <CustomAnimation>
                 <div className="py-12 flex items-center justify-center">
                     <div className="aspect-[3/4]">
-                        <div className="bg-contain p-7 w-[250px] sm:w-[300px] flex items-center justify-center rounded-xl" style={{ backgroundImage: `url(${IMG_PATTERN_SQUARE})` }}>
+                        <div className="bg-contain p-7 w-[250px] sm:w-[300px] flex items-center justify-center rounded-xl" style={{ backgroundImage: `url(${PATTERN_BATIK})` }}>
                             <img src={img ?? IMG_GIRL} alt="" className="rounded-md object-center"/>
                         </div>
                     </div>
