@@ -7,6 +7,7 @@ import { GIRL_FATHER_NAME, GIRL_MOTHER_NAME, GIRL_NAME, GIRL_NAME_NO_TITLE } fro
 import TextCustom from "../../commons/text.common";
 
 import PATTERN_BATIK from '../../../assets/patterns/batik/pattern_batik2.png';
+import { COLOR_PRIMARY } from "../../../contants/common.const";
 
 export default function DetailCouple({ 
     img,
@@ -33,7 +34,7 @@ export default function DetailCouple({
             </CustomAnimation>
 
             <CustomAnimation>
-                <h4 className="text-4xl border-b-4 text-center pb-4 mx-28 sm:mx-40 font-name">
+                <h4 className={`border-${COLOR_PRIMARY} text-4xl border-b-4 text-center pb-4 mx-28 sm:mx-40 font-name`}>
                     {shortName ?? GIRL_NAME_NO_TITLE}
                 </h4>
             </CustomAnimation>

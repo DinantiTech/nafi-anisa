@@ -1,4 +1,4 @@
-import { CLOCK_EVENT, DETAIL_EVENT, FINISH_EVENT, INVITE_EVENT, MARRIAGE_CONTRACT_EVENT } from "../../contants/common.const";
+import { CLOCK_EVENT, COLOR_PRIMARY, DETAIL_EVENT, FINISH_EVENT, INVITE_EVENT, MARRIAGE_CONTRACT_EVENT } from "../../contants/common.const";
 import CustomAnimation from "../animations/custom.animation";
 import HeadingCustom from "../commons/heading.common";
 import FrameLayout from "../layouts/frame.layout";
@@ -12,7 +12,7 @@ export default function Event() {
         <FrameLayout>
             <div className="mx-auto w-full flex justify-center items-center flex-col px-3 font-primary">
                 <CustomAnimation>
-                    <div className="border-b-4">
+                    <div className={`border-${COLOR_PRIMARY} border-b-4`}>
                         <HeadingCustom>{DETAIL_EVENT}</HeadingCustom>
                     </div>
                 </CustomAnimation>

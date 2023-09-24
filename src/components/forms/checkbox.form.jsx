@@ -1,18 +1,18 @@
 import { Field } from "formik";
-import { PRESENT_LABEL_RSVP } from "../../contants/common.const";
+import { COLOR_PRIMARY, PRESENT_LABEL_RSVP } from "../../contants/common.const";
 
-export default function CustomCheckbox({ label, name }) {
+export default function CustomCheckbox({ label, name, isAttendance }) {
     return (
         <div className="flex items-center">
             <Field
                 name={name}
                 id="default-checkbox"
                 type="checkbox"
-                className="w-4 h-4 text-amber-600 bg-gray-100 border-gray-300 rounded focus:ring-amber-500 dark:focus:ring-amber-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+                className={`accent-${COLOR_PRIMARY} w-4 h-4 bg-gray-100 border-gray-300 rounded`}
             />
             <label
                 htmlFor="default-checkbox"
-                className="ml-2 text-sm font-medium dark:text-gray-300 text-amber-900"
+                className={`${isAttendance ? `text-${COLOR_PRIMARY}` : `text-gray-400`} ml-2 text-sm font-medium`}
             >
                 {label ?? PRESENT_LABEL_RSVP}
             </label>

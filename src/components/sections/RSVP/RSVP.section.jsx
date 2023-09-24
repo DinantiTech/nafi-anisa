@@ -1,5 +1,5 @@
-import { useMemo } from "react";
-import { ATTENDANCE_LABEL_RSVP, NAME_LABEL_RSVP, NAME_PLACEHOLDER_RSVP, RSVP_LABEL, SEND_RSVP, SHEET_NAME, WISH_AND_PRAY_RSVP, WISH_LABEL_RSVP, WISH_PLACEHOLDER_RSVP } from "../../../contants/common.const";
+import { useMemo, useState } from "react";
+import { ATTENDANCE_LABEL_RSVP, COLOR_PRIMARY, NAME_LABEL_RSVP, NAME_PLACEHOLDER_RSVP, RSVP_LABEL, SEND_RSVP, SHEET_NAME, WISH_AND_PRAY_RSVP, WISH_LABEL_RSVP, WISH_PLACEHOLDER_RSVP } from "../../../contants/common.const";
 import { PAPER_ICON } from "../../../contants/icon.const";
 import { useAppScript } from "../../../hooks/useAppScript.hook";
 import CustomAnimation from "../../animations/custom.animation";
@@ -15,6 +15,7 @@ import HeadingCustom from "../../commons/heading.common";
 
 export default function RSVP() {
     const [data, loading, error, createData, setStartFetching] = useAppScript(SHEET_NAME);
+    const [isAttendance, setIsAttendance] = useState(false)
 
     return (
         <FrameLayout>
@@ -27,13 +28,15 @@ export default function RSVP() {
                     <HeadingCustom>
                         { WISH_AND_PRAY_RSVP }
                     </HeadingCustom>
-                    <p className="uppercase text-gray-500 mt-1 font-primary italic">- {RSVP_LABEL} -</p>
+                    <p className={`uppercase text-${COLOR_PRIMARY} mt-1 font-primary italic`}>- {RSVP_LABEL} -</p>
                 </CustomAnimation>
 
                 <Formik
                     initialValues={{ name: '', message: '', attendance: false }}
                     validate={values => {
                         let errors = {};
+
+                        setIsAttendance(values.attendance)
 
                         if(values.name.length < 1) {
                             errors.name = "Nama harus diisi"
@@ -64,7 +67,7 @@ export default function RSVP() {
                             <CustomInput error={errors.name} name="name" label={NAME_LABEL_RSVP} placeholder={NAME_PLACEHOLDER_RSVP} />
                             <CustomTextarea error={errors.message} name="message" label={WISH_LABEL_RSVP} placeholder={WISH_PLACEHOLDER_RSVP} />
                             
-                            <AttendanceInput name="attendance" label={ATTENDANCE_LABEL_RSVP} />
+                            <AttendanceInput isAttendance={isAttendance} name="attendance" label={ATTENDANCE_LABEL_RSVP} />
                             <CustomButton type="submit"  label={SEND_RSVP} name={SEND_RSVP} icon={PAPER_ICON} />
                         </form>
                     )}
