@@ -16,7 +16,7 @@ import Welcome from "../sections/welcome.section";
 export default function MainLayout() {
     return (
         <div className="flex relative w-full h-full justify-between antialiased">
-            <MusicBtn />
+            {/* <MusicBtn /> */}
             <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden`} >
                 <div className="w-full ">
                     <Cover />

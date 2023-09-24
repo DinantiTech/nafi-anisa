@@ -4,7 +4,7 @@ export const COLOR_SECONDARY = "amber-500";
 export const COLOR_TERTIARY = "amber-300"
 export const BG_COLOR_PRIMARY = "bg-amber-600";
 export const IS_BG_GRADIENT = true;
-export const BG_GRADIENT = "bg-gradient-to-b from-amber-100 to-orange-200"
+export const BG_GRADIENT = "bg-gradient-to-b from-orange-200 to-orange-300"
 
 // LINK RESOURCE
 export const SPREADSHEET_ID = "1z71V03f36yTH0KLANv3oLUyagLXOUu5LKPrTgcdNm6U";
