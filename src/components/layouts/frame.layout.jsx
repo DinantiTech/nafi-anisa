@@ -2,7 +2,7 @@ import PatternBatik from '../../assets/patterns/pattern_side12.svg';
 
 export default function FrameLayout({ children }) {
     return (
-        <div className="relative bg-gradient-to-bl">
+        <div className="relative">
             <div className="absolute w-full top-0">
                 <img src={PatternBatik} className="h-[100px] absolute left-0 transform rotate-[270deg]" />
                 <img src={PatternBatik} className="h-[100px] absolute right-0" />

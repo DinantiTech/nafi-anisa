@@ -1,6 +1,10 @@
-// LINK RESOURCE
-export const COLOR_PRIMARY = "white";
+// COLOR SCHEMES
+export const TEXT_COLOR_PRIMARY = "text-amber-900"
+export const BG_COLOR_PRIMARY = "bg-amber-600";
+export const IS_BG_GRADIENT = true;
+export const BG_GRADIENT = "bg-gradient-to-b from-amber-100 to-amber-300"
 
+// LINK RESOURCE
 export const SPREADSHEET_ID = "1z71V03f36yTH0KLANv3oLUyagLXOUu5LKPrTgcdNm6U";
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
 export const SHEET_NAME = "RSVP";

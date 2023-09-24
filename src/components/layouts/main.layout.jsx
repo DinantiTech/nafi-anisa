@@ -1,4 +1,4 @@
-import { COLOR_PRIMARY } from "../../contants/common.const";
+import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, TEXT_COLOR_PRIMARY } from "../../contants/common.const";
 import { BGWELCOME } from "../../contants/images.const";
 import MusicBtn from "../buttons/music.button";
 import Footer from "../commons/footer.common";
@@ -17,7 +17,7 @@ export default function MainLayout() {
     return (
         <div className="flex relative w-full h-full justify-between antialiased">
             <MusicBtn />
-            <div className={`bg-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden`} >
+            <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} ${TEXT_COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden`} >
                 <div className="w-full ">
                     <Cover />
                     <Welcome />
