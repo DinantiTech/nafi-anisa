@@ -4,17 +4,21 @@ import { BOY_NAME_SHORT, GIRL_NAME_SHORT } from "../../contants/identity.const";
 import CustomButton from "../buttons/custom.button";
 import { useState } from "react";
 import { MESSAGE_OUTLINE_ICON } from "../../contants/icon.const";
+import { useMusic } from '../../providers/music.provider';
 
 export default function Cover() {
+    const { setIsMusic } = useMusic()
+
     const [isOpen, setIsOpen] = useState(true);
     const [loading, setLoading] = useState(false);
 
     const toggleDrawer = () => {
-    setLoading(true)
+        setLoading(true)
 
-    setTimeout(() => {
-        setLoading(false);
-        setIsOpen((prevState) => !prevState)
+        setTimeout(() => {
+            setLoading(false);
+            setIsOpen((prevState) => !prevState)
+            setIsMusic(true)
         }, 1500);
     }
 
@@ -39,7 +43,7 @@ export default function Cover() {
                     <div className="mt-10">
                         <CustomButton loading={loading} name="Buka undangan" icon={MESSAGE_OUTLINE_ICON} onClick={toggleDrawer} />
                     </div>
-                </div>  
+                </div>
             </DrawerCommon>
         </>
     )

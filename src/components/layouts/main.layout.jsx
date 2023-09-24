@@ -1,5 +1,6 @@
 import { COLOR_PRIMARY } from "../../contants/common.const";
 import { BGWELCOME } from "../../contants/images.const";
+import MusicBtn from "../buttons/music.button";
 import Footer from "../commons/footer.common";
 import RSVP from "../sections/RSVP/RSVP.section";
 import CountingDown from "../sections/counting_down.section";
@@ -15,6 +16,7 @@ import Welcome from "../sections/welcome.section";
 export default function MainLayout() {
     return (
         <div className="flex relative w-full h-full justify-between antialiased">
+            <MusicBtn />
             <div className={`bg-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden`} >
                 <div className="w-full ">
                     <Cover />
