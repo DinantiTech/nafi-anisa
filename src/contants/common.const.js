@@ -4,12 +4,13 @@ export const COLOR_SECONDARY = "amber-500";
 export const COLOR_TERTIARY = "amber-300"
 export const BG_COLOR_PRIMARY = "bg-amber-600";
 export const IS_BG_GRADIENT = true;
-export const BG_GRADIENT = "bg-gradient-to-b from-orange-50 to-amber-100"
+export const BG_GRADIENT = "bg-gradient-to-b from-orange-50 to-amber-100";
 
 // LINK RESOURCE
 export const SPREADSHEET_ID = "1z71V03f36yTH0KLANv3oLUyagLXOUu5LKPrTgcdNm6U";
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
 export const SHEET_NAME = "RSVP";
+export const MUSIC_BG = "https://dl162.dlmate21.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ1htZGx4OXdJcUFLOUY3Y1lDMHZleUlzUktQYlVPeklTc0NOOGYvanZiZU55QU5ReUF1cGtvQ1hlVSs4TjJsam5KK28wcFdNVTZld1Bya3VYb29EaHlqQWk3YzhpZVU3NWZZWEpFczBGMzIzdldudGZOdGdEc3BuK280aCtsWVRSWjkya3RQckNDMTU1Z3pYSEpXK2EwNTZnZzR5dVBzZHhPMy8vQW5TV3d4cW91c2M1d1NrMTVkczBNajhPZ2lhV2E4eDlJeG9vVndFajUrcmZ5VmN4bVN1T05iMnAwUEhZPQ%3D%3D"
 
 
 // Welcome section

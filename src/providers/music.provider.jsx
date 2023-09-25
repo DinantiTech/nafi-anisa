@@ -5,10 +5,14 @@ import { createContext } from "react";
 const MusicCtx = createContext(false);
 
 export default function MusicProvider({ children }) {
-    const [isMusic, setIsMusic] = useState(false)
+    const [isMusic, setIsMusic] = useState(false);
+
+    const handleIsPlay = () => {
+        setIsMusic(prev => !prev);
+    }
 
     return (
-        <MusicCtx.Provider value={{ isMusic, setIsMusic }}>{ children }</MusicCtx.Provider>
+        <MusicCtx.Provider value={{ isMusic, setIsMusic, handleIsPlay }}>{ children }</MusicCtx.Provider>
     )
 }
 
