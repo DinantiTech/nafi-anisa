@@ -5,9 +5,11 @@ import CustomButton from "../buttons/custom.button";
 import { useState } from "react";
 import { MESSAGE_OUTLINE_ICON } from "../../contants/icon.const";
 import { useMusic } from '../../providers/music.provider';
+import { useCover } from "../../providers/cover.provider";
 
 export default function Cover() {
-    const { setIsMusic } = useMusic()
+    const { handleIsPlay } = useMusic()
+    const { handleIsCover } = useCover();
 
     const [isOpen, setIsOpen] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -18,7 +20,8 @@ export default function Cover() {
         setTimeout(() => {
             setLoading(false);
             setIsOpen((prevState) => !prevState)
-            setIsMusic(true)
+            handleIsCover()
+            handleIsPlay()
         }, 1500);
     }
 

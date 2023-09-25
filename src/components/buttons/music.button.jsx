@@ -11,7 +11,6 @@ export default function MusicBtn() {
         
         if (isMusic) {
           audio.play();
-          audio
         } else {
           audio.pause();
         }

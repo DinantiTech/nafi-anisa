@@ -1,5 +1,6 @@
 import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY } from "../../contants/common.const";
 import { BGWELCOME } from "../../contants/images.const";
+import { useCover } from "../../providers/cover.provider";
 import ImagesFade from "../animations/image_fade.animation";
 import MusicBtn from "../buttons/music.button";
 import Footer from "../commons/footer.common";
@@ -15,10 +16,14 @@ import LoveStory from "../sections/stories.section";
 import Welcome from "../sections/welcome.section";
 
 export default function MainLayout() {
+    const { isOpen } = useCover()
+
     return (
-        <div className="flex relative w-full h-full justify-between antialiased">
-            <MusicBtn />
-            <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden z-20`} >
+        <div className="flex relative w-full h-full justify-between antialiased scroll-smooth">
+            { isOpen ? (
+                <MusicBtn />
+            ) : null}
+            <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden z-40`} >
                 <div className="w-full ">
                     <Cover />
                     <Welcome />

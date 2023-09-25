@@ -6,14 +6,17 @@ import { router } from './routes'
 import { HelmetProvider } from 'react-helmet-async'
 import HeadCommon from './components/commons/head.common'
 import MusicProvider from './providers/music.provider'
+import CoverProvider from './providers/cover.provider'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <HelmetProvider>
       <HeadCommon />
-      <MusicProvider>
-        <RouterProvider router={router} />
-      </MusicProvider>
+      <CoverProvider>
+        <MusicProvider>
+          <RouterProvider router={router} />
+        </MusicProvider>
+      </CoverProvider>
     </HelmetProvider>
   </React.StrictMode>,
 )
