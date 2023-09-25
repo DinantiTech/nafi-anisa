@@ -1,6 +1,6 @@
 export default function RightSection() {
     return (
-        <div className="bg-primary relative bg-gradient-to-b from-transparent via-lime-300/5 to-amber-900/90 h-full" >
+        <div className="bg-primary relative bg-gradient-to-b from-transparent via-lime-300/10 to-orange-900/50 h-full" >
             <div className="absolute top-[70%]">
                 <div className="flex flex-col justify-end text-center px-20">
                     <div className="relative w-full">

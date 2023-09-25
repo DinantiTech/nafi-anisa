@@ -1,5 +1,6 @@
 import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY } from "../../contants/common.const";
 import { BGWELCOME } from "../../contants/images.const";
+import ImagesFade from "../animations/image_fade.animation";
 import MusicBtn from "../buttons/music.button";
 import Footer from "../commons/footer.common";
 import RSVP from "../sections/RSVP/RSVP.section";
@@ -17,7 +18,7 @@ export default function MainLayout() {
     return (
         <div className="flex relative w-full h-full justify-between antialiased">
             <MusicBtn />
-            <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden`} >
+            <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden z-50`} >
                 <div className="w-full ">
                     <Cover />
                     <Welcome />
@@ -41,7 +42,8 @@ export default function MainLayout() {
                     <Footer />
                 </div>
             </div>
-            <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" style={{ backgroundImage: `url(${BGWELCOME})` }}>
+            <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" >
+                <ImagesFade />
                 <RightSection />
             </div>
         </div>
