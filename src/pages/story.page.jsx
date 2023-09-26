@@ -8,8 +8,11 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Icon } from "@iconify/react";
-import { ARROW_ROUNDED_ICON, ARROW_TICK_ICON } from "../contants/icon.const";
 import { useNavigate } from "react-router-dom";
+
+import { ARROW_ROUNDED_ICON, ARROW_TICK_ICON } from "../contants/icon.const";
+import { BG_GRADIENT, COLOR_PRIMARY, COLOR_TERTIARY } from "../contants/common.const";
+import PatternBatik from '../assets/patterns/pattern_side11.svg';
 
 const Galeries = lazy(() => import('../components/sections/galeries'));
 const PhotoboxModal = lazy(() => import('../components/commons/modal_photobox.common'));
@@ -35,31 +38,36 @@ export default function Stories() {
 
   return (
     <section>
-      <div className="wrapper flex flex-col items-center justify-center bg-amber-100 min-h-screen gap-y-7 overflow-hidden relative">
+      <div className="absolute w-full top-0 z-50">
+          <img src={PatternBatik} className="h-[8rem] md:h-[10rem] absolute left-0 transform rotate-[270deg]" loading='lazy' />
+      </div>
+      <img src={PatternBatik} className="h-[8rem] md:h-[10rem] absolute right-0 bottom-6 md:bottom-0 z-10 rotate-[90deg]" loading='lazy' />
+
+      <div className={`${BG_GRADIENT} text-${COLOR_PRIMARY} wrapper flex flex-col items-center justify-center min-h-screen gap-y-7 overflow-hidden relative font-primary pt-14 xs:pt-20 md:pt-0`}>
 
         <button onClick={() => navigate(-1)} className="hidden absolute right-20 top-10 md:flex items-center justify-center gap-x-1">
           <Icon icon={ARROW_TICK_ICON} className="text-4xl"/>
           <span>Kembali</span>
         </button>
 
-        <div className={`${selectedStory.desc.length >= 300 ? 'items-start md:py-14' : 'items-center'} w-full flex justify-center md:gap-x-10 gap-x-4`}>
+        <div className={`${selectedStory.desc.length >= 300 ? 'items-start md:py-14' : ''} w-full flex flex-col md:flex-row items-center justify-center md:gap-x-10 gap-x-4`}>
           
-          <div id="left-side-img-span" className="aspect-auto w-72 md:w-72 h-[26rem]">
+          <div id="left-side-img-span" className="aspect-auto w-60 md:w-72 h-[21rem] xs:h-[26rem]">
             <img
               src={selectedStory?.url}
               alt=""
-              className="w-full h-full object-cover object-center"
+              className="w-full h-full object-cover object-center rounded-full"
             />
           </div>
 
 
-          <div className="right-side-container flex flex-col">
-            <div className="flex flex-col items-start justify-center w-full md:w-[30rem] md:gap-y-4 gap-y-4 mt-3">
-              <h6 className="md:text-8xl text-4xl md:leading-[5.5rem]">
+          <div className="right-side-container flex flex-col text-center items-center justify-center">
+            <div className="flex flex-col items-start justify-center w-full md:w-[34rem] md:gap-y-4 gap-y-4 mt-3 px-6">
+              <h6 className="md:text-7xl text-5xl md:leading-[5.5rem] w-full mt-7 md:mt-0 font-name">
                 {selectedStory?.title}
               </h6>
-              <span className="text-gray-500">20 Agustus 2010</span>
-              <p className="indent-8 md:text-base text-sm w-56 xs:w-72 sm:w-80 md:w-full">{selectedStory?.desc}</p>
+              <span className={`text-${COLOR_TERTIARY} w-full font-title`}>20 Agustus 2010</span>
+              <p className="md:text-lg xs:w-72 sm:w-80 md:w-full w-full">{selectedStory?.desc}</p>
             </div>
 
             <div className="flex items-center justify-center mt-7 gap-x-5 md:text-base text-sm px-4">
@@ -106,7 +114,7 @@ export default function Stories() {
           </div>
         </div>
 
-        <div className="md:hidden w-full">
+        <div className="md:hidden mt-7 w-full">
           <Suspense>
             <Galeries />
           </Suspense>
