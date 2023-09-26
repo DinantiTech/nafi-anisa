@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 
-export default function ModalCustom({ isOpen, onClose, children }) {
+export default function ModalCustom({ isOpen, onClose, children, isButtonClose }) {
 
     const modalRef = useRef();
 
@@ -14,7 +14,7 @@ export default function ModalCustom({ isOpen, onClose, children }) {
         <div 
             ref={modalRef}
             onClick={handleOutsideClick}
-            className={`fixed z-10 inset-0 overflow-y-auto w-full h-full flex items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
+            className={`fixed z-40 inset-0 overflow-y-auto w-full h-full min-h-screen flex items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
             <div className="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
                 <div className={`fixed inset-0 transition-opacity ${isOpen ? 'ease-out duration-300 opacity-100' : 'ease-in duration-200 opacity-0'}`}>
                     <div className="absolute inset-0 bg-gray-500 opacity-75"></div>
@@ -32,15 +32,17 @@ export default function ModalCustom({ isOpen, onClose, children }) {
                             {children}
                         </div>
                     </div>
-                    <div className="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
-                        <button
-                            type="button"
-                            className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
-                            onClick={onClose}
-                        >
-                            Close
-                        </button>
-                    </div>
+                    { isButtonClose ? (
+                        <div className="px-4 py-3 bg-gray-50 sm:px-6 sm:flex sm:flex-row-reverse">
+                            <button
+                                type="button"
+                                className="w-full inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-green-600 text-base font-medium text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:ml-3 sm:w-auto sm:text-sm"
+                                onClick={onClose}
+                            >
+                                Close
+                            </button>
+                        </div>
+                    ) : null }
                 </div>
             </div>
         </div>

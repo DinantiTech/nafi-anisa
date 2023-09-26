@@ -8,7 +8,7 @@ import { useMusic } from '../../providers/music.provider';
 import { useCover } from "../../providers/cover.provider";
 
 export default function Cover() {
-    const { handleIsPlay } = useMusic()
+    const { setIsMusic } = useMusic()
     const { handleIsCover, setIsOpen: setIsOpenCover } = useCover();
 
     const [isOpen, setIsOpen] = useState(true);
@@ -20,8 +20,8 @@ export default function Cover() {
         setTimeout(() => {
             setLoading(false);
             setIsOpen((prevState) => !prevState)
-            handleIsCover()
-            handleIsPlay()
+            setIsOpenCover(true)
+            setIsMusic(true)
         }, 1500);
     }
 

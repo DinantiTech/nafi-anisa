@@ -17,15 +17,13 @@ import PatternBatik from '../assets/patterns/pattern_side11.svg';
 const Galeries = lazy(() => import('../components/sections/galeries'));
 const PhotoboxModal = lazy(() => import('../components/commons/modal_photobox.common'));
 
-export default function Stories() {
+export default function Stories({ handleClose = () => {} }) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedStory, setSelectedStory] = useState(STORIES[currentIndex]);
   const [getPhoto, setGetPhoto] = useState({
     isOpen: false,
     currentIndexPhoto: null
   })
-
-  const navigate = useNavigate();
 
   useMemo(() => {
     setSelectedStory(STORIES[currentIndex])
@@ -37,7 +35,7 @@ export default function Stories() {
   const handleClosePhoto = () => setGetPhoto({ ...getPhoto, isOpen: false })
 
   return (
-    <section>
+    <section className="w-full">
       <div className="absolute w-full top-0 z-50">
           <img src={PatternBatik} className="h-[8rem] md:h-[10rem] absolute left-0 transform rotate-[270deg]" loading='lazy' />
       </div>
@@ -45,9 +43,9 @@ export default function Stories() {
 
       <div className={`${BG_GRADIENT} text-${COLOR_PRIMARY} wrapper flex flex-col items-center justify-center min-h-screen gap-y-7 overflow-hidden relative font-primary pt-14 xs:pt-20 md:pt-0`}>
 
-        <button onClick={() => navigate(-1)} className="hidden absolute right-20 top-10 md:flex items-center justify-center gap-x-1">
-          <Icon icon={ARROW_TICK_ICON} className="text-4xl"/>
-          <span>Kembali</span>
+        <button onClick={handleClose} className="absolute md:right-20 right-7 top-10 md:flex items-center justify-center gap-x-1 font-name">
+          <Icon icon={ARROW_TICK_ICON} className="hidden md:block text-4xl"/>
+          <p className="text-xl md:text-2xl">Kembali</p>
         </button>
 
         <div className={`${selectedStory.desc.length >= 300 ? 'items-start md:py-14' : ''} w-full flex flex-col md:flex-row items-center justify-center md:gap-x-10 gap-x-4`}>
@@ -114,7 +112,7 @@ export default function Stories() {
           </div>
         </div>
 
-        <div className="md:hidden mt-7 w-full">
+        <div className="md:hidden mt-7 w-full pb-14">
           <Suspense>
             <Galeries />
           </Suspense>

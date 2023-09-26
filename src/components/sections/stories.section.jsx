@@ -6,19 +6,21 @@ import GununganWayang from '../../assets/patterns/gunungan_wayang.png'
 import { IMG_LOVE_STORY } from "../../contants/images.const";
 import CustomButton from "../buttons/custom.button";
 import CustomAnimation from "../animations/custom.animation";
-import { useNavigate } from "react-router-dom";
 import { BOOK_LOVE_ICON } from "../../contants/icon.const";
+import ModalStory from "../commons/modal_stories";
+import Stories from "../../pages/story.page";
+import { useState } from "react";
 
 export default function LoveStory() {
 
-    const navigate = useNavigate()
-
-    const pushStories = () => {
-        return navigate('/stories')
-    }
+    const [isOpenStory, setIsOpenStory] = useState(false);
 
     return (
         <div className="w-full flex items-center justify-center flex-col">
+            <ModalStory isOpen={isOpenStory}>
+                <Stories handleClose={() => setIsOpenStory(false)} />
+            </ModalStory>
+
             <HeadingCustom>{HEADING_STORY}</HeadingCustom>
             <TextCustom>- {NOTE_STORY} -</TextCustom>
 
@@ -44,7 +46,7 @@ export default function LoveStory() {
                         {/* Tombol */}
                         <CustomAnimation>
                             <div className="absolute bottom-5 z-40">
-                                <CustomButton onClick={pushStories} name="Buka" icon={BOOK_LOVE_ICON} />
+                                <CustomButton onClick={() => setIsOpenStory(true)} name="Buka" icon={BOOK_LOVE_ICON} />
                             </div>
                         </CustomAnimation>
                     </div>

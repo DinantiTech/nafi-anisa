@@ -33,16 +33,12 @@ export default function PhotoboxModal({ isOpen, onClose, indexPhoto }) {
   };
 
   return (
-    <div className={`fixed z-10 inset-0 overflow-y-auto w-full h-full flex items-center justify-center ${isOpen ? 'flex' : 'hidden'}`}>
-      <div className="flex items-center justify-center min-h-screen pb-20 text-center sm:block sm:p-0">
-        <div className={`fixed inset-0 transition-opacity ${isOpen ? 'ease-out duration-300 opacity-100' : 'ease-in duration-200 opacity-0'}`}>
-          <div className="absolute inset-0 bg-black/75"></div>
-        </div>
-
+    <div className={`fixed z-10 overflow-y-auto w-full h-full flex items-center justify-center ${isOpen ? 'flex' : 'hidden'} md:bg-black/40`}>
+      <div className="flex items-center justify-center min-h-screen text-center sm:block">
         <span className="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
         <div
           ref={modalRef}
-          className={`inline-block align-bottom text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full ${
+          className={`inline-block align-bottom text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full bg-black/40 md:bg-black/0 py-4 ${
             isOpen ? 'ease-out duration-300 opacity-100 translate-y-0' : 'ease-in duration-200 opacity-0 translate-y-4'
           }`}
           role="dialog"

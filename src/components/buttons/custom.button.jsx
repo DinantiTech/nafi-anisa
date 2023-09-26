@@ -1,7 +1,7 @@
 import { Icon } from "@iconify/react";
 import { ARROW_CLOCKWISE_ICON } from "../../contants/icon.const";
 
-export default function CustomButton({ name, rounded, icon, onClick, type, loading }) {
+export default function CustomButton({ name, rounded, icon, onClick = () => {}, type, loading }) {
 
   return (
     <button
