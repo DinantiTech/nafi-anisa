@@ -2,14 +2,14 @@ import DrawerCommon from "../commons/drawer.common";
 import GununganWayang from '../../assets/patterns/gunungan_wayang.png'
 import { BOY_NAME_SHORT, GIRL_NAME_SHORT } from "../../contants/identity.const";
 import CustomButton from "../buttons/custom.button";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { MESSAGE_OUTLINE_ICON } from "../../contants/icon.const";
 import { useMusic } from '../../providers/music.provider';
 import { useCover } from "../../providers/cover.provider";
 
 export default function Cover() {
     const { handleIsPlay } = useMusic()
-    const { handleIsCover } = useCover();
+    const { handleIsCover, setIsOpen: setIsOpenCover } = useCover();
 
     const [isOpen, setIsOpen] = useState(true);
     const [loading, setLoading] = useState(false);
@@ -24,6 +24,10 @@ export default function Cover() {
             handleIsPlay()
         }, 1500);
     }
+
+    useEffect(() => {
+        setIsOpenCover(false)
+    }, [])
 
     return (
         <>

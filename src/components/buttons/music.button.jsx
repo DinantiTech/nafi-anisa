@@ -17,7 +17,7 @@ export default function MusicBtn() {
       }, [isMusic]);
 
     return (
-        <button onClick={handleIsPlay} className={`text-${COLOR_PRIMARY} ${BG_GRADIENT} fixed right-10 bottom-16 z-50 p-2 text-3xl rounded-full shadow-${COLOR_PRIMARY} shadow-md animate-bounce`}>
+        <button onClick={handleIsPlay} className={`text-${COLOR_PRIMARY} ${BG_GRADIENT} ${isMusic ? "animate-bounce" : ""} fixed right-10 bottom-16 z-50 p-2 text-3xl rounded-full shadow-${COLOR_PRIMARY} shadow-md`}>
             <audio id="audio" src={MUSIC_BG} loop />
             { isMusic ? (
                 <Icon icon="icon-park-twotone:pause-one" />
