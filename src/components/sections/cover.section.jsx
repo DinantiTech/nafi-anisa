@@ -33,7 +33,7 @@ export default function Cover() {
         <>
             <DrawerCommon isOpen={isOpen}>
                 <div className="w-full
-                h-full flex items-center justify-center flex-col">
+                h-full flex items-center justify-center flex-col z-[99] absolute top-0">
                     <img src={GununganWayang} alt="gunungan wayang" className="w-52" />
 
 
