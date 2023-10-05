@@ -5,7 +5,7 @@ import { COPY_ICON, SUCCESS_ICON } from "../../contants/icon.const";
 import toast, { Toaster } from 'react-hot-toast';
 import CustomAnimation from "../animations/custom.animation";
 import HeadingCustom from "../commons/heading.common";
-import { COLOR_SECONDARY, COLOR_TERTIARY, HEADING_PAYMENT, LABEL_PAYMENT, NOTE_PAYMENT, TOAST_LABEL_PAYMENT } from "../../contants/common.const";
+import { COLOR_TERTIARY, HEADING_PAYMENT, LABEL_PAYMENT, NOTE_PAYMENT, TOAST_LABEL_PAYMENT } from "../../contants/common.const";
 import TextCustom from "../commons/text.common";
 
 export default function PaymentSection() {
@@ -36,17 +36,17 @@ export default function PaymentSection() {
             } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5 justify-between items-center py-4 px-4`}
         >
           <div className="flex items-center justify-center gap-x-2">
-              {selectedPayment?.url ? (
-                <div className="">
-                  <img
-                    className="w-12"
-                    src={selectedPayment?.url}
-                    alt={selectedPayment?.name}
-                  />
-                </div>
-              ) : null}
+            {selectedPayment?.url ? (
+              <div className="">
+                <img
+                  className="w-12"
+                  src={selectedPayment?.url}
+                  alt={selectedPayment?.name}
+                />
+              </div>
+            ) : null}
             <p className="text-sm text-gray-900">
-              No REK {selectedPayment.code+selectedPayment.value} {TOAST_LABEL_PAYMENT}
+              No REK {selectedPayment.code + selectedPayment.value} {TOAST_LABEL_PAYMENT}
             </p>
           </div>
 
@@ -60,7 +60,7 @@ export default function PaymentSection() {
     <div className="w-full flex items-center justify-center flex-col px-4 gap-y-3 py-10">
       <Toaster position="top-center"
         reverseOrder={false} />
-      
+
       <CustomAnimation>
         <div className="mb-3">
           <HeadingCustom>{HEADING_PAYMENT}</HeadingCustom>
@@ -69,7 +69,7 @@ export default function PaymentSection() {
 
       <CustomAnimation>
         <div className="mb-6">
-            <TextCustom>{NOTE_PAYMENT}</TextCustom>
+          <TextCustom>{NOTE_PAYMENT}</TextCustom>
         </div>
       </CustomAnimation>
 
@@ -94,9 +94,7 @@ export default function PaymentSection() {
           <p>BANK {selectedPayment.name} <span className={`text-${COLOR_TERTIARY}`}>({selectedPayment.code})</span></p>
           <div onClick={copyToClipboard} className="flex items-center justify-center gap-x-1 cursor-pointer">
             <p className="font-semibold">No Rek/Account Number: {selectedPayment.value}</p>
-            <span className="text-white">
-              <Icon icon={COPY_ICON} />
-            </span>
+            <Icon icon={COPY_ICON} />
           </div>
           <p>a/n: {selectedPayment.nameAccount}</p>
         </div>
