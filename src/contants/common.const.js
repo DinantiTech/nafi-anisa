@@ -75,3 +75,6 @@ export const TOAST_LABEL_PAYMENT = "berhasil disalin";
 
 // Footer
 export const SONG = "Virgoun - Bukti";
+
+// Navigation Mobile
+export const IS_NAV_MOBILE = true;

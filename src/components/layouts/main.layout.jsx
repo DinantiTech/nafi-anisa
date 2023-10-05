@@ -1,5 +1,4 @@
-import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY } from "../../contants/common.const";
-import { BGWELCOME } from "../../contants/images.const";
+import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY, IS_NAV_MOBILE } from "../../contants/common.const";
 import { useCover } from "../../providers/cover.provider";
 import ImagesFade from "../animations/image_fade.animation";
 import MusicBtn from "../buttons/music.button";
@@ -26,26 +25,29 @@ export default function MainLayout() {
             ) : null}
             <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden z-40`} >
                 <Cover />
-                <div className="w-full ">
+                <div id='couple' className="w-full">
                     <Welcome />
                     <Couples />
-                    <div className="mt-14">
+                    <div id='stories' className="mt-14">
                         <LoveStory />
                     </div>
                     <div className="mt-16">
                         <CountingDown />
                     </div>
-                    <Event />
+
+                    <div id="event"><Event /></div>
+
                     <div className="">
                         <LiveStreaming />
                     </div>
-                    <RSVP />
+
+                    <div id="rsvp"><RSVP /></div>
 
                     <div className="mt-5">
                         <PaymentSection />
                     </div>
 
-                    <NavMobile />
+                    { IS_NAV_MOBILE ? <NavMobile /> : null }
                     <Footer />
                 </div>
             </div>

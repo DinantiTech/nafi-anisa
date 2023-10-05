@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { CONJUNCTION_WELCOME, GREETING_WELCOME, INVITE_TO_WELCOME, OPENING_WELCOME, QUOTE_WELCOME, REGARD_WELCOME, VERSE_WELCOME } from '../../contants/common.const';
 import { DATE_RESEPSI } from '../../contants/date.const';
 import { BOY_NAME_NO_TITLE, GIRL_NAME_NO_TITLE } from '../../contants/identity.const';
