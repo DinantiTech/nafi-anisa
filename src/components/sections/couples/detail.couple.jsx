@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { IMG_GIRL, IMG_PATTERN_SQUARE } from "../../../contants/images.const";
+import { IMG_GIRL } from "../../../contants/images.const";
 import ButtonSocial from "../../buttons/social.button";
 import { SocialType } from "../../../enums/social_type.enum";
 import CustomAnimation from "../../animations/custom.animation";

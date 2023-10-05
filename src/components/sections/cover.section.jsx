@@ -9,7 +9,7 @@ import { useCover } from "../../providers/cover.provider";
 
 export default function Cover() {
     const { setIsMusic } = useMusic()
-    const { handleIsCover, setIsOpen: setIsOpenCover } = useCover();
+    const { setIsOpen: setIsOpenCover } = useCover();
 
     const [isOpen, setIsOpen] = useState(true);
     const [loading, setLoading] = useState(false);

@@ -30,7 +30,7 @@ export default function LiveStreaming() {
                 <CustomAnimation>
                     <iframe 
                         src={YOUTUBE_EMBED}
-                        frameborder="0"
+                        frameBorder="0"
                         allowFullScreen
                         title={`Live wedding of ${THE_BRIDE}`}
                         className="aspect-video w-full p-4 rounded-lg"

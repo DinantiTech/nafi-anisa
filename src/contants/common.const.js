@@ -51,7 +51,7 @@ export const FINISH_EVENT = "Sampai Selesai";
 // LIVE section
 export const BROADCAST_LIVE = "Siaran Langsung";
 export const START_LIVE = "Live pada";
-export const DISCLAIMER_LIVE = "Jika Anda menghadapi kesulitan saat memutar video live streaming di atas, mohon tekan tombol di bawah ini";
+export const DISCLAIMER_LIVE = "Jika Anda mengalami masalah saat mencoba menonton siaran langsung video di atas, silakan klik tombol di bawah ini.";
 export const TO_LIVE = "Menuju Youtube";
 
 // WISH AND PRAY (RSVP) Section
