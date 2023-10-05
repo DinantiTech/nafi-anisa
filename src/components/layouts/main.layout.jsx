@@ -1,60 +1,90 @@
+import { Suspense, lazy } from "react";
 import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY, IS_NAV_MOBILE } from "../../contants/common.const";
 import { useCover } from "../../providers/cover.provider";
-import ImagesFade from "../animations/image_fade.animation";
 import MusicBtn from "../buttons/music.button";
-import Footer from "../commons/footer.common";
-import NavMobile from "../commons/navigation_mobile.common";
-import RSVP from "../sections/RSVP/RSVP.section";
-import CountingDown from "../sections/counting_down.section";
-import Couples from "../sections/couples/couple.section";
 import Cover from "../sections/cover.section";
-import Event from "../sections/event.section";
-import LiveStreaming from "../sections/live_streaming.section";
-import PaymentSection from "../sections/payment.section";
-import RightSection from "../sections/right.section";
-import LoveStory from "../sections/stories.section";
-import Welcome from "../sections/welcome.section";
+
+
+const Welcome = lazy(() => import("../sections/welcome.section"));
+const LoveStory = lazy(() => import("../sections/stories.section"));
+const RightSection = lazy(() => import("../sections/right.section"));
+const Couples = lazy(() => import("../sections/couples/couple.section"));
+const CountingDown = lazy(() => import("../sections/counting_down.section"));
+const Event = lazy(() => import("../sections/event.section"));
+const NavMobile = lazy(() => import("../commons/navigation_mobile.common"));
+const PaymentSection = lazy(() => import("../sections/payment.section"));
+const LiveStreaming = lazy(() => import("../sections/live_streaming.section"));
+const RSVP = lazy(() => import("../sections/RSVP/RSVP.section"));
+const Footer = lazy(() => import("../commons/footer.common"));
 
 export default function MainLayout() {
-    const { isOpen } = useCover()
+  const { isOpen } = useCover()
 
-    return (
-        <div className="flex relative w-full h-full justify-between antialiased scroll-smooth">
-            {isOpen ? (
-                <MusicBtn />
-            ) : null}
-            <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden z-40`} >
-                <Cover />
-                <div id='couple' className="w-full">
-                    <Welcome />
-                    <Couples />
-                    <div id='stories' className="mt-14">
-                        <LoveStory />
-                    </div>
-                    <div className="mt-16">
-                        <CountingDown />
-                    </div>
+  return (
+    <div className="flex relative w-full h-full justify-between antialiased scroll-smooth">
+      {isOpen ? (
+        <MusicBtn />
+      ) : null}
+      <div className={`${IS_BG_GRADIENT ? BG_GRADIENT : BG_COLOR_PRIMARY} text-${COLOR_PRIMARY} w-full lg:w-2/5 overflow-hidden z-40`} >
+        <Cover />
+        <div id='couple' className="w-full">
 
-                    <div id="event"><Event /></div>
+          <Suspense>
+            <Welcome />
+          </Suspense>
 
-                    <div className="">
-                        <LiveStreaming />
-                    </div>
+          <Suspense>
+            <Couples />
+          </Suspense>
 
-                    <div id="rsvp"><RSVP /></div>
-
-                    <div className="mt-5">
-                        <PaymentSection />
-                    </div>
-
-                    { IS_NAV_MOBILE ? <NavMobile /> : null }
-                    <Footer />
-                </div>
+          <Suspense>
+            <div id='stories' className="mt-14">
+              <LoveStory />
             </div>
-            <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" >
-                <ImagesFade />
-                <RightSection />
+          </Suspense>
+
+          <Suspense>
+            <div className="mt-16">
+              <CountingDown />
             </div>
+          </Suspense>
+
+          <Suspense>
+            <div id="event"><Event /></div>
+          </Suspense>
+
+          <Suspense>
+            <div className="">
+              <LiveStreaming />
+            </div>
+          </Suspense>
+
+          <Suspense>
+            <div id="rsvp"><RSVP /></div>
+          </Suspense>
+
+          <Suspense>
+            <div className="mt-5">
+              <PaymentSection />
+            </div>
+          </Suspense>
+
+          {IS_NAV_MOBILE ? (
+            <Suspense>
+              <NavMobile />
+            </Suspense>
+          ) : null}
+
+          <Suspense>
+            <Footer />
+          </Suspense>
         </div>
-    )
+      </div>
+      <Suspense>
+        <div className="w-3/5 hidden lg:block mx-auto text-white fixed h-screen bg-cover right-0" >
+          <RightSection />
+        </div>
+      </Suspense>
+    </div>
+  )
 }
