@@ -1,7 +1,8 @@
 import { Suspense, lazy } from "react";
-import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY, IS_NAV_MOBILE } from "../../contants/common.const";
+
 import { useCover } from "../../providers/cover.provider";
 import MusicBtn from "../buttons/music.button";
+import { BG_GRADIENT, BG_COLOR_PRIMARY, IS_BG_GRADIENT, COLOR_PRIMARY, IS_NAV_MOBILE } from "../../contants/common.const";
 import Cover from "../sections/cover.section";
 
 
@@ -18,8 +19,7 @@ const RSVP = lazy(() => import("../sections/RSVP/RSVP.section"));
 const Footer = lazy(() => import("../commons/footer.common"));
 
 export default function MainLayout() {
-  const { isOpen } = useCover()
-
+  const { isOpen } = useCover();
   return (
     <div className="flex relative w-full h-full justify-between antialiased scroll-smooth">
       {isOpen ? (

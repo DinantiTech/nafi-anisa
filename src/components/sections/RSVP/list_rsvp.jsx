@@ -2,6 +2,7 @@ import { Icon } from "@iconify/react";
 import { useState } from "react";
 import { CROSS_ICON } from "../../../contants/icon.const";
 import { GREETINGS_RSVP, SEE_MORE_RSVP } from "../../../contants/common.const";
+import CustomAnimation from "../../animations/custom.animation";
 
 export default function ListRSVP({ data }) {
   const [showFullList, setShowFullList] = useState(false);
@@ -14,19 +15,22 @@ export default function ListRSVP({ data }) {
   return (
     <div className="w-full px-4 mt-5 flex flex-col items-start justify-center gap-y-3 divide-y">
       <PopupListRsvp isOpen={showFullList} handleClose={handleShowFullList} data={data} />
-      {
-        limitedRSVPData?.map((data, index) => (
-          <div key={index} className="w-full flex flex-col items-start justify-center gap-y-3 pt-2">
-            <div className="flex items-start justify-center flex-col">
-              <h5 className="text-amber-900 font-semibold sm:text-lg">
-                {data.name} <span className="text-xs text-rose-400">{data?.attendance ? "(Akan hadir)" : null}</span>
-              </h5>
-              {/* <span className="text-sm text-amber-700">{moment(new Date(data?.createdAt) ?? new Date()).fromNow()}</span> */}
+
+      <CustomAnimation>
+        {
+          limitedRSVPData?.map((data, index) => (
+            <div key={index} className="w-full flex flex-col items-start justify-center gap-y-3 pt-2">
+              <div className="flex items-start justify-center flex-col">
+                <h5 className="text-amber-900 font-semibold sm:text-lg">
+                  {data.name} <span className="text-xs text-rose-400">{data?.attendance ? "(Akan hadir)" : null}</span>
+                </h5>
+                {/* <span className="text-sm text-amber-700">{moment(new Date(data?.createdAt) ?? new Date()).fromNow()}</span> */}
+              </div>
+              <p className="text-sm">{data.message}</p>
             </div>
-            <p className="text-sm">{data.message}</p>
-          </div>
-        ))
-      }
+          ))
+        }
+      </CustomAnimation>
 
       {data?.length > 5 && (
         <button

@@ -5,39 +5,47 @@ import useTimer from "../../hooks/timer.hook"
 import EventButton from "../buttons/event.button";
 
 import PATTERN_BATIK from '../../assets/patterns/batik/pattern_batik2.png';
+import CustomAnimation from "../animations/custom.animation";
 
 export default function CountingDown() {
-    const timeRemaining = useTimer(new Date(START_EVENT))
+  const timeRemaining = useTimer(new Date(START_EVENT))
 
-    return (
-        <div className="bg-repeat w-full" style={{ backgroundImage: `url(${PATTERN_BATIK})`}}>
-            <div className="xs:p-10 p-5">
-                <div className="relative w-full border-8 border-amber-100 shadow-lg shadow-amber-600/40">
-                    <img src={BG_COUNTING_DOWN} alt="" className="aspect-[1/1.2] w-full object-center object-cover" />
-                    <div className="w-full absolute sm:bottom-10 xs:bottom-7 bottom-3 mx-auto flex flex-col justify-center items-center gap-y-3 xs:gap-y-4 sm:gap-y-5">
-                        <div className="flex items-center justify-center w-full gap-x-0.5 font-cta">
-                            <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
-                                <h5 className="xs:text-2xl text-sm">{timeRemaining.days}</h5>
-                                <p className="text-sm xs:text-base">{DAY_COUNTING}</p>
-                            </div>
-                            <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
-                                <h5 className="xs:text-2xl text-sm">{timeRemaining.hours}</h5>
-                                <p className="text-sm xs:text-base">{HOURS_COUNTING}</p>
-                            </div>
-                            <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
-                                <h5 className="xs:text-2xl text-sm">{timeRemaining.minutes}</h5>
-                                <p className="text-sm xs:text-base">{MINUTE_COUNTING}</p>
-                            </div>
-                            <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
-                                <h5 className="xs:text-2xl text-sm">{timeRemaining.seconds}</h5>
-                                <p className="text-sm xs:text-base">{SECOND_COUNTING}</p>
-                            </div>
-                        </div>
-                        <EventButton />
-                    </div>
-
+  return (
+    <div className="bg-repeat w-full" style={{ backgroundImage: `url(${PATTERN_BATIK})` }}>
+      <div className="xs:p-10 p-5">
+        <div className="relative w-full border-8 border-amber-100 shadow-lg shadow-amber-600/40">
+          <img src={BG_COUNTING_DOWN} alt="" className="aspect-[1/1.2] w-full object-center object-cover" />
+          <div className="w-full absolute sm:bottom-10 xs:bottom-7 bottom-3 mx-auto flex flex-col justify-center items-center gap-y-3 xs:gap-y-4 sm:gap-y-5">
+            <CustomAnimation>
+              <div className="flex items-center justify-center w-full gap-x-0.5 font-cta">
+                <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
+                  <h5 className="xs:text-2xl text-sm">{timeRemaining.days}</h5>
+                  <p className="text-sm xs:text-base">{DAY_COUNTING}</p>
                 </div>
-            </div>
+
+                <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
+                  <h5 className="xs:text-2xl text-sm">{timeRemaining.hours}</h5>
+                  <p className="text-sm xs:text-base">{HOURS_COUNTING}</p>
+                </div>
+
+                <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
+                  <h5 className="xs:text-2xl text-sm">{timeRemaining.minutes}</h5>
+                  <p className="text-sm xs:text-base">{MINUTE_COUNTING}</p>
+                </div>
+
+                <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 border-2 leading-snug bg-gradient-to-b from-amber-600 to-amber-700 text-white">
+                  <h5 className="xs:text-2xl text-sm">{timeRemaining.seconds}</h5>
+                  <p className="text-sm xs:text-base">{SECOND_COUNTING}</p>
+                </div>
+              </div>
+            </CustomAnimation>
+            <CustomAnimation>
+              <EventButton />
+            </CustomAnimation>
+          </div>
+
         </div>
-    )
+      </div>
+    </div>
+  )
 }

@@ -1,22 +1,21 @@
-import { Bounce, Fade } from "react-reveal";
+import { useEffect } from "react";
+import Aos from "aos";
+import "aos/dist/aos.css";
+import { getRandomAOSAnimation } from "../../helpers/random_animation";
 
-const EFFECT_TYPE = {
-    bounce: 'bounce',
-    fade: 'fade',
-};
+export default function CustomAnimation({ children, animation }) {
+  useEffect(() => {
+    Aos.init({
+      delay: 400,
+      once: true
+    })
+    Aos.refresh()
+  }, [])
 
-export default function CustomAnimation({ type, children, ...rest }) {
-    // if (type === EFFECT_TYPE.bounce) {
-    //     return (
-    //         <Bounce bottom {...rest}>
-    //             {children}
-    //         </Bounce>
-    //     );
-    // }
 
-    return (
-        <Fade bottom {...rest}>
-            {children}
-        </Fade>
-    );
+  return (
+    <div className="w-full" data-aos={animation ?? getRandomAOSAnimation()}>
+      {children}
+    </div>
+  );
 }

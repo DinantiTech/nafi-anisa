@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import { ATTENDANCE_LABEL_RSVP, COLOR_PRIMARY, NAME_LABEL_RSVP, NAME_PLACEHOLDER_RSVP, RSVP_LABEL, SEND_RSVP, SHEET_NAME, WISH_AND_PRAY_RSVP, WISH_LABEL_RSVP, WISH_PLACEHOLDER_RSVP } from "../../../contants/common.const";
 import { PAPER_ICON } from "../../../contants/icon.const";
 import { useAppScript } from "../../../hooks/useAppScript.hook";
@@ -14,69 +14,77 @@ import { Formik } from "formik";
 import HeadingCustom from "../../commons/heading.common";
 
 export default function RSVP() {
-    const [data, loading, error, createData, setStartFetching] = useAppScript(SHEET_NAME);
-    const [isAttendance, setIsAttendance] = useState(false)
+  const [data, loading, createData, setStartFetching] = useAppScript(SHEET_NAME);
+  const [isAttendance, setIsAttendance] = useState(false)
 
-    return (
-        <FrameLayout>
-            { loading ? (<LoveLoader />) : null }
-            <div className="w-full flex flex-col justify-center items-center pb-8">
-                <CustomAnimation>
-                    {/* <h2 className="uppercase sm:text-2xl text-xl font-primary">
+  return (
+    <FrameLayout>
+      {loading ? (<LoveLoader />) : null}
+      <div className="w-full flex flex-col justify-center items-center pb-8">
+        <CustomAnimation>
+          {/* <h2 className="uppercase sm:text-2xl text-xl font-primary">
                         Harapan & Doa
                     </h2> */}
-                    <HeadingCustom>
-                        { WISH_AND_PRAY_RSVP }
-                    </HeadingCustom>
-                    <p className={`uppercase text-${COLOR_PRIMARY} mt-1 font-primary italic`}>- {RSVP_LABEL} -</p>
-                </CustomAnimation>
+          <HeadingCustom>
+            {WISH_AND_PRAY_RSVP}
+          </HeadingCustom>
+          <p className={`uppercase text-${COLOR_PRIMARY} mt-1 font-primary italic text-center flex items-center justify-center`}>- {RSVP_LABEL} -</p>
+        </CustomAnimation>
 
-                <Formik
-                    initialValues={{ name: '', message: '', attendance: false }}
-                    validate={values => {
-                        let errors = {};
+        <Formik
+          initialValues={{ name: '', message: '', attendance: false }}
+          validate={values => {
+            let errors = {};
 
-                        setIsAttendance(values.attendance)
+            setIsAttendance(values.attendance)
 
-                        if(values.name.length < 1) {
-                            errors.name = "Nama harus diisi"
-                        } else if(values.message < 1) {
-                            errors.message = "Ucapan & doa harus diisi"
-                        }
+            if (values.name.length < 1) {
+              errors.name = "Nama harus diisi"
+            } else if (values.message < 1) {
+              errors.message = "Ucapan & doa harus diisi"
+            }
 
-                        return errors;
-                    }}
+            return errors;
+          }}
 
-                    onSubmit={async (values, {resetForm}) => {
-                        if(values?.name?.length > 0 && values?.message?.length > 1) {
-                            const time = new Date()
-                            const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
-    
-                            await createData(query);
-                            
-                            setStartFetching(true)
-                            resetForm()
-                        }
-                    }}
-                >
-                    {({
-                        errors,
-                        handleSubmit
-                    }) => (
-                        <form onSubmit={handleSubmit} className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4 font-primary">
-                            <CustomInput error={errors.name} name="name" label={NAME_LABEL_RSVP} placeholder={NAME_PLACEHOLDER_RSVP} />
-                            <CustomTextarea error={errors.message} name="message" label={WISH_LABEL_RSVP} placeholder={WISH_PLACEHOLDER_RSVP} />
-                            
-                            <AttendanceInput isAttendance={isAttendance} name="attendance" label={ATTENDANCE_LABEL_RSVP} />
-                            <CustomButton type="submit"  label={SEND_RSVP} name={SEND_RSVP} icon={PAPER_ICON} />
-                        </form>
-                    )}
+          onSubmit={async (values, { resetForm }) => {
+            if (values?.name?.length > 0 && values?.message?.length > 1) {
+              const time = new Date()
+              const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
 
-                </Formik>
+              await createData(query);
+              setStartFetching(true)
+              resetForm()
+            }
+          }}
+        >
+          {({
+            errors,
+            handleSubmit
+          }) => (
+            <form onSubmit={handleSubmit} className="relative mt-5 w-full px-4 flex flex-col justify-start items-start gap-y-4 font-primary">
+              <CustomAnimation>
+                <CustomInput error={errors.name} name="name" label={NAME_LABEL_RSVP} placeholder={NAME_PLACEHOLDER_RSVP} />
+              </CustomAnimation>
 
+              <CustomAnimation>
+                <CustomTextarea error={errors.message} name="message" label={WISH_LABEL_RSVP} placeholder={WISH_PLACEHOLDER_RSVP} />
+              </CustomAnimation>
 
-                <ListRSVP data={data} />
-            </div>
-        </FrameLayout>
-    )
+              <CustomAnimation>
+                <AttendanceInput isAttendance={isAttendance} name="attendance" label={ATTENDANCE_LABEL_RSVP} />
+              </CustomAnimation>
+
+              <CustomAnimation>
+                <CustomButton type="submit" label={SEND_RSVP} name={SEND_RSVP} icon={PAPER_ICON} />
+              </CustomAnimation>
+            </form>
+          )}
+
+        </Formik>
+
+        <ListRSVP data={data} />
+      </div>
+    </FrameLayout>
+  )
 }

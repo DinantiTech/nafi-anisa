@@ -23,12 +23,12 @@ export default function LiveStreaming() {
                 </CustomAnimation>
 
                 <CustomAnimation>
-                    <p className="sm:text-lg text-white mt-2">{START_LIVE} {convert_date(DATE_LIVE_STREAMING)}</p>
+                    <p className="sm:text-lg text-white mt-2 text-center">{START_LIVE} {convert_date(DATE_LIVE_STREAMING)}</p>
                 </CustomAnimation>
 
                 {/* Video Streaming */}
                 <CustomAnimation>
-                    <iframe 
+                    <iframe
                         src={YOUTUBE_EMBED}
                         frameBorder="0"
                         allowFullScreen
@@ -43,7 +43,7 @@ export default function LiveStreaming() {
                 </CustomAnimation>
                 <CustomAnimation>
                     <Link to={YOUTUBE_LINK}>
-                        <div className="py-4 font-cta">
+                        <div className="py-4 font-cta mx-auto flex items-center justify-center">
                             <CustomButton label={TO_LIVE} name={TO_LIVE} icon={YOUTUBE_ICON}  />
                         </div>
                     </Link>
