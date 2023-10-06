@@ -11,7 +11,7 @@ export default function RightSection() {
             src={imageUrl}
             alt=""
             className="object-cover bg-contain"
-            style={{ animationDelay: `${index * 7}s` }}
+            style={{ animationDelay: `${index * 4}s` }}
           />
         ))}
       </div>

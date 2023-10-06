@@ -3,7 +3,7 @@ import HeadingCustom from "../commons/heading.common";
 import TextCustom from "../commons/text.common";
 
 import GununganWayang from '../../assets/patterns/gunungan_wayang.png'
-import { IMG_LOVE_STORY } from "../../contants/images.const";
+import { IMG_LOVE_STORY } from "../../contants/media.const";
 import CustomButton from "../buttons/custom.button";
 import { BOOK_LOVE_ICON } from "../../contants/icon.const";
 import ModalStory from "../commons/modal_stories";

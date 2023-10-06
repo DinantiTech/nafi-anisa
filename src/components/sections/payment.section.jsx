@@ -1,4 +1,4 @@
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { ALL_PAYMENT } from "../../contants/identity.const";
 import { Icon } from "@iconify/react";
 import { COPY_ICON, SUCCESS_ICON } from "../../contants/icon.const";
@@ -21,7 +21,7 @@ export default function PaymentSection() {
     setSelectedPayment(selectedPayment);
   };
 
-  useMemo(() => {
+  useEffect(() => {
     setSelectedPayment(filteredPayments[0] ?? '')
   }, [])
 

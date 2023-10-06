@@ -4,7 +4,7 @@
     background-size: cover;
     background-position: center;
     position: absolute;
-    animation: slide 40s infinite;
+    animation: slide 30s infinite;
     opacity: 0;
 }
 

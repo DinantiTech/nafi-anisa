@@ -1,6 +1,6 @@
 import { DAY_COUNTING, HOURS_COUNTING, MINUTE_COUNTING, SECOND_COUNTING } from "../../contants/common.const"
 import { START_EVENT } from "../../contants/date.const"
-import { BG_COUNTING_DOWN } from "../../contants/images.const"
+import { BG_COUNTING_DOWN } from "../../contants/media.const"
 import useTimer from "../../hooks/timer.hook"
 import EventButton from "../buttons/event.button";
 

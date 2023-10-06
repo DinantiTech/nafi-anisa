@@ -1,7 +1,7 @@
 import { FATHER_DAUGHTER_COUPLE, FATHER_SON_COUPLE, MOTHER_DAUGHTER_COUPLE, MOTHER_SON_COUPLE, THE_BRIDE_COUPLE } from "../../../contants/common.const";
 import { INSTAGRAM_ICON, TWITTER_ICON } from "../../../contants/icon.const";
 import { BOY_FATHER_NAME, BOY_MOTHER_NAME, BOY_NAME, BOY_NAME_SHORT, GIRL_FATHER_NAME, GIRL_MOTHER_NAME, GIRL_NAME, GIRL_NAME_SHORT } from "../../../contants/identity.const";
-import { IMG_GIRL, IMG_MAN } from "../../../contants/images.const";
+import { IMG_GIRL, IMG_MAN } from "../../../contants/media.const";
 import { SocialType } from "../../../enums/social_type.enum";
 import CustomAnimation from "../../animations/custom.animation"
 import HeadingCustom from "../../commons/heading.common";

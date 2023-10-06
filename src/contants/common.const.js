@@ -10,17 +10,15 @@ export const BG_GRADIENT = "bg-gradient-to-b from-orange-50 to-amber-100";
 export const SPREADSHEET_ID = "1z71V03f36yTH0KLANv3oLUyagLXOUu5LKPrTgcdNm6U";
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
 export const SHEET_NAME = "RSVP";
-export const MUSIC_BG = "https://dl195.dlmate10.online/?file=M3R4SUNiN3JsOHJ6WWQ2a3NQS1Y5ZGlxVlZIOCtyZ1B0L2diNlRkb1NwbHRqNkJrKzhXUEIrd0VBcDQ5NUtucFB2aHkzQjN4VVB5MFpsdUN0SWcxREg2UnBKQTdzRFBLeko0aFRjRXNFMFRlZ3VtMmdpUjBqRUtuV05YZFJ2MEVTeWMrOFdabCtCU0h3dHp0bENLbzYwTDc4MGFCZkRkRXZ5dFllL0xWL3NKaDhTL09kK2Z0d1pVUnBDdWF2OHNmZzZYTDRsQ3ZrK0Y0cTlWdld4a25LOFlFanNPaG1lUGErRU1iMVE9PQ%3D%3D"
-
 
 // Welcome section
 export const REGARD_WELCOME = "Kepada Yth.";
-export const INVITE_TO_WELCOME = "Bapak/Ibu/Saudara/i"
+export const INVITE_TO_WELCOME = "Bapak/Ibu/Saudara/i yang kami hormati"
 export const GREETING_WELCOME = "Assalamualaikum Warahmatullahi Wabarakatuh.";
-export const OPENING_WELCOME = "Dengan memohon anugerah dan berkat Tuhan, kami bermaksud mengumumkan kepada Bapak/Ibu/Saudara/i acara pernikahan kami:";
+export const OPENING_WELCOME = "Dengan izin dan keberkahan Allah Subhanahu wa Ta'ala, kami dengan sukacita mengumumkan acara pernikahan kami:";
 export const CONJUNCTION_WELCOME = "&";
-export const QUOTE_WELCOME = '"Demikianlah mereka bukan lagi dua, melainkan satu. Karena itu, apa yang telah dipersatukan Allah, tidak boleh diceraikan manusia."';
-export const VERSE_WELCOME = "Matius 19:6";
+export const QUOTE_WELCOME = "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu pasangan hidup dari jenismu sendiri, supaya kamu dapat ketenangan hati dan Dia menjadikan kasih sayang di antara kamu.";
+export const VERSE_WELCOME = "Quran, Ar-Rum: 21";
 
 // Couple section
 export const THE_BRIDE_COUPLE = "Sang Mempelai";
