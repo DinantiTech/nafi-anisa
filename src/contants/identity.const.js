@@ -9,7 +9,7 @@ export const GIRL_MOTHER_NAME = `Parents Lady`;
 
 
 // BOY
-export const BOY_NAME = 'Budi Santoso Pratama, S.T., M.T., M.B.A';
+export const BOY_NAME = 'Budi Santoso Pratama, M.T.';
 export const BOY_NAME_NO_TITLE = 'Budi Santoso Pratama';
 export const BOY_NAME_SHORT = 'Budi';
 export const BOY_FATHER_NAME = `Parents Man`;
@@ -43,12 +43,11 @@ export const ALL_PAYMENT = [
 
 // Stories
 export const STORIES = [
-    { title: "Awal Bertemu", url: "https://images.unsplash.com/photo-1687398000550-409442905c12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw4fHx8ZW58MHx8fHx8&auto=format&fit=crop&w=600&q=60", desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas eleifend pharetra risus sit amet tempor. Fusce a ipsum dui. Phasellus in erat sagittis, luctus nibh eu, venenatis ante."  },
-    { title: "Hangout Bareng", url: "https://images.unsplash.com/photo-1687229763648-c3f43c8ffb22?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHw1NHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=60", desc: "Fusce at consectetur dolor, sit amet feugiat mi. Nulla non neque laoreet ipsum pellentesque ultrices. In sagittis ultrices fringilla. Suspendisse eros tortor, vehicula id ornare sed, sagittis id nunc. Maecenas et justo neque."  },
-    { title: "Berpacaran", url: "https://plus.unsplash.com/premium_photo-1685282197042-b5a360e81132?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=871&q=80", desc: "Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Sed facilisis dolor non libero tempus, at vehicula dolor semper."  },
-    { title: "Bertunangan", url: "https://images.unsplash.com/photo-1686854231212-1325ffeedbe1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=386&q=80", desc: "Vestibulum sit amet convallis turpis, nec auctor magna. Phasellus fringilla velit nec rhoncus rhoncus. Duis purus nisl, scelerisque ac ante ac, vehicula commodo nibh."  }
+  { title: "Awal Bertemu", date: "20 September 2019", url: "https://res.cloudinary.com/storyline-beta/image/upload/v1696607735/themes/base/pju1h2nn1gfydyxxi1vj.jpg", desc: "Ketika kami pertama kali bertemu, mata kita saling berpandangan di tengah keramaian sebuah kafe yang penuh dengan kebahagiaan. Saya ingat betul senyum manismu yang membuat hati saya berdebar-debar. Percakapan ringan kita menjadi permulaan cerita indah ini." },
+  { title: "Hangout Bareng", date: "04 Agustus 2020", url: "https://res.cloudinary.com/storyline-beta/image/upload/v1696607736/themes/base/jpfxz5p7mwlqg9jujwgv.jpg", desc: "Setelah itu, kita seringkali menghabiskan waktu bersama. Berkumpul di kafe, mengeksplor tempat-tempat baru, dan berbagi cerita. Kita mulai mengenal satu sama lain dengan lebih dalam, dan tawa kita selalu mengisi udara." },
+  { title: "Berpacaran", date: "17 Agustus 2020", url: "https://res.cloudinary.com/storyline-beta/image/upload/v1696607735/themes/base/piwppllhyqztiuj2vt3v.jpg", desc: "Perasaan kita tumbuh lebih dari sekadar persahabatan. Kami saling mendukung dan saling mencintai. Setiap momen bersama menjadi berharga. Kepercayaan dan cinta ini membawa kita pada tahap yang lebih serius dalam hubungan ini." },
+  { title: "Bertunangan", date: "20 September 2023", url: "https://res.cloudinary.com/storyline-beta/image/upload/v1696598976/themes/base/yjl8nuc891t0cl1a4o1p.jpg", desc: "Akhirnya, kita memutuskan untuk melangkah lebih jauh dan bertunangan. Cincin pertunangan itu mengikat janji kami untuk selamanya. Saya tidak sabar menanti hari pernikahan kita, saat kita akan bersatu dalam ikatan yang suci." }
 ]
-
 // Galeries
 export const GALERIES = [
     "https://res.cloudinary.com/storyline-beta/image/upload/v1696600474/themes/base/forgvm2grkgklyh6s6hp.jpg",

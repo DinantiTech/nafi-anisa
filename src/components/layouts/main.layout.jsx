@@ -17,11 +17,16 @@ const PaymentSection = lazy(() => import("../sections/payment.section"));
 const LiveStreaming = lazy(() => import("../sections/live_streaming.section"));
 const RSVP = lazy(() => import("../sections/RSVP/RSVP.section"));
 const Footer = lazy(() => import("../commons/footer.common"));
+const PhotoboxModal = lazy(() => import("../commons/modal_photobox.common"));
 
 export default function MainLayout() {
   const { isOpen } = useCover();
   return (
     <div className="flex relative w-full h-full justify-between antialiased scroll-smooth">
+      <Suspense>
+        <PhotoboxModal isOpen={true} indexPhoto={1} />
+      </Suspense>
+
       {isOpen ? (
         <MusicBtn />
       ) : null}

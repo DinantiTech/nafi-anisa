@@ -1,10 +1,13 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import { BOY_NAME_SHORT, GALERIES, GIRL_NAME_SHORT } from '../../contants/identity.const';
 import { Icon } from '@iconify/react';
 import { ARROW_ROUNDED_ICON } from '../../contants/icon.const';
 import { useState } from 'react';
+import { usePhotoBox } from '../../providers/photobox.provider';
 
-export default function PhotoboxModal({ isOpen, onClose, indexPhoto }) {
+export default function PhotoboxModal({ indexPhoto }) {
+  const { photo, handleClosePhoto } = usePhotoBox()
+
   const [currentIndex, setCurrentIndex] = useState(indexPhoto || 0);
   const selectedStory = GALERIES[currentIndex];
 
@@ -12,7 +15,7 @@ export default function PhotoboxModal({ isOpen, onClose, indexPhoto }) {
 
   const handleOutsideClick = (event) => {
     if (modalRef.current && !modalRef.current.contains(event.target)) {
-      onClose();
+      handleClosePhoto();
     }
   };
 
@@ -33,13 +36,13 @@ export default function PhotoboxModal({ isOpen, onClose, indexPhoto }) {
   };
 
   return (
-    <div className={`fixed z-10 overflow-y-auto w-full h-full flex items-center justify-center ${isOpen ? 'flex' : 'hidden'} md:bg-black/40`}>
+  <div className={`${photo?.isOpen ? 'block' : 'hidden'} fixed w-full top-0 z-50 h-full flex flex-col items-center justify-center min-h-screen bg-black/40`}>
       <div className="flex items-center justify-center min-h-screen text-center sm:block">
-        <span className="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203;
+        {/* <span className="hidden sm:inline-block sm:align-middle sm:h-screen"></span>&#8203; */}
         <div
           ref={modalRef}
-          className={`inline-block align-bottom text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:w-full bg-black/40 md:bg-black/0 py-4 ${
-            isOpen ? 'ease-out duration-300 opacity-100 translate-y-0' : 'ease-in duration-200 opacity-0 translate-y-4'
+          className={`inline-block align-bottom text-left overflow-hidden transform transition-all sm:my-8 sm:align-middle w-full bg-black/0 py-4 ${
+            photo?.isOpen ? 'ease-out duration-300 opacity-100 translate-y-0' : 'ease-in duration-200 opacity-0 translate-y-4'
           }`}
           role="dialog"
           aria-modal="true"
@@ -75,6 +78,6 @@ export default function PhotoboxModal({ isOpen, onClose, indexPhoto }) {
           </div>
         </div>
       </div>
-    </div>
+  </div>
   );
 }

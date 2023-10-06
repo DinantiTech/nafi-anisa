@@ -42,9 +42,10 @@ export const REMIND_EVENT_COUNTING = "Ingatkan Acara";
 // Event section
 export const DETAIL_EVENT = "Detail Acara";
 export const MARRIAGE_CONTRACT_EVENT = "Akad Nikah";
-export const INVITE_EVENT = "Akad nikah akan dilaksanakan secara terbatas dan hanya dihadiri oleh keluarga dan kerabat dekat pada:";
+export const RULES_EVENT = "Akad nikah akan dilaksanakan secara terbatas dan hanya dihadiri oleh keluarga dan kerabat dekat";
 export const CLOCK_EVENT = "Pukul";
 export const FINISH_EVENT = "Sampai Selesai";
+export const RESEPSTION = "Resepsi";
 
 // LIVE section
 export const BROADCAST_LIVE = "Siaran Langsung";

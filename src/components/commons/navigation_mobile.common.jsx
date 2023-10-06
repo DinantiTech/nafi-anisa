@@ -18,7 +18,7 @@ export default function NavMobile() {
 
 
     return (
-        <nav className={`${BG_GRADIENT} sm:hidden w-full shadow-xl shadow-${COLOR_PRIMARY} fixed border-t-2 border-${COLOR_PRIMARY}/50 bottom-0 inset-x-0 flex text-xss z-40 rounded-t-2xl shadow-xl shadow-${COLOR_PRIMARY} items-center justify-center`}>
+        <nav className={`${BG_GRADIENT} sm:hidden w-full shadow-xl shadow-${COLOR_PRIMARY} fixed border-t-2 border-${COLOR_PRIMARY}/50 bottom-0 inset-x-0 flex text-xss z-40 rounded-t-2xl shadow-xl shadow-${COLOR_PRIMARY} items-center justify-center z-0`}>
             <div className="w-full focus:outline-none flex py-2 text-center group items-center justify-evenly">
               { dataNavs?.map((data, idx) => (
                 <button onClick={() => scrollToElement(data?.id)} key={idx} className="flex items-center justify-center flex-col">

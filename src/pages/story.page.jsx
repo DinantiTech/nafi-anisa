@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useMemo, useState } from "react";
+import { Suspense, lazy, useMemo, useState } from "react";
 import { GALERIES, STORIES } from "../contants/identity.const";
 
 import { Autoplay, Scrollbar } from 'swiper';
@@ -8,22 +8,19 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import { Icon } from "@iconify/react";
-import { useNavigate } from "react-router-dom";
 
 import { ARROW_ROUNDED_ICON, ARROW_TICK_ICON } from "../contants/icon.const";
 import { BG_GRADIENT, COLOR_PRIMARY, COLOR_TERTIARY } from "../contants/common.const";
 import PatternBatik from '../assets/patterns/pattern_side11.svg';
+import { usePhotoBox } from "../providers/photobox.provider";
 
 const Galeries = lazy(() => import('../components/sections/galeries'));
-const PhotoboxModal = lazy(() => import('../components/commons/modal_photobox.common'));
 
-export default function Stories({ handleClose = () => {} }) {
+export default function Stories({ handleClose = () => { } }) {
+  const { setPhoto } = usePhotoBox()
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [selectedStory, setSelectedStory] = useState(STORIES[currentIndex]);
-  const [getPhoto, setGetPhoto] = useState({
-    isOpen: false,
-    currentIndexPhoto: null
-  })
 
   useMemo(() => {
     setSelectedStory(STORIES[currentIndex])
@@ -32,24 +29,23 @@ export default function Stories({ handleClose = () => {} }) {
   const handleBackStory = () => setCurrentIndex((prevIndex) => (prevIndex === 0 ? 0 : prevIndex - 1));
   const handleNextStory = () => setCurrentIndex((prevIndex) => (prevIndex === STORIES.length - 1 ? prevIndex : prevIndex + 1));
 
-  const handleClosePhoto = () => setGetPhoto({ ...getPhoto, isOpen: false })
 
   return (
-    <section className="w-full">
+    <section className="w-full z-[99] h-full">
       <div className="absolute w-full top-0 z-50">
-          <img src={PatternBatik} className="h-[8rem] md:h-[10rem] absolute left-0 transform rotate-[270deg]" loading='lazy' />
+        <img src={PatternBatik} className="h-[8rem] md:h-[10rem] absolute left-0 transform rotate-[270deg]" loading='lazy' />
       </div>
       <img src={PatternBatik} className="h-[8rem] md:h-[10rem] absolute right-0 bottom-6 md:bottom-0 z-10 rotate-[90deg]" loading='lazy' />
 
-      <div className={`${BG_GRADIENT} text-${COLOR_PRIMARY} wrapper flex flex-col items-center justify-center min-h-screen gap-y-7 overflow-hidden relative font-primary pt-14 xs:pt-20 md:pt-0`}>
+      <div className={`${BG_GRADIENT} text-${COLOR_PRIMARY} h-full flex flex-col items-center justify-center min-h-screen gap-y-7 overflow-hidden relative font-primary pt-14 xs:pt-20 md:pt-0`}>
 
         <button onClick={handleClose} className="absolute md:right-20 right-7 top-10 md:flex items-center justify-center gap-x-1 font-name">
-          <Icon icon={ARROW_TICK_ICON} className="hidden md:block text-4xl"/>
+          <Icon icon={ARROW_TICK_ICON} className="hidden md:block text-4xl" />
           <p className="text-xl md:text-2xl">Kembali</p>
         </button>
 
         <div className={`${selectedStory.desc.length >= 300 ? 'items-start md:py-14' : ''} w-full flex flex-col md:flex-row items-center justify-center md:gap-x-10 gap-x-4`}>
-          
+
           <div id="left-side-img-span" className="aspect-auto w-60 md:w-72 h-[21rem] xs:h-[26rem]">
             <img
               src={selectedStory?.url}
@@ -64,24 +60,22 @@ export default function Stories({ handleClose = () => {} }) {
               <h6 className="md:text-7xl text-5xl md:leading-[5.5rem] w-full mt-7 md:mt-0 font-name">
                 {selectedStory?.title}
               </h6>
-              <span className={`text-${COLOR_TERTIARY} w-full font-title`}>20 Agustus 2010</span>
+              <span className={`text-${COLOR_TERTIARY} w-full font-title`}>{selectedStory.date}</span>
               <p className="md:text-lg xs:w-72 sm:w-80 md:w-full w-full">{selectedStory?.desc}</p>
             </div>
 
-            <div className="flex items-center justify-center mt-7 gap-x-5 md:text-base text-sm px-4">
+            <div className="flex items-center justify-center mt-7 gap-x-5 md:text-base text-md px-4 z-20">
               <button onClick={handleBackStory} className="flex items-center justify-center gap-x-2 hover:text-amber-800 duration-500">
-                  <Icon icon={ARROW_ROUNDED_ICON} rotate={2} />
-                  <span>
-                      Sebelumnya
-                  </span>
+                <Icon icon={ARROW_ROUNDED_ICON} rotate={2} />
+                <span>Sebelumnya</span>
               </button>
               <button onClick={handleNextStory} className="flex items-center justify-center gap-x-2 hover:text-amber-800 duration-500">
-                  <span>Selanjutnya</span>
-                  <Icon icon={ARROW_ROUNDED_ICON} />
+                <span>Selanjutnya</span>
+                <Icon icon={ARROW_ROUNDED_ICON} />
               </button>
             </div>
 
-            
+
             <div className="md:block hidden">
               <Swiper
                 modules={[Scrollbar, Autoplay]}
@@ -97,7 +91,7 @@ export default function Stories({ handleClose = () => {} }) {
                   <SwiperSlide
                     key={index}
                     className="w-40 h-44"
-                    onClick={() => setGetPhoto({ isOpen: true, currentIndexPhoto: index})}
+                    onClick={() => setPhoto({ isOpen: true, currentIndexPhoto: index })}
                   >
                     <img
                       src={story}
@@ -117,14 +111,8 @@ export default function Stories({ handleClose = () => {} }) {
             <Galeries />
           </Suspense>
         </div>
-        
-        <Suspense>
-          { getPhoto.isOpen ? (
-            <PhotoboxModal isOpen={getPhoto.isOpen} indexPhoto={getPhoto.currentIndexPhoto} onClose={handleClosePhoto}/>
-          ) : null }
-        </Suspense>
+
       </div>
-      
     </section>
   );
 }
