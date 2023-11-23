@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Comfortaa } from 'next/font/google';
 import '@/styles/globals.css';
+import Providers from '@/providers/providers';
 
 const comfortaa = Comfortaa({ subsets: ['latin'] });
 
@@ -99,7 +100,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={comfortaa.className}>{children}</body>
+      <Providers>
+        <body className={comfortaa.className}>{children}</body>
+      </Providers>
     </html>
   )
 }
