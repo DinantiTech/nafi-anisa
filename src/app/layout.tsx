@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { Comfortaa } from 'next/font/google';
 import '@/styles/globals.css';
-import Providers from '@/providers/providers';
 
 const comfortaa = Comfortaa({ subsets: ['latin'] });
 
@@ -29,17 +28,8 @@ export const metadata: Metadata = {
     statusBarStyle: 'default'
   },
 
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
   alternates: {
     canonical: '/',
-    // languages: {
-    //   'en-US': '/en-US',
-    //   'id-ID': '/id-ID',
-    // },
   },
   
   robots: {
@@ -72,15 +62,6 @@ export const metadata: Metadata = {
     creator: 'Dinanti Creator',
     // images: ['https://nextjs.org/og.png'],
   },
-
-  verification: {
-    google: 'u6Qwt5SMpEmbvWsILa1JcxpRD-d0hH2xm186VLgD9hE',
-    other: {
-      "ahrefs-site-verification": "166f48dd2c2a0482e7f6bea772d2ceeee1e0cf9a6e8d54bf99091e41617bc14a"
-    },
-    yandex: '7d8e1882d8ca7d15',
-    // yahoo: 'yahoo',
-  },
 };
 
 export const viewport: Viewport = {
@@ -100,9 +81,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <Providers>
-        <body className={comfortaa.className}>{children}</body>
-      </Providers>
+      <body className={comfortaa.className}>{children}</body>
     </html>
   )
 }
