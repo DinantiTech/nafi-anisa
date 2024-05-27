@@ -8,6 +8,8 @@ import 'aos/dist/aos.css';
 
 import Cover from "./sections/cover.section";
 import HeroSection from "./sections/hero.section";
+import MobileLayout from "./layouts/mobile.layout";
+import GroomBrideSection from "./sections/groom_bride.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -18,8 +20,11 @@ export default function IndexComponent() {
 
     return (
         <main className={`${mavenPro.className} w-full h-full bg-white`}>
-            {/* <Cover /> */}
-            <HeroSection />
+            <MobileLayout>
+                {/* <Cover /> */}
+                <HeroSection />
+                <GroomBrideSection />
+            </MobileLayout>
         </main>
     );
 }

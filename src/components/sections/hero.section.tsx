@@ -22,7 +22,7 @@ export default function HeroSection() {
     }, []);
 
     return (
-        <MobileLayout>
+        <>
             <div className="flex items-center justify-between px-7 w-full left-0 sm:hidden py-1 xxs:py-0">
                 <Image src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon couple" />
                 <Image src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon RSVP" />
@@ -52,7 +52,7 @@ export default function HeroSection() {
 
                     </div>
 
-                    <div 
+                    <div
                         className="flex flex-col items-center justify-center text-white text-xs xxs:text-base"
                         data-aos="fade-up"
                         data-aos-delay="900"
@@ -65,6 +65,6 @@ export default function HeroSection() {
                     </div>
                 </div>
             </div>
-        </MobileLayout>
+        </>
     );
 }
