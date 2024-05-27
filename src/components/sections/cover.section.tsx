@@ -42,7 +42,7 @@ export default function CoverSection() {
 
                                     <div className="text-right">
                                         <p className={`${creattionDemoFont.className}`} data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1400" data-aos-duration="700">and</p>
-                                        <h4 className="xxs:mt-3 -mr-10" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1600" data-aos-duration="800">Alif</h4>
+                                        <h4 className="xxs:mt-3 xxs:-mr-10 -mr-7" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1600" data-aos-duration="800">Alif</h4>
                                     </div>
 
                                 </div>
