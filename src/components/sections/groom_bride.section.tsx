@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { Icon } from "@iconify/react";
 
 import IconGroomBride from "@/assets/icon_groom_bride.svg";
+import GroomImg from "@/assets/couple/groom.png";
+import BrideImg from "@/assets/couple/bride.png";
 
 export default function GroomBrideSection() {
     return (
@@ -15,7 +18,52 @@ export default function GroomBrideSection() {
                 <p className="text-xs xxs:text-sm xs:text-base">“Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda (kebesaran Allah) bagi kaum yang berpikir." </p>
                 <p className="font-semibold text-left xxs:text-sm text-xs">(QS Ar Rum : 21)</p>
             </div>
-            
+
+            <div className="mt-6 flex flex-col items-center justify-center gap-y-10">
+                {/* Groom */}
+                <div className="flex justify-start items-start gap-x-2">
+                    <div className="flex flex-col justify-start items-start w-[57%] gap-y-2 overflow-hidden">
+                        <Image data-aos="fade-right" src={GroomImg} alt="groom" sizes="100vw" className="" />
+                        <p data-aos="fade-right" className="text-lg">Annisa Fikri Annafi</p>
+                    </div>
+                    <div className="w-[43%] overflow-hidden">
+                        <h2 className="text-4xl font-bold">BRIDE <br />/ NAFI</h2>
+                        <p className="">Putri Pertama dari Bapak Kristoni, & Ibu Fitriyani</p>
+                        <div data-aos="fade-right" className="bg-[#945C5C] text-white text-sm flex flex-col items-start justify-center w-full mt-3 px-2">
+                            <div className="flex items-center justify-start gap-x-1">
+                                <Icon icon="ri:instagram-fill" />
+                                <p>@annisa_annafi</p>
+                            </div>
+                            <div className="flex items-center justify-start gap-x-1">
+                                <Icon icon="ph:phone-fill" />
+                                <p>08812861574</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {/* Bride */}
+                <div className="flex justify-start items-start gap-x-2 pb-40">
+                    <div className="w-[43%] overflow-hidden">
+                        <h2 className="text-4xl font-bold">GROOM <br />/ TIO</h2>
+                        <p className="">Putra Pertama dari Bapak Maskuri, & Ibu Waryati</p>
+                        <div  data-aos="fade-left" className="bg-[#945C5C] text-white text-sm flex flex-col items-start justify-center w-full mt-3 px-2">
+                            <div className="flex items-center justify-start gap-x-1">
+                                <Icon icon="ri:instagram-fill" />
+                                <p>@ridzkialiff</p>
+                            </div>
+                            <div className="flex items-center justify-start gap-x-1">
+                                <Icon icon="ph:phone-fill" />
+                                <p>081215210445</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col justify-end items-end w-[57%] gap-y-2 overflow-hidden">
+                        <Image data-aos="fade-left" src={BrideImg} alt="bride" sizes="100vw" className="" />
+                        <p data-aos="fade-left" className="text-lg">Ridzki Alif Kurniawan</p>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 }
