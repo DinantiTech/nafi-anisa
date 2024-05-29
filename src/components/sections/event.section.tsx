@@ -5,6 +5,7 @@ import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
 import { AKAD_DATE, AKAD_TIME, END_DATE_RECEPTION, END_TIME_RECEPTION, MAPS_LOCATION, START_DATE_RECEPTION, START_TIME_RECEPTION } from '@/constants/event.const';
 import { Icon } from '@iconify/react';
+import HeadingTitle from '../micro/heading_title.micro';
 
 export default function EventSection() {
     return (
@@ -20,7 +21,7 @@ export default function EventSection() {
                 />
             </div>
 
-            <h2 className='-mt-1 tracking-wide font-semibold text-lg xxs:text-2xl sm:text-3xl xxs:font-semibold'>AKAD</h2>
+            <HeadingTitle title='AKAD' />
 
             <div className='flex flex-col items-center justify-center my-3 gap-y-3'>
 
@@ -57,7 +58,7 @@ export default function EventSection() {
                 />
             </div>
 
-            <h2 className='-mt-1 tracking-wide font-semibold text-lg xxs:text-2xl sm:text-3xl xxs:font-semibold'>RESEPSI</h2>
+            <HeadingTitle title='RESEPSI' />
 
             <div className='flex flex-col items-center justify-center my-3 gap-y-3'>
 
