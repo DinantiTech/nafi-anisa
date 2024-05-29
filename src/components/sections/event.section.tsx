@@ -57,7 +57,7 @@ export default function EventSection() {
                 />
             </div>
 
-            <h2 className='-mt-1 tracking-wide font-semibold text-lg'>RESEPSI</h2>
+            <h2 className='-mt-1 tracking-wide font-semibold text-lg xxs:text-2xl sm:text-3xl xxs:font-semibold'>RESEPSI</h2>
 
             <div className='flex flex-col items-center justify-center my-3 gap-y-3'>
 
