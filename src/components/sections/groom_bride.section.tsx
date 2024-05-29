@@ -24,12 +24,12 @@ export default function GroomBrideSection() {
                 <div className="flex justify-start items-start gap-x-2">
                     <div className="flex flex-col justify-start items-start w-[57%] gap-y-2 overflow-hidden">
                         <Image data-aos="fade-right" src={GroomImg} alt="groom" sizes="100vw" className="" />
-                        <p data-aos="fade-right" className="text-lg">Annisa Fikri Annafi</p>
+                        <p data-aos="fade-right" className="xxs:text-lg text-sm">Annisa Fikri Annafi</p>
                     </div>
                     <div className="w-[43%] overflow-hidden">
-                        <h2 className="text-4xl font-bold">BRIDE <br />/ NAFI</h2>
-                        <p className="">Putri Pertama dari Bapak Kristoni, & Ibu Fitriyani</p>
-                        <div data-aos="fade-right" className="bg-[#945C5C] text-white text-sm flex flex-col items-start justify-center w-full mt-3 px-2">
+                        <h2 className="xxs:text-4xl text-3xl font-bold">BRIDE <br />/ NAFI</h2>
+                        <p className="xxs:text-base text-xs">Putri Pertama dari Bapak Kristoni, & Ibu Fitriyani</p>
+                        <div data-aos="fade-right" className="bg-[#945C5C] text-white xxs:text-sm text-[0.6rem] flex flex-col items-start justify-center w-full mt-3 px-2">
                             <div className="flex items-center justify-start gap-x-1">
                                 <Icon icon="ri:instagram-fill" />
                                 <p>@annisa_annafi</p>
@@ -45,9 +45,9 @@ export default function GroomBrideSection() {
                 {/* Bride */}
                 <div className="flex justify-start items-start gap-x-2">
                     <div className="w-[43%] overflow-hidden">
-                        <h2 className="text-4xl font-bold">GROOM <br />/ TIO</h2>
-                        <p className="">Putra Pertama dari Bapak Maskuri, & Ibu Waryati</p>
-                        <div  data-aos="fade-left" className="bg-[#945C5C] text-white text-sm flex flex-col items-start justify-center w-full mt-3 px-2">
+                        <h2 className="xxs:text-4xl text-3xl font-bold">GROOM <br />/ TIO</h2>
+                        <p className="xxs:text-base text-xs">Putra Pertama dari Bapak Maskuri, & Ibu Waryati</p>
+                        <div  data-aos="fade-left" className="bg-[#945C5C] text-white xxs:text-sm text-[0.6rem] flex flex-col items-start justify-center w-full mt-3 px-2">
                             <div className="flex items-center justify-start gap-x-1">
                                 <Icon icon="ri:instagram-fill" />
                                 <p>@ridzkialiff</p>
@@ -60,7 +60,7 @@ export default function GroomBrideSection() {
                     </div>
                     <div className="flex flex-col justify-end items-end w-[57%] gap-y-2 overflow-hidden">
                         <Image data-aos="fade-left" src={BrideImg} alt="bride" sizes="100vw" className="" />
-                        <p data-aos="fade-left" className="text-lg">Ridzki Alif Kurniawan</p>
+                        <p data-aos="fade-left" className="xxs:text-lg text-sm">Ridzki Alif Kurniawan</p>
                     </div>
                 </div>
             </div>

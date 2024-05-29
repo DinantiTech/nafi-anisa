@@ -16,12 +16,12 @@ export default function CountdownSection() {
                     data-aos="fade-up"
                     data-aos-easing="linear"
                 >
-                    <div className="absolute top-0 left-0 z-20 w-full h-full flex flex-col items-center justify-center gap-y-2">
-                        <div className="flex flex-col items-center justify-center gap-y-2">
-                            <p className="font-light text-lg xxs:text-xl tracking-wider">COUNT DOWN</p>
-                            <h2 className="font-medium text-4xl tracking-widest text-center">OUR SPECIAL DAYS</h2>
+                    <div className="absolute top-0 left-0 z-20 w-full h-full flex flex-col items-center justify-center xxs:gap-y-2">
+                        <div className="flex flex-col items-center justify-center xxs:gap-y-2">
+                            <p className="font-light xxs:text-xl tracking-wider">COUNT DOWN</p>
+                            <h2 className="font-medium xxs:text-4xl text-2xl tracking-widest text-center">OUR SPECIAL DAYS</h2>
                         </div>
-                        <div className="flex items-center justify-center gap-6">
+                        <div className="flex items-center justify-center xxs:gap-6 gap-3">
 
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 leading-snug text-white">
                                 <h5 className="xs:text-2xl text-sm font-normal">{days}</h5>
