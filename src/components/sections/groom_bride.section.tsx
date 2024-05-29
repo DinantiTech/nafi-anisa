@@ -43,7 +43,7 @@ export default function GroomBrideSection() {
                 </div>
 
                 {/* Bride */}
-                <div className="flex justify-start items-start gap-x-2 pb-40">
+                <div className="flex justify-start items-start gap-x-2">
                     <div className="w-[43%] overflow-hidden">
                         <h2 className="text-4xl font-bold">GROOM <br />/ TIO</h2>
                         <p className="">Putra Pertama dari Bapak Maskuri, & Ibu Waryati</p>
