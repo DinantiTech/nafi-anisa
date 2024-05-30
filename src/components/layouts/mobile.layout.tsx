@@ -1,8 +1,14 @@
-import { ReactNode } from "react";
+import React from "react";
+import { Utils } from "@/utils/index.util";
+import { HTMLAttributes, ReactNode } from "react";
 
-export default function MobileLayout({ children }: { children: ReactNode }) {
+interface MobileLayoutProps extends HTMLAttributes<HTMLDivElement> {
+    children: ReactNode;
+}
+
+export default function MobileLayout({ children, className, ...rest }: MobileLayoutProps) {
     return (
-        <div className="relative w-max-[500px] md:w-[500px] mx-auto overflow-hidden text-black">
+        <div className={Utils.cn("relative w-max-[500px] md:w-[500px] mx-auto overflow-hidden text-black", className)} {...rest}>
             {children}
         </div>
     );

@@ -1,5 +1,12 @@
-export default function HeadingTitle({ title }: { title: string }) {
+import { Utils } from "@/utils/index.util";
+import { HTMLAttributes } from "react";
+
+interface HeadingTitleProps extends HTMLAttributes<HTMLHeadingElement> {
+    title: string;
+}
+
+export default function HeadingTitle({ title, className, ...rest }: HeadingTitleProps) {
     return (
-        <h2 className='-mt-1 tracking-wide font-semibold text-lg xxs:text-2xl sm:text-3xl xxs:font-semibold'>{title}</h2>
+        <h2 className={Utils.cn("-mt-1 tracking-wide font-semibold text-lg xxs:text-2xl sm:text-3xl xxs:font-semibold", className)} { ...rest }>{title}</h2>
     );
 }

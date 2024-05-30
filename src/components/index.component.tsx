@@ -14,6 +14,7 @@ import CountdownSection from "./sections/countdown.section";
 import EventSection from "./sections/event.section";
 import StoriesSection from "./sections/stories.section";
 import GaleriesSection from "./sections/galeries.section";
+import GiftSection from "./sections/gift.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -32,6 +33,7 @@ export default function IndexComponent() {
                 <EventSection />
                 <StoriesSection />
                 <GaleriesSection />
+                <GiftSection />
             </MobileLayout>
         </main>
     );
