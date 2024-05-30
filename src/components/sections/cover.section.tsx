@@ -3,7 +3,6 @@
 import Image from "next/image";
 import localFont from 'next/font/local';
 import Drawer from 'react-modern-drawer';
-import { useState } from "react";
 
 // Styles
 import 'react-modern-drawer/dist/index.css';
@@ -32,18 +31,18 @@ export default function CoverSection() {
             <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-white">
                 <MobileLayout>
                     
-                    <Image src={BgAnd} sizes='100vw' alt="" className="absolute top-0 left-0 z-10 w-full min-h-max h-full bg-white/50 object-cover opacity-60 " />
+                    <Image src={BgAnd} sizes='100vw' alt="" className="absolute top-0 left-0 z-10 w-full min-h-max h-full bg-white/0.5 object-cover opacity-40 " />
 
                     <div className="absolute z-20 h-full w-full flex flex-col items-center justify-center px-8 gap-y-36 xxs:gap-y-44 md:gap-y-52 lg:gap-y-60">
 
-                        <div className="flex justify-start flex-col items-start w-full font-semibold text-xs xxs:text-lg text-black">
+                        <div className="flex justify-start flex-col items-start w-full font-[450] text-xs xxs:text-2xl xs:text-2xl text-black tracking-widest leading-6">
 
                             <p data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1200" data-aos-duration="500">JOIN US FOR</p>
                             <p data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1400" data-aos-duration="600">THE WEDDING OF</p>
 
                         </div>
 
-                        <div className="w-full flex justify-end">
+                        <div className="w-full flex justify-end xxs:mr-10 mr-5">
                             <div className="flex flex-col items-center justify-center text-black">
                                 <div className={`${newYorkFont.className} relative text-4xl xxs:text-6xl font-medium leading-6 xxs:leading-8`}>
 
@@ -56,16 +55,18 @@ export default function CoverSection() {
 
                                 </div>
 
-                                <div data-aos="fade-right" data-aos-delay="1700" data-aos-duration="800" className="h-0.5 xxs:h-1 w-20 bg-black mt-3 xxs:mt-6 rounded-full" />
+                                <div data-aos="zoom-in" data-aos-delay="1700" data-aos-duration="800" className="h-0.5 w-20 bg-black mt-3 xxs:mt-6 rounded-full" />
 
-                                <p 
-                                    className="xxs:my-5 my-3 font-bold text-[0.6rem] xxs:text-sm"
-                                    data-aos="flip-down"
-                                    data-aos-delay="1800"
-                                    data-aos-duration="800"
-                                >
-                                    20 - 21 JUNE 2024
-                                </p>
+                                <div className="h-fit overflow-hidden">
+                                    <p 
+                                        className="xxs:my-5 my-3 font-bold text-[0.6rem] xxs:text-sm"
+                                        data-aos="fade-down"
+                                        data-aos-delay="1800"
+                                        data-aos-duration="800"
+                                    >
+                                        20 - 21 JUNE 2024
+                                    </p>
+                                </div>
 
                                 <button
                                     onClick={handleOpenInvitation}
