@@ -11,7 +11,7 @@ export default function EventSection() {
     return (
         <div className="w-full flex flex-col items-center justify-center my-5 text-black">
             {/* AKAD */}
-            <div className='w-20 xxs:w-32'>
+            <div className='w-20 xxs:w-24'>
                 <Lottie
                     options={{
                         loop: true,
@@ -48,7 +48,7 @@ export default function EventSection() {
             </div>
 
             {/* RECEPTION */}
-            <div className='w-20 xxs:w-32 mt-3 xxs:mt-5'>
+            <div className='w-20 xxs:w-24 mt-3 xxs:mt-5'>
                 <Lottie
                     options={{
                         loop: true,
