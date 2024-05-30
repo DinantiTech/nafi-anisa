@@ -6,11 +6,16 @@ import MobileLayout from "@/components/layouts/mobile.layout";
 import IconCouple from "@/assets/icon_N_A.svg";
 import IconRSVP from "@/assets/icon_RSVP.svg";
 import { HeroImage } from "@/constants/hero_images.const";
+import { useMusicStore } from "@/stores/music.store";
+import { useCoverStore } from "@/stores/cover.store";
 
 const newYorkFont = localFont({ src: "../../assets/fonts/NewYork.otf" });
 const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf" })
 
 export default function HeroSection() {
+    const { setMusic } = useMusicStore();
+    const { isCover, setCover } = useCoverStore();
+
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
     useMemo(() => {
@@ -21,12 +26,17 @@ export default function HeroSection() {
         return () => clearInterval(interval);
     }, []);
 
+    const handleOpenInvitation = () => {
+        // setMusic(false);
+        setCover(true);
+    }
+
     return (
         <>
-            <div className="flex items-center justify-between px-7 w-full left-0 sm:hidden py-1 xxs:py-0">
-                <Image src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon couple" />
+            <nav className="flex items-center justify-between px-7 w-full left-0 sm:hidden py-1 xxs:py-0">
+                <Image onClick={() => handleOpenInvitation()} src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon couple" />
                 <Image src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon RSVP" />
-            </div>
+            </nav>
 
             <div className="relative w-full h-[500px]">
                 {HeroImage?.map((img, idx) => (

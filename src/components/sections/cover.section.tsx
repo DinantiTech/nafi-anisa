@@ -9,17 +9,26 @@ import { useState } from "react";
 import 'react-modern-drawer/dist/index.css';
 
 const newYorkFont = localFont({ src: "../../assets/fonts/NewYork.otf" });
-const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf" })
+const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf" });
 
 import Cover from "@/assets/cover.png";
 import MobileLayout from "@/components/layouts/mobile.layout";
 import BgAnd from "@/assets/bg_&.svg";
+import { useMusicStore } from "@/stores/music.store";
+import { useCoverStore } from "@/stores/cover.store";
 
 export default function CoverSection() {
-    const [drawer, setDrawer] = useState<boolean>(true);
+    const { setMusic } = useMusicStore();
+    const { isCover, setCover } = useCoverStore();
+
+
+    const handleOpenInvitation = () => {
+        setMusic(true);
+        setCover(false);
+    }
 
     return (
-        <Drawer open={drawer} direction="left" zIndex={100} customIdSuffix="cover-drawer" size="100%">
+        <Drawer open={isCover} direction="left" zIndex={100} customIdSuffix="cover-drawer" size="100%">
             <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-white">
                 <MobileLayout>
                     
@@ -59,7 +68,7 @@ export default function CoverSection() {
                                 </p>
 
                                 <button
-                                    onClick={() => setDrawer(false)}
+                                    onClick={handleOpenInvitation}
                                     className="btn btn-sm xxs:btn-md bg-[#A97373] hover:bg-[#A97373]/90 duration-300 text-white font-semibold border-none xss:text-md text-xs"
                                     data-aos="zoom-in"
                                     data-aos-delay="1900"

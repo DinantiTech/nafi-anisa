@@ -1,0 +1,1 @@
+export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717079230/musics/kekal%20-%20nadin%20amizah.mp3";

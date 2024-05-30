@@ -15,6 +15,8 @@ import EventSection from "./sections/event.section";
 import StoriesSection from "./sections/stories.section";
 import GaleriesSection from "./sections/galeries.section";
 import GiftSection from "./sections/gift.section";
+import SpecialyThanksSection from "./sections/specialy_thanks.section";
+import MusicBtn from "./micro/button_music.micro";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -26,7 +28,7 @@ export default function IndexComponent() {
     return (
         <main className={`${mavenPro.className} w-full h-full bg-white`}>
             <MobileLayout>
-                {/* <Cover /> */}
+                <Cover />
                 <HeroSection />
                 <GroomBrideSection />
                 <CountdownSection />
@@ -34,6 +36,9 @@ export default function IndexComponent() {
                 <StoriesSection />
                 <GaleriesSection />
                 <GiftSection />
+                <SpecialyThanksSection />
+
+                <MusicBtn />
             </MobileLayout>
         </main>
     );

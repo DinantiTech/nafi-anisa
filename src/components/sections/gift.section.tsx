@@ -29,7 +29,7 @@ export default function GiftSection() {
 
             <HeadingTitle title="SEND GIFT" className="-mt-5" />
 
-            <p className="text-center mt-4">Jika memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan Anda kemudahan</p>
+            <p className="text-center mt-4 text-xs xxs:text-sm sm:text-base px-4">Jika memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan Anda kemudahan</p>
 
             <button className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 mt-4 sm:mt-6 font-normal">
                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
