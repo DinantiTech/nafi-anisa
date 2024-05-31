@@ -30,7 +30,7 @@ export default function IndexComponent() {
     return (
         <main className={`${mavenPro.className} w-full h-full bg-white`}>
             <MobileLayout>
-                {/* <Cover /> */}
+                <Cover />
                 <HeroSection />
                 <GroomBrideSection />
                 <CountdownSection />

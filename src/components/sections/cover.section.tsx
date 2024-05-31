@@ -29,9 +29,22 @@ export default function CoverSection() {
     return (
         <Drawer open={isCover} direction="left" zIndex={100} customIdSuffix="cover-drawer" size="100%">
             <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-white">
-                <MobileLayout>
-                    
-                    <Image src={BgAnd} sizes='100vw' alt="" className="absolute top-0 left-0 z-10 w-full min-h-max h-full bg-white/0.5 object-cover opacity-40 " />
+                <MobileLayout className="overflow-hidden">
+
+                    <div className="absolute top-0 left-0 z-10 w-full h-full" 
+                         data-aos="zoom-out-up"
+                        data-aos-offset="300"
+                        data-aos-delay="400"
+                        data-aos-duration="700"
+                        data-aos-easing="ease-in-sine"
+                    >
+                        <Image
+                            src={BgAnd}
+                            sizes='100vw'
+                            alt="" 
+                            className=" w-full min-h-max h-full bg-white/0.5 object-cover opacity-40"
+                        />
+                    </div>
 
                     <div className="absolute z-20 h-full w-full flex flex-col items-center justify-center px-8 gap-y-36 xxs:gap-y-44 md:gap-y-52 lg:gap-y-60">
 

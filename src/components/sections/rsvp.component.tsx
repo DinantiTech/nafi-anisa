@@ -20,8 +20,6 @@ type FormType = {
 export default function RSVPSection() {
     const [data, loading, _, createData, setStartFetching] = useAppScript(SHEET_NAME);
 
-    const [rsvpData, setRsvpData] = useState<FormType | null>(null);
-
     const [messageLimit, setMessageLimit] = useState<number>(5);
 
     const handleLoadMore = () => {
@@ -49,7 +47,7 @@ export default function RSVPSection() {
                     onSubmit={async (values, { resetForm }) => {
                         if (values?.name?.length > 0 && values?.message?.length > 1) {
                             const time = new Date().toISOString()
-                            const query = `&name=${rsvpData!.name}&message=${rsvpData!.message}&attendance=${rsvpData!.attendance}&createdAt=${time}`;
+                            const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
                             await createData(query);
                             setStartFetching(true)
                             resetForm()
