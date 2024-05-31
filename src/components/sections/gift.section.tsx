@@ -14,24 +14,12 @@ import LogoShopeepay from "@/assets/logo/ShopeePay.svg";
 import LogoDana from "@/assets/logo/DANA.svg";
 import LogoOvo from "@/assets/logo/OVO.svg";
 import toast, { Toaster } from "react-hot-toast";
+import { ADDRESS_GIFT } from "@/constants/others.const";
 
 export default function GiftSection() {
-    const copyToClipboard = (value: string) => {
-          navigator.clipboard.writeText(value);
-        //   toast.custom((t) => (
-        //     <div
-        //       className={`${t.visible ? 'animate-enter' : 'animate-leave'
-        //         } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5 justify-between items-center py-4 px-4`}
-        //     >
-        //       <div className="flex items-center justify-center gap-x-2">
-        //         <p className="text-sm text-gray-900">
-        //           No REK {value} berhasil disalin
-        //         </p>
-        //       </div>
-    
-        //       <Icon icon="ep:success-filled" className="text-lg text-green-600" />
-        //     </div>
-        //   ))
+    const copyToClipboard = ({ value, type }: { value: string, type: "REK" | "ADDRESS" }) => {
+        navigator.clipboard.writeText(value);
+        return toast.success(type === "REK" ? `No REK ${value} berhasil disalin` : "Alamat Berhasil Disalin");
       };
 
     return (
@@ -52,7 +40,7 @@ export default function GiftSection() {
 
             <p className="text-center mt-4 text-xs xxs:text-sm sm:text-base px-4">Jika memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan Anda kemudahan</p>
 
-            <button className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 mt-4 sm:mt-6 font-normal">
+            <button onClick={() => copyToClipboard({value: ADDRESS_GIFT, type: "ADDRESS"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 mt-4 sm:mt-6 font-normal">
                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                 COPY ADDRESS
             </button>
@@ -78,7 +66,7 @@ export default function GiftSection() {
                                 <p className="font-semibold">1732240455</p>
                                 <p>Annisa Fikri Annafi</p>
                             </div>
-                            <button onClick={() => copyToClipboard("1732240455")} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
+                            <button onClick={() => copyToClipboard({value: "1732240455", type: "REK"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
                                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                                 COPY
                             </button>
@@ -111,7 +99,7 @@ export default function GiftSection() {
                                 <p className="font-semibold">081215210445</p>
                                 <p>Ridzki Alif Kurniawan</p>
                             </div>
-                            <button className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
+                            <button onClick={() => copyToClipboard({value: "081215210445", type: "REK"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
                                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                                 COPY
                             </button>
