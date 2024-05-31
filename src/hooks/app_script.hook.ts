@@ -21,14 +21,13 @@ export const useAppScript = (SHEET_NAME: string): [DataItem[] | null, boolean, a
             const result = await fetch(
                 `${HOSTNAME_APP_SCRIPT}?action=${ACTION_SCRIPT.GET_ALL}&tableName=${SHEET_NAME}&sheetId=${SPREADSHEET_ID}`,
                 {
-                    method: "GET",
-                    redirect: 'follow', 
+                    method: "GET"
                 }
             );
 
             const jsonData = await result.json();
 
-            setData(jsonData?.data?.sort((a: DataItem, b: DataItem) => {
+            setData(jsonData?.data?.sort((a: DataItem | null, b: DataItem | null) => {
                 if (a && b) {
                     return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
                 }
