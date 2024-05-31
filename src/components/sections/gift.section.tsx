@@ -13,10 +13,31 @@ import IconMastercard from "@/assets/logo/mastercard.svg";
 import LogoShopeepay from "@/assets/logo/ShopeePay.svg";
 import LogoDana from "@/assets/logo/DANA.svg";
 import LogoOvo from "@/assets/logo/OVO.svg";
+import toast, { Toaster } from "react-hot-toast";
 
 export default function GiftSection() {
+    const copyToClipboard = (value: string) => {
+          navigator.clipboard.writeText(value);
+        //   toast.custom((t) => (
+        //     <div
+        //       className={`${t.visible ? 'animate-enter' : 'animate-leave'
+        //         } max-w-md w-full bg-white shadow-lg rounded-lg pointer-events-auto flex ring-1 ring-black ring-opacity-5 justify-between items-center py-4 px-4`}
+        //     >
+        //       <div className="flex items-center justify-center gap-x-2">
+        //         <p className="text-sm text-gray-900">
+        //           No REK {value} berhasil disalin
+        //         </p>
+        //       </div>
+    
+        //       <Icon icon="ep:success-filled" className="text-lg text-green-600" />
+        //     </div>
+        //   ))
+      };
+
     return (
         <MobileLayout className="flex items-center flex-col">
+            <Toaster position="top-center" reverseOrder={false} />
+
             <div className='w-24 xxs:w-28 sm:w-32'>
                 <Lottie
                     options={{
@@ -57,7 +78,7 @@ export default function GiftSection() {
                                 <p className="font-semibold">1732240455</p>
                                 <p>Annisa Fikri Annafi</p>
                             </div>
-                            <button className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
+                            <button onClick={() => copyToClipboard("1732240455")} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
                                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                                 COPY
                             </button>
