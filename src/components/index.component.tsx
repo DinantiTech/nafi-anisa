@@ -17,6 +17,7 @@ import GaleriesSection from "./sections/galeries.section";
 import GiftSection from "./sections/gift.section";
 import SpecialyThanksSection from "./sections/specialy_thanks.section";
 import MusicBtn from "./micro/button_music.micro";
+import YoutubeSection from "./sections/youtube.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function IndexComponent() {
                 <EventSection />
                 <StoriesSection />
                 <GaleriesSection />
+                <YoutubeSection />
                 <GiftSection />
                 <SpecialyThanksSection />
 
