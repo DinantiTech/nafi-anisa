@@ -22,7 +22,7 @@ import RSVPSection from "./sections/rsvp.component";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
-export default function IndexComponent() {
+export default function IndexComponent({ to }: { to?: string }) {
     useEffect(() => {
         AOS.init()
     }, [])
@@ -30,8 +30,8 @@ export default function IndexComponent() {
     return (
         <main className={`${mavenPro.className} w-full h-full bg-white`}>
             <MobileLayout>
-                <Cover />
-                <HeroSection />
+                {/* <Cover /> */}
+                <HeroSection to={to} />
                 <GroomBrideSection />
                 <CountdownSection />
                 <EventSection />

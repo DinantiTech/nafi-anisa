@@ -12,7 +12,7 @@ import { useCoverStore } from "@/stores/cover.store";
 const newYorkFont = localFont({ src: "../../assets/fonts/NewYork.otf" });
 const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf" })
 
-export default function HeroSection() {
+export default function HeroSection({ to }: { to?: string }) {
     const { setMusic } = useMusicStore();
     const { isCover, setCover } = useCoverStore();
 
@@ -70,7 +70,7 @@ export default function HeroSection() {
                         data-aos-duration="1000"
                     >
                         <p>Kepada Bapak / Ibu / Saudara / i,</p>
-                        <h5 className="text-xl xxs:text-2xl font-semibold">Oliver Sykes</h5>
+                        <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
                         <p>di tempat</p>
                     </div>
                 </div>
