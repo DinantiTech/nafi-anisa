@@ -1,3 +1,5 @@
+"use client";
+
 import { useMemo, useState } from "react";
 import localFont from 'next/font/local';
 import Image from "next/image";
