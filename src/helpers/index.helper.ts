@@ -1,6 +1,6 @@
 
 import moment from 'moment';
-import 'moment/locale/id';
+// import 'moment/locale/id';
 
 export class Helpers {
     static redirectToBlank(url: string) {

@@ -32,7 +32,7 @@ export default function CoverSection() {
                 <MobileLayout className="overflow-hidden">
 
                     <div className="absolute top-0 left-0 z-10 w-full h-full" 
-                         data-aos="zoom-out-up"
+                        data-aos="zoom-out-up"
                         data-aos-offset="300"
                         data-aos-delay="400"
                         data-aos-duration="700"
