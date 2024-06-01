@@ -1,15 +1,17 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useState } from "react";
 import { Field, Formik } from "formik";
 import { Icon } from "@iconify/react/dist/iconify.js";
+import moment from "moment-timezone";
+import Lottie from "react-lottie";
 
 import MobileLayout from "../layouts/mobile.layout";
 import { useAppScript } from "@/hooks/app_script.hook";
 import { SHEET_NAME } from "@/constants/others.const";
 import HeadingTitle from "../micro/heading_title.micro";
-import ModalAvatar from "../commons/modal_avatar.common";
-import moment from "moment-timezone";
+
+import rsvpAnimmationData from "@/assets/icon-animation/rsvp-animation.json";
 
 type FormType = {
     name: string;
@@ -27,9 +29,19 @@ export default function RSVPSection() {
     };
 
     return (
-        <MobileLayout className="px-4">
-            <div className="w-full flex flex-col justify-center items-center py-8">
-                <HeadingTitle title="BEST WISHES" />
+        <MobileLayout className="px-4 py-5">
+            <div className='w-20 xxs:w-24 mt-3 xxs:mt-5 mx-auto'>
+                <Lottie
+                    options={{
+                        loop: true,
+                        animationData: rsvpAnimmationData,
+                        autoplay: true,
+                    }}
+                />
+            </div>
+
+            <HeadingTitle title="BEST WISHES" className="mx-auto flex items-center justify-center" />
+            <div className="w-full flex flex-col justify-center items-center py-6">
 
                 <Formik
                     initialValues={{ name: '', message: '', attendance: false }}
