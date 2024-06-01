@@ -35,11 +35,9 @@ export default function RSVPSection() {
                     initialValues={{ name: '', message: '', attendance: false }}
                     validate={(values: FormType) => {
                         let errors: Record<string, any> = {};
-                        if (values.name.length < 1) {
-                            errors.name = "Nama harus diisi"
-                        } else if (values.message.length < 1) {
-                            errors.message = "Ucapan & doa harus diisi"
-                        }
+
+                        if (values.name.length < 1) errors.name = "Name is required"
+                        if (values.message.length < 1) errors.message = "Wish is required"
 
                         return errors;
                     }}
@@ -126,7 +124,7 @@ export default function RSVPSection() {
                 {data && data.length > messageLimit ? (
                     <button
                         onClick={handleLoadMore}
-                        className="btn btn-sm text-sm bg-[#945C5C] w-full text-white mt-7 font-normal"
+                        className="btn btn-sm text-sm bg-[#945C5C] hover:bg-[#945C5C]/90 w-full text-white mt-7 font-normal py-4 h-auto"
                     >
                         LOAD MORE MESSAGES
                     </button>

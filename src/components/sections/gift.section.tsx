@@ -19,8 +19,8 @@ import { ADDRESS_GIFT } from "@/constants/others.const";
 export default function GiftSection() {
     const copyToClipboard = ({ value, type }: { value: string, type: "REK" | "ADDRESS" }) => {
         navigator.clipboard.writeText(value);
-        return toast.success(type === "REK" ? `No REK ${value} berhasil disalin` : "Alamat Berhasil Disalin");
-      };
+        return toast.success(type === "REK" ? `Bank account number : ${value} has been copied successful` : "Address has been copied successful");
+    };
 
     return (
         <MobileLayout className="flex items-center flex-col">
@@ -40,14 +40,14 @@ export default function GiftSection() {
 
             <p className="text-center mt-4 text-xs xxs:text-sm sm:text-base px-4">Jika memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan Anda kemudahan</p>
 
-            <button onClick={() => copyToClipboard({value: ADDRESS_GIFT, type: "ADDRESS"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 mt-4 sm:mt-6 font-normal">
+            <button onClick={() => copyToClipboard({value: ADDRESS_GIFT, type: "ADDRESS"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 mt-4 sm:mt-6 font-normal border-0">
                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                 COPY ADDRESS
             </button>
             
             <Carousel className="w-full my-10 sm:my-16" showArrows={true} infiniteLoop >
                 <div className="aspect-video w-full">
-                    <div className="flex items-center justify-between flex-col w-full h-full p-6 shadow-md border">
+                    <div className="flex items-center justify-between flex-col w-full h-full p-6 border">
 
                         <div className="flex items-center justify-between w-full">
                             <div className="flex flex-col items-start justify-center">
@@ -75,7 +75,7 @@ export default function GiftSection() {
                 </div>
 
                 <div className="aspect-video w-full">
-                    <div className="flex items-center justify-between flex-col w-full h-full p-6 shadow">
+                    <div className="flex items-center justify-between flex-col w-full h-full p-6 border">
 
                         <div className="flex items-center justify-between w-full">
 
