@@ -3,6 +3,13 @@ import moment from 'moment';
 // import 'moment/locale/id';
 
 export class Helpers {
+    static scrollToElement(elementId: string) {
+        const element = document.getElementById(elementId);
+        if (element) {
+            element.scrollIntoView({ behavior: 'smooth' });
+        }
+    };
+
     static redirectToBlank(url: string) {
         window.open(url, '_blank');
     }

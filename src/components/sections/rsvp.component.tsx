@@ -31,7 +31,7 @@ export default function RSVPSection() {
     };
 
     return (
-        <MobileLayout className="px-4 py-5">
+        <MobileLayout className="px-4 py-5" id="rsvp">
             <div className='w-20 xxs:w-24 mt-3 xxs:mt-5 mx-auto'>
                 <Lottie
                     options={{

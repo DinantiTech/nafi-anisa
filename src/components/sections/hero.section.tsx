@@ -10,6 +10,7 @@ import IconRSVP from "@/assets/icon_RSVP.svg";
 import { HeroImage } from "@/constants/hero_images.const";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";
+import { Helpers } from "@/helpers/index.helper";
 
 const newYorkFont = localFont({ src: "../../assets/fonts/NewYork.otf" });
 const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf" })
@@ -37,7 +38,7 @@ export default function HeroSection({ to }: { to?: string }) {
         <>
             <nav className="flex items-center justify-between px-7 w-full left-0 sm:hidden py-1 xxs:py-0">
                 <Image onClick={() => handleOpenInvitation()} src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon couple" />
-                <Image src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon RSVP" />
+                <Image onClick={() => Helpers.scrollToElement("rsvp")} src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon RSVP" />
             </nav>
 
             <div className="relative w-full h-[500px]">
