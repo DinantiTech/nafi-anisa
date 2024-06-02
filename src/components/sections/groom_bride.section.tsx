@@ -24,8 +24,12 @@ export default function GroomBrideSection() {
                 <div className="flex justify-start items-start gap-x-2">
                     <div className="flex flex-col justify-start items-start w-[57%] gap-y-2 overflow-hidden">
                         <Image data-aos="fade-right" src={GroomImg} alt="groom" sizes="100vw" className="" />
-                        <p data-aos="fade-right" className="xxs:text-lg text-sm">Annisa Fikri Annafi</p>
+                        <div data-aos="fade-right" className="flex gap-x-3 items-center justify-between w-full">
+                            <p className="xxs:text-lg text-sm flex-shrink-0">Annisa Fikri Annafi</p>
+                            <div className="h-0.5 w-full bg-black rounded-full"></div>
+                        </div>
                     </div>
+
                     <div className="w-[43%] overflow-hidden">
                         <h2 data-aos="fade-right" className="sm:text-5xl xs:text-4xl xxs:text-3xl text-[1.5rem] leading-8 font-bold">BRIDE <br />/ NAFI</h2>
                         <p data-aos="fade-right" className="xxs:text-base text-xs">Putri Pertama dari Bapak Kristoni, & Ibu Fitriyani</p>
@@ -60,7 +64,10 @@ export default function GroomBrideSection() {
                     </div>
                     <div className="flex flex-col justify-end items-end w-[57%] gap-y-2 overflow-hidden">
                         <Image data-aos="fade-left" src={BrideImg} alt="bride" sizes="100vw" className="" />
-                        <p data-aos="fade-left" className="xxs:text-lg text-sm">Ridzki Alif Kurniawan</p>
+                        <div data-aos="fade-right" className="flex gap-x-3 items-center justify-between w-full">
+                            <p className="xxs:text-lg text-sm flex-shrink-0">Ridzki Alif Kurniawan</p>
+                            <div className="h-0.5 w-full bg-black rounded-full"></div>
+                        </div>
                     </div>
                 </div>
             </div>
