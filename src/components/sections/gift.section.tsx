@@ -17,9 +17,9 @@ import toast, { Toaster } from "react-hot-toast";
 import { ADDRESS_GIFT } from "@/constants/others.const";
 
 export default function GiftSection() {
-    const copyToClipboard = ({ value, type }: { value: string, type: "REK" | "ADDRESS" }) => {
+    const copyToClipboard = ({ value, type }: { value: string, type: "REK" | "ADDRESS" | "VIR" }) => {
         navigator.clipboard.writeText(value);
-        return toast.success(type === "REK" ? `Bank account number : ${value} has been copied successful` : "Address has been copied successful");
+        return toast.success(type === "REK" ? `Bank account number : ${value} has been copied successful` : type === "VIR" ? `E-wallet phone number : ${value} has been copied successful` : "Address has been copied successful");
     };
 
     return (
@@ -99,7 +99,7 @@ export default function GiftSection() {
                                 <p className="font-semibold">081215210445</p>
                                 <p>Ridzki Alif Kurniawan</p>
                             </div>
-                            <button onClick={() => copyToClipboard({value: "081215210445", type: "REK"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
+                            <button onClick={() => copyToClipboard({value: "081215210445", type: "VIR"})} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#945C5C] hover:bg-[#945C5C]/90 font-normal">
                                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                                 COPY
                             </button>
