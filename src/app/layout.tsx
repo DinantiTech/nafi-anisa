@@ -10,6 +10,7 @@ const metaTitle: string = 'Nafi & Alif - The Wedding Of Invitation';
 // const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/v1717233748/themes/ASA_270624/meta-image.png"; // HQ
 
 const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/v1717235244/themes/ASA_270624/meta-image-lq.png";
+const siteUrl = 'https://dinanti.id';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://dinanti.id'),
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
     title: metaTitle,
     description: metaDesc,
     url: '/',
-    siteName: 'https://dinanti.id',
+    siteName: siteUrl,
     type: "website",
     images: metaImage
   },
@@ -53,6 +54,7 @@ export const metadata: Metadata = {
     description: metaDesc,
     creator: 'Dinanti Creator',
     images: metaImage,
+    site: siteUrl
   },
 };
 
