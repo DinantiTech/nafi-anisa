@@ -4,7 +4,6 @@ import { useMemo, useState } from "react";
 import localFont from 'next/font/local';
 import Image from "next/image";
 
-import MobileLayout from "@/components/layouts/mobile.layout";
 import IconCouple from "@/assets/icon_N_A.svg";
 import IconRSVP from "@/assets/icon_RSVP.svg";
 import { HeroImage } from "@/constants/hero_images.const";
