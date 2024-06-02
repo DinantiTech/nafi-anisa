@@ -55,7 +55,7 @@ export default function HeroSection({ to }: { to?: string }) {
                 <div className="flex flex-col items-center justify-around w-full min-h-full absolute top-0 left-0 z-50 text-black bg-gradient-to-t from-black/60 to-transparent">
                     <div className={`${newYorkFont.className} relative text-4xl xxs:text-6xl font-medium leading-6 xxs:leading-8`}>
 
-                        <h4 className="text-left -ml-6 text-[#945C5C]" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-duration="600">Nafi</h4>
+                        <h4 className="text-left -ml-6 text-[#945C5C] -mt-10" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="400" data-aos-duration="600">Nafi</h4>
 
                         <div className="text-right">
                             <p className={`${creattionDemoFont.className}`} data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="500" data-aos-duration="700">and</p>

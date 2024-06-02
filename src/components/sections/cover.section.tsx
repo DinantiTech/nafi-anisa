@@ -12,7 +12,7 @@ const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf
 
 import Cover from "@/assets/cover.png";
 import MobileLayout from "@/components/layouts/mobile.layout";
-import BgAnd from "@/assets/bg_&.svg";
+import BgAnd from "@/assets/bg_&.png";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";
 
@@ -27,9 +27,9 @@ export default function CoverSection() {
     }
 
     return (
-        <Drawer open={isCover} direction="left" zIndex={100} customIdSuffix="cover-drawer" size="100%">
-            <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-white">
-                <MobileLayout className="overflow-hidden">
+        <Drawer open={isCover} direction="left" zIndex={100} customIdSuffix="cover-drawer" size="100%" className="">
+            <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-white h-full">
+                <MobileLayout className="overflow-hidden" id="cover">
 
                     <div className="absolute top-0 left-0 z-10 w-full h-full" 
                         data-aos="zoom-out-up"
@@ -42,7 +42,7 @@ export default function CoverSection() {
                             src={BgAnd}
                             sizes='100vw'
                             alt="" 
-                            className=" w-full min-h-max h-full bg-white/0.5 object-cover opacity-40"
+                            className="w-full min-h-max h-full bg-white/0.5 object-cover opacity-40"
                         />
                     </div>
 
@@ -68,12 +68,13 @@ export default function CoverSection() {
 
                                 </div>
 
-                                <div data-aos="zoom-in" data-aos-delay="1700" data-aos-duration="800" className="h-0.5 w-20 bg-black mt-3 xxs:mt-6 rounded-full" />
+                                <div data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1700" data-aos-duration="800" className="h-0.5 w-20 bg-black mt-3 xxs:mt-6 rounded-full" />
 
                                 <div className="h-fit overflow-hidden">
                                     <p 
                                         className="xxs:my-5 my-3 font-bold text-[0.6rem] xxs:text-sm"
                                         data-aos="fade-down"
+                                        data-aos-offset="0"
                                         data-aos-delay="1800"
                                         data-aos-duration="800"
                                     >

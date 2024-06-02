@@ -19,10 +19,9 @@ import SpecialyThanksSection from "./sections/specialy_thanks.section";
 import MusicBtn from "./micro/button_music.micro";
 import RSVPSection from "./sections/rsvp.component";
 import dynamic from "next/dynamic";
+import YoutubeSection from "./sections/youtube.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
-
-const YoutubeSection = dynamic(() => import("./sections/youtube.section"))
 
 export default function IndexComponent({ to }: { to?: string }) {
     useEffect(() => {
@@ -31,8 +30,8 @@ export default function IndexComponent({ to }: { to?: string }) {
 
     return (
         <main className={`${mavenPro.className} w-full h-full bg-white`}>
+            <Cover />
             <MobileLayout>
-                <Cover />
                 <HeroSection to={to} />
                 <GroomBrideSection />
                 <CountdownSection />
@@ -40,9 +39,7 @@ export default function IndexComponent({ to }: { to?: string }) {
                 <StoriesSection />
                 <GaleriesSection />
 
-                <Suspense>
-                    <YoutubeSection />
-                </Suspense>
+                <YoutubeSection />
 
                 <RSVPSection />
                 <GiftSection />

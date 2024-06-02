@@ -46,7 +46,7 @@ export default function GiftSection() {
             </button>
             
             <Carousel className="w-full my-10 sm:my-16" showArrows={true} infiniteLoop >
-                <div className="aspect-video w-full">
+                <div className="aspect-video w-full bg-white">
                     <div className="flex items-center justify-between flex-col w-full h-full p-6 border">
 
                         <div className="flex items-center justify-between w-full">
@@ -74,7 +74,7 @@ export default function GiftSection() {
                     </div>
                 </div>
 
-                <div className="aspect-video w-full">
+                <div className="aspect-video w-full bg-white">
                     <div className="flex items-center justify-between flex-col w-full h-full p-6 border">
 
                         <div className="flex items-center justify-between w-full">
