@@ -12,6 +12,7 @@ import { SHEET_NAME } from "@/constants/others.const";
 import HeadingTitle from "../micro/heading_title.micro";
 
 import rsvpAnimmationData from "@/assets/icon-animation/rsvp-animation.json";
+import { useRSVPSubmitStore } from "@/stores/rsvp_submit.store";
 
 type FormType = {
     name: string;
@@ -20,6 +21,7 @@ type FormType = {
 }
 
 export default function RSVPSection() {
+    const { isRSVPSubmit, setRSVPSubmit } = useRSVPSubmitStore();
     const [data, loading, _, createData, setStartFetching] = useAppScript(SHEET_NAME);
 
     const [messageLimit, setMessageLimit] = useState<number>(5);
@@ -59,7 +61,8 @@ export default function RSVPSection() {
                             const time = new Date().toISOString()
                             const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
                             await createData(query);
-                            setStartFetching(true)
+                            setStartFetching(true);
+                            setRSVPSubmit(true)
                             resetForm()
                         }
                     }}
@@ -71,18 +74,19 @@ export default function RSVPSection() {
                     }) => (
                         <form onSubmit={handleSubmit} className="relative mt-10 w-full flex flex-col justify-start items-start gap-y-5 font-primary">
                             <div className="relative w-full text-sm xxs:text-base">
-                                <Field autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : "border-black"} peer h-10 w-full border-b text-gray-900 focus:outline-none focus:borer-rose-600`} placeholder="Enter Your Name" />
+                                <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-10 w-full border-b text-gray-900 focus:outline-none focus:borer-rose-600`} placeholder="Enter Your Name" />
 
                                 {errors.name ? <span className="text-red-800 text-xs">{errors?.name}</span> : null}
                             </div>
                             <div className="relative w-full text-sm xxs:text-base">
-                                <Field as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : "border-black"} peer h-24 w-full border-b border-black text-gray-900 focus:outline-none focus:borer-rose-600`} placeholder="Enter Your Wish" />
+                                <Field disabled={isRSVPSubmit} as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-24 w-full border-b border-black text-gray-900 focus:outline-none focus:borer-rose-600`} placeholder="Enter Your Wish" />
                                 {errors.message ? <span className="text-red-800 text-xs">{errors?.message}</span> : null}
                             </div>
 
                             <div id="attendance" className="w-full flex justify-between items-center rounded-lg">
                                 <div className="flex items-center">
                                     <Field
+                                        disabled={isRSVPSubmit}
                                         name="attendance"
                                         id="default-checkbox"
                                         type="checkbox"
@@ -90,13 +94,13 @@ export default function RSVPSection() {
                                     />
                                     <label
                                         htmlFor="default-checkbox"
-                                        className={`ml-2 text-sm`}
+                                        className={`${isRSVPSubmit ? "text-gray-400" : ""} ml-2 text-sm`}
                                     >
                                         Attendance
                                     </label>
                                 </div>
 
-                                <button disabled={isSubmitting} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#945C5C]/90 border-none btn btn-sm xxs:btn-md bg-[#945C5C] text-white font-normal gap-x-1'>
+                                <button disabled={isRSVPSubmit || isSubmitting} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#945C5C]/90 border-none btn btn-sm xxs:btn-md bg-[#945C5C] text-white font-normal gap-x-1'>
                                     <Icon icon="jam:paper-plane" />
                                     SEND
                                 </button>
