@@ -5,7 +5,7 @@ import ImageCountdown from "@/assets/img_countdown.png";
 import useTimer from "@/hooks/countdown.hook";
 
 export default function CountdownSection() {
-    const { days, hours, minutes, seconds } = useTimer(new Date("2024-06-20"));
+    const { days, hours, minutes, seconds } = useTimer(new Date("2024-06-20T09:00:00"));
 
     return (
         <MobileLayout>

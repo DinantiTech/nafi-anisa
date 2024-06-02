@@ -27,7 +27,7 @@ export default function GroomBrideSection() {
                         <p data-aos="fade-right" className="xxs:text-lg text-sm">Annisa Fikri Annafi</p>
                     </div>
                     <div className="w-[43%] overflow-hidden">
-                        <h2 data-aos="fade-right" className="xxs:text-4xl text-3xl font-bold">BRIDE <br />/ NAFI</h2>
+                        <h2 data-aos="fade-right" className="sm:text-5xl xs:text-4xl xxs:text-3xl text-[1.5rem] leading-8 font-bold">BRIDE <br />/ NAFI</h2>
                         <p data-aos="fade-right" className="xxs:text-base text-xs">Putri Pertama dari Bapak Kristoni, & Ibu Fitriyani</p>
                         <div data-aos="fade-right" className="bg-[#945C5C] text-white xxs:text-sm text-[0.6rem] flex flex-col items-start justify-center w-full mt-3 px-2">
                             <div className="flex items-center justify-start gap-x-1">
@@ -45,7 +45,7 @@ export default function GroomBrideSection() {
                 {/* Bride */}
                 <div className="flex justify-start items-start gap-x-2">
                     <div className="w-[43%] overflow-hidden">
-                        <h2 data-aos="fade-left" className="xxs:text-4xl text-3xl font-bold">GROOM <br />/ TIO</h2>
+                        <h2 data-aos="fade-left" className="sm:text-5xl xs:text-4xl xxs:text-3xl text-[1.5rem] leading-8 font-bold">GROOM <br />/ TIO</h2>
                         <p data-aos="fade-left" className="xxs:text-base text-xs">Putra Pertama dari Bapak Maskuri, & Ibu Waryati</p>
                         <div data-aos="fade-left" className="bg-[#945C5C] text-white xxs:text-sm text-[0.6rem] flex flex-col items-start justify-center w-full mt-3 px-2">
                             <div className="flex items-center justify-start gap-x-1">
