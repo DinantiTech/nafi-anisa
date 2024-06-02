@@ -3,6 +3,10 @@ import moment from 'moment';
 // import 'moment/locale/id';
 
 export class Helpers {
+    static youtubeEmbed(youtubeId: string): string {
+        return `https://www.youtube.com/embed/${youtubeId}?Version=3&autoplay=1&mute=1&loop=1&playlist=${youtubeId}`;
+    }
+
     static scrollToElement(elementId: string) {
         const element = document.getElementById(elementId);
         if (element) {

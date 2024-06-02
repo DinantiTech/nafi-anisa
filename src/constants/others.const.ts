@@ -1,5 +1,5 @@
 // Youtube Embed
-export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717079230/musics/kekal%20-%20nadin%20amizah.mp3";
+export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717177086/musics/kekal_nadin.mp4";
 
 // Google API Sheet
 export const SPREADSHEET_ID = "1815BL8GyJ172g1WfHuCMQ8gKuUSSfUUIt5qjGhZimXg";

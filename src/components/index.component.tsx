@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect } from "react";
+import { Suspense, useEffect } from "react";
 import AOS from "aos";
 import { Maven_Pro } from "next/font/google";
 
@@ -17,10 +17,12 @@ import GaleriesSection from "./sections/galeries.section";
 import GiftSection from "./sections/gift.section";
 import SpecialyThanksSection from "./sections/specialy_thanks.section";
 import MusicBtn from "./micro/button_music.micro";
-import YoutubeSection from "./sections/youtube.section";
 import RSVPSection from "./sections/rsvp.component";
+import dynamic from "next/dynamic";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
+
+const YoutubeSection = dynamic(() => import("./sections/youtube.section"))
 
 export default function IndexComponent({ to }: { to?: string }) {
     useEffect(() => {
@@ -37,7 +39,11 @@ export default function IndexComponent({ to }: { to?: string }) {
                 <EventSection />
                 <StoriesSection />
                 <GaleriesSection />
-                <YoutubeSection />
+
+                <Suspense>
+                    <YoutubeSection />
+                </Suspense>
+
                 <RSVPSection />
                 <GiftSection />
                 <SpecialyThanksSection />
