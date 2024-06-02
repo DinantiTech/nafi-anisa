@@ -5,9 +5,11 @@ import { useSearchParams } from "next/navigation";
 
 
 const ToPage = () => {
-    const searchParams = useSearchParams()
+  const queryParams = useSearchParams();
 
-  return <IndexComponent to={searchParams?.toString()?.replace(/=/g, '')} />
+  const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ');
+ 
+  return <IndexComponent to={guestString} />
 };
 
 export default ToPage;
