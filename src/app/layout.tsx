@@ -6,7 +6,7 @@ const comfortaa = Comfortaa({ subsets: ['latin'] });
 
 const metaDesc: string = "Menjadi sebuah kebahagiaan bagi kami untuk mengumumkan awal dari babak baru kehidupan kami bersama. Silakan klik tautan situs Undangan Website di bawah untuk informasi lebih lanjut";
 
-const metaTitle: string = 'Nafi & Alif - The Wedding Of Invitation';
+const metaTitle: string = 'Amelia & Hanif - The Wedding Of Invitation';
 // const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/v1717233748/themes/ASA_270624/meta-image.png"; // HQ
 
 const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/v1717235244/themes/ASA_270624/meta-image-lq.png";
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   description: metaDesc,
 
   generator: 'dinanti generator',
-  applicationName: 'Nafi & Alif',
+  applicationName: 'Amelia & Hanif',
   referrer: 'origin-when-cross-origin',
   keywords: ['dinanti', 'Dinanti', 'Digital Invitation', 'invitation', 'dinanti.id', 'undangan digital', 'pernikahan', 'undangan pernikahan', 'khitan', 'undangan khitanan'],
   authors: [{ name: 'dinanti author' }, { name: 'Saepudin'}, { name: 'Arnoud' }, { name: 'Danes' }, { name: 'Asa' }],

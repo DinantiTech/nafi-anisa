@@ -6,13 +6,11 @@ import Drawer from 'react-modern-drawer';
 
 // Styles
 import 'react-modern-drawer/dist/index.css';
+const schoolbell = localFont({ src: "../../assets/fonts/Schoolbell-Regular.ttf" });
+const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
-const newYorkFont = localFont({ src: "../../assets/fonts/NewYork.otf" });
-const creattionDemoFont = localFont({ src: "../../assets/fonts/CreattionDemo.otf" });
-
-import Cover from "@/assets/cover.png";
+import CoverHero from "@/assets/cover_hero.jpg";
 import MobileLayout from "@/components/layouts/mobile.layout";
-import BgAnd from "@/assets/bg_&.png";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";
 
@@ -28,85 +26,53 @@ export default function CoverSection() {
 
     return (
         <Drawer open={isCover} direction="left" zIndex={100} customIdSuffix="cover-drawer" size="100%" className="">
-            <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-white h-full">
-                <MobileLayout className="overflow-hidden" id="cover">
+            <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-[#FFFBEF] h-full">
+                <MobileLayout className="overflow-hidden h-screen " id="cover">
+                    <div className="absolute z-20 h-full w-full flex flex-col items-center justify-center px-8 gap-y-4">
+                        <div className="overflow-hidden relative shadow-2xl"
+                            data-aos="zoom-out-up"
+                            data-aos-offset="300"
+                            data-aos-delay="300"
+                            data-aos-duration="700"
+                            data-aos-easing="ease-in-sine"
+                        >
+                            <Image
+                                src={CoverHero}
+                                alt="couple cover"
+                                sizes='30vh'
+                                className="object-cover object-top z-0 md:object-top" />
 
-                    <div className="absolute top-0 left-0 z-10 w-full h-full" 
-                        data-aos="zoom-out-up"
-                        data-aos-offset="300"
-                        data-aos-delay="400"
-                        data-aos-duration="700"
-                        data-aos-easing="ease-in-sine"
-                    >
-                        <Image
-                            src={BgAnd}
-                            sizes='100vw'
-                            alt="" 
-                            className="w-full min-h-max h-full bg-white/0.5 object-cover opacity-40"
-                        />
-                    </div>
+                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-2xl lg:text-6xl`}
+                                data-aos="fade-down"
+                                data-aos-delay="1200"
+                                data-aos-duration="900"
+                                data-aos-offset="0"
+                            >
+                                24 . 10 . 2024
+                            </p>
 
-                    <div className="absolute z-20 h-full w-full flex flex-col items-center justify-center px-8 gap-y-36 xxs:gap-y-44 md:gap-y-52 lg:gap-y-60">
-
-                        <div className="flex justify-start flex-col items-start w-full font-[450] text-xs xxs:text-2xl xs:text-2xl text-black tracking-widest leading-6">
-
-                            <p data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1200" data-aos-duration="500">JOIN US FOR</p>
-                            <p data-aos="fade-right" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1400" data-aos-duration="600">THE WEDDING OF</p>
-
-                        </div>
-
-                        <div className="w-full flex justify-end xxs:mr-10 mr-5">
-                            <div className="flex flex-col items-center justify-center text-black">
-                                <div className={`${newYorkFont.className} relative text-4xl xxs:text-6xl font-medium leading-6 xxs:leading-8`}>
-
-                                    <h4 className="text-left" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1200" data-aos-duration="600">Nafi</h4>
-
-                                    <div className="text-right">
-                                        <p className={`${creattionDemoFont.className}`} data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1400" data-aos-duration="700">and</p>
-                                        <h4 className="xxs:mt-3 xxs:-mr-10 -mr-7" data-aos="fade-left" data-aos-anchor="#example-anchor" data-aos-offset="300" data-aos-easing="ease-in-sine" data-aos-delay="1600" data-aos-duration="800">Alif</h4>
-                                    </div>
-
-                                </div>
-
-                                <div data-aos="zoom-in" data-aos-offset="0" data-aos-delay="1700" data-aos-duration="800" className="h-0.5 w-20 bg-black mt-3 xxs:mt-6 rounded-full" />
-
-                                <div className="h-fit overflow-hidden">
-                                    <p 
-                                        className="xxs:my-5 my-3 font-bold text-[0.6rem] xxs:text-sm"
-                                        data-aos="fade-down"
-                                        data-aos-offset="0"
-                                        data-aos-delay="1800"
-                                        data-aos-duration="800"
-                                    >
-                                        20 - 21 JUNE 2024
-                                    </p>
-                                </div>
-
+                            <div className="absolute bottom-6 lg:botton-14 left-0 right-0 flex flex-col items-center justify-center">
                                 <button
                                     onClick={handleOpenInvitation}
-                                    className="btn btn-sm xxs:btn-md bg-[#A97373] hover:bg-[#A97373]/90 duration-300 text-white font-semibold border-none xss:text-md text-xs"
-                                    data-aos="zoom-in"
-                                    data-aos-delay="1900"
+                                    className={`${schoolbell.className} btn btn-sm lg:btn-2xl rounded-full shadow-lg hover:shadow-xl bg-[#E8B787] hover:bg-[#E6B07B]/90 text-white font-normal border-none xss:text-md sm:text-base lg:text-lg`}
+                                    data-aos="fade-up"
+                                    data-aos-delay="1800"
                                     data-aos-duration="900"
                                     data-aos-offset="0"
-                                >    
+                                >
                                     OPEN INVITATION
                                 </button>
                             </div>
                         </div>
+                        <p className={` ${babyDoll.className} text-black font-normal text-xl lg:text-2xl text-pretty text-center`}
+                            data-aos="fade-down"
+                            data-aos-delay="2700"
+                            data-aos-duration="900"
+                            data-aos-offset="0"
+                        >
+                            THE BEGINNING OF AN ETERNAL BOND
+                        </p>
                     </div>
-
-                    <Image 
-                        src={Cover}
-                        data-aos="zoom-out-up"
-                        data-aos-offset="300"
-                        data-aos-delay="300"
-                        data-aos-duration="700"
-                        data-aos-easing="ease-in-sine"
-                        alt="couple cover"
-                        sizes='100vw' 
-                        className="object-cover object-top z-0 md:object-top h-screen" />
-
                 </MobileLayout>
             </div>
         </Drawer>
