@@ -29,7 +29,7 @@ export default function IndexComponent({ to }: { to?: string }) {
     }, [])
 
     return (
-        <main className={`${mavenPro.className} w-full h-full bg-white`}>
+        <main className={`${mavenPro.className} w-full h-full bg-[#FFFBEF]`}>
             <Cover />
             <MobileLayout>
                 <HeroSection to={to} />
