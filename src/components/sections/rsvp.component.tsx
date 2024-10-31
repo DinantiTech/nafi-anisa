@@ -5,6 +5,7 @@ import { Field, Formik } from "formik";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import moment from "moment-timezone";
 import Lottie from "react-lottie";
+import localFont from "next/font/local";
 
 import MobileLayout from "../layouts/mobile.layout";
 import { useAppScript } from "@/hooks/app_script.hook";
@@ -13,6 +14,8 @@ import HeadingTitle from "../micro/heading_title.micro";
 
 import rsvpAnimmationData from "@/assets/icon-animation/rsvp-animation.json";
 import { useRSVPSubmitStore } from "@/stores/rsvp_submit.store";
+
+const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 type FormType = {
     name: string;
@@ -42,8 +45,8 @@ export default function RSVPSection() {
                 />
             </div>
 
-            <HeadingTitle title="BEST WISHES" className="mx-auto flex items-center justify-center" />
-            <div className="w-full flex flex-col justify-center items-center py-6">
+            <HeadingTitle title="BEST WISHES" className={`${babyDoll.className} mx-auto flex items-center justify-center`} />
+            <div className={`${babyDoll.className} w-full flex flex-col justify-center items-center py-6`}>
 
                 <Formik
                     initialValues={{ name: '', message: '', attendance: false }}
@@ -73,17 +76,17 @@ export default function RSVPSection() {
                         isSubmitting
                     }) => (
                         <form onSubmit={handleSubmit} className="relative mt-10 w-full flex flex-col justify-start items-start gap-y-5 font-primary">
-                            <div className="relative w-full text-sm xxs:text-base">
-                                <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-10 w-full border-b text-gray-900 focus:outline-none focus:borer-rose-600`} placeholder="Enter Your Name" />
+                            <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
+                                <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-10 w-full border-b text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Enter Your Name..." />
 
                                 {errors.name ? <span className="text-red-800 text-xs">{errors?.name}</span> : null}
                             </div>
-                            <div className="relative w-full text-sm xxs:text-base">
-                                <Field disabled={isRSVPSubmit} as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-24 w-full border-b border-black text-gray-900 focus:outline-none focus:borer-rose-600`} placeholder="Enter Your Wish" />
+                            <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
+                                <Field disabled={isRSVPSubmit} as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-24 w-full border-b border-black text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Text here..." />
                                 {errors.message ? <span className="text-red-800 text-xs">{errors?.message}</span> : null}
                             </div>
 
-                            <div id="attendance" className="w-full flex justify-between items-center rounded-lg">
+                            <div id="attendance" className="w-full flex justify-between items-center rounded-lg" data-aos="fade-in">
                                 <div className="flex items-center">
                                     <Field
                                         disabled={isRSVPSubmit}
@@ -100,7 +103,7 @@ export default function RSVPSection() {
                                     </label>
                                 </div>
 
-                                <button disabled={isRSVPSubmit || isSubmitting} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#945C5C]/90 border-none btn btn-sm xxs:btn-md bg-[#945C5C] text-white font-normal gap-x-1'>
+                                <button disabled={isRSVPSubmit || isSubmitting} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
                                     <Icon icon="jam:paper-plane" />
                                     SEND
                                 </button>
@@ -120,7 +123,7 @@ export default function RSVPSection() {
                         <>
                             {
                                 data?.slice(0, messageLimit)?.map((data: Record<string, any>, index) => (
-                                    <div key={index} className="flex items-start justify-center gap-x-2">
+                                    <div key={index} className="flex items-start justify-center gap-x-2" data-aos="fade-left">
                                         <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded-full flex items-center justify-center uppercase font-bold">{data?.name[0]}</div>
                                         <div className="w-full flex flex-col items-start justify-center">
                                             <div className="flex items-start justify-center flex-col">
@@ -140,7 +143,8 @@ export default function RSVPSection() {
                 {data && data.length > messageLimit ? (
                     <button
                         onClick={handleLoadMore}
-                        className="btn btn-sm text-sm bg-[#945C5C] hover:bg-[#945C5C]/90 w-full text-white mt-7 font-normal py-4 h-auto"
+                        className="btn btn-sm text-sm bg-[#E8B787] hover:bg-[#E8B787]/90 w-full text-white mt-7 font-normal py-4 h-auto"
+                        data-aos="fade-in"
                     >
                         LOAD MORE MESSAGES
                     </button>

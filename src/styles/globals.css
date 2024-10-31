@@ -3,9 +3,18 @@
 @tailwind utilities;
 
 #bg-texture {
-    background-image: url('../assets/texture.png'); /* Adjust the path to your image */
-    background-size: contain;
-    background-repeat: repeat-y;
-    
-    /* You can add more styling as needed */
-  }
+  background-image: url('../assets/texture.png');
+  /* Adjust the path to your image */
+  background-size: contain;
+  background-repeat: repeat-y;
+
+  /* You can add more styling as needed */
+}
+#couple_texture {
+  background-image: url('../assets/couple/couple_bg.jpg');
+  /* Adjust the path to your image */
+  background-size: contain;
+  background-repeat: repeat-y;
+
+  /* You can add more styling as needed */
+}

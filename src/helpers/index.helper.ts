@@ -22,18 +22,18 @@ export class Helpers {
         const startMoment = moment(startDate);
 
         if (!endDate) {
-            return startMoment.format('D MMM YY');
+            return startMoment.format('D MMMM YYYY');
         }
 
         const endMoment = moment(endDate);
 
         if (startMoment.isSame(endMoment, 'day')) {
-            return startMoment.format('D MMM YY');
+            return startMoment.format('D MMMM YYYY');
         } else {
             if (startMoment.month() === endMoment.month() && startMoment.year() === endMoment.year()) {
-                return `${startMoment.format('D')} - ${endMoment.format('D MMM YY')}`;
+                return `${startMoment.format('D')} - ${endMoment.format('D MMMM YYYY')}`;
             } else {
-                return `${startMoment.format('D MMM')} - ${endMoment.format('D MMM YY')}`;
+                return `${startMoment.format('D MMM')} - ${endMoment.format('D MMM YYYY')}`;
             }
         }
     }

@@ -44,7 +44,7 @@ export default function HeroSection({ to }: { to?: string }) {
             </nav> */}
 
             <div className="flex flex-col gap-y-4 my-8 items-center">
-                <p className={` ${babyDoll.className} text-black font-normal text-xl lg:text-4xl text-pretty text-center`}>
+                <p className={` ${babyDoll.className} text-black font-normal text-4xl lg:text-4xl text-pretty text-center`}>
                     THE WEDDING OF
                 </p>
 
@@ -68,10 +68,10 @@ export default function HeroSection({ to }: { to?: string }) {
                     className="w-48 mx-auto"
                 />
 
-                <p className="text-center text-balance text-2xl">
+                <p className="text-center text-balance text-2xl" data-aos="fade-right">
                     وَمِنْ اٰيٰتِهٖٓ اَنْ خَلَقَ لَكُمْ مِّنْ اَنْفُسِكُمْ اَزْوَاجًا لِّتَسْكُنُوْٓا اِلَيْهَا وَجَعَلَ بَيْنَكُمْ مَّوَدَّةً وَّرَحْمَةً ۗاِنَّ فِيْ ذٰلِكَ لَاٰيٰتٍ لِّقَوْمٍ يَّتَفَكَّرُوْنَ
                 </p>
-                <p className={`${babyDoll.className} text-center text-sm md:text-base text-balance w-11/12`}>
+                <p className={`${babyDoll.className} text-center text-sm md:text-base text-balance w-11/12`} data-aos="fade-left">
                     "Di antara tanda-tanda (kebesaran)-Nya ialah bahwa Dia menciptakan pasangan-pasangan untukmu dari
                     (jenis) dirimu sendiri agar kamu merasa tenteram kepadanya. Dia menjadikan di antaramu rasa cinta
                     dan kasih sayang. Sesungguhnya pada yang demikian itu benar-benar terdapat tanda-tanda

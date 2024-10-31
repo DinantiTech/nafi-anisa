@@ -20,6 +20,8 @@ import MusicBtn from "./micro/button_music.micro";
 import RSVPSection from "./sections/rsvp.component";
 import dynamic from "next/dynamic";
 import YoutubeSection from "./sections/youtube.section";
+import RulesSection from "./sections/rules.component";
+import PrayerSection from "./sections/prayer.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -36,10 +38,13 @@ export default function IndexComponent({ to }: { to?: string }) {
                 <GroomBrideSection />
                 <CountdownSection />
                 <EventSection />
-                <StoriesSection />
-                <GaleriesSection />
+                {/* <StoriesSection /> */}
+                {/* <GaleriesSection /> */}
 
-                <YoutubeSection />
+                {/* <YoutubeSection /> */}
+
+                <RulesSection />
+                <PrayerSection />
 
                 <RSVPSection />
                 <GiftSection />

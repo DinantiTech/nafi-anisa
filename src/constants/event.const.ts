@@ -1,5 +1,6 @@
-export const AKAD_DATE = "2024-06-20";
-export const AKAD_TIME = "09:00 AM";
+export const AKAD_DATE = "2024-11-24";
+export const AKAD_TIME = "08:00 AM";
+export const TASYUKURAN_DATE = "2024-11-28";
 
 export const START_DATE_RECEPTION = "2024-06-20";
 export const END_DATE_RECEPTION = "2024-06-21";
