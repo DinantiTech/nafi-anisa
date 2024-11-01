@@ -4,6 +4,7 @@ import Image from "next/image";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import localFont from "next/font/local";
+import { Inter } from 'next/font/google'
 
 import MobileLayout from "../layouts/mobile.layout";
 import giftAnimationData from "@/assets/icon-animation/gift-animation.json";
@@ -12,15 +13,17 @@ import HeadingTitle from "../micro/heading_title.micro";
 import LogoBRI from "@/assets/logo/logo-BRI.png";
 import LogoBCA from "@/assets/logo/logo-BCA.png";
 import IconMastercard from "@/assets/logo/mastercard.svg";
-import LogoShopeepay from "@/assets/logo/ShopeePay.svg";
-import LogoDana from "@/assets/logo/DANA.svg";
-import LogoOvo from "@/assets/logo/OVO.svg";
+// import LogoShopeepay from "@/assets/logo/ShopeePay.svg";
+// import LogoDana from "@/assets/logo/DANA.svg";
+// import LogoOvo from "@/assets/logo/OVO.svg";
 import toast, { Toaster } from "react-hot-toast";
 import { ADDRESS_GIFT } from "@/constants/others.const";
 
-
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
-const inter = localFont({ src: "../../assets/fonts/Inter-VariableFont_opsz,wght.ttf" });
+
+
+const inter = Inter({ subsets: ['latin'] })
+// const inter = localFont({ src: "../../assets/fonts/Inter-VariableFont_opsz,wght.ttf" });
 
 
 export default function GiftSection() {
