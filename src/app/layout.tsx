@@ -9,7 +9,7 @@ const metaDesc: string = "Menjadi sebuah kebahagiaan bagi kami untuk mengumumkan
 const metaTitle: string = 'Amelia & Hanif - The Wedding Of Invitation';
 // const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/v1717233748/themes/ASA_270624/meta-image.png"; // HQ
 
-const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/v1717235244/themes/ASA_270624/meta-image-lq.png";
+const metaImage: string = "https://res.cloudinary.com/storyline-beta/image/upload/c_thumb,w_200,g_face/v1730473096/themes/ASA_291024/xdd82ebke2ddankvgxu8.jpg";
 const siteUrl = 'https://dinanti.id';
 
 export const metadata: Metadata = {
