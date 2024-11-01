@@ -4,7 +4,7 @@ const isDevEnd = process && process.env.NODE_ENV === "development";
 export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717177086/musics/kekal_nadin.mp4";
 
 // Google API Sheet
-export const SPREADSHEET_ID = isDevEnd ? "1815BL8GyJ172g1WfHuCMQ8gKuUSSfUUIt5qjGhZimXg" : "1zQQM8AKu7Wa84f-QydlCqFDSgD-bDXnmAjHE2cYOFso";
+export const SPREADSHEET_ID = isDevEnd ? "1815BL8GyJ172g1WfHuCMQ8gKuUSSfUUIt5qjGhZimXg" : "1c1Fw1PpwuBVt6QYChy_c_HxjQJJaA7lXKhon1GFdiDY";
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
 export const SHEET_NAME = "RSVP";
 
