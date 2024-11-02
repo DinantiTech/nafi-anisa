@@ -48,7 +48,7 @@ export default function CoverSection() {
                                 data-aos-duration="900"
                                 data-aos-offset="0"
                             >
-                                24 . 10 . 2024
+                                24 . 11 . 2024
                             </p>
 
                             <div className="absolute bottom-6 lg:bottom-14 left-0 right-0 flex flex-col items-center justify-center">
