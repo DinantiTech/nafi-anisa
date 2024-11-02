@@ -21,10 +21,10 @@ export default function GroomBrideSection() {
             <div className="mt-6 flex flex-col items-center justify-center gap-y-10">
                 {/* Groom */}
 
-                <div className="flex items-end -ml-6 overflow-hidden">
-                    <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-56 w-auto" />
-                    <div className={`pl-14 p-10 -ml-12 bg-no-repeat bg-cover bg-center bg-fixed`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-nowrap text-sm w-2/3 lg:w-1/3`}>
+                <div className="flex flex-col xxs:flex-row items-center xxs:items-end">
+                    <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
+                    <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pl-14 xs:pr-5 xs:p-10 xs:-ml-12`} id="couple_texture">
+                        <p className={`${babyDoll.className} text-left text-sm`}>
                             Abdul Hanif Alfata S. Pt. <br />
                             (Hanif) <br />
                             Putra dari <br />
@@ -35,10 +35,10 @@ export default function GroomBrideSection() {
                     </div>
                 </div>
 
-                <div className="flex flex-row-reverse items-end overflow-hidden">
-                    <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" className="h-56 w-auto -ml-12"/>
-                    <div className={`pr-14 pl-5 p-10 bg-no-repeat bg-cover bg-center bg-fixed ml-24`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-right text-nowrap text-sm w-2/3 lg:w-1/3`}>
+                <div className="flex flex-col xxs:flex-row-reverse items-center xxs:items-end">
+                    <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" className="h-auto w-1/2 xs:h-56 xs:w-auto"/>
+                    <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pr-14 xs:pl-5 xs:p-10 xs:-mr-12`} id="couple_texture">
+                        <p className={`${babyDoll.className} text-left text-sm`}>
                             Shofi Putri Amelia S. Psi <br />
                             (Amelia) <br />
                             Putri dari <br />

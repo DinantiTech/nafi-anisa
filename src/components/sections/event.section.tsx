@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import { Helpers } from '@/helpers/index.helper';
 import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
-import { AKAD_DATE, AKAD_TIME, TASYUKURAN_DATE, MAPS_LOCATION } from '@/constants/event.const';
+import { AKAD_DATE, AKAD_TIME, TASYUKURAN_DATE, MAPS_LOCATION, MAPS_LOCATION_2 } from '@/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
 
@@ -100,7 +100,7 @@ export default function EventSection() {
                     </p>
                 </div>
 
-                <button data-aos="fade-down" onClick={() => Helpers.redirectToBlank(MAPS_LOCATION)} className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
+                <button data-aos="fade-down" onClick={() => Helpers.redirectToBlank(MAPS_LOCATION_2)} className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
                     <Icon icon="simple-icons:googlemaps" />
                     Maps
                 </button>

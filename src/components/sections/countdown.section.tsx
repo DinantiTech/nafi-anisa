@@ -19,8 +19,8 @@ export default function CountdownSection() {
                         <div>
                             <Image data-aos="fade-right" src={ImgCountdown} alt="countdown decoration" sizes="100vw" className="w-40"/>
                         </div>
-                        <div className="flex flex-col items-center justify-center xxs:gap-y-2">
-                            <p className={`${babyDoll.className} text-5xl text-nowrap tracking-wider`}>COUNT DOWN</p>
+                        <div className="flex flex-col items-center justify-center xxs:gap-y-2 py-2">
+                            <p className={`${babyDoll.className} text-3xl xss:text-5xl text-nowrap tracking-wider p-2`}>COUNT DOWN</p>
                         </div>
                         <div className={`${shorelinesScript.className} flex items-center justify-center xxs:gap-6 gap-3`}>
 
