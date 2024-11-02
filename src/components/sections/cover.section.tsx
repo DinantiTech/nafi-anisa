@@ -9,7 +9,7 @@ import 'react-modern-drawer/dist/index.css';
 const schoolbell = localFont({ src: "../../assets/fonts/Schoolbell-Regular.ttf" });
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
-import CoverHero from "@/assets/cover_hero.webp";
+import CoverHero from "@/assets/cover_hero.jpg";
 import MobileLayout from "@/components/layouts/mobile.layout";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";

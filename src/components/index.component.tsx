@@ -30,6 +30,8 @@ export default function IndexComponent({ to }: { to?: string }) {
         AOS.init()
     }, [])
 
+    console.log(to);
+
     return (
         <main className={`${mavenPro.className} w-full h-full bg-[#FFFBEF]`}>
             <Cover />

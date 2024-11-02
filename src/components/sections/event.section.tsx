@@ -96,7 +96,7 @@ export default function EventSection() {
 
                 <div className='w-11/12 overflow-hidden'>
                     <p data-aos="fade-down" className='text-xs xxs:text-sm sm:text-base text-center text-balance'>
-                        Dusun Sentul, 005/009, Desa Sukorejo, Kec. Sukorejo, Kab. Kendal
+                        Dusun Sentul, 05/09, Desa Sukorejo, Kec. Sukorejo, Kab. Kendal
                     </p>
                 </div>
 

@@ -8,7 +8,6 @@ const ToPage = () => {
   const queryParams = useSearchParams();
 
   const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ');
- 
   return <IndexComponent to={guestString} />
 };
 

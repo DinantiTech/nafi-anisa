@@ -48,19 +48,24 @@ export default function HeroSection({ to }: { to?: string }) {
                     THE WEDDING OF
                 </p>
 
-                <div className="relative w-full h-[300px]">
+                <div className="relative w-full h-[200px]">
                     {HeroImage?.map((img, idx) => (
                         <Image
                             key={idx}
                             src={img}
                             alt={`Image ${idx}`}
-                            sizes='300px'
-                            className={`absolute object-contain transition-opacity z-10 duration-[4000ms] h-full w-full ease-in-out  ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                            sizes='200px'
+                            className={` absolute object-contain transition-opacity z-10 duration-[4000ms] h-full ease-in-out  ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
                         />))}
                 </div>
                 <p className={` ${shorelinesScript.className} text-black font-normal text-xl lg:text-2xl text-pretty text-center`}>
                     amelia & hanif
                 </p>
+                <div className={`${babyDoll.className} flex flex-col items-center justify-center text-balck text-xs xxs:text-base`}>
+                    <p>Kepada Bapak / Ibu / Saudara / i,</p>
+                    <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
+                    <p>di tempat</p>
+                </div>
                 <Image
                     src={HurufArab}
                     alt="Huruf Arab"
