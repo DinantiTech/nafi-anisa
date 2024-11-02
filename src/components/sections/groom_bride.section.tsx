@@ -24,7 +24,7 @@ export default function GroomBrideSection() {
                 <div className="flex items-end -ml-6 overflow-hidden">
                     <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" sizes="100vh" className="h-56 w-auto" />
                     <div className={`pl-14 p-10 -ml-12 bg-no-repeat bg-cover bg-center bg-fixed`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-nowrap text-sm w-1/3`}>
+                        <p className={`${babyDoll.className} text-left text-nowrap text-sm w-2/3 lg:w-1/3`}>
                             Abdul Hanif Alfata S. Pt. <br />
                             (Hanif) <br />
                             Putra dari <br />
@@ -38,7 +38,7 @@ export default function GroomBrideSection() {
                 <div className="flex flex-row-reverse items-end overflow-hidden">
                     <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" sizes="40vw" className="h-56 w-auto -ml-12"/>
                     <div className={`pr-14 pl-5 p-10 bg-no-repeat bg-cover bg-center bg-fixed ml-24`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-right text-nowrap text-sm`}>
+                        <p className={`${babyDoll.className} text-right text-nowrap text-sm w-2/3 lg:w-1/3`}>
                             Shofi Putri Amelia S. Psi <br />
                             (Amelia) <br />
                             Putri dari <br />
