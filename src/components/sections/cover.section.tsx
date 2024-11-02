@@ -9,7 +9,7 @@ import 'react-modern-drawer/dist/index.css';
 const schoolbell = localFont({ src: "../../assets/fonts/Schoolbell-Regular.ttf" });
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
-import CoverHero from "@/assets/cover_hero.jpg";
+import CoverHero from "@/assets/cover_hero.png";
 import MobileLayout from "@/components/layouts/mobile.layout";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";
@@ -42,7 +42,7 @@ export default function CoverSection() {
                                 sizes='30vh'
                                 className="object-cover object-top z-0 md:object-top" />
 
-                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-2xl lg:text-6xl drop-shadow-2xl`}
+                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-2xl lg:text-6xl drop-shadow-2xl`} style={{textShadow: '1px 1px 10px rgba(0,0,0, 0.5)'}}
                                 data-aos="fade-down"
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
