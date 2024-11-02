@@ -1,7 +1,9 @@
 const isDevEnd = process && process.env.NODE_ENV === "development";
 
 // Youtube Embed
-export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717177086/musics/kekal_nadin.mp4";
+
+export const MusicBG = "https://asset.cloudinary.com/diaryapp/5174d12ffb9285a4a36764d0b4297aa4";
+// export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717177086/musics/kekal_nadin.mp4";
 
 // Google API Sheet
 //  development | production

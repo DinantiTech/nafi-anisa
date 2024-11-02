@@ -48,16 +48,20 @@ export default function HeroSection({ to }: { to?: string }) {
                     THE WEDDING OF
                 </p>
 
-                <div className="relative w-full h-[200px]">
-                    {HeroImage?.map((img, idx) => (
-                        <Image
-                            key={idx}
-                            src={img}
-                            alt={`Image ${idx}`}
-                            sizes='200px'
-                            className={` absolute object-contain transition-opacity z-10 duration-[4000ms] h-full ease-in-out  ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
-                        />))}
+                <div className="w-full h-full">
+                    <div className="relative h-[200px] flex justify-center items-center">
+                        {HeroImage?.map((img, idx) => (
+                            <Image
+                                key={idx}
+                                src={img}
+                                alt={`Image ${idx}`}
+                                sizes="200px"
+                                className={`absolute object-contain transition-opacity z-10 duration-[4000ms] h-full ease-in-out ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
+                            />
+                        ))}
+                    </div>
                 </div>
+
                 <p className={` ${shorelinesScript.className} text-black font-normal text-xl lg:text-2xl text-pretty text-center`}>
                     amelia & hanif
                 </p>
