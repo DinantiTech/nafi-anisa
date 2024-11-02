@@ -41,7 +41,7 @@ export default function EventSection() {
                 </div>
 
                 <button data-aos="fade-down" onClick={() => Helpers.redirectToBlank(MAPS_LOCATION)} className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
-                    <Icon icon="arcticons:google-maps-alt" />
+                    <Icon icon="simple-icons:googlemaps" />
                     Maps
                 </button>
             </div>

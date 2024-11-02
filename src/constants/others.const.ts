@@ -9,7 +9,7 @@ export const SPREADSHEET_ID = isDevEnd ? "1815BL8GyJ172g1WfHuCMQ8gKuUSSfUUIt5qjG
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec";
 export const SHEET_NAME = "RSVP";
 
-export const ADDRESS_GIFT = "Jalan Lingkar Terminal No. 02, RT 03 RW 07, Dusun Ngloyo, Desa Trimulyo, Sukorejo, Kendal, Jawa Tengah 51363 (Salon Maharani)";
+export const ADDRESS_GIFT = "Jl. Masjid Baitul Matien Gang Situ Elok RT 01/06 Pernasidi Kec. Cilongok Kab. Banyumas";
 
 // Jangan dihapus
 // https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec
