@@ -128,7 +128,7 @@ export default function RSVPSection() {
                                         <div className="w-full flex flex-col items-start justify-center">
                                             <div className="flex items-start justify-center flex-col">
                                                 <h5 className="text-black font-semibold sm:text-lg">
-                                                    {data.name} <span className="text-xs text-amber-900">{data?.attendance ? "🔥" : null}</span>
+                                                    {data.name} <span className="text-xs text-amber-900">{data?.attendance ? "✅" : null}</span>
                                                 </h5>
                                                 <span className="text-amber-700 text-xs">{moment(new Date(data?.createdAt)).tz('Asia/Jakarta').fromNow()}</span>
                                             </div>

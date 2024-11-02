@@ -24,11 +24,11 @@ export default function GroomBrideSection() {
                 <div className="flex flex-col xxs:flex-row items-center xxs:items-end">
                     <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pl-14 xs:pr-5 xs:p-10 xs:-ml-12`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-sm`}>
-                            Abdul Hanif Alfata S. Pt. <br />
+                        <p className={`${babyDoll.className} text-left text-sm leading-7`}>
+                            Abdul Hanif Alfata S. Pt.
                             (Hanif) <br />
-                            Putra dari <br />
-                            Bapak Mustakim M.Pd. & <br />
+                            Putra dari
+                            Bapak Mustakim M.Pd. &<br />
                             Ibu Siti Nur Fajriyah A.Md. <br />
                             @anif_alfata
                         </p>
@@ -38,10 +38,10 @@ export default function GroomBrideSection() {
                 <div className="flex flex-col xxs:flex-row-reverse items-center xxs:items-end">
                     <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" className="h-auto w-1/2 xs:h-56 xs:w-auto"/>
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pr-14 xs:pl-5 xs:p-10 xs:-mr-12`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-sm`}>
-                            Shofi Putri Amelia S. Psi <br />
+                        <p className={`${babyDoll.className} text-left text-sm leading-7`}>
+                            Shofi Putri Amelia S. Psi
                             (Amelia) <br />
-                            Putri dari <br />
+                            Putri dari
                             Bapak M. Sunarto A. Md. & <br />
                             Ibu Laely Rosyada <br />
                             @ameliaaa.sp. 
