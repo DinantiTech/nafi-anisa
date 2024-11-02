@@ -55,7 +55,6 @@ export default function HeroSection({ to }: { to?: string }) {
                                 key={idx}
                                 src={img}
                                 alt={`Image ${idx}`}
-                                sizes="200px"
                                 className={`absolute object-contain transition-opacity z-10 duration-[4000ms] h-full ease-in-out ${idx === currentIndex ? 'opacity-100' : 'opacity-0'}`}
                             />
                         ))}
