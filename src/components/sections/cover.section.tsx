@@ -42,7 +42,7 @@ export default function CoverSection() {
                                 sizes='30vh'
                                 className="object-cover object-top z-0 md:object-top" />
 
-                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-black font-normal text-2xl lg:text-6xl drop-shadow-2xl`}
+                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-2xl lg:text-6xl drop-shadow-2xl`}
                                 data-aos="fade-down"
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
