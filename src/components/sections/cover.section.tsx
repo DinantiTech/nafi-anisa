@@ -9,7 +9,7 @@ import 'react-modern-drawer/dist/index.css';
 const schoolbell = localFont({ src: "../../assets/fonts/Schoolbell-Regular.ttf" });
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
-import CoverHero from "@/assets/cover_hero.png";
+import CoverHero from "@/assets/cover_hero.jpg";
 import MobileLayout from "@/components/layouts/mobile.layout";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";
@@ -39,8 +39,7 @@ export default function CoverSection() {
                             <Image
                                 src={CoverHero}
                                 alt="couple cover"
-                                sizes='30vh'
-                                className="object-cover object-top z-0 md:object-top" />
+                                className="object-cover object-top z-0 md:object-top w-96" />
 
                             <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-xl lg:text-6xl drop-shadow-2xl`} style={{textShadow: '1px 1px 10px rgba(0,0,0, 0.5)'}}
                                 data-aos="fade-down"
@@ -60,7 +59,7 @@ export default function CoverSection() {
                                     data-aos-duration="900"
                                     data-aos-offset="0"
                                 >
-                                    OPEN INVITATION
+                                    Open Invitation
                                 </button>
                             </div>
                         </div>
