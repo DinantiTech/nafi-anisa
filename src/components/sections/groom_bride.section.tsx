@@ -42,7 +42,7 @@ export default function GroomBrideSection() {
                             Shofi Putri Amelia S. Psi <br />
                             (Amelia) <br />
                             Putri dari <br />
-                            Bapak M. Sunarto, A. Md. & <br />
+                            Bapak M. Sunarto A. Md. & <br />
                             Ibu Laely Rosyada <br />
                             @ameliaaa.sp. 
                         </p>
