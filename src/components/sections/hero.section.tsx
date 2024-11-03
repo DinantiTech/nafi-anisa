@@ -38,12 +38,12 @@ export default function HeroSection({ to }: { to?: string }) {
 
     return (
         <>
-            {/* <nav className="flex items-center justify-between px-7 w-full left-0 sm:hidden py-1 xxs:py-0">
-                <Image onClick={() => handleOpenInvitation()} src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon couple" />
-                <Image onClick={() => Helpers.scrollToElement("rsvp")} src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12" alt="icon RSVP" />
-            </nav> */}
+            <nav className="flex items-center justify-between px-7 w-full left-0 py-1 xxs:py-0 sm:hidden">
+                <Image onClick={() => handleOpenInvitation()} src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12 brightness-0" alt="icon couple" />
+                <Image onClick={() => Helpers.scrollToElement("rsvp")} src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12 brightness-0	" alt="icon RSVP" />
+            </nav>
 
-            <div className="flex flex-col gap-y-4 my-8 items-center">
+            <div className="flex flex-col gap-y-4 my-8 items-center" id="home">
                 <p className={` ${babyDoll.className} text-black font-normal text-4xl lg:text-4xl text-pretty text-center`}>
                     THE WEDDING OF
                 </p>
@@ -64,11 +64,11 @@ export default function HeroSection({ to }: { to?: string }) {
                 <p className={` ${shorelinesScript.className} text-black font-normal text-xl lg:text-2xl text-pretty text-center`}>
                     amelia & hanif
                 </p>
-                <div className={`${babyDoll.className} flex flex-col items-center justify-center text-balck text-xs xxs:text-base`}>
+                {/* <div className={`${babyDoll.className} flex flex-col items-center justify-center text-balck text-xs xxs:text-base`}>
                     <p>Kepada Bapak / Ibu / Saudara / i,</p>
                     <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
                     <p>di tempat</p>
-                </div>
+                </div> */}
                 <Image
                     src={HurufArab}
                     alt="Huruf Arab"

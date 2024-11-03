@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import { Helpers } from '@/helpers/index.helper';
 import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
-import { AKAD_DATE, AKAD_TIME, TASYUKURAN_DATE, MAPS_LOCATION, MAPS_LOCATION_2 } from '@/constants/event.const';
+import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, TASYUKURAN_DATE, MAPS_LOCATION, MAPS_LOCATION_2 } from '@/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
 
@@ -12,7 +12,7 @@ const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 export default function EventSection() {
     return (
-        <div className="w-full flex flex-col items-center justify-center my-5 text-black">
+        <div className="w-full flex flex-col items-center justify-center my-5 text-black" id='event'>
             {/* AKAD */}
             <div className='w-20 xxs:w-24'>
                 <Lottie
@@ -65,7 +65,7 @@ export default function EventSection() {
                     <div className='w-fit overflow-hidden'>
                         <div className='underline text-center' data-aos="fade-left">
                             Ahad, {Helpers.formatDateRange(AKAD_DATE)}
-                            {/* <br /> Pukul {AKAD_TIME} */}
+                            <br /> Pukul {START_TIME_RECEPTION}
                         </div>
                     </div>
                 </div>
@@ -82,13 +82,13 @@ export default function EventSection() {
                 </button>
             </div>
 
-            <HeadingTitle className={` ${babyDoll.className} mt-16 text-center`} title='TASYAKURAN <br /> PERNIKAHAN' />
+            <HeadingTitle className={` ${babyDoll.className} mt-16 text-center`} title='Ngunduh Mantu' />
 
             <div className={` ${babyDoll.className} flex flex-col items-center justify-center my-2 gap-y-3`}>
                 <div className='flex items-center justify-center font-medium h-fit overflow-hidden xxs:text-xl sm:text-2xl'>
                     <div className='w-fit overflow-hidden'>
                         <div className='underline text-center' data-aos="fade-left">
-                            Ahad, {Helpers.formatDateRange(TASYUKURAN_DATE)}
+                            Jumat, {Helpers.formatDateRange(TASYUKURAN_DATE)}
                             {/* <br /> Pukul {AKAD_TIME} */}
                         </div>
                     </div>

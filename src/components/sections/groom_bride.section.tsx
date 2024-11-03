@@ -9,7 +9,7 @@ const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 export default function GroomBrideSection() {
     return (
-        <div data-aos="fade-down" data-aos-offset="300" className="flex flex-col justify-center py-10 px-7 text-black">
+        <div data-aos="fade-down" data-aos-offset="300" className="flex flex-col justify-center py-10 px-7 text-black" id='couple'>
             <div className="flex flex-col gap-y-2 items-center">
                 <Image src={IconGroomBride} className="w-28" sizes="100vw" alt="icon groom and bride" />
                 <h3 className={` ${babyDoll.className} text-[#E8B787] tracking-widest font-semibold xxs:text-2xl text-lg`}>GROOM & BRIDE</h3>

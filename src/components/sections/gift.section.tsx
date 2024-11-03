@@ -36,7 +36,7 @@ export default function GiftSection() {
         <MobileLayout className={`${babyDoll.className} flex items-center flex-col`}>
             <Toaster position="top-center" reverseOrder={false} />
 
-            <div className='w-24 xxs:w-28 sm:w-32'>
+            <div className='w-24 xxs:w-28 sm:w-32' id="gift">
                 <Lottie
                     options={{
                         loop: true,

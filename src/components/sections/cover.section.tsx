@@ -14,7 +14,7 @@ import MobileLayout from "@/components/layouts/mobile.layout";
 import { useMusicStore } from "@/stores/music.store";
 import { useCoverStore } from "@/stores/cover.store";
 
-export default function CoverSection() {
+export default function CoverSection({ to }: { to?: string }) {
     const { setMusic } = useMusicStore();
     const { isCover, setCover } = useCoverStore();
 
@@ -41,7 +41,7 @@ export default function CoverSection() {
                                 alt="couple cover"
                                 className="object-cover object-top z-0 md:object-top w-96" />
 
-                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-4xl lg:text-6xl drop-shadow-2xl`} style={{textShadow: '1px 1px 10px rgba(0,0,0, 0.5)'}}
+                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-4xl lg:text-6xl drop-shadow-2xl`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
                                 data-aos="fade-down"
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
@@ -50,7 +50,15 @@ export default function CoverSection() {
                                 24 . 11 . 2024
                             </p>
 
-                            <div className="absolute bottom-6 lg:bottom-14 left-0 right-0 flex flex-col items-center justify-center">
+
+                            <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center bg-gradient-to-b from-transparent to-black w-full p-4 mx-auto">
+                                <div className={`${babyDoll.className} flex flex-col items-center pt-3 pb-2 justify-center text-balck text-xs xxs:text-base text-[#E8B787]`}
+                                    // style={{ textShadow: '1px 1px 10px rgba(0,0,0, 1)' }}
+                                    >
+                                    <p>Kepada Yth:</p>
+                                    <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
+                                    <p>di tempat</p>
+                                </div>
                                 <button
                                     onClick={handleOpenInvitation}
                                     className={`${schoolbell.className} btn btn-sm lg:btn-4xl rounded-full shadow-lg hover:shadow-xl bg-[#E8B787] hover:bg-[#E6B07B]/90 text-white font-normal border-none xss:text-md sm:text-base lg:text-lg`}

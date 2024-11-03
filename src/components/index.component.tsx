@@ -22,6 +22,7 @@ import dynamic from "next/dynamic";
 import YoutubeSection from "./sections/youtube.section";
 import RulesSection from "./sections/rules.component";
 import PrayerSection from "./sections/prayer.section";
+import Navigation from "./sections/navigation.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
@@ -34,7 +35,7 @@ export default function IndexComponent({ to }: { to?: string }) {
 
     return (
         <main className={`${mavenPro.className} w-full h-full bg-[#FFFBEF]`}>
-            <Cover />
+            <Cover to={to} />
             <MobileLayout>
                 <HeroSection to={to} />
                 <GroomBrideSection />
@@ -53,6 +54,7 @@ export default function IndexComponent({ to }: { to?: string }) {
                 <SpecialyThanksSection />
 
                 <MusicBtn />
+                <Navigation />
             </MobileLayout>
         </main>
     );

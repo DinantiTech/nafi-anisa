@@ -2,8 +2,8 @@ const isDevEnd = process && process.env.NODE_ENV === "development";
 
 // Youtube Embed
 
-export const MusicBG = "https://res.cloudinary.com/diaryapp/video/upload/v1730557726/wwd.mp3juice.blog_-_Hanggini_feat._Luthfi_Aulia_-_Selalu_Bahagia_Ya_Official_Lyric_Video_hcamdw.mp3";
-// export const MusicBG = "https://res.cloudinary.com/storyline-beta/video/upload/v1717177086/musics/kekal_nadin.mp4";
+// export const MusicBG = "https://res.cloudinary.com/diaryapp/video/upload/v1730557726/wwd.mp3juice.blog_-_Hanggini_feat._Luthfi_Aulia_-_Selalu_Bahagia_Ya_Official_Lyric_Video_hcamdw.mp3";
+export const MusicBG = "https://res.cloudinary.com/diaryapp/video/upload/v1730606481/zlctufenavekjsve0jrl.mp3";
 
 // Google API Sheet
 //  development | production
