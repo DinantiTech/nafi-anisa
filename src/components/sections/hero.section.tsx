@@ -62,7 +62,7 @@ export default function HeroSection({ to }: { to?: string }) {
                 </div>
 
                 <p className={` ${shorelinesScript.className} text-black font-normal text-xl lg:text-2xl text-pretty text-center`}>
-                    amelia & hanif
+                Hanif & Amelia
                 </p>
                 {/* <div className={`${babyDoll.className} flex flex-col items-center justify-center text-balck text-xs xxs:text-base`}>
                     <p>Kepada Bapak / Ibu / Saudara / i,</p>

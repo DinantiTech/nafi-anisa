@@ -23,7 +23,7 @@ export default function SpecialyThanksSection() {
                 <p className='text-balance'>Atas kehadiran dan do’a restunya, kami ucapkan terima kasih.</p>
             </div>
 
-            <p className={`${shorelinesScript.className} my-5 text-xl xxs:text-2xl`}>Amelia & Hanif</p>
+            <p className={`${shorelinesScript.className} my-5 text-xl xxs:text-2xl`}>Hanif & Amelia</p>
 
             <footer className='flex flex-col items-center justify-center text-[0.6rem] xxs:text-xs sm:text-sm'>
                 {/* <p>Turut berbahagia segenap keluarga besar</p>

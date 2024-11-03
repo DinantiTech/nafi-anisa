@@ -8,6 +8,7 @@ import Drawer from 'react-modern-drawer';
 import 'react-modern-drawer/dist/index.css';
 const schoolbell = localFont({ src: "../../assets/fonts/Schoolbell-Regular.ttf" });
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
+const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
 import CoverHero from "@/assets/cover_hero.jpg";
 import MobileLayout from "@/components/layouts/mobile.layout";
@@ -41,14 +42,18 @@ export default function CoverSection({ to }: { to?: string }) {
                                 alt="couple cover"
                                 className="object-cover object-top z-0 md:object-top w-96" />
 
-                            <p className={` ${babyDoll.className} absolute top-10 left-0 right-0 flex w-full justify-center text-white font-normal text-4xl lg:text-6xl drop-shadow-2xl`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
+
+                            <div className="absolute top-10 left-0 right-0"
                                 data-aos="fade-down"
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
-                                data-aos-offset="0"
-                            >
-                                24 . 11 . 2024
-                            </p>
+                                data-aos-offset="0">
+                                <p className={` ${babyDoll.className}  flex w-full justify-center text-white font-normal text-4xl lg:text-6xl drop-shadow-2xl`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
+                                >
+                                    24 . 11 . 2024
+                                </p>
+                                <p className={`${shorelinesScript.className} flex w-full justify-center my-5 text-lg xxs:text-2xl`}>Hanif & Amelia</p>
+                            </div>
 
 
                             <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center bg-gradient-to-b from-transparent to-black w-full p-4 mx-auto">
@@ -57,10 +62,10 @@ export default function CoverSection({ to }: { to?: string }) {
                                     data-aos-delay="2100"
                                     data-aos-duration="900"
                                     data-aos-offset="0"
-                                    >
-                                    <p>Kepada Yth:</p>
+                                >
+                                    <p>{to? 'Kepada Yth:' : ""}</p>
                                     <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
-                                    <p>di tempat</p>
+                                    {/* <p>di tempat</p> */}
                                 </div>
                                 <button
                                     onClick={handleOpenInvitation}
