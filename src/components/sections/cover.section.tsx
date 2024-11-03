@@ -53,7 +53,10 @@ export default function CoverSection({ to }: { to?: string }) {
 
                             <div className="absolute bottom-0 left-0 right-0 flex flex-col items-center justify-center bg-gradient-to-b from-transparent to-black w-full p-4 mx-auto">
                                 <div className={`${babyDoll.className} flex flex-col items-center pt-3 pb-2 justify-center text-balck text-xs xxs:text-base text-[#E8B787]`}
-                                    // style={{ textShadow: '1px 1px 10px rgba(0,0,0, 1)' }}
+                                    data-aos="fade-up"
+                                    data-aos-delay="2100"
+                                    data-aos-duration="900"
+                                    data-aos-offset="0"
                                     >
                                     <p>Kepada Yth:</p>
                                     <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
