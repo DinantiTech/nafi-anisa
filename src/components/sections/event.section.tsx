@@ -89,7 +89,7 @@ export default function EventSection() {
                     <div className='w-fit overflow-hidden'>
                         <div className='underline text-center' data-aos="fade-left">
                             Jumat, {Helpers.formatDateRange(TASYUKURAN_DATE)}
-                            {/* <br /> Pukul {AKAD_TIME} */}
+                            <br /> Pukul {AKAD_TIME}
                         </div>
                     </div>
                 </div>
