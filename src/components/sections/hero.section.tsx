@@ -38,10 +38,10 @@ export default function HeroSection({ to }: { to?: string }) {
 
     return (
         <>
-            <nav className="flex items-center justify-between px-7 w-full left-0 py-1 xxs:py-0 sm:hidden">
+            {/* <nav className="flex items-center justify-between px-7 w-full left-0 py-1 xxs:py-0 sm:hidden">
                 <Image onClick={() => handleOpenInvitation()} src={IconCouple} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12 brightness-0" alt="icon couple" />
                 <Image onClick={() => Helpers.scrollToElement("rsvp")} src={IconRSVP} sizes='100vw' className="w-8 xxs:w-12 h-8 xxs:h-12 brightness-0	" alt="icon RSVP" />
-            </nav>
+            </nav> */}
 
             <div className="flex flex-col gap-y-4 my-8 items-center" id="home">
                 <p className={` ${babyDoll.className} text-black font-normal text-4xl lg:text-4xl text-pretty text-center`}>
