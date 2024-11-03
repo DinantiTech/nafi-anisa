@@ -10,7 +10,7 @@ export default function Navigation() {
         { title: "Gift", icon: "mdi:present", id: "gift" }
     ]
 
-      const scrollToElement = (elementId) => {
+      const scrollToElement = (elementId: any) => {
         const element = document.getElementById(elementId);
         if (element) {
           element.scrollIntoView({ behavior: 'smooth' });
