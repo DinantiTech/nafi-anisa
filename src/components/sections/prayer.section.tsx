@@ -11,7 +11,7 @@ export default function PrayerSection() {
         <>
             <MobileLayout className="px-4 py-5" id="rules">
                 <HeadingTitle title="DOA PENGANTIN" className={`${babyDoll.className} mx-auto flex items-center justify-center text-center mb-5`} />
-                <Image
+                {/* <Image
                     src={HurufArab}
                     alt="Huruf Arab"
                     sizes='250px'
@@ -21,8 +21,8 @@ export default function PrayerSection() {
 
                 <p data-aos="fade-in" className="text-center text-balance text-xl mb-5">
                     بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
-                </p>
-                <p data-aos="fade-right" className={`${babyDoll.className} text-center text-sm md:text-base text-pretty w-11/12 mx-auto`}>
+                </p> */}
+                <p data-aos="fade-right" className={`${babyDoll.className} text-center text-sm md:text-base text-pretty w-11/12 mx-auto mt-3`}>
                     "Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu susah, dan semoga Allah menyatukan kalian dalam kebaikan."
                 </p>
             </MobileLayout>

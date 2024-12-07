@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import IconGroomBride from "@/assets/icon_groom_bride.svg";
 import GroomImg from "@/assets/couple/groom.png";
 import BrideImg from "@/assets/couple/bride.png";
+import { BRIDE_FATHER, BRIDE_MOTHER, BRIDE_NAME, BRIDE_USERNAME, GROOM_FATHER, GROOM_MOTHER, GROOM_NAME, GROOM_USERNAME } from "@/libs/constants/others.const";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
@@ -25,12 +26,11 @@ export default function GroomBrideSection() {
                     <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pl-14 xs:pr-5 xs:p-10 xs:-ml-12`} id="couple_texture">
                         <p className={`${babyDoll.className} text-left text-sm leading-7`}>
-                            Abdul Hanif Alfata S. Pt.
-                            (Hanif) <br />
+                            {GROOM_NAME} <br />
                             Putra dari
-                            Bapak Mustakim M.Pd. &<br />
-                            Ibu Siti Nur Fajriyah A.Md. <br />
-                            @anif_alfata
+                            {GROOM_FATHER} &<br />
+                            {GROOM_MOTHER} <br />
+                            {GROOM_USERNAME}
                         </p>
                     </div>
                 </div>
@@ -39,12 +39,11 @@ export default function GroomBrideSection() {
                     <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" className="h-auto w-1/2 xs:h-56 xs:w-auto"/>
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pr-14 xs:pl-5 xs:p-10 xs:-mr-12`} id="couple_texture">
                         <p className={`${babyDoll.className} text-left text-sm leading-7`}>
-                            Shofi Putri Amelia S. Psi
-                            (Amelia) <br />
+                            {BRIDE_NAME} <br />
                             Putri dari
-                            Bapak M. Sunarto A. Md. & <br />
-                            Ibu Laely Rosyada <br />
-                            @ameliaaa.sp. 
+                            {BRIDE_FATHER} <br />
+                            & {BRIDE_MOTHER} <br />
+                            {BRIDE_USERNAME} 
                         </p>
                     </div>
                 </div>

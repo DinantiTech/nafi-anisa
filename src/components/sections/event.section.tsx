@@ -4,7 +4,7 @@ import localFont from 'next/font/local';
 import { Helpers } from '@/libs/helpers/index.helper';
 import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
-import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, TASYUKURAN_DATE, MAPS_LOCATION, MAPS_LOCATION_2 } from '@/libs/constants/event.const';
+import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, MAPS_LOCATION, ADDRESS_LOCATION } from '@/libs/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
 
@@ -30,13 +30,13 @@ export default function EventSection() {
 
                 <div className='flex items-center justify-center font-medium h-fit overflow-hidden xxs:text-xl sm:text-2xl'>
                     <div className='w-fit overflow-hidden'>
-                        <div className='underline text-center' data-aos="fade-left">Ahad, {Helpers.formatDateRange(AKAD_DATE)} <br /> Pukul {AKAD_TIME}</div>
+                        <div className='underline text-center' data-aos="fade-left">Sabtu, {Helpers.formatDateRange(AKAD_DATE)} <br /> Pukul {AKAD_TIME}</div>
                     </div>
                 </div>
 
                 <div className='w-11/12 overflow-hidden'>
                     <p data-aos="fade-down" className='text-xs xxs:text-sm sm:text-base text-center text-balance'>
-                        Jl. Masjid Baitul Matien Gang Situ Elok RT 01/06 Pernasidi Kec. Cilongok Kab. Banyumas
+                        {ADDRESS_LOCATION}
                     </p>
                 </div>
 
@@ -64,7 +64,7 @@ export default function EventSection() {
                 <div className='flex items-center justify-center font-medium h-fit overflow-hidden xxs:text-xl sm:text-2xl'>
                     <div className='w-fit overflow-hidden'>
                         <div className='underline text-center' data-aos="fade-left">
-                            Ahad, {Helpers.formatDateRange(AKAD_DATE)}
+                            Sabtu, {Helpers.formatDateRange(AKAD_DATE)}
                             <br /> Pukul {START_TIME_RECEPTION}
                         </div>
                     </div>
@@ -72,35 +72,11 @@ export default function EventSection() {
 
                 <div className='w-11/12 overflow-hidden'>
                     <p data-aos="fade-down" className='text-xs xxs:text-sm sm:text-base text-center text-balance'>
-                        Jl. Masjid Baitul Matien Gang Situ Elok RT 01/06 Pernasidi Kec. Cilongok Kab. Banyumas
+                        {ADDRESS_LOCATION}
                     </p>
                 </div>
 
                 <button data-aos="fade-down" onClick={() => Helpers.redirectToBlank(MAPS_LOCATION)} className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
-                    <Icon icon="simple-icons:googlemaps" />
-                    Maps
-                </button>
-            </div>
-
-            <HeadingTitle className={` ${babyDoll.className} mt-16 text-center`} title='Ngunduh Mantu' />
-
-            <div className={` ${babyDoll.className} flex flex-col items-center justify-center my-2 gap-y-3`}>
-                <div className='flex items-center justify-center font-medium h-fit overflow-hidden xxs:text-xl sm:text-2xl'>
-                    <div className='w-fit overflow-hidden'>
-                        <div className='underline text-center' data-aos="fade-left">
-                            Jumat, {Helpers.formatDateRange(TASYUKURAN_DATE)}
-                            <br /> Pukul {AKAD_TIME}
-                        </div>
-                    </div>
-                </div>
-
-                <div className='w-11/12 overflow-hidden'>
-                    <p data-aos="fade-down" className='text-xs xxs:text-sm sm:text-base text-center text-balance'>
-                        Dusun Sentul, 05/09, Desa Sukorejo, Kec. Sukorejo, Kab. Kendal
-                    </p>
-                </div>
-
-                <button data-aos="fade-down" onClick={() => Helpers.redirectToBlank(MAPS_LOCATION_2)} className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
                     <Icon icon="simple-icons:googlemaps" />
                     Maps
                 </button>

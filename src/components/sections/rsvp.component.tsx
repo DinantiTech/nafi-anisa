@@ -41,6 +41,9 @@ export default function RSVPSection() {
                         loop: true,
                         animationData: rsvpAnimmationData,
                         autoplay: true,
+                        rendererSettings: {
+                            preserveAspectRatio: 'xMidYMid slice'
+                        }
                     }}
                 />
             </div>

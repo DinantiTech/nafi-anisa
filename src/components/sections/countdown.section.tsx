@@ -4,12 +4,13 @@ import localFont from "next/font/local";
 import MobileLayout from "@/components/layouts/mobile.layout";
 import ImgCountdown from "@/assets/img_countdown.png"
 import useTimer from "@/libs/hooks/countdown.hook";
+import { AKAD_DATE } from "@/libs/constants/event.const";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
 export default function CountdownSection() {
-    const { days, hours, minutes } = useTimer(new Date("2024-11-24T08:00:00"));
+    const { days, hours, minutes } = useTimer(new Date(`${AKAD_DATE}T08:00:00`));
 
     return (
         <MobileLayout>

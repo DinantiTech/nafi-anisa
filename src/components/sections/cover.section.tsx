@@ -14,6 +14,7 @@ import CoverHero from "@/assets/cover_hero.jpg";
 import MobileLayout from "@/components/layouts/mobile.layout";
 import { useCoverStore } from "@/libs/stores/cover.store";
 import { useMusicStore } from "@/libs/stores/music.store";
+import { NEWLYWEDS_TITLE } from "@/libs/constants/others.const";
 
 export default function CoverSection({ to }: { to?: string }) {
     const { setMusic } = useMusicStore();
@@ -40,7 +41,7 @@ export default function CoverSection({ to }: { to?: string }) {
                             <Image
                                 src={CoverHero}
                                 alt="couple cover"
-                                className="object-cover object-top z-0 md:object-top w-96" />
+                                className="object-cover object-top z-0 md:object-top w-96" priority />
 
 
                             <div className="absolute top-10 left-0 right-0"
@@ -50,9 +51,9 @@ export default function CoverSection({ to }: { to?: string }) {
                                 data-aos-offset="0">
                                 <p className={` ${babyDoll.className}  flex w-full justify-center text-white font-normal text-4xl lg:text-6xl drop-shadow-2xl`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
                                 >
-                                    24 . 11 . 2024
+                                    01 . 02 . 2025
                                 </p>
-                                <p className={`${shorelinesScript.className} flex w-full justify-center my-5 text-lg xxs:text-2xl`}>Hanif & Amelia</p>
+                                <p className={`${shorelinesScript.className} flex w-full justify-center my-5 text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
                             </div>
 
 

@@ -8,7 +8,7 @@ interface MobileLayoutProps extends HTMLAttributes<HTMLDivElement> {
 
 export default function MobileLayout({ children, className, ...rest }: MobileLayoutProps) {
     return (
-        <div className={Utils.cn("relative w-max-[500px] md:w-[500px] mx-auto  overflow-hidden text-black", className)} {...rest}>
+        <div className={Utils.cn("relative w-max-[500px] md:w-[500px] mx-auto overflow-hidden text-black", className)} {...rest}>
             {children}
         </div>
     );
