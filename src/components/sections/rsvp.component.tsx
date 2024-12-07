@@ -8,12 +8,12 @@ import Lottie from "react-lottie";
 import localFont from "next/font/local";
 
 import MobileLayout from "../layouts/mobile.layout";
-import { useAppScript } from "@/hooks/app_script.hook";
-import { SHEET_NAME } from "@/constants/others.const";
+import { useAppScript } from "@/libs/hooks/app_script.hook";
+import { SHEET_NAME } from "@/libs/constants/others.const";
 import HeadingTitle from "../micro/heading_title.micro";
 
 import rsvpAnimmationData from "@/assets/icon-animation/rsvp-animation.json";
-import { useRSVPSubmitStore } from "@/stores/rsvp_submit.store";
+import { useRSVPSubmitStore } from "@/libs/stores/rsvp_submit.store";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 

@@ -1,4 +1,4 @@
-import { Utils } from "@/utils/index.util";
+import { Utils } from "@/libs/utils/index.util";
 import { HTMLAttributes } from "react";
 
 interface HeadingTitleProps extends HTMLAttributes<HTMLHeadingElement> {

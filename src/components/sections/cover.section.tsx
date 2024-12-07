@@ -12,8 +12,8 @@ const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script 
 
 import CoverHero from "@/assets/cover_hero.jpg";
 import MobileLayout from "@/components/layouts/mobile.layout";
-import { useMusicStore } from "@/stores/music.store";
-import { useCoverStore } from "@/stores/cover.store";
+import { useCoverStore } from "@/libs/stores/cover.store";
+import { useMusicStore } from "@/libs/stores/music.store";
 
 export default function CoverSection({ to }: { to?: string }) {
     const { setMusic } = useMusicStore();

@@ -1,5 +1,5 @@
-import { MusicBG } from "@/constants/others.const";
-import { useMusicStore } from "@/stores/music.store";
+import { MusicBG } from "@/libs/constants/others.const";
+import { useMusicStore } from "@/libs/stores/music.store";
 import { Icon } from "@iconify/react";
 import { useEffect } from "react";
 

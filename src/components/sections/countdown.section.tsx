@@ -2,14 +2,14 @@ import Image from "next/image";
 import localFont from "next/font/local";
 
 import MobileLayout from "@/components/layouts/mobile.layout";
-import useTimer from "@/hooks/countdown.hook";
 import ImgCountdown from "@/assets/img_countdown.png"
+import useTimer from "@/libs/hooks/countdown.hook";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
 export default function CountdownSection() {
-    const { days, hours, minutes, seconds } = useTimer(new Date("2024-11-24T08:00:00"));
+    const { days, hours, minutes } = useTimer(new Date("2024-11-24T08:00:00"));
 
     return (
         <MobileLayout>
@@ -42,11 +42,6 @@ export default function CountdownSection() {
                                 <p className="text-sm xxs:text-base sm:text-xl tracking-wide">Minutes</p>
                                 <h5 className="xxs:text-2xl text-sm font-normal">{minutes}</h5>
                             </div>
-
-                            {/* <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center xs:py-2 py-1 leading-snug text-black">
-                                <p className="text-sm xxs:text-base sm:text-xl tracking-wide">Seconds</p>
-                                <h5 className="xxs:text-2xl text-sm font-normal">{seconds}</h5>
-                            </div> */}
                         </div>
                     </div>
                 </div>

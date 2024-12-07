@@ -1,10 +1,10 @@
 import Lottie from 'react-lottie';
 import localFont from 'next/font/local';
 
-import { Helpers } from '@/helpers/index.helper';
+import { Helpers } from '@/libs/helpers/index.helper';
 import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
-import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, TASYUKURAN_DATE, MAPS_LOCATION, MAPS_LOCATION_2 } from '@/constants/event.const';
+import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, TASYUKURAN_DATE, MAPS_LOCATION, MAPS_LOCATION_2 } from '@/libs/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
 

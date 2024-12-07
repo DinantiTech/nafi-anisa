@@ -6,10 +6,10 @@ import Image from "next/image";
 
 import IconCouple from "@/assets/icon_N_A.svg";
 import IconRSVP from "@/assets/icon_RSVP.svg";
-import { HeroImage } from "@/constants/hero_images.const";
-import { useMusicStore } from "@/stores/music.store";
-import { useCoverStore } from "@/stores/cover.store";
-import { Helpers } from "@/helpers/index.helper";
+import { HeroImage } from "@/libs/constants/hero_images.const";
+import { useMusicStore } from "@/libs/stores/music.store";
+import { useCoverStore } from "@/libs/stores/cover.store";
+import { Helpers } from "@/libs/helpers/index.helper";
 import HurufArab from "@/assets/huruf-arab.jpg";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });

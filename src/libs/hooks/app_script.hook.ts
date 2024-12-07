@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { HOSTNAME_APP_SCRIPT, SPREADSHEET_ID } from "@/constants/others.const";
-import { ACTION_SCRIPT } from "@/emuns/method_app_script.enum";
+import { HOSTNAME_APP_SCRIPT, SPREADSHEET_ID } from "@/libs/constants/others.const";
+import { ACTION_SCRIPT } from "@/libs/emuns/method_app_script.enum";
 
 type DataItem = {
     createdAt: string;

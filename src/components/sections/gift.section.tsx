@@ -17,7 +17,7 @@ import IconMastercard from "@/assets/logo/mastercard.svg";
 // import LogoDana from "@/assets/logo/DANA.svg";
 // import LogoOvo from "@/assets/logo/OVO.svg";
 import toast, { Toaster } from "react-hot-toast";
-import { ADDRESS_GIFT } from "@/constants/others.const";
+import { ADDRESS_GIFT } from "@/libs/constants/others.const";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
@@ -42,6 +42,9 @@ export default function GiftSection() {
                         loop: true,
                         animationData: giftAnimationData,
                         autoplay: true,
+                        rendererSettings: {
+                            preserveAspectRatio: 'xMidYMid slice'
+                          }
                     }}
                 />
             </div>
