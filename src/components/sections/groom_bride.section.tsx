@@ -14,7 +14,7 @@ export default function GroomBrideSection() {
                 <Image src={IconGroomBride} className="w-28" sizes="100vw" alt="icon groom and bride" />
                 <h3 className={` ${babyDoll.className} text-[#E8B787] tracking-widest font-semibold xxs:text-2xl text-lg`}>GROOM & BRIDE</h3>
                 <svg className="w-fit -mt-3" width="220" viewBox="0 0 1664 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 106.402C5 81.8974 61.0263 77.2147 96.8889 70.1725C339.728 22.4877 728.039 -40.7568 956.403 54.4209C1116.92 121.319 712.093 157.733 774.039 100.889C795.098 81.5648 890.239 77.5779 924.596 74.8982C1166.39 56.0386 1415.83 59.2924 1659 56.7835" stroke="#E8B787" stroke-width="10" stroke-linecap="round" />
+                    <path d="M5 106.402C5 81.8974 61.0263 77.2147 96.8889 70.1725C339.728 22.4877 728.039 -40.7568 956.403 54.4209C1116.92 121.319 712.093 157.733 774.039 100.889C795.098 81.5648 890.239 77.5779 924.596 74.8982C1166.39 56.0386 1415.83 59.2924 1659 56.7835" stroke="#E8B787" strokeWidth="10" strokeLinecap="round" />
                 </svg>
             </div>
 
