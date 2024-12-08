@@ -39,18 +39,18 @@ export default function IndexComponent() {
             <MobileLayout>
                 <HeroSection to={guestString} />
                 <GroomBrideSection />
-                {/* <CountdownSection />
+                <CountdownSection />
                 <EventSection />
 
                 <RulesSection />
                 <PrayerSection />
 
-                <RSVPSection />
-                <GiftSection />
-                <SpecialyThanksSection />
+                {/* <RSVPSection /> */}
+                {/* <GiftSection /> */}
+                {/* <SpecialyThanksSection /> */}
 
-                <MusicBtn />
-                <Navigation /> */}
+                {/* <MusicBtn /> */}
+                {/* <Navigation /> */}
             </MobileLayout>
         </main>
     );
