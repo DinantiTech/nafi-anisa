@@ -38,7 +38,7 @@ export default function IndexComponent() {
             <MobileLayout>
                 <HeroSection to={guestString} />
                 <GroomBrideSection />
-                <CountdownSection />
+                {/* <CountdownSection />
                 <EventSection />
 
                 <RulesSection />
@@ -49,7 +49,7 @@ export default function IndexComponent() {
                 <SpecialyThanksSection />
 
                 <MusicBtn />
-                <Navigation />
+                <Navigation /> */}
             </MobileLayout>
         </main>
     );
