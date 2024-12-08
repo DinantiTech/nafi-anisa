@@ -1,8 +1,5 @@
 import type { Metadata, Viewport } from 'next';
-import { Comfortaa } from 'next/font/google';
 import '@/styles/globals.css';
-
-const comfortaa = Comfortaa({ subsets: ['latin'] });
 
 const metaDesc: string = "Menjadi sebuah kebahagiaan bagi kami untuk mengumumkan awal dari babak baru kehidupan kami bersama. Silakan klik tautan situs Undangan Website di bawah untuk informasi lebih lanjut";
 
@@ -75,7 +72,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={comfortaa.className}>{children}</body>
+      <body>{children}</body>
     </html>
   )
 }
