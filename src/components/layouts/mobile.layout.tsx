@@ -1,4 +1,4 @@
-import { Utils } from "@/libs/utils/index.util";
+import { Utils } from "@/components/libs/utils/index.util";
 import React from "react";
 import { HTMLAttributes, ReactNode } from "react";
 
