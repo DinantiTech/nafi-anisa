@@ -1,7 +1,11 @@
-import IndexComponent from "@/components/index.component";
+import { Suspense, lazy } from "react";
+
+const IndexComponent = lazy(() => import("@/components/index.component"));
 
 export default function Home() {
   return (
-    <IndexComponent />
+    <Suspense>
+      <IndexComponent />
+    </Suspense>
   );
 }
