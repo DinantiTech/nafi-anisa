@@ -1,4 +1,4 @@
-import Lottie from 'react-lottie';
+import Lottie from 'lottie-react';
 import localFont from 'next/font/local';
 
 import { Helpers } from '@/libs/helpers/index.helper';
@@ -17,11 +17,10 @@ export default function EventSection() {
             {/* AKAD */}
             <div className='w-20 xxs:w-24'>
                 <Lottie
-                    options={{
-                        loop: true,
-                        animationData: ringAnimationJson,
-                        autoplay: true,
-                    }}
+                    loop
+                    animationData={ringAnimationJson}
+                    autoplay
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
             </div>
 
@@ -50,11 +49,10 @@ export default function EventSection() {
             {/* RECEPTION */}
             <div className='w-20 xxs:w-24 mt-3 xxs:mt-5'>
                 <Lottie
-                    options={{
-                        loop: true,
-                        animationData: cheersAnimationJson,
-                        autoplay: true,
-                    }}
+                    loop
+                    animationData={cheersAnimationJson}
+                    autoplay
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
             </div>
 

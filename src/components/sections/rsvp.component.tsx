@@ -4,7 +4,7 @@ import { useMemo, useState } from "react";
 import { Field, Formik } from "formik";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import moment from "moment-timezone";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import localFont from "next/font/local";
 
 import MobileLayout from "../layouts/mobile.layout";
@@ -26,11 +26,11 @@ type FormType = {
     attendance: boolean;
 }
 
-const Rsvp = new RSVP({sheetName: 'RSVP', sheetID: SPREADSHEET_ID});
+const Rsvp = new RSVP({ sheetName: 'RSVP', sheetID: SPREADSHEET_ID });
 
 export default function RSVPSection() {
     const { isRSVPSubmit, setRSVPSubmit } = useRSVPSubmitStore();
-    
+
     const [loading, setLoading] = useState<boolean>(false);
     const [dataRsvp, setDataRsvp] = useState<Record<string, any>>({})
     const [messageLimit, setMessageLimit] = useState<number>(5);
@@ -46,7 +46,7 @@ export default function RSVPSection() {
             await Rsvp.createRSVP(dataRsvp);
 
             // update state list RSVP
-            listRsvp?.push({...dataRsvp, createdAt: new Date().toISOString() })
+            listRsvp?.push({ ...dataRsvp, createdAt: new Date().toISOString() })
             setModalAvatarRsvp(false)
         } catch (error) {
             console.log(error);
@@ -72,14 +72,10 @@ export default function RSVPSection() {
         <MobileLayout className="px-4 py-5" id="rsvp">
             <div className='w-20 xxs:w-24 mt-3 xxs:mt-5 mx-auto'>
                 <Lottie
-                    options={{
-                        loop: true,
-                        animationData: rsvpAnimmationData,
-                        autoplay: true,
-                        rendererSettings: {
-                            preserveAspectRatio: 'xMidYMid slice'
-                        }
-                    }}
+                    loop
+                    animationData={rsvpAnimmationData}
+                    autoplay
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
             </div>
 
@@ -111,21 +107,21 @@ export default function RSVPSection() {
                         <form onSubmit={handleSubmit} className="relative mt-10 w-full flex flex-col justify-start items-start gap-y-5 font-primary">
 
                             {/* Modal select Avatar RSVP */}
-                            <ModalAvatar 
+                            <ModalAvatar
                                 isOpen={modalAvatarRsvp}
-                                avatar={dataRsvp?.avatar} 
-                                selectAvatar={(val) => setDataRsvp(prev => ({...prev, avatar: val}))}
+                                avatar={dataRsvp?.avatar}
+                                selectAvatar={(val) => setDataRsvp(prev => ({ ...prev, avatar: val }))}
                                 clickOutside={() => setModalAvatarRsvp(false)}
                                 handleSubmit={handleSendRSVP}
                             />
 
                             <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
-                                <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-10 w-full border-b text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Enter Your Name..." />
+                                <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400" : "border-black"}`} peer h-10 w-full border-b text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Enter Your Name..." />
 
                                 {errors.name ? <span className="text-red-800 text-xs">{errors?.name}</span> : null}
                             </div>
                             <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
-                                <Field disabled={isRSVPSubmit} as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-24 w-full border-b border-black text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Text here..." />
+                                <Field disabled={isRSVPSubmit} as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400" : "border-black"}`} peer h-24 w-full border-b border-black text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Text here..." />
                                 {errors.message ? <span className="text-red-800 text-xs">{errors?.message}</span> : null}
                             </div>
 

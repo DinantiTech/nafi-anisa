@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Lottie from "react-lottie";
+import Lottie from "lottie-react";
 import { Icon } from "@iconify/react";
 import localFont from "next/font/local";
 import { Inter } from 'next/font/google'
@@ -41,14 +41,10 @@ export default function GiftSection() {
 
             <div className='w-24 xxs:w-28 sm:w-32' id="gift">
                 <Lottie
-                    options={{
-                        loop: true,
-                        animationData: giftAnimationData,
-                        autoplay: true,
-                        rendererSettings: {
-                            preserveAspectRatio: 'xMidYMid slice'
-                        }
-                    }}
+                    loop
+                    animationData={giftAnimationData}
+                    autoplay
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
             </div>
 

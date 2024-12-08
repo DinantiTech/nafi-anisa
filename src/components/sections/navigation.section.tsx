@@ -1,3 +1,5 @@
+"use client";
+
 import { Icon } from "@iconify/react";
 // import { BG_GRADIENT, COLOR_PRIMARY } from "../../contants/common.const";
 
