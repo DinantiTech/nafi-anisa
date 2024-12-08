@@ -40,7 +40,7 @@ export default function IndexComponent() {
                 <HeroSection to={guestString} />
                 <GroomBrideSection />
                 <CountdownSection />
-                <EventSection />
+                {/* <EventSection /> */}
 
                 {/* <RulesSection />
                 <PrayerSection /> */}
