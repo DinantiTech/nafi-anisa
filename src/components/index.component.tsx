@@ -1,8 +1,9 @@
 "use client";
 
-import { useEffect } from "react";
 import AOS from "aos";
+import { useEffect } from "react";
 import { Maven_Pro } from "next/font/google";
+import { useSearchParams } from "next/navigation";
 
 import 'aos/dist/aos.css';
 
@@ -22,23 +23,23 @@ import Navigation from "./sections/navigation.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
-export default function IndexComponent({ to }: { to?: string }) {
+export default function IndexComponent() {
     useEffect(() => {
         AOS.init()
     }, [])
 
+    const queryParams = useSearchParams();
+
+    const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ');
+
     return (
         <main className={`${mavenPro.className} w-full h-full bg-[#FFFBEF]`}>
-            <Cover to={to} />
+            <Cover to={guestString} />
             <MobileLayout>
-                <HeroSection to={to} />
+                <HeroSection to={guestString} />
                 <GroomBrideSection />
                 <CountdownSection />
                 <EventSection />
-                {/* <StoriesSection /> */}
-                {/* <GaleriesSection /> */}
-
-                {/* <YoutubeSection /> */}
 
                 <RulesSection />
                 <PrayerSection />

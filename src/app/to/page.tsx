@@ -1,14 +1,16 @@
 "use client";
 
-import IndexComponent from "@/components/index.component";
-import { useSearchParams } from "next/navigation";
+// import IndexComponent from "@/components/index.component";
+import { lazy, Suspense } from "react";
 
+const IndexComponent = lazy(() => import("@/components/index.component"))
 
 const ToPage = () => {
-  const queryParams = useSearchParams();
-
-  const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ');
-  return <IndexComponent to={guestString} />
+  return (
+    <Suspense fallback={ <div>Rendering.....</div> }>
+      <IndexComponent />
+    </Suspense>
+  )
 };
 
 export default ToPage;
