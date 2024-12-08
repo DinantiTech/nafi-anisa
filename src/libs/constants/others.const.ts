@@ -21,6 +21,6 @@ export const MusicBG = "https://res.cloudinary.com/diaryapp/video/upload/v173060
 
 // Google API Sheet
 //  development | production
-export const SPREADSHEET_ID = isDevEnd ? "1NUryftKH2OD1wVQFRrT1iCMc7zeUnoRq1FFmNbie6io" : "1c1Fw1PpwuBVt6QYChy_c_HxjQJJaA7lXKhon1GFdiDY"
+export const SPREADSHEET_ID = isDevEnd ? "1NUryftKH2OD1wVQFRrT1iCMc7zeUnoRq1FFmNbie6io" : "1JLLh8hAFj1nYmYs14Ni_IehvOOKDPCjOy-Na2B7GVVM"
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec"
 export const SHEET_NAME = "RSVP";

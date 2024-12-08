@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Field, Formik } from "formik";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import moment from "moment-timezone";
@@ -9,11 +9,15 @@ import localFont from "next/font/local";
 
 import MobileLayout from "../layouts/mobile.layout";
 import { useAppScript } from "@/libs/hooks/app_script.hook";
-import { SHEET_NAME } from "@/libs/constants/others.const";
+import { SHEET_NAME, SPREADSHEET_ID } from "@/libs/constants/others.const";
 import HeadingTitle from "../micro/heading_title.micro";
 
 import rsvpAnimmationData from "@/assets/icon-animation/rsvp-animation.json";
 import { useRSVPSubmitStore } from "@/libs/stores/rsvp_submit.store";
+import ModalAvatar from "../modals/avatar.modal";
+import { RSVP } from "@dinantitech/rsvp";
+import Image from "next/image";
+import { selectAvatar } from "@/libs/helpers/select_avatar.helper";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
@@ -23,15 +27,47 @@ type FormType = {
     attendance: boolean;
 }
 
+const Rsvp = new RSVP({sheetName: 'RSVP', sheetID: SPREADSHEET_ID});
+
 export default function RSVPSection() {
     const { isRSVPSubmit, setRSVPSubmit } = useRSVPSubmitStore();
-    const [data, loading, _, createData, setStartFetching] = useAppScript(SHEET_NAME);
-
+    
+    const [loading, setLoading] = useState<boolean>(false);
+    const [dataRsvp, setDataRsvp] = useState<Record<string, any>>({})
     const [messageLimit, setMessageLimit] = useState<number>(5);
+    const [listRsvp, setListRsvp] = useState<Record<string, any>[] | null>([]);
+
+    const [modalAvatarRsvp, setModalAvatarRsvp] = useState<boolean>(false);
+
+    const handleSendRSVP = async () => {
+        try {
+            setLoading(true);
+
+            // send RSVP
+            await Rsvp.createRSVP(dataRsvp);
+
+            // update state list RSVP
+            listRsvp?.push({...dataRsvp, createdAt: new Date().toISOString() })
+            setModalAvatarRsvp(false)
+        } catch (error) {
+            console.log(error);
+        } finally {
+            setLoading(false);
+        }
+    }
 
     const handleLoadMore = () => {
         setMessageLimit(prevLimit => prevLimit + 5);
     };
+
+    useMemo(() => {
+        setLoading(true);
+        Rsvp.getRSVP().then((val: any) => {
+            const sortedData = val?.data?.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+            setListRsvp(sortedData);
+            setLoading(false);
+        });
+    }, []);
 
     return (
         <MobileLayout className="px-4 py-5" id="rsvp">
@@ -50,7 +86,6 @@ export default function RSVPSection() {
 
             <HeadingTitle title="BEST WISHES" className={`${babyDoll.className} mx-auto flex items-center justify-center`} />
             <div className={`${babyDoll.className} w-full flex flex-col justify-center items-center py-6`}>
-
                 <Formik
                     initialValues={{ name: '', message: '', attendance: false }}
                     validate={(values: FormType) => {
@@ -64,12 +99,8 @@ export default function RSVPSection() {
 
                     onSubmit={async (values, { resetForm }) => {
                         if (values?.name?.length > 0 && values?.message?.length > 1) {
-                            const time = new Date().toISOString()
-                            const query = `&name=${values.name}&message=${values.message}&attendance=${values.attendance}&createdAt=${time}`;
-                            await createData(query);
-                            setStartFetching(true);
-                            setRSVPSubmit(true)
-                            resetForm()
+                            setDataRsvp(values)
+                            setModalAvatarRsvp(true)
                         }
                     }}
                 >
@@ -79,6 +110,16 @@ export default function RSVPSection() {
                         isSubmitting
                     }) => (
                         <form onSubmit={handleSubmit} className="relative mt-10 w-full flex flex-col justify-start items-start gap-y-5 font-primary">
+
+                            {/* Modal select Avatar RSVP */}
+                            <ModalAvatar 
+                                isOpen={modalAvatarRsvp}
+                                avatar={dataRsvp?.avatar} 
+                                selectAvatar={(val) => setDataRsvp(prev => ({...prev, avatar: val}))}
+                                clickOutside={() => setModalAvatarRsvp(false)}
+                                handleSubmit={handleSendRSVP}
+                            />
+
                             <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
                                 <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400": "border-black"}`} peer h-10 w-full border-b text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Enter Your Name..." />
 
@@ -102,7 +143,7 @@ export default function RSVPSection() {
                                         htmlFor="default-checkbox"
                                         className={`${isRSVPSubmit ? "text-gray-400" : ""} ml-2 text-sm`}
                                     >
-                                        Attendance
+                                        Attendance (Kehadiran)
                                     </label>
                                 </div>
 
@@ -125,9 +166,11 @@ export default function RSVPSection() {
                     ) : (
                         <>
                             {
-                                data?.slice(0, messageLimit)?.map((data: Record<string, any>, index) => (
+                                listRsvp?.slice(0, messageLimit)?.map((data: Record<string, any>, index) => (
                                     <div key={index} className="flex items-start justify-center gap-x-2" data-aos="fade-left">
-                                        <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded-full flex items-center justify-center uppercase font-bold">{data?.name[0]}</div>
+                                        <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded-full flex items-center justify-center uppercase font-bold border-2 border-amber-700">
+                                            <Image src={selectAvatar(data?.avatar)} alt={data?.name} className="" />
+                                        </div>
                                         <div className="w-full flex flex-col items-start justify-center">
                                             <div className="flex items-start justify-center flex-col">
                                                 <h5 className="text-black font-semibold sm:text-lg">
@@ -143,7 +186,7 @@ export default function RSVPSection() {
                         </>
                     )}
                 </div>
-                {data && data.length > messageLimit ? (
+                {listRsvp && listRsvp.length > messageLimit ? (
                     <button
                         onClick={handleLoadMore}
                         className="btn btn-sm text-sm bg-[#E8B787] hover:bg-[#E8B787]/90 w-full text-white mt-7 font-normal py-4 h-auto"

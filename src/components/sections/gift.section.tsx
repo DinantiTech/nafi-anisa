@@ -61,7 +61,7 @@ export default function GiftSection() {
                 <p>COPY ADDRESS</p>
             </button>
 
-            <Carousel className={`${inter.className} w-full my-10 sm:my-10`} showArrows={true} infiniteLoop autoPlay >
+            <Carousel className={`${inter.className} w-full my-10 sm:my-10`} showArrows={true} infiniteLoop autoPlay showThumbs={false} >
                 { payments?.map((data, idx) => (
                     <div key={idx} className="w-full bg-white">
                         <div className="flex items-center justify-between flex-col w-full h-60 p-6 border">
