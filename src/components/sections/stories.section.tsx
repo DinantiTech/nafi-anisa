@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import MobileLayout from "../layouts/mobile.layout";
 import HeadingTitle from "../micro/heading_title.micro";
-import { Stories } from "@/constants/stories.const";
+import { Stories } from "@/libs/constants/stories.const";
 
 export default function StoriesSection() {
     return (
