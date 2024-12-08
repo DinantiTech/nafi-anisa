@@ -1,5 +1,5 @@
 import MobileLayout from "../layouts/mobile.layout";
-import { Helpers } from '@/helpers/index.helper';
+import { Helpers } from '@/libs/helpers/index.helper';
 
 export default function YoutubeSection() {
     return (

@@ -2,7 +2,7 @@ import Lottie from 'react-lottie';
 import localFont from 'next/font/local';
 
 import { Helpers } from '@/libs/helpers/index.helper';
-import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
+import * as ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
 import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, MAPS_LOCATION, ADDRESS_LOCATION } from '@/libs/constants/event.const';
 import { Icon } from '@iconify/react';
@@ -11,6 +11,7 @@ import HeadingTitle from '../micro/heading_title.micro';
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 export default function EventSection() {
+
     return (
         <div className="w-full flex flex-col items-center justify-center my-5 text-black" id='event'>
             {/* AKAD */}

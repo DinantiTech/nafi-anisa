@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Field, Formik } from "formik";
 import { Icon } from "@iconify/react/dist/iconify.js";
 import moment from "moment-timezone";
@@ -8,8 +8,7 @@ import Lottie from "react-lottie";
 import localFont from "next/font/local";
 
 import MobileLayout from "../layouts/mobile.layout";
-import { useAppScript } from "@/libs/hooks/app_script.hook";
-import { SHEET_NAME, SPREADSHEET_ID } from "@/libs/constants/others.const";
+import { SPREADSHEET_ID } from "@/libs/constants/others.const";
 import HeadingTitle from "../micro/heading_title.micro";
 
 import rsvpAnimmationData from "@/assets/icon-animation/rsvp-animation.json";

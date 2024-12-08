@@ -4,7 +4,7 @@ import Lottie from "react-lottie";
 
 import MobileLayout from "../layouts/mobile.layout";
 import HeadingTitle from "../micro/heading_title.micro";
-import { GaleryImages } from "@/constants/galeries.const";
+import { GaleryImages } from "@/libs/constants/galeries.const";
 
 import galeryAnimationData from "@/assets/icon-animation/galery-animation.json";
 
