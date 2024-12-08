@@ -2,7 +2,7 @@ import Lottie from 'lottie-react';
 import localFont from 'next/font/local';
 
 import { Helpers } from '@/components/libs/helpers/index.helper';
-import * as ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
+import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
 import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
 import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, MAPS_LOCATION, ADDRESS_LOCATION } from '@/components/libs/constants/event.const';
 import { Icon } from '@iconify/react';
