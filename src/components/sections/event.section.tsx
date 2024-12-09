@@ -1,5 +1,7 @@
+"use client";
+
 /* eslint-disable @typescript-eslint/no-unused-vars */
-// import Lottie from 'lottie-react';
+import Lottie from 'lottie-react';
 import localFont from 'next/font/local';
 
 import { Helpers } from '@/components/libs/helpers/index.helper';
@@ -8,29 +10,37 @@ import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
 import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, MAPS_LOCATION, ADDRESS_LOCATION } from '@/components/libs/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
-import Lottie, { useLottie } from 'lottie-react';
+// import Lottie, { useLottie } from 'lottie-react';
+// import lottie from 'lottie-web';
+import React from 'react';
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 export default function EventSection() {
 
-    const { View } = useLottie({
-        animationData: ringAnimationJson,
-        loop: true,
-        autoPlay: true
-    });
+    // const animationContainer = React.useRef(null);
+
+    // React.useEffect(() => {
+    //     lottie.loadAnimation({
+    //         container: animationContainer.current,
+    //         renderer: 'svg',
+    //         loop: true,
+    //         autoplay: true,
+    //         path: "@/assets/icon-animation/ring-animation.json"
+    //       });
+    // }, [])
 
     return (
         <div className="w-full flex flex-col items-center justify-center my-5 text-black" id='event'>
             {/* AKAD */}
             <div className='w-20 xxs:w-24'>
-                { View }
-                {/* <Lottie
+                {/* <div ref={animationContainer} /> */}
+                <Lottie
                     loop
                     animationData={ringAnimationJson}
                     autoplay
-                    // rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
-                /> */}
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                />
             </div>
 
             <HeadingTitle className={` ${babyDoll.className}`} title='AKAD' />
