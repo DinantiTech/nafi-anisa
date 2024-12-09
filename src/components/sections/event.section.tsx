@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 // import Lottie from 'lottie-react';
 import localFont from 'next/font/local';
 
@@ -7,22 +8,29 @@ import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
 import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, MAPS_LOCATION, ADDRESS_LOCATION } from '@/components/libs/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
-import Lottie from 'lottie-react';
+import Lottie, { useLottie } from 'lottie-react';
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 export default function EventSection() {
 
+    const { View } = useLottie({
+        animationData: ringAnimationJson,
+        loop: true,
+        autoPlay: true
+    });
+
     return (
         <div className="w-full flex flex-col items-center justify-center my-5 text-black" id='event'>
             {/* AKAD */}
             <div className='w-20 xxs:w-24'>
-                <Lottie
+                { View }
+                {/* <Lottie
                     loop
                     animationData={ringAnimationJson}
                     autoplay
                     // rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
-                />
+                /> */}
             </div>
 
             <HeadingTitle className={` ${babyDoll.className}`} title='AKAD' />
@@ -48,14 +56,14 @@ export default function EventSection() {
             </div>
 
             {/* RECEPTION */}
-            <div className='w-20 xxs:w-24 mt-3 xxs:mt-5'>
+            {/* <div className='w-20 xxs:w-24 mt-3 xxs:mt-5'>
                 <Lottie
                     loop
                     animationData={cheersAnimationJson}
                     autoplay
                     // rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
-            </div>
+            </div> */}
 
             <HeadingTitle className={` ${babyDoll.className}`} title='RESEPSI' />
 
