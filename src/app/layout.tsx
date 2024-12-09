@@ -8,7 +8,6 @@ const metaDesc: string = "Menjadi sebuah kebahagiaan bagi kami untuk mengumumkan
 const metaTitle: string = `${NEWLYWEDS_TITLE} - The Wedding Of Invitation`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dinanti.id'),
   title: metaTitle,
   description: metaDesc,
 
