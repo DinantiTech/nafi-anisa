@@ -10,7 +10,8 @@ export default function MusicBtn() {
   const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Only run this code in the browser
+    if (typeof window === "undefined") return;
+
     const audioElement = new Audio(MusicBG);
     audioElement.loop = true;
     setAudio(audioElement);
@@ -22,12 +23,31 @@ export default function MusicBtn() {
   }, []);
 
   useEffect(() => {
-    if (audio) {
-      if (isMusic) {
-        audio.play();
-      } else {
+    if (typeof window === "undefined" || !audio) return;
+
+    const handleVisibilityChange = () => {
+      if (document.visibilityState === "hidden" || !isMusic) {
         audio.pause();
+      } else if (isMusic) {
+        audio.play();
       }
+    };
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+
+    // Cleanup listener on unmount
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+    };
+  }, [isMusic, audio]);
+
+  useEffect(() => {
+    if (typeof window === "undefined" || !audio) return;
+
+    if (isMusic && document.visibilityState === "visible") {
+      audio.play();
+    } else {
+      audio.pause();
     }
   }, [isMusic, audio]);
 
