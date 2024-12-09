@@ -1,4 +1,6 @@
 import moment from 'moment';
+import 'moment/locale/id'; // Bahasa Indonesia
+import 'moment/locale/en-gb'; // Bahasa Inggris (opsional)
 
 export class Helpers {
   /**
@@ -37,17 +39,20 @@ export class Helpers {
    * Format a date range into a readable string.
    * @param startDate - The start date in ISO format.
    * @param endDate - The end date in ISO format (optional).
+   * @param lang - type lang Indonesia or English (optional).
    * @returns A formatted date range string.
    */
-  static formatDateRange(startDate: string, endDate?: string): string {
+  static formatDateRange(startDate: string, endDate?: string | null, lang: 'id' | 'en' = 'en'): string {
+    moment.locale(lang); // Set bahasa sesuai parameter lang
+  
     const startMoment = moment(startDate);
-
+  
     if (!endDate) {
       return startMoment.format('D MMMM YYYY');
     }
-
+  
     const endMoment = moment(endDate);
-
+  
     if (startMoment.isSame(endMoment, 'day')) {
       return startMoment.format('D MMMM YYYY');
     } else if (startMoment.month() === endMoment.month() && startMoment.year() === endMoment.year()) {
