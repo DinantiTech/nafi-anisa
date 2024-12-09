@@ -1,8 +1,9 @@
 "use client";
 
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import Lottie from 'lottie-react';
+import React from 'react';
 import localFont from 'next/font/local';
+import dynamic from "next/dynamic";
 
 import { Helpers } from '@/components/libs/helpers/index.helper';
 import ringAnimationJson from "@/assets/icon-animation/ring-animation.json";
@@ -10,32 +11,19 @@ import cheersAnimationJson from "@/assets/icon-animation/cheers-animation.json";
 import { AKAD_DATE, AKAD_TIME, START_TIME_RECEPTION, MAPS_LOCATION, ADDRESS_LOCATION } from '@/components/libs/constants/event.const';
 import { Icon } from '@iconify/react';
 import HeadingTitle from '../micro/heading_title.micro';
-// import Lottie, { useLottie } from 'lottie-react';
-// import lottie from 'lottie-web';
-import React from 'react';
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
+const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false }); 
+
 export default function EventSection() {
-
-    // const animationContainer = React.useRef(null);
-
-    // React.useEffect(() => {
-    //     lottie.loadAnimation({
-    //         container: animationContainer.current,
-    //         renderer: 'svg',
-    //         loop: true,
-    //         autoplay: true,
-    //         path: "@/assets/icon-animation/ring-animation.json"
-    //       });
-    // }, [])
 
     return (
         <div className="w-full flex flex-col items-center justify-center my-5 text-black" id='event'>
             {/* AKAD */}
             <div className='w-20 xxs:w-24'>
                 {/* <div ref={animationContainer} /> */}
-                <Lottie
+                <DynamicLottie
                     loop
                     animationData={ringAnimationJson}
                     autoplay
@@ -66,14 +54,14 @@ export default function EventSection() {
             </div>
 
             {/* RECEPTION */}
-            {/* <div className='w-20 xxs:w-24 mt-3 xxs:mt-5'>
-                <Lottie
+            <div className='w-20 xxs:w-24 mt-3 xxs:mt-5'>
+                <DynamicLottie
                     loop
                     animationData={cheersAnimationJson}
                     autoplay
-                    // rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
-            </div> */}
+            </div>
 
             <HeadingTitle className={` ${babyDoll.className}`} title='RESEPSI' />
 
