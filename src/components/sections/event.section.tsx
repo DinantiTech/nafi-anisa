@@ -21,7 +21,7 @@ export default function EventSection() {
                     loop
                     animationData={ringAnimationJson}
                     autoplay
-                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                    // rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
             </div>
 
@@ -53,7 +53,7 @@ export default function EventSection() {
                     loop
                     animationData={cheersAnimationJson}
                     autoplay
-                    rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
+                    // rendererSettings={{ preserveAspectRatio: 'xMidYMid slice' }}
                 />
             </div>
 
