@@ -13,7 +13,7 @@ import Image from "next/image";
 export default function RulesSection() {
     return (
         <>
-            <MobileLayout className="px-4 py-5" id="rules">
+            <MobileLayout className="px-4 py-5 mt-10" id="rules">
                 <HeadingTitle title="ADAB MENGHADIRI PERNIKAHAN" className={`${babyDoll.className} mx-auto flex items-center justify-center text-center mb-4`} />
                 <div data-aos="fade-right" className={`${babyDoll.className} rounded-xl bg-white shadow-lg p-5 flex flex-wrap gap-4`} >
                     <div className="w-full flex flex-col sm:flex-row gap-2 sm:justify-between">

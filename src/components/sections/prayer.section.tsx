@@ -7,7 +7,7 @@ const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 export default function PrayerSection() {
     return (
         <>
-            <MobileLayout className="px-4 py-5" id="rules">
+            <MobileLayout className="px-4 py-10" id="rules">
                 <HeadingTitle title="DOA PENGANTIN" className={`${babyDoll.className} mx-auto flex items-center justify-center text-center mb-5`} />
                 {/* <Image
                     src={HurufArab}

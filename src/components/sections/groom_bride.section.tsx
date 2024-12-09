@@ -10,8 +10,8 @@ const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
 export default function GroomBrideSection() {
     return (
-        <div data-aos="fade-down" data-aos-offset="300" className="flex flex-col justify-center py-10 px-7 text-black" id='couple'>
-            <div className="flex flex-col gap-y-2 items-center">
+        <div data-aos="fade-down" data-aos-offset="300" className="flex flex-col justify-center py-7 px-7 text-black" id='couple'>
+            <div className="flex flex-col gap-y-2 items-center pb-5">
                 <Image src={IconGroomBride} className="w-28" sizes="100vw" alt="icon groom and bride" />
                 <h3 className={` ${babyDoll.className} text-[#E8B787] tracking-widest font-semibold xxs:text-2xl text-lg`}>GROOM & BRIDE</h3>
                 <svg className="w-fit -mt-3" width="220" viewBox="0 0 1664 134" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -24,12 +24,10 @@ export default function GroomBrideSection() {
 
                 <div className="flex flex-col xxs:flex-row items-center xxs:items-end">
                     <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
-                    <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pl-14 xs:pr-5 xs:p-10 xs:-ml-12`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-sm leading-7`}>
-                            {GROOM_NAME} <br />
-                            Putra dari
-                            {GROOM_FATHER} &<br />
-                            {GROOM_MOTHER} <br />
+                    <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-5 xs:pl-14 xxs:-ml-4 xs:pr-5 xs:p-10 xs:-ml-12 md:pr-7 lg:pr-8`} id="couple_texture">
+                        <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-8 text-gray-600`}>
+                            <span className="font-bold text-black">{GROOM_NAME}</span> <br />
+                            Putra dari {GROOM_FATHER} & {GROOM_MOTHER} <br />
                             {GROOM_USERNAME}
                         </p>
                     </div>
@@ -37,12 +35,10 @@ export default function GroomBrideSection() {
 
                 <div className="flex flex-col xxs:flex-row-reverse items-center xxs:items-end">
                     <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" className="h-auto w-1/2 xs:h-56 xs:w-auto"/>
-                    <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-8 xs:pr-14 xs:pl-5 xs:p-10 xs:-mr-12`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-sm leading-7`}>
-                            {BRIDE_NAME} <br />
-                            Putri dari
-                            {BRIDE_FATHER} <br />
-                            & {BRIDE_MOTHER} <br />
+                    <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-5 xs:pr-14 xxs:-mr-5 xs:pl-5 xs:p-10 xs:-mr-12`} id="couple_texture">
+                        <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-8 text-gray-600`}>
+                            <span className="font-bold text-black">{BRIDE_NAME}</span> <br />
+                            Putri dari {BRIDE_FATHER} & {BRIDE_MOTHER} <br />
                             {BRIDE_USERNAME} 
                         </p>
                     </div>

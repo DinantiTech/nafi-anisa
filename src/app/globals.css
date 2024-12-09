@@ -2,20 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+#bg-texture {
+  background-image: url('../assets/texture.png');
+  background-size: contain;
+  background-repeat: repeat-y;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+#couple_texture {
+  background-image: url('../assets/couple/paper_texture.jpg');
+  background-size: contain;
+  background-repeat: repeat-y;
 }

@@ -109,8 +109,7 @@ export default function RSVPSection() {
                 >
                     {({
                         errors,
-                        handleSubmit,
-                        isSubmitting
+                        handleSubmit
                     }) => (
                         <form onSubmit={handleSubmit} className="relative mt-10 w-full flex flex-col justify-start items-start gap-y-5 font-primary">
 
@@ -150,7 +149,7 @@ export default function RSVPSection() {
                                     </label>
                                 </div>
 
-                                <button disabled={isRSVPSubmit || isSubmitting} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
+                                <button disabled={isRSVPSubmit} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
                                     <Icon icon="jam:paper-plane" />
                                     SEND
                                 </button>
@@ -177,7 +176,7 @@ export default function RSVPSection() {
                                         <div className="w-full flex flex-col items-start justify-center">
                                             <div className="flex items-start justify-center flex-col">
                                                 <h5 className="text-black font-semibold sm:text-lg">
-                                                    {data.name} <span className="text-xs text-amber-900">{data?.attendance ? "✅" : null}</span>
+                                                    {data.name} <span className="md:text-xs text-[0.6rem] text-amber-900">{data?.attendance ? "(akan hadir) ✅" : null}</span>
                                                 </h5>
                                                 <span className="text-amber-700 text-xs">{moment(new Date(data?.createdAt)).tz('Asia/Jakarta').fromNow()}</span>
                                             </div>

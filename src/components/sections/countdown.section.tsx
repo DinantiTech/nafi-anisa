@@ -14,7 +14,7 @@ export default function CountdownSection() {
 
     return (
         <MobileLayout>
-            <div className="w-full h-fit overflow-hidden text-black">
+            <div className="w-full h-fit overflow-hidden text-black mt-5">
                 <div className="w-full h-full" data-aos="fade-up" data-aos-easing="linear">
                     <div className="w-full h-full flex flex-col items-center justify-center xxs:gap-y-2">
                         <div>

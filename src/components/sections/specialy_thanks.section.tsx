@@ -43,7 +43,7 @@ export default function SpecialyThanksSection() {
                     <Link href="https://dinanti.id" target='_blank'>
                         <Image src={IconDinanti} alt='logo dinanti' sizes='100vw' className='w-14' />
                     </Link>
-                    <p className='mt-2 text-xs'>Inspired Design by Asa & Animation assets from Lottie</p>
+                    <p className='mt-2 text-xs'>Design by Asa & Animation assets from Lottie</p>
                 </div>
             </footer>
         </MobileLayout>
