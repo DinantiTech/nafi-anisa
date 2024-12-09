@@ -1,8 +1,8 @@
 import Image from "next/image";
-import Lottie from "lottie-react";
+import dynamic from "next/dynamic";
 import { Icon } from "@iconify/react";
 import localFont from "next/font/local";
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
 import toast, { Toaster } from "react-hot-toast";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
@@ -19,6 +19,7 @@ import LogoBSI from "@/assets/logo/BSI.png";
 import { ADDRESS_GIFT } from "@/components/libs/constants/others.const";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
+const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false }); 
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -40,7 +41,7 @@ export default function GiftSection() {
             <Toaster position="top-center" reverseOrder={false} />
 
             <div className='w-24 xxs:w-28 sm:w-32' id="gift">
-                <Lottie
+                <DynamicLottie
                     loop
                     animationData={giftAnimationData}
                     autoplay

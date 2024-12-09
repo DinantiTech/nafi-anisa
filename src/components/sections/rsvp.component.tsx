@@ -2,12 +2,12 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { useMemo, useState } from "react";
-import { Field, Formik } from "formik";
-import { Icon } from "@iconify/react/dist/iconify.js";
+import dynamic from "next/dynamic";
 import moment from "moment-timezone";
-import Lottie from "lottie-react";
+import { Field, Formik } from "formik";
 import localFont from "next/font/local";
+import { useEffect, useMemo, useState } from "react";
+import { Icon } from "@iconify/react/dist/iconify.js";
 
 import MobileLayout from "../layouts/mobile.layout";
 import { SPREADSHEET_ID } from "@/components/libs/constants/others.const";
@@ -21,6 +21,7 @@ import Image from "next/image";
 import { selectAvatar } from "@/components/libs/helpers/select_avatar.helper";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
+const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false }); 
 
 type FormType = {
     name: string;
@@ -36,20 +37,20 @@ export default function RSVPSection() {
     const [loading, setLoading] = useState<boolean>(false);
     const [dataRsvp, setDataRsvp] = useState<Record<string, any>>({})
     const [messageLimit, setMessageLimit] = useState<number>(5);
-    const [listRsvp, setListRsvp] = useState<Record<string, any>[] | null>([]);
-
     const [modalAvatarRsvp, setModalAvatarRsvp] = useState<boolean>(false);
+    const [listRsvp, setListRsvp] = useState<Record<string, any>[] | null>([]);
 
     const handleSendRSVP = async () => {
         try {
             setLoading(true);
+            setModalAvatarRsvp(false)
 
             // send RSVP
             await Rsvp.createRSVP(dataRsvp);
 
             // update state list RSVP
-            listRsvp?.push({ ...dataRsvp, createdAt: new Date().toISOString() })
-            setModalAvatarRsvp(false)
+            setListRsvp((prevList) => [{...dataRsvp, createdAt: new Date().toISOString()}, ...(prevList || [])]);
+            setRSVPSubmit(true)
         } catch (error) {
             console.log(error);
         } finally {
@@ -70,10 +71,15 @@ export default function RSVPSection() {
         });
     }, []);
 
+    useEffect(() => {
+        console.log(listRsvp);
+        
+    }, [listRsvp])
+
     return (
         <MobileLayout className="px-4 py-5" id="rsvp">
             <div className='w-20 xxs:w-24 mt-3 xxs:mt-5 mx-auto'>
-                <Lottie
+                <DynamicLottie
                     loop
                     animationData={rsvpAnimmationData}
                     autoplay

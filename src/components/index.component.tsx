@@ -42,11 +42,11 @@ export default function IndexComponent() {
                 <CountdownSection />
                 <EventSection />
 
-                {/* <RulesSection />
-                <PrayerSection /> */}
+                <RulesSection />
+                <PrayerSection />
 
-                {/* <RSVPSection /> */}
-                {/* <GiftSection /> */}
+                <RSVPSection />
+                <GiftSection />
                 {/* <SpecialyThanksSection /> */}
 
                 {/* <MusicBtn /> */}
