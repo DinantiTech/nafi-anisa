@@ -47,10 +47,10 @@ export default function IndexComponent() {
 
                 <RSVPSection />
                 <GiftSection />
-                {/* <SpecialyThanksSection /> */}
+                <SpecialyThanksSection />
 
-                {/* <MusicBtn /> */}
-                {/* <Navigation /> */}
+                <MusicBtn />
+                <Navigation />
             </MobileLayout>
         </main>
     );
