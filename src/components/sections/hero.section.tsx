@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import localFont from 'next/font/local';
 import Image from "next/image";
 
@@ -16,23 +16,15 @@ const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script 
 
 
 export default function HeroSection({ to }: { to?: string }) {
-    const { setMusic } = useMusicStore();
-    const { isCover, setCover } = useCoverStore();
-
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
-    useMemo(() => {
+    useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex === HeroImage.length - 1 ? 0 : prevIndex + 1));
         }, 5000);
 
         return () => clearInterval(interval);
     }, []);
-
-    const handleOpenInvitation = () => {
-        // setMusic(false);
-        setCover(true);
-    }
 
     return (
         <>
