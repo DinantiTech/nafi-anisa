@@ -1,9 +1,11 @@
 "use client";
 
-import { MusicBG } from "@/components/libs/constants/others.const";
-import { useMusicStore } from "@/components/libs/stores/music.store";
 import { Icon } from "@iconify/react";
 import { useEffect, useState } from "react";
+
+import { useMusicStore } from "@/components/libs/stores/music.store";
+
+const bgMusic = "/bg_music.mp3";
 
 export default function MusicBtn() {
   const { isMusic, setMusic } = useMusicStore();
@@ -12,7 +14,7 @@ export default function MusicBtn() {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    const audioElement = new Audio(MusicBG);
+    const audioElement = new Audio(bgMusic);
     audioElement.loop = true;
     setAudio(audioElement);
 
