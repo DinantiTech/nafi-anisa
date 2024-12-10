@@ -5,7 +5,7 @@ import dynamic from "next/dynamic";
 import moment from "moment-timezone";
 import { Field, Formik } from "formik";
 import localFont from "next/font/local";
-import { useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 import MobileLayout from "../layouts/mobile.layout";
@@ -61,7 +61,7 @@ export default function RSVPSection() {
         setMessageLimit(prevLimit => prevLimit + 5);
     };
 
-    useMemo(() => {
+    useEffect(() => {
         setLoading(true);
         Rsvp.getRSVP().then((val: any) => {
             const sortedData = val?.data?.sort((a: any, b: any) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());

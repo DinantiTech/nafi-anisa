@@ -1,21 +1,16 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import localFont from 'next/font/local';
 import Image from "next/image";
 
 import { HeroImage } from "@/components/libs/constants/hero_images.const";
-import { useMusicStore } from "@/components/libs/stores/music.store";
-import { useCoverStore } from "@/components/libs/stores/cover.store";
 import { NEWLYWEDS_TITLE } from "@/components/libs/constants/others.const";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
-
-
-export default function HeroSection({ to }: { to?: string }) {
+export default function HeroSection() {
     const [currentIndex, setCurrentIndex] = useState<number>(0);
 
     useEffect(() => {

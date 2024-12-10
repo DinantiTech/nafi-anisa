@@ -40,7 +40,7 @@ export default function IndexComponent({ slug }: { slug?: string }) {
         <main className={`${mavenPro.className} w-full h-full bg-[#FFFBEF]`}>
             <Cover to={to} />
             <MobileLayout>
-                <HeroSection to={to} />
+                <HeroSection />
                 <GroomBrideSection />
                 <CountdownSection />
                 <EventSection />
