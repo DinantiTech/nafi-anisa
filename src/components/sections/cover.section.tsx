@@ -65,7 +65,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                     data-aos-offset="0"
                                 >
                                     <p>{to? 'Kepada Yth:' : ""}</p>
-                                    <h5 className="text-xl xxs:text-2xl font-semibold">{to ?? ""}</h5>
+                                    <h5 className="text-xl xxs:text-2xl font-semibold text-center">{to ?? ""}</h5>
                                     {/* <p>di tempat</p> */}
                                 </div>
                                 <button
