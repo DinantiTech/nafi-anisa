@@ -6,7 +6,7 @@ import { ImageResponse } from 'next/og'
 export const runtime = 'edge'
  
 export default async function Image() {
-  const logoSrc: any = await fetch(new URL('./img-opengraph.png', import.meta.url)).then(
+  const logoSrc: any = await fetch(new URL('./img-opengraph.jpg', import.meta.url)).then(
     (res) => res.arrayBuffer()
   )
  
