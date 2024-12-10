@@ -13,8 +13,6 @@ interface ModalProps {
 export default function ModalAvatar({ avatar, selectAvatar, clickOutside, isOpen, handleSubmit }: ModalProps) {
     const handleSelectAvatar = (idx: number) => {
         if (selectAvatar) {
-            console.log(idx);
-            
             selectAvatar(idx);
         }
     };

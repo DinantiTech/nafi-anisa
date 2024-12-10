@@ -1,12 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import dynamic from "next/dynamic";
 import moment from "moment-timezone";
 import { Field, Formik } from "formik";
 import localFont from "next/font/local";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 import { Icon } from "@iconify/react/dist/iconify.js";
 
 import MobileLayout from "../layouts/mobile.layout";
@@ -71,11 +70,6 @@ export default function RSVPSection() {
         });
     }, []);
 
-    useEffect(() => {
-        console.log(listRsvp);
-        
-    }, [listRsvp])
-
     return (
         <MobileLayout className="px-4 py-5" id="rsvp">
             <div className='w-20 xxs:w-24 mt-3 xxs:mt-5 mx-auto'>
@@ -100,7 +94,7 @@ export default function RSVPSection() {
                         return errors;
                     }}
 
-                    onSubmit={async (values, { resetForm }) => {
+                    onSubmit={async (values, {}) => {
                         if (values?.name?.length > 0 && values?.message?.length > 1) {
                             setDataRsvp(values)
                             setModalAvatarRsvp(true)

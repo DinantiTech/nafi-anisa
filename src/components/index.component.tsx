@@ -24,20 +24,23 @@ import Navigation from "./sections/navigation.section";
 
 const mavenPro = Maven_Pro({ subsets: ["latin"] });
 
-export default function IndexComponent() {
+export default function IndexComponent({ slug }: { slug?: string }) {
     useEffect(() => {
         AOS.init()
     }, [])
 
     const queryParams = useSearchParams();
 
-    const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ');
+    const guestSlug = slug?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ')?.replace(/%20/g, ' ');
+    const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ')?.replace(/%20/g, ' ');
+
+    const to = guestSlug ?? guestString
 
     return (
         <main className={`${mavenPro.className} w-full h-full bg-[#FFFBEF]`}>
-            <Cover to={guestString} />
+            <Cover to={to} />
             <MobileLayout>
-                <HeroSection to={guestString} />
+                <HeroSection to={to} />
                 <GroomBrideSection />
                 <CountdownSection />
                 <EventSection />
