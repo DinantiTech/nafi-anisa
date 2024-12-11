@@ -5,6 +5,7 @@ import IconGroomBride from "@/assets/icon_groom_bride.svg";
 import GroomImg from "@/assets/couple/groom.png";
 import BrideImg from "@/assets/couple/bride.png";
 import { BRIDE_FATHER, BRIDE_MOTHER, BRIDE_NAME, BRIDE_USERNAME, GROOM_FATHER, GROOM_MOTHER, GROOM_NAME, GROOM_USERNAME } from "@/components/libs/constants/others.const";
+import Link from "next/link";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 
@@ -19,7 +20,7 @@ export default function GroomBrideSection() {
                 </svg>
             </div>
 
-            <div className="mt-6 flex flex-col items-center justify-center gap-y-10">
+            <div className="mt-6 flex flex-col items-end justify-center gap-y-10">
                 {/* Groom */}
 
                 <div className="flex flex-col xxs:flex-row justify-center items-center xxs:items-end">
@@ -27,8 +28,8 @@ export default function GroomBrideSection() {
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-5 xs:pl-14 xxs:-ml-4 xs:pr-7 xs:p-9 xs:-ml-12 md:pr-8 lg:pr-8`} id="couple_texture">
                         <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-8 text-gray-600`}>
                             <span className="font-bold text-black">{GROOM_NAME}</span> <br />
-                            Putra dari {GROOM_FATHER} <br /> & {GROOM_MOTHER} <br />
-                            {GROOM_USERNAME}
+                            Putra Pertama dari {GROOM_FATHER} <br /> & {GROOM_MOTHER} <br />
+                            <span><Link href={`https://www.instagram.com/${GROOM_USERNAME.replace(/@/g, '')}`} target="_blank">{GROOM_USERNAME}</Link></span>
                         </p>
                     </div>
                 </div>
@@ -36,10 +37,10 @@ export default function GroomBrideSection() {
                 <div className="flex flex-col xxs:flex-row-reverse justify-center items-center xxs:items-end">
                     <Image data-aos="fade-left" data-aos-duration="500" src={BrideImg} alt="Bride" className="h-auto w-1/2 xs:h-56 xs:w-auto"/>
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-5 xs:pr-14 xxs:-mr-5 xxs:pl-5 sm:p-9 xs:-mr-12`} id="couple_texture">
-                        <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-8 text-gray-600`}>
+                        <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-7 text-gray-600`}>
                             <span className="font-bold text-black">{BRIDE_NAME}</span> <br />
-                            Putri dari {BRIDE_FATHER} <br /> & {BRIDE_MOTHER} <br />
-                            {BRIDE_USERNAME} 
+                            Putri Kedua dari {BRIDE_FATHER} <br /> & {BRIDE_MOTHER} <br />
+                            <span><Link href={`https://www.instagram.com/${BRIDE_USERNAME.replace(/@/g, '')}`} target="_blank">{BRIDE_USERNAME}</Link></span>
                         </p>
                     </div>
                 </div>
