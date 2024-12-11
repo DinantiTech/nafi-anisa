@@ -68,7 +68,7 @@ export default function EventSection() {
                 <div className='flex items-center justify-center font-medium h-fit overflow-hidden xxs:text-xl sm:text-2xl'>
                     <div className='w-fit overflow-hidden'>
                         <div className='underline text-center' data-aos="fade-left">
-                            Sabtu, {Helpers.formatDateRange(AKAD_DATE)}
+                            Sabtu, {Helpers.formatDateRange(AKAD_DATE, null, 'id')}
                             <br /> Pukul {START_TIME_RECEPTION}
                         </div>
                     </div>
