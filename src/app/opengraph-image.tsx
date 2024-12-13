@@ -19,7 +19,7 @@ export default async function Image() {
           justifyContent: 'center',
         }}
       >
-        <img src={logoSrc} width="100%" />
+        <img src={logoSrc} width="100%" style={{ objectFit: "cover", objectPosition: "center" }} />
       </div>
     )
   )
