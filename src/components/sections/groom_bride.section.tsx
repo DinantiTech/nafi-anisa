@@ -28,7 +28,7 @@ export default function GroomBrideSection() {
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-5 xs:pl-14 xxs:-ml-4 xs:pr-7 xs:p-9 xs:-ml-12 md:pr-8 lg:pr-8`} id="couple_texture">
                         <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-8 text-gray-600`}>
                             <span className="font-bold text-black">{GROOM_NAME}</span> <br />
-                            Putra Pertama dari {GROOM_FATHER} <br /> & {GROOM_MOTHER} <br />
+                            Putra Pertama dari Bapak <br /> {GROOM_FATHER} <br /> & Ibu {GROOM_MOTHER} <br />
                             <span><Link href={`https://www.instagram.com/${GROOM_USERNAME.replace(/@/g, '')}`} target="_blank">{GROOM_USERNAME}</Link></span>
                         </p>
                     </div>
@@ -39,7 +39,7 @@ export default function GroomBrideSection() {
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed p-5 xs:pr-14 xxs:-mr-5 xxs:pl-5 sm:p-9 xs:-mr-12`} id="couple_texture">
                         <p className={`${babyDoll.className} text-left text-sm leading-6 md:leading-7 lg:leading-7 text-gray-600`}>
                             <span className="font-bold text-black">{BRIDE_NAME}</span> <br />
-                            Putri Kedua dari {BRIDE_FATHER} <br /> & {BRIDE_MOTHER} <br />
+                            Putri Kedua dari Bapak <br /> {BRIDE_FATHER} <br /> & Ibu {BRIDE_MOTHER} <br />
                             <span><Link href={`https://www.instagram.com/${BRIDE_USERNAME.replace(/@/g, '')}`} target="_blank">{BRIDE_USERNAME}</Link></span>
                         </p>
                     </div>
