@@ -1,7 +1,9 @@
 export class Params {
     // Function to restore original case (remove lowercase transformation)
     static restoreOriginalCase(input: string) {
-        return input.replace(/-/g, ' ').replace(/\b[a-z]/g, char => char.toUpperCase());
+        const decodedInput = decodeURIComponent(input);
+
+        return decodedInput?.replace(/-/g, ' ').replace(/\b[a-z]/g, char => char.toUpperCase());
     }
 
     // Function to generate URL parameter and return original string
