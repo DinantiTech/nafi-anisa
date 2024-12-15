@@ -16,7 +16,7 @@ export default async function Image() {
     (
       <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', width: '500px', height: '723px', background: '#fff' }}>
         <img
-          src={URL.createObjectURL(new Blob([logoSrc], { type: 'image/jpeg' }))}
+          src={logoSrc}
           alt="Open Graph Image"
           style={{ maxWidth: '100%', maxHeight: '100%' }}
         />
