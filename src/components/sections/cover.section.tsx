@@ -49,11 +49,11 @@ export default function CoverSection({ to }: { to?: string }) {
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
                                 data-aos-offset="0">
-                                <p className={` ${babyDoll.className}  flex w-full justify-center text-white font-normal text-4xl lg:text-6xl drop-shadow-2xl`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
+                                <p className={` ${babyDoll.className} drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]  flex w-full justify-center text-white font-normal text-4xl lg:text-6xl`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
                                 >
                                     01 . 02 . 2025
                                 </p>
-                                <p className={`${shorelinesScript.className} flex w-full justify-center my-5 text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
+                                <p className={`${shorelinesScript.className} drop-shadow-[0_1.2px_1.2px_rgba(100,100,100, 1)] flex w-full justify-center my-5 text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
                             </div>
 
 
@@ -64,8 +64,8 @@ export default function CoverSection({ to }: { to?: string }) {
                                     data-aos-duration="900"
                                     data-aos-offset="0"
                                 >
-                                    <p>{to? 'Kepada Yth:' : ""}</p>
-                                    <h5 className="text-xl xxs:text-2xl font-semibold text-center">{to ?? ""}</h5>
+                                    <p className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">{to? 'Kepada Yth:' : ""}</p>
+                                    <h5 className="drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] text-xl xxs:text-2xl font-semibold text-center">{to ?? ""}</h5>
                                     {/* <p>di tempat</p> */}
                                 </div>
                                 <button
