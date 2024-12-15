@@ -13,7 +13,7 @@ export default async function Image() {
   return new ImageResponse(
     (
       <div>
-        <img src={logoSrc} width="100%" height="100%" />
+        <img src={logoSrc} height={723} width={500} />
       </div>
     )
   )
