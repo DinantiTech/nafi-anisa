@@ -1,4 +1,5 @@
 import { NEWLYWEDS_TITLE } from "@/components/libs/constants/others.const";
+import { Params } from "@/components/libs/helpers/params.helper";
 import { Suspense, lazy } from "react";
 
 const IndexComponent = lazy(() => import("@/components/index.component"));
@@ -8,10 +9,10 @@ type SlugType = {
 }
 
 export async function generateMetadata({ params }: SlugType) {
-  const slug =  (await params).slug
+  const slug =  (await params)?.slug
   
   return {
-    title: `${NEWLYWEDS_TITLE} - To ${slug}`,
+    title: `${NEWLYWEDS_TITLE} - To ${Params.restoreOriginalCase(slug)}`,
   }
 }
 
