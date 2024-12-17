@@ -44,7 +44,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 className="object-cover object-top z-0 md:object-top w-96" priority />
 
 
-                            <div className="absolute top-0.5 left-0 right-0"
+                            <div className="absolute top-[0.3rem] left-0 right-0"
                                 data-aos="fade-down"
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
