@@ -44,7 +44,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 className="object-cover object-top z-0 md:object-top w-96" priority />
 
 
-                            <div className="absolute top-10 left-0 right-0"
+                            <div className="absolute top-0.5 left-0 right-0"
                                 data-aos="fade-down"
                                 data-aos-delay="1200"
                                 data-aos-duration="900"
@@ -53,7 +53,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 >
                                     01 . 02 . 2025
                                 </p>
-                                <p className={`${shorelinesScript.className} drop-shadow-[0_1.2px_1.2px_rgba(100,100,100, 1)] flex w-full justify-center my-5 text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
+                                <p className={`${shorelinesScript.className} drop-shadow-[0_1.2px_1.2px_rgba(100,100,100, 1)] flex w-full justify-center text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
                             </div>
 
 
