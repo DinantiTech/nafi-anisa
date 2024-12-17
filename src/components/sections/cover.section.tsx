@@ -53,7 +53,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 >
                                     01 . 02 . 2025
                                 </p>
-                                <p className={`${shorelinesScript.className} drop-shadow-[0_1.2px_1.2px_rgba(100,100,100, 1)] flex w-full justify-center text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
+                                <p className={`${shorelinesScript.className} drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)] flex w-full justify-center text-lg xxs:text-2xl`}>{NEWLYWEDS_TITLE}</p>
                             </div>
 
 
