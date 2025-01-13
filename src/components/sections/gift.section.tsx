@@ -79,7 +79,7 @@ export default function GiftSection() {
                                     <p className="font-semibold text-lg">{data?.value}</p>
                                     <p className="italic">{data?.beneficiary}</p>
                                 </div>
-                                <button onClick={() => copyToClipboard({ value: data?.value, type: "REK" })} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#E8B787] hover:bg-[#E8B787]/90 font-normal">
+                                <button onClick={() => copyToClipboard({ value: data?.value, type: "REK" })} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#E8B787] hover:bg-[#E8B787]/90 border-0 font-normal">
                                     <Icon className="text-lg" icon="solar:copy-line-duotone" />
                                     COPY
                                 </button>
