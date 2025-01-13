@@ -30,8 +30,8 @@ export default function IndexComponent({ slug }: { slug?: string }) {
 
     const queryParams = useSearchParams();
 
-    const guestSlug = slug?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ')?.replace(/%20/g, ' ');
-    const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ')?.replace(/%20/g, ' ');
+    const guestSlug = slug?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ')?.replace(/%20/g, ' ')?.replace(/%2C/g, ',');
+    const guestString = queryParams?.toString()?.replace(/=/g, '')?.replace(/[-+_]/g, ' ')?.replace(/%20/g, ' ')?.replace(/%2C/g, ',');
 
     const to = guestSlug ?? guestString
 
