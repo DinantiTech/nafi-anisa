@@ -37,7 +37,7 @@ export default function GroomBrideSection() {
                     <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed relative`}>
                         <Image data-aos="fade-right" data-aos-duration="500" src={Bubble} alt="GROOM" className="w-[296px]" style={{ transform: 'rotate(180deg)' }} />
-                        <p data-aos="fade-right" data-aos-duration="500" className={`${babyDoll.className} text-left text-sm p-5 leading-4 text-gray-600 absolute bottom-2 left-2 w-full`}>
+                        <p data-aos="fade-right" data-aos-duration="500" className={`${babyDoll.className} text-left text-sm p-5 leading-4 text-gray-600 absolute bottom-1 left-2 w-full`}>
                             <span className="font-bold text-black">{GROOM_NAME}</span> <br />
                             Putra Ketiga dari <br /> Bapak {GROOM_FATHER} & Ibu {GROOM_MOTHER} <br />
                             <span><Link href={`https://www.instagram.com/${GROOM_USERNAME.replace(/@/g, '')}`} target="_blank">{GROOM_USERNAME}</Link></span>

@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 import HeadingTitle from "../micro/heading_title.micro";
 
 import IconDinanti from "@/assets/logo/logo_dinanti.svg";
+import Doraemaon from "@/assets/doraemon.svg";
 import { Icon } from '@iconify/react';
 import { NEWLYWEDS_TITLE } from '@/components/libs/constants/others.const';
 import Link from 'next/link';
@@ -14,7 +15,7 @@ const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script 
 
 export default function SpecialyThanksSection() {
     return (
-        <div className={`${babyDoll.className} text-center px-4 mb-32`}>
+        <div className={`${babyDoll.className} text-center px-4 mb-14`}>
             {/* <DotLottieReact
                 src="https://lottie.host/b8ed8e7b-9790-4808-9c63-3fa4d8e26974/LiUTKcbyzh.lottie"
                 loop
@@ -45,6 +46,8 @@ export default function SpecialyThanksSection() {
                     </Link>
                     <p className='mt-2 text-xs'>Design by Asa & Animation assets from Lottie</p>
                 </div>
+
+                <Image src={Doraemaon} data-aos="fade-up" alt='doraemon illustration' sizes='100vw' className='w-full pt-16' />
             </footer>
         </div>
     );
