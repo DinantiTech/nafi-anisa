@@ -3,13 +3,28 @@
 @tailwind utilities;
 
 #bg-texture {
-  background-image: url('../assets/texture.png');
+  background-image: url('../assets/texture.webp');
   background-size: contain;
   background-repeat: repeat-y;
 }
 
-#couple_texture {
-  background-image: url('../assets/couple/paper_texture.jpg');
+#bg-bubble {
+  background-image: url('../assets/bubble.svg');
   background-size: contain;
-  background-repeat: repeat-y;
+  background-repeat: no-repeat;
+}
+
+#bg-parallax{
+  background-image: url('../assets/scenery_bg.webp');
+  background-size: 70%;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
+
+  @media (max-width: 1024px) {
+    background-size: contain;
+  }
+  @media (max-width: 600px) {
+    background-size: 150%;
+  }
 }

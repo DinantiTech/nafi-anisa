@@ -1,17 +1,16 @@
 const isDevEnd = process && process.env.NODE_ENV === "development";
-
 // Detail NEWLYWEDS
-export const NEWLYWEDS_TITLE = 'Ammar & Firda'
+export const NEWLYWEDS_TITLE = 'Anisa & Nafi'
 
-export const GROOM_NAME = "Ammar Azzam Basysyar (Ammar)"
-export const GROOM_FATHER = "Yayat Supriatna"
-export const GROOM_MOTHER =  "Titin Sumarni"
-export const GROOM_USERNAME = "@ammar.zamsyar"
+export const GROOM_NAME = "Muhammad Arrizqunnafi' Abdillah (Nafi)"
+export const GROOM_FATHER = "Arifin Suhartono"
+export const GROOM_MOTHER =  "Nurhayati"
+export const GROOM_USERNAME = "@arrizqun_30"
 
-export const BRIDE_NAME = "Zuhrotun Firdausi Azhar (Firda)"
-export const BRIDE_FATHER = "Muhammad Ngainur Rofik"
-export const BRIDE_MOTHER =  "Endang Setijo Pertiwi"
-export const BRIDE_USERNAME = "@firdazuhro52"
+export const BRIDE_NAME = "Anisa Nur Santoso (Anisa)"
+export const BRIDE_FATHER = "Teguh Santoso (Alm.)"
+export const BRIDE_MOTHER =  "Sri Ana Susilowati"
+export const BRIDE_USERNAME = "@anisanursantoso"
 
 export const ADDRESS_GIFT = "Jl.Kh. Ahmad madani no.118 Rt 008/Rw 009, Jatimakmur, Pondok Gede, Kota Bekasi 17413"
 

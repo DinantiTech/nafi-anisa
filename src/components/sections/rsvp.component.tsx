@@ -20,7 +20,7 @@ import Image from "next/image";
 import { selectAvatar } from "@/components/libs/helpers/select_avatar.helper";
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
-const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false }); 
+const DynamicLottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 type FormType = {
     name: string;
@@ -48,7 +48,7 @@ export default function RSVPSection() {
             await Rsvp.createRSVP(dataRsvp);
 
             // update state list RSVP
-            setListRsvp((prevList) => [{...dataRsvp, createdAt: new Date().toISOString()}, ...(prevList || [])]);
+            setListRsvp((prevList) => [{ ...dataRsvp, createdAt: new Date().toISOString() }, ...(prevList || [])]);
             setRSVPSubmit(true)
         } catch (error) {
             console.log(error);
@@ -94,7 +94,7 @@ export default function RSVPSection() {
                         return errors;
                     }}
 
-                    onSubmit={async (values, {}) => {
+                    onSubmit={async (values, { }) => {
                         if (values?.name?.length > 0 && values?.message?.length > 1) {
                             setDataRsvp(values)
                             setModalAvatarRsvp(true)
@@ -143,7 +143,7 @@ export default function RSVPSection() {
                                     </label>
                                 </div>
 
-                                <button disabled={isRSVPSubmit} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#E8B787]/90 border-none btn btn-sm xxs:btn-md bg-[#E8B787] text-white font-normal gap-x-1'>
+                                <button disabled={isRSVPSubmit} type="submit" className='flex items-center justify-center xxs:text-lg hover:bg-[#4FBBE7]/90 border-none btn btn-sm xxs:btn-md bg-[#4FBBE7] text-white font-normal gap-x-1'>
                                     <Icon icon="jam:paper-plane" />
                                     SEND
                                 </button>
@@ -164,15 +164,15 @@ export default function RSVPSection() {
                             {
                                 listRsvp?.slice(0, messageLimit)?.map((data: Record<string, any>, index) => (
                                     <div key={index} className="flex items-start justify-center gap-x-2" data-aos="fade-left">
-                                        <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded-full flex items-center justify-center uppercase font-bold border-2 border-amber-700">
+                                        <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded-full flex items-center justify-center uppercase font-bold border-2 border-black">
                                             <Image src={selectAvatar(data?.avatar)} alt={data?.name} className="" />
                                         </div>
                                         <div className="w-full flex flex-col items-start justify-center">
                                             <div className="flex items-start justify-center flex-col">
                                                 <h5 className="text-black font-semibold sm:text-lg">
-                                                    {data.name} <span className="md:text-xs text-[0.6rem] text-amber-900">{data?.attendance ? "(akan hadir) ✅" : null}</span>
+                                                    {data.name} <span className="md:text-xs text-[0.6rem] text-[#4FBBE7]">{data?.attendance ? "(akan hadir) ✅" : null}</span>
                                                 </h5>
-                                                <span className="text-amber-700 text-xs">{moment(new Date(data?.createdAt)).tz('Asia/Jakarta').fromNow()}</span>
+                                                <span className="text-bborder-black text-xs">{moment(new Date(data?.createdAt)).tz('Asia/Jakarta').fromNow()}</span>
                                             </div>
                                             <p className="text-sm">{data.message}</p>
                                         </div>
@@ -185,7 +185,7 @@ export default function RSVPSection() {
                 {listRsvp && listRsvp.length > messageLimit ? (
                     <button
                         onClick={handleLoadMore}
-                        className="btn btn-sm text-sm bg-[#E8B787] hover:bg-[#E8B787]/90 w-full text-white mt-7 font-normal py-4 h-auto"
+                        className="btn btn-sm text-sm bg-[#4FBBE7] hover:bg-[#4FBBE7]/90 w-full text-white mt-7 font-normal py-4 h-auto"
                         data-aos="fade-in"
                     >
                         LOAD MORE MESSAGES

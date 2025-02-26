@@ -1,34 +1,34 @@
 import Image from 'next/image';
 import localFont from 'next/font/local';
 
-import MobileLayout from "../layouts/mobile.layout";
 import HeadingTitle from "../micro/heading_title.micro";
 
 import IconDinanti from "@/assets/logo/logo_dinanti.svg";
 import { Icon } from '@iconify/react';
 import { NEWLYWEDS_TITLE } from '@/components/libs/constants/others.const';
 import Link from 'next/link';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
+// import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
 export default function SpecialyThanksSection() {
     return (
-        <MobileLayout className={`${babyDoll.className} text-center px-4 mb-32`}>
-            <DotLottieReact
+        <div className={`${babyDoll.className} text-center px-4 mb-32`}>
+            {/* <DotLottieReact
                 src="https://lottie.host/b8ed8e7b-9790-4808-9c63-3fa4d8e26974/LiUTKcbyzh.lottie"
                 loop
                 autoplay
                 className='-mb-16 -mt-10'
-            />
+            /> */}
 
             <HeadingTitle title="Terima Kasih" className={`${babyDoll.className} flex flex-col items-center justify-center font-light text-4xl xxs:text-5xl sm:text-6xl xxs:mt-1`} />
 
             <div className='flex flex-col items-center justify-center gap-y-3 xxs:gap-y-2 text-xs xxs:text-sm sm:text-base mt-3'>
                 <p>Merupakan sebuah kehormatan, dan kebahagiaan bagi kami
                     apabila Bapak, Ibu, Saudara/i berkenan hadir dan memberikan
-                    do’a restunya.</p>
+                    do’a restunya untuk keberlangsungan pernikahan kami.</p>
+
                 <br />
                 <p className='text-balance'>Atas kehadiran dan do’a restunya, kami ucapkan terima kasih.</p>
             </div>
@@ -46,6 +46,6 @@ export default function SpecialyThanksSection() {
                     <p className='mt-2 text-xs'>Design by Asa & Animation assets from Lottie</p>
                 </div>
             </footer>
-        </MobileLayout>
+        </div>
     );
 }

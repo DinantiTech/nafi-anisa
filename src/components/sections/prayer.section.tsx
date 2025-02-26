@@ -1,7 +1,7 @@
-import Image from "next/image";
+// import Image from "next/image";
 import localFont from "next/font/local";
 
-import HurufArab from "@/assets/huruf-arab.jpg";
+// import HurufArab from "@/assets/huruf-arab.jpg";
 import MobileLayout from "../layouts/mobile.layout";
 import HeadingTitle from "../micro/heading_title.micro";
 
@@ -12,14 +12,17 @@ export default function PrayerSection() {
         <>
             <MobileLayout className="px-4 py-10" id="rules">
                 <HeadingTitle title="DOA PENGANTIN" className={`${babyDoll.className} mx-auto flex items-center justify-center text-center mb-5`} />
-                <Image
+                {/* <Image
                     src={HurufArab}
                     alt="Huruf Arab"
                     sizes='250px'
                     className="w-48 mx-auto mb-5"
                     data-aos="fade-left"
-                />
+                /> */}
 
+                <p data-aos="fade-in" className="text-center text-balance text-3xl mb-5">
+                    بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
+                </p>
                 <p data-aos="fade-in" className="text-center text-balance text-xl mb-5">
                     بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
                 </p>

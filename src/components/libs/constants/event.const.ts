@@ -1,10 +1,12 @@
-export const AKAD_DATE = "2025-02-01";
-export const AKAD_TIME = "08:00 WIB";
+export const AKAD_DATE = "2025-04-19";
+export const AKAD_TIME = "09:00 WIB";
+export const ADDRESS_LOCATION_AKAD = "Gedung Semeru\nBP2KLK Semarang\nJl. Elang Raya No.2, Mangunharjo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272";
+export const MAPS_LOCATION_AKAD = "https://maps.app.goo.gl/aRpEgco2nr63Y1ja6";
 
-export const START_DATE_RECEPTION = "2025-02-01";
-export const END_DATE_RECEPTION = "2024-06-21";
-export const START_TIME_RECEPTION = "10:00 WIB";
-export const END_TIME_RECEPTION = "FINISH";
+export const START_DATE_RECEPTION = "2025-04-19";
+export const END_DATE_RECEPTION = "2024-04-19";
+export const START_TIME_RECEPTION = "11:30 WIB";
+export const END_TIME_RECEPTION = "13:30 WIB";
 
-export const ADDRESS_LOCATION = "Jl. Srabah RT. 001 RW. 005 Ds. Karanganom Kec. Kauman Kab.Tulungagung Jawa Timur 66261";
-export const MAPS_LOCATION = "https://maps.app.goo.gl/Efs5cGyLsrajjk3d9"
+export const ADDRESS_LOCATION_RECEPTION = "Jl. Elang Raya No.2, Mangunharjo, Kec. Tembalang, Kota Semarang, Jawa Tengah 50272";
+export const MAPS_LOCATION_RECEPTION = "https://maps.app.goo.gl/aRpEgco2nr63Y1ja6"

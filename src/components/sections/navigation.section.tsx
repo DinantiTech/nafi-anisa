@@ -21,7 +21,7 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="w-max-[500px] md:w-[500px] mx-auto fixed border-t-2 bg-black bottom-0 inset-x-0 flex text-xss z-40 rounded-t-2xl shadow-xl items-center justify-center py-1">
+    <nav className="w-max-[500px] md:w-[500px] mx-auto fixed bg-[#4CB4DE] bottom-0 inset-x-0 flex text-xss z-40 rounded-t-2xl shadow-xl items-center justify-center py-1">
       <div className="w-full focus:outline-none flex py-2 text-center group items-center justify-evenly">
         {dataNavs.map((data, idx) => (
           <button

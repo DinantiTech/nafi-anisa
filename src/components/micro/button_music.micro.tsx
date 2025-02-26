@@ -56,7 +56,7 @@ export default function MusicBtn() {
   return (
     <button
       onClick={() => setMusic(!isMusic)}
-      className={`${isMusic ? "animate-bounce" : ""} bg-white fixed right-5 xxs:right-10 bottom-16 z-50 p-2 text-xl xxs:text-3xl rounded-full shadow-md`}
+      className={`${isMusic ? "animate-bounce" : ""} bg-[#4CB4DE] text-white fixed right-5 xxs:right-10 bottom-16 z-50 p-2 text-xl xxs:text-3xl rounded-full shadow-md`}
     >
       {isMusic ? (
         <Icon icon="icon-park-twotone:pause-one" />
