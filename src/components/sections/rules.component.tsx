@@ -7,7 +7,7 @@ const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
 // import masjid from "@/assets/rules/masjid.jpg";
 // import pakaian from "@/assets/rules/pakaian.jpg";
 // import pray from "@/assets/rules/pray.jpg";
-import Image from "next/image";
+// import Image from "next/image";
 import { Icon } from '@iconify/react';
 
 

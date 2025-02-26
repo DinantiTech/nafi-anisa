@@ -10,9 +10,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 import 'aos/dist/aos.css';
-import Image from "next/image";
+// import Image from "next/image";
 
-import BgScenery from "@/assets/scenery_bg.webp";
+// import BgScenery from "@/assets/scenery_bg.webp";
 
 import Cover from "./sections/cover.section";
 import HeroSection from "./sections/hero.section";

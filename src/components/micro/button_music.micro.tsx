@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 import { useMusicStore } from "@/components/libs/stores/music.store";
 
-const bgMusic = "/bg_music.mp3";
+const bgMusic = "/Hafiz_Hamidun_Jodoh_Berdua.mp3";
 
 export default function MusicBtn() {
   const { isMusic, setMusic } = useMusicStore();
