@@ -7,7 +7,7 @@ import useTimer from "@/components/libs/hooks/countdown.hook";
 import { AKAD_DATE } from "@/components/libs/constants/event.const";
 
 const doraefont = localFont({ src: "../../assets/fonts/Doraefont.ttf" });
-const britannic = localFont({ src: "../../assets/fonts/BRITANIC.ttf" });
+const britannic = localFont({ src: "../../assets/fonts/britanic.ttf" });
 
 export default function CountdownSection() {
     const { days, hours, minutes } = useTimer(new Date(`${AKAD_DATE}T08:00:00`));
