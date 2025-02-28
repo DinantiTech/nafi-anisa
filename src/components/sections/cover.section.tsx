@@ -3,12 +3,17 @@
 import Image from "next/image";
 import localFont from 'next/font/local';
 import Drawer from 'react-modern-drawer';
+import { Archivo_Black } from 'next/font/google'
 
 // Styles
 import 'react-modern-drawer/dist/index.css';
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
-const britannic = localFont({ src: "../../assets/fonts/britanic.ttf", display: 'swap', });
+// const britannic = localFont({ src: "../../assets/fonts/britanic.ttf", display: 'swap', });
 const doraefont = localFont({ src: "../../assets/fonts/Doraefont.ttf" });
+const archivo = Archivo_Black({
+    subsets: ['latin'],
+    weight: "400"
+})
 // const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
 import CoverHero from "@/assets/cover_name_only.webp";
@@ -61,7 +66,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                     data-aos-duration="900"
 
                                     data-aos-offset="0">
-                                    <p className={` ${britannic.className} drop-shadow-[10px_10px_11.4px_0_#00000070]  flex w-full justify-center text-white font-normal text-4xl pt-10`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
+                                    <p className={` ${archivo.className} drop-shadow-[10px_10px_11.4px_0_#00000070]  flex w-full justify-center text-white font-normal text-3xl pt-10`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
                                     >
                                         31.03.25
                                     </p>
