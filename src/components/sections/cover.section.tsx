@@ -7,7 +7,7 @@ import Drawer from 'react-modern-drawer';
 // Styles
 import 'react-modern-drawer/dist/index.css';
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
-const britannic = localFont({ src: "../../assets/fonts/britanic.ttf" });
+const britannic = localFont({ src: "../../assets/fonts/britanic.ttf", display: 'swap', });
 const doraefont = localFont({ src: "../../assets/fonts/Doraefont.ttf" });
 // const shorelinesScript = localFont({ src: "../../assets/fonts/Shorelines Script Bold.otf" });
 
