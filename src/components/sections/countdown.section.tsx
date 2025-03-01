@@ -5,10 +5,13 @@ import localFont from "next/font/local";
 // import ImgCountdown from "@/assets/img_countdown.png"
 import useTimer from "@/components/libs/hooks/countdown.hook";
 import { AKAD_DATE } from "@/components/libs/constants/event.const";
+import { Archivo_Black } from 'next/font/google';
 
 const doraefont = localFont({ src: "../../assets/fonts/Doraefont.ttf" });
-const britannic = localFont({ src: "../../assets/fonts/britanic.ttf" });
-
+const archivo = Archivo_Black({
+    subsets: ['latin'],
+    weight: "400"
+})
 export default function CountdownSection() {
     const { days, hours, minutes } = useTimer(new Date(`${AKAD_DATE}T08:00:00`));
 
@@ -23,8 +26,8 @@ export default function CountdownSection() {
                         <div className="flex flex-col items-center justify-center xxs:gap-y-2 py-2">
                             <p className={`${doraefont.className} text-[#0168B7] text-3xl xss:text-5xl text-nowrap tracking-wider p-2`} style={{ textShadow: "-2px -2px 0 #4FBBE7, 2px -2px 0 #4FBBE7, -2px 2px 0 #4FBBE7, 2px 2px 0 #4FBBE7" }}>COUNT DOWN</p>
                         </div>
-                        {/* <div className={`${britannic.className} flex items-center justify-center xxs:gap-6 gap-3`}> */}
-                        <div className={`${britannic.className} flex items-center justify-center gap-3`}>
+                        {/* <div className={`${archivo.className} flex items-center justify-center xxs:gap-6 gap-3`}> */}
+                        <div className={`${archivo.className} flex items-center justify-center gap-3`}>
 
                             <div className="xs:w-16 w-14 font-semibold cursor-pointer rounded-xl text-center leading-snug text-black">
                                 {/* <p className="text-sm xxs:text-base sm:text-xl tracking-wide">Days</p> */}
