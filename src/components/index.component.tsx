@@ -52,8 +52,10 @@ export default function IndexComponent({ slug }: { slug?: string }) {
                 <HeroSection />
                 <div id="bg-parallax" className="relative bg-[#4CB4DE] py-8">
                     <div className="absolute top-0 h-full z-0 w-full">
-                        <Image data-aos="fade-right" data-aos-duration="500" src={BgCloud1} alt="cloud background" className="h-auto z-0 sticky top-0 image-animation" />
-                        <Image data-aos="fade-right" data-aos-duration="800" src={BgCloud2} alt="cloud background" className="h-auto z-0 sticky top-0 margin left-12 image-animation" />
+                        <div className="z-0 sticky top-0 ">
+                            <Image data-aos="fade-right" data-aos-duration="500" src={BgCloud1} alt="cloud background" className="h-auto z-0 image-animation" />
+                            <Image data-aos="fade-right" data-aos-duration="800" src={BgCloud2} alt="cloud background" className="h-auto z-0 left-32 image-animation" style={{ animationDelay: '2s' }} />
+                        </div>
                     </div>
                     <GroomBrideSection />
                     <div className="bg-[#FFFFFF7D] rounded-xl mx-auto p-6 z-10" style={{ maxWidth: 'calc(100% - 4rem)' }}>
