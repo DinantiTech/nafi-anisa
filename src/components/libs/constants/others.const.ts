@@ -12,7 +12,7 @@ export const BRIDE_FATHER = "Teguh Santoso (Alm.)"
 export const BRIDE_MOTHER =  "Sri Ana Susilowati"
 export const BRIDE_USERNAME = "@anisanursantoso"
 
-export const ADDRESS_GIFT = "Jl.Kh. Ahmad madani no.118 Rt 008/Rw 009, Jatimakmur, Pondok Gede, Kota Bekasi 17413"
+export const ADDRESS_GIFT = "Rumah mempelai Wanita, Jalan Pucang Gading Raya No.62 RT 09/RW12, Kelurahan Batursari, Kecamatan Mranggen, Kabupaten Demak"
 
 // Youtube Embed
 

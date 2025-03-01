@@ -28,13 +28,13 @@ export default function GroomBrideSection() {
                             <span><Link href={`https://www.instagram.com/${BRIDE_USERNAME.replace(/@/g, '')}`} target="_blank">{BRIDE_USERNAME}</Link></span>
                         </p>
                     </div>
-                    <Image data-aos="fade-right" data-aos-duration="500" src={BrideImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
+                    <Image data-aos="fade-right" data-aos-duration="500" src={BrideImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto image-animation-updown" />
                 </div>
             </div>
             <div className="-mt-36 mr-8 flex flex-col items-end justify-center gap-y-10">
                 {/* GROOM */}
                 <div className="flex flex-col justify-center items-center">
-                    <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto" />
+                    <Image data-aos="fade-right" data-aos-duration="500" src={GroomImg} alt="groom" className="h-auto w-1/2 xs:h-56 xs:w-auto image-animation-updown" style={{ animationDelay: '2s' }} />
                     <div className={`-mt-5 bg-no-repeat bg-cover bg-center bg-fixed relative`}>
                         <Image data-aos="fade-right" data-aos-duration="500" src={Bubble} alt="GROOM" className="w-[316px]" style={{ transform: 'rotate(180deg)' }} />
                         <p data-aos="fade-right" data-aos-duration="500" className={`${babyDoll.className} text-left text-sm py-6 px-7 leading-4 text-gray-600 absolute bottom-1 left-1 w-full`}>

@@ -41,7 +41,21 @@ html{
     transform: translateX(100%);
   }
 }
+@keyframes moveUpDown {
+  0% {
+    transform: translateY(-5%);
+  }
+  50% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}
 
 .image-animation {
   animation: moveRight 10s linear infinite;
+}
+.image-animation-updown {
+  animation: moveUpDown 3s ease-in-out infinite;
 }
