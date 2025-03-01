@@ -43,15 +43,15 @@ export default function CoverSection({ to }: { to?: string }) {
                             data-aos-delay="0"
                             data-aos-duration="800"
                             data-aos-offset="0"
-                            className="h-12 sm:h-20 bg-[#C03030] w-full relative z-30 ">
-                            <div className="h-12 sm:h-20 bg-[#FBFD78] w-12 sm:w-20 rounded-full absolute -bottom-6 left-1/2 -translate-x-1/2"></div>
+                            className="h-12 sm:h-14 bg-[#C03030] w-full z-30 flex justify-center">
+                            <div className="h-12 sm:h-14 bg-[#FBFD78] w-12 sm:w-14 rounded-full mt-6"></div>
                         </div>
                         <div
                             data-aos="fade-down"
                             data-aos-delay="800"
                             data-aos-duration="800"
                             data-aos-offset="0"
-                            className="relative flex flex-col items-center justify-center px-8 gap-y-4 w-full pt-28  before:bg-white before:content-['*'] before:absolute before:z-0 before:top-[-13rem] before:h-[42rem] sm:before:h-[50rem] before:w-[40rem] before:rounded-full ">
+                            className="relative flex flex-col items-center justify-center px-8 gap-y-4 w-full pt-28  before:bg-white before:content-['*'] before:absolute before:z-0 before:top-[-13rem] before:h-[42rem] sm:before:h-[49rem] before:w-[40rem] before:rounded-full ">
                             <Image
                                 data-aos="fade-down"
                                 data-aos-delay="200"
@@ -61,7 +61,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 alt="curved text"
                                 className="object-contain z-0 absolute top-10 max-w-96 w-[88%]  sm:w-full" priority />
 
-                            <div id="curve" className="overflow-hidden relative shadow-2xl rounded-full -mt-4 sm:mt-0"
+                            <div id="curve" className="overflow-hidden relative shadow-2xl rounded-full -mt-4"
                                 data-aos="zoom-out-up"
                                 data-aos-offset="300"
                                 data-aos-delay="500"
