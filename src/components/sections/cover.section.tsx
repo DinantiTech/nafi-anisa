@@ -8,7 +8,6 @@ import { Archivo_Black } from 'next/font/google'
 // Styles
 import 'react-modern-drawer/dist/index.css';
 const babyDoll = localFont({ src: "../../assets/fonts/Baby Doll.ttf" });
-const britannic = localFont({ src: "../../assets/fonts/britanic.ttf" });
 const doraefont = localFont({ src: "../../assets/fonts/Doraefont.ttf" });
 const archivo = Archivo_Black({
     subsets: ['latin'],
@@ -22,11 +21,6 @@ import MobileLayout from "@/components/layouts/mobile.layout";
 import { useCoverStore } from "@/components/libs/stores/cover.store";
 import { useMusicStore } from "@/components/libs/stores/music.store";
 // import { NEWLYWEDS_TITLE } from "@/components/libs/constants/others.const";
-
-const archivo = Archivo_Black({
-    subsets: ['latin'],
-    weight: "400"
-})
 
 export default function CoverSection({ to }: { to?: string }) {
     const { setMusic } = useMusicStore();
@@ -84,7 +78,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                     data-aos-delay="1200"
                                     data-aos-duration="700"
                                     data-aos-offset="0">
-                                    <p className={` ${britannic.className} drop-shadow-[10px_10px_11.4px_0_#00000070]  flex w-full justify-center text-white font-normal text-4xl pt-10`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
+                                    <p className={` ${archivo.className} flex w-full justify-center text-white font-normal text-4xl pt-10`} style={{ textShadow: 'rgba(0, 0, 0, 0.44) 2px 2px 4px' }}
                                     >
                                         31.03.25
                                     </p>
