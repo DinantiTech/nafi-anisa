@@ -7,7 +7,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 
-import MobileLayout from "../layouts/mobile.layout";
+// import MobileLayout from "../layouts/mobile.layout";
 import giftAnimationData from "@/assets/icon-animation/gift-animation.json";
 import HeadingTitle from "../micro/heading_title.micro";
 
