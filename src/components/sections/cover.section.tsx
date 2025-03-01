@@ -38,11 +38,25 @@ export default function CoverSection({ to }: { to?: string }) {
             <div className="fixed top-0 left-0 max-h-screen min-h-screen w-full bg-[#4FBBE7] h-full">
                 <MobileLayout className="overflow-hidden h-screen" id="cover">
                     <div className="h-full w-full flex flex-col items-center ">
-                        <div className="h-20 bg-[#C03030] w-full relative z-30">
+                        <div
+                            data-aos="fade-down"
+                            data-aos-delay="0"
+                            data-aos-duration="800"
+                            data-aos-offset="0"
+                            className="h-20 bg-[#C03030] w-full relative z-30">
                             <div className="h-20 bg-[#FBFD78] w-20 rounded-full absolute -bottom-9 left-1/2 -translate-x-1/2"></div>
                         </div>
-                        <div className="relative flex flex-col items-center justify-center px-8 gap-y-4 w-full pt-28  before:bg-white before:content-['*'] before:absolute before:z-0 before:top-[-13rem] before:h-[50rem] before:w-[40rem] before:rounded-full ">
+                        <div
+                            data-aos="fade-down"
+                            data-aos-delay="800"
+                            data-aos-duration="800"
+                            data-aos-offset="0"
+                            className="relative flex flex-col items-center justify-center px-8 gap-y-4 w-full pt-28  before:bg-white before:content-['*'] before:absolute before:z-0 before:top-[-13rem] before:h-[50rem] before:w-[40rem] before:rounded-full ">
                             <Image
+                                data-aos="fade-down"
+                                data-aos-delay="200"
+                                data-aos-duration="800"
+                                data-aos-offset="0"
                                 src={CurvedText}
                                 alt="curved text"
                                 className="object-contain z-0 absolute top-10 max-w-96 w-full" priority />
@@ -50,7 +64,7 @@ export default function CoverSection({ to }: { to?: string }) {
                             <div id="curve" className="overflow-hidden relative shadow-2xl rounded-full "
                                 data-aos="zoom-out-up"
                                 data-aos-offset="300"
-                                data-aos-delay="300"
+                                data-aos-delay="500"
                                 data-aos-duration="700"
                                 data-aos-easing="ease-in-sine"
                             >
@@ -63,10 +77,9 @@ export default function CoverSection({ to }: { to?: string }) {
                                 <div className="absolute top-0 left-0 right-0"
                                     data-aos="fade-down"
                                     data-aos-delay="1200"
-                                    data-aos-duration="900"
-
+                                    data-aos-duration="700"
                                     data-aos-offset="0">
-                                    <p className={` ${archivo.className} drop-shadow-[10px_10px_11.4px_0_#00000070]  flex w-full justify-center text-white font-normal text-4xl pt-10`} style={{ textShadow: '1px 1px 10px rgba(0,0,0, 0.5)' }}
+                                    <p className={` ${archivo.className} flex w-full justify-center text-white font-normal text-4xl pt-10`} style={{ textShadow: 'rgba(0, 0, 0, 0.44) 2px 2px 4px' }}
                                     >
                                         31.03.25
                                     </p>

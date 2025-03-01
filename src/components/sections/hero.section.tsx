@@ -24,7 +24,13 @@ export default function HeroSection() {
 
     return (
         <>
-            <div className="h-10 bg-[#C03030] w-full flex align-middle justify-center relative z-20" id="home">
+            <div
+                data-aos="fade-down"
+                data-aos-delay="0"
+                data-aos-duration="800"
+                data-aos-offset="0"
+                className="h-10 bg-[#C03030] w-full flex align-middle justify-center relative z-20"
+                id="home">
                 <div className="h-10 bg-[#FBFD78] w-10 rounded-full"></div>
             </div>
             <div className="flex flex-col gap-y-4 mb-8 items-center relative" style={{ maxHeight: 'calc(100% - 100px)' }}>
@@ -32,7 +38,13 @@ export default function HeroSection() {
                     src={CoverHero}
                     alt="couple cover"
                     className="object-cover w-full h-dvh z-0 relative -m-8" />
-                <div className="absolute bottom-32 z-10 bg-[#ffffffcb] w-full flex flex-col gap-y-4 items-center justify-center p-5 rounded-xl" style={{ maxWidth: 'calc(100% - 2rem)' }}>
+                <div
+                    data-aos="fade-down"
+                    data-aos-delay="200"
+                    data-aos-duration="800"
+                    data-aos-offset="0"
+                    className="absolute bottom-32 z-10 bg-[#ffffffcb] w-full flex flex-col gap-y-4 items-center justify-center p-5 rounded-xl"
+                    style={{ maxWidth: 'calc(100% - 2rem)' }}>
                     <p className={`text-center text-2xl md:text-3xl text-balance`} /* data-aos="fade-left" */>
                         بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
                     </p>
