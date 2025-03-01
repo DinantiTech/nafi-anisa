@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  height: 100%;
+}
+
 #bg-texture {
   background-image: url('../assets/texture.webp');
   background-size: contain;
@@ -27,4 +31,17 @@
   @media (max-width: 600px) {
     background-size: 150%;
   }
+}
+
+@keyframes moveRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+.image-animation {
+  animation: moveRight 10s linear infinite;
 }

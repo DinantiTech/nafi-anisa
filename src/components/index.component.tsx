@@ -10,9 +10,10 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 
 import 'aos/dist/aos.css';
-// import Image from "next/image";
+import Image from "next/image";
 
-// import BgScenery from "@/assets/scenery_bg.webp";
+import BgCloud1 from "@/assets/cloud.webp";
+import BgCloud2 from "@/assets/cloud_2.webp";
 
 import Cover from "./sections/cover.section";
 import HeroSection from "./sections/hero.section";
@@ -35,17 +36,6 @@ gsap.registerPlugin(ScrollTrigger);
 export default function IndexComponent({ slug }: { slug?: string }) {
     useEffect(() => {
         AOS.init();
-
-        // gsap.to("#bg-parallax-image", {
-        //     yPercent: -20,
-        //     ease: "none",
-        //     scrollTrigger: {
-        //         trigger: "#bg-parallax",
-        //         start: "top bottom", // when the top of the trigger hits the bottom of the viewport
-        //         end: "bottom top", // when the bottom of the trigger hits the top of the viewport
-        //         scrub: true,
-        //     },
-        // });
     }, [])
 
     const queryParams = useSearchParams();
@@ -61,6 +51,10 @@ export default function IndexComponent({ slug }: { slug?: string }) {
             <MobileLayout>
                 <HeroSection />
                 <div id="bg-parallax" className="relative bg-[#4CB4DE] py-8">
+                    <div className="absolute top-0 h-full z-0 w-full">
+                        <Image data-aos="fade-right" data-aos-duration="500" src={BgCloud1} alt="cloud background" className="h-auto z-0 sticky top-0 image-animation" />
+                        <Image data-aos="fade-right" data-aos-duration="800" src={BgCloud2} alt="cloud background" className="h-auto z-0 sticky top-0 margin left-12 image-animation" />
+                    </div>
                     <GroomBrideSection />
                     <div className="bg-[#FFFFFF7D] rounded-xl mx-auto p-6" style={{ maxWidth: 'calc(100% - 4rem)' }}>
                         <CountdownSection />

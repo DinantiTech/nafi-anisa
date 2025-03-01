@@ -7,7 +7,7 @@ export const runtime = 'edge'
 
 export default async function Image() {
   // Mendapatkan data gambar
-  const logoSrc: any = await fetch(new URL('./img-opengraph.jpg', import.meta.url)).then(
+  const logoSrc: any = await fetch(new URL('./img-opengraph.webp', import.meta.url)).then(
     (res) => res.arrayBuffer()
   )
 

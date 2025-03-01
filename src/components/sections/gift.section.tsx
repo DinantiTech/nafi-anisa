@@ -35,7 +35,7 @@ export default function GiftSection() {
     ]
 
     return (
-        <MobileLayout className={`${babyDoll.className} flex items-center flex-col`}>
+        <div className={`${babyDoll.className} flex items-center flex-col`}>
             <Toaster position="top-center" reverseOrder={false} />
 
             <div className='w-24 xxs:w-28 sm:w-32' id="gift">
@@ -86,6 +86,6 @@ export default function GiftSection() {
                     </div>
                 ))}
             </Carousel>
-        </MobileLayout>
+        </div>
     );
 }
