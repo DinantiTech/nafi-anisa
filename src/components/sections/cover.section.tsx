@@ -42,15 +42,15 @@ export default function CoverSection({ to }: { to?: string }) {
                             data-aos-delay="0"
                             data-aos-duration="800"
                             data-aos-offset="0"
-                            className="h-20 bg-[#C03030] w-full relative z-30">
-                            <div className="h-20 bg-[#FBFD78] w-20 rounded-full absolute -bottom-9 left-1/2 -translate-x-1/2"></div>
+                            className="h-12 sm:h-20 bg-[#C03030] w-full relative z-30 ">
+                            <div className="h-12 sm:h-20 bg-[#FBFD78] w-12 sm:w-20 rounded-full absolute -bottom-6 left-1/2 -translate-x-1/2"></div>
                         </div>
                         <div
                             data-aos="fade-down"
                             data-aos-delay="800"
                             data-aos-duration="800"
                             data-aos-offset="0"
-                            className="relative flex flex-col items-center justify-center px-8 gap-y-4 w-full pt-28  before:bg-white before:content-['*'] before:absolute before:z-0 before:top-[-13rem] before:h-[50rem] before:w-[40rem] before:rounded-full ">
+                            className="relative flex flex-col items-center justify-center px-8 gap-y-4 w-full pt-28  before:bg-white before:content-['*'] before:absolute before:z-0 before:top-[-13rem] before:h-[42rem] sm:before:h-[50rem] before:w-[40rem] before:rounded-full ">
                             <Image
                                 data-aos="fade-down"
                                 data-aos-delay="200"
@@ -58,9 +58,9 @@ export default function CoverSection({ to }: { to?: string }) {
                                 data-aos-offset="0"
                                 src={CurvedText}
                                 alt="curved text"
-                                className="object-contain z-0 absolute top-10 max-w-96 w-full" priority />
+                                className="object-contain z-0 absolute top-10 max-w-96 w-[88%]  sm:w-full" priority />
 
-                            <div id="curve" className="overflow-hidden relative shadow-2xl rounded-full "
+                            <div id="curve" className="overflow-hidden relative shadow-2xl rounded-full -mt-4 sm:mt-0"
                                 data-aos="zoom-out-up"
                                 data-aos-offset="300"
                                 data-aos-delay="500"
@@ -70,7 +70,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 <Image
                                     src={CoverHero}
                                     alt="couple cover"
-                                    className="object-cover object-top z-0 md:object-top w-64 " priority />
+                                    className="object-cover object-top z-0 md:object-top w-48 sm:w-64" priority />
 
 
                                 <div className="absolute top-0 left-0 right-0"
@@ -78,7 +78,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                     data-aos-delay="1200"
                                     data-aos-duration="700"
                                     data-aos-offset="0">
-                                    <p className={` ${archivo.className} flex w-full justify-center text-white font-normal text-4xl pt-10`} style={{ textShadow: 'rgba(0, 0, 0, 0.44) 2px 2px 4px' }}
+                                    <p className={` ${archivo.className} flex w-full justify-center text-white font-normal text-3xl sm:text-4xl pt-10`} style={{ textShadow: 'rgba(0, 0, 0, 0.44) 2px 2px 4px' }}
                                     >
                                         31.03.25
                                     </p>
@@ -86,7 +86,7 @@ export default function CoverSection({ to }: { to?: string }) {
                                 </div>
                             </div>
                         </div>
-                        <div className="flex flex-col items-center justify-center  w-full p-4 mx-auto bg-[#4FBBE7] pt-32 -mt-24 pb-32">
+                        <div className="flex flex-col items-center justify-center  w-full p-4 mx-auto bg-[#4FBBE7] pt-32 sm:pt-32 -mt-24">
                             <div className={`${babyDoll.className} flex flex-col items-center pt-3 pb-2 justify-center text-xs xxs:text-base text-[#fff]`}
                                 data-aos="fade-up"
                                 data-aos-delay="2100"
