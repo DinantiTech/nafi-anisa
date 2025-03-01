@@ -12,7 +12,7 @@ export const BRIDE_FATHER = "Teguh Santoso (Alm.)"
 export const BRIDE_MOTHER =  "Sri Ana Susilowati"
 export const BRIDE_USERNAME = "@anisanursantoso"
 
-export const ADDRESS_GIFT = "Jl.Kh. Ahmad madani no.118 Rt 008/Rw 009, Jatimakmur, Pondok Gede, Kota Bekasi 17413"
+export const ADDRESS_GIFT = "Rumah mempelai Wanita, Jalan Pucang Gading Raya No.62 RT 09/RW12, Kelurahan Batursari, Kecamatan Mranggen, Kabupaten Demak"
 
 // Youtube Embed
 
@@ -20,6 +20,6 @@ export const MusicBG = "https://res.cloudinary.com/diaryapp/video/upload/v173060
 
 // Google API Sheet
 //  development | production
-export const SPREADSHEET_ID = isDevEnd ? "1NUryftKH2OD1wVQFRrT1iCMc7zeUnoRq1FFmNbie6io" : "1JLLh8hAFj1nYmYs14Ni_IehvOOKDPCjOy-Na2B7GVVM"
+export const SPREADSHEET_ID = isDevEnd ? "1NUryftKH2OD1wVQFRrT1iCMc7zeUnoRq1FFmNbie6io" : "11o2vnaneQSDcGWlnJHCELEUt0QS1qgRsNS-WX36EyDs"
 export const HOSTNAME_APP_SCRIPT = "https://script.google.com/macros/s/AKfycbxHOC8HqA1wVhdwVsuk-3NscyIya8qW4DnI3afFLke4B4CuKmTHgJ9wzU3zBsP5wnyrvg/exec"
 export const SHEET_NAME = "RSVP";

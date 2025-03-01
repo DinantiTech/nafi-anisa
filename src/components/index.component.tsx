@@ -56,7 +56,7 @@ export default function IndexComponent({ slug }: { slug?: string }) {
                         <Image data-aos="fade-right" data-aos-duration="800" src={BgCloud2} alt="cloud background" className="h-auto z-0 sticky top-0 margin left-12 image-animation" />
                     </div>
                     <GroomBrideSection />
-                    <div className="bg-[#FFFFFF7D] rounded-xl mx-auto p-6" style={{ maxWidth: 'calc(100% - 4rem)' }}>
+                    <div className="bg-[#FFFFFF7D] rounded-xl mx-auto p-6 z-10" style={{ maxWidth: 'calc(100% - 4rem)' }}>
                         <CountdownSection />
                         <EventSection />
                     </div>
