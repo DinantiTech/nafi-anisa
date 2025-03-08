@@ -47,7 +47,7 @@ export default function SpecialyThanksSection() {
                     <p className='mt-2 text-xs'>Design by Asa & Animation assets from Lottie</p>
                 </div>
 
-                <Image src={Doraemaon} data-aos="fade-up" alt='doraemon illustration' sizes='100vw' className='w-full pt-16 pb-14' />
+                <Image src={Doraemaon} data-aos="fade-up" data-aos-duration="1000" alt='doraemon illustration' sizes='100vw' className='w-full pt-16 pb-14' />
             </footer>
         </div>
     );

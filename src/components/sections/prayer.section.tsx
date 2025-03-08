@@ -20,13 +20,13 @@ export default function PrayerSection() {
                     data-aos="fade-left"
                 /> */}
 
-                <p data-aos="fade-in" className="text-center text-balance text-3xl mb-5">
+                <p data-aos="fade-in" data-aos-duration="1000" className="text-center text-balance text-3xl mb-5">
                     بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ
                 </p>
-                <p data-aos="fade-in" className="text-center text-balance text-xl mb-5">
+                <p data-aos="fade-in" data-aos-duration="1000" className="text-center text-balance text-xl mb-5">
                     بَارَكَ اللَّهُ لَكَ وَبَارَكَ عَلَيْكَ وَجَمَعَ بَيْنَكُمَا فِي خَيْرٍ
                 </p>
-                <p data-aos="fade-right" className={`${babyDoll.className} text-center text-sm md:text-base text-pretty w-11/12 mx-auto mt-3`}>
+                <p data-aos="fade-right" data-aos-duration="1000" className={`${babyDoll.className} text-center text-sm md:text-base text-pretty w-11/12 mx-auto mt-3`}>
                     &quot;Semoga Allah memberkahimu di waktu bahagia dan memberkahimu di waktu susah, dan semoga Allah menyatukan kalian dalam kebaikan.&quot;
                 </p>
             </MobileLayout>

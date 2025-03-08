@@ -49,9 +49,9 @@ export default function GiftSection() {
 
             <HeadingTitle title="SEND GIFT" className={` ${babyDoll.className} -mt-5`} />
 
-            <p className="text-center mt-4 text-xs xxs:text-sm sm:text-base px-4" data-aos="fade-down">Jika memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan Anda kemudahan</p>
+            <p className="text-center mt-4 text-xs xxs:text-sm sm:text-base px-4" data-aos="fade-down" data-aos-duration="1000">Jika memberi adalah bentuk tanda kasih Anda, fitur ini dapat memberikan Anda kemudahan</p>
 
-            <button data-aos="fade-in" onClick={() => copyToClipboard({ value: ADDRESS_GIFT, type: "ADDRESS" })} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#4FBBE7] hover:bg-[#4FBBE7]/90 mt-4 sm:mt-6 font-normal border-0">
+            <button data-aos="fade-in" data-aos-duration="1000" onClick={() => copyToClipboard({ value: ADDRESS_GIFT, type: "ADDRESS" })} className="btn btn-sm sm:btn-md text-white flex items-center justify-center bg-[#4FBBE7] hover:bg-[#4FBBE7]/90 mt-4 sm:mt-6 font-normal border-0">
                 <Icon className="text-lg" icon="solar:copy-line-duotone" />
                 <p>COPY ADDRESS</p>
             </button>

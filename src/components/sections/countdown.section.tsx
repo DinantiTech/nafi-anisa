@@ -18,7 +18,7 @@ export default function CountdownSection() {
     return (
         <>
             <div className="w-full h-fit overflow-hidden text-black mt-5">
-                <div className="w-full h-full" data-aos="fade-up" data-aos-easing="linear">
+                <div className="w-full h-full" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1000">
                     <div className="w-full h-full flex flex-col items-center justify-center xxs:gap-y-2">
                         {/* <div>
                             <Image data-aos="fade-right" src={ImgCountdown} alt="countdown decoration" sizes="100vw" className="w-40" />
