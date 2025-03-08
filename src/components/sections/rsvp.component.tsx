@@ -116,17 +116,17 @@ export default function RSVPSection() {
                                 handleSubmit={handleSendRSVP}
                             />
 
-                            <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
+                            <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in" data-aos-duration="1000">
                                 <Field disabled={isRSVPSubmit} autoComplete="off" id="name" name="name" type="text" className={`${errors?.name ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400" : "border-black"}`} peer h-10 w-full border-b text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Enter Your Name..." />
 
                                 {errors.name ? <span className="text-red-800 text-xs">{errors?.name}</span> : null}
                             </div>
-                            <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in">
+                            <div className="relative w-full text-sm xxs:text-base" data-aos="fade-in" data-aos-duration="1000">
                                 <Field disabled={isRSVPSubmit} as="textarea" type="textarea" autoComplete="off" id="message" name="message" className={`${errors?.message ? "border-red-800" : `${isRSVPSubmit ? "border-gray-400" : "border-black"}`} peer h-24 w-full border-b border-black text-[#565656] focus:outline-none focus:borer-rose-600 bg-transparent`} placeholder="Text here..." />
                                 {errors.message ? <span className="text-red-800 text-xs">{errors?.message}</span> : null}
                             </div>
 
-                            <div id="attendance" className="w-full flex justify-between items-center rounded-lg" data-aos="fade-in">
+                            <div id="attendance" className="w-full flex justify-between items-center rounded-lg" data-aos="fade-in" data-aos-duration="1000">
                                 <div className="flex items-center">
                                     <Field
                                         disabled={isRSVPSubmit}
@@ -163,7 +163,7 @@ export default function RSVPSection() {
                         <>
                             {
                                 listRsvp?.slice(0, messageLimit)?.map((data: Record<string, any>, index) => (
-                                    <div key={index} className="flex items-start justify-center gap-x-2" data-aos="fade-left">
+                                    <div key={index} className="flex items-start justify-center gap-x-2" data-aos="fade-left" data-aos-duration="1000">
                                         <div className="w-10 h-10 flex-shrink-0 bg-gray-300 rounded-full flex items-center justify-center uppercase font-bold border-2 border-black">
                                             <Image src={selectAvatar(data?.avatar)} alt={data?.name} className="" />
                                         </div>
@@ -186,7 +186,7 @@ export default function RSVPSection() {
                     <button
                         onClick={handleLoadMore}
                         className="btn btn-sm text-sm bg-[#4FBBE7] hover:bg-[#4FBBE7]/90 w-full text-white mt-7 font-normal py-4 h-auto"
-                        data-aos="fade-in"
+                        data-aos="fade-in" data-aos-duration="1000"
                     >
                         LOAD MORE MESSAGES
                     </button>

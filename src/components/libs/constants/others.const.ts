@@ -2,12 +2,12 @@ const isDevEnd = process && process.env.NODE_ENV === "development";
 // Detail NEWLYWEDS
 export const NEWLYWEDS_TITLE = 'Anisa & Nafi'
 
-export const GROOM_NAME = "Muhammad Arrizqunnafi' Abdillah (Nafi)"
+export const GROOM_NAME = "Muhammad Arrizqunnafi' Abdillah, S.E. (Nafi)"
 export const GROOM_FATHER = "Arifin Suhartono"
-export const GROOM_MOTHER =  "Nurhayati"
+export const GROOM_MOTHER =  "Nur Hayati"
 export const GROOM_USERNAME = "@arrizqun_30"
 
-export const BRIDE_NAME = "Anisa Nur Santoso (Anisa)"
+export const BRIDE_NAME = "Anisa Nur Santoso, S.E. (Anisa)"
 export const BRIDE_FATHER = "Teguh Santoso (Alm.)"
 export const BRIDE_MOTHER =  "Sri Ana Susilowati"
 export const BRIDE_USERNAME = "@anisanursantoso"

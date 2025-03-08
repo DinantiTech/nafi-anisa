@@ -16,9 +16,9 @@ export default function RulesSection() {
         <>
             <MobileLayout className="px-4 py-5 mt-10" id="rules">
                 <HeadingTitle title="ADAB MENGHADIRI PERNIKAHAN" className={`${babyDoll.className} mx-auto flex items-center justify-center text-center mb-4`} />
-                <div data-aos="fade-right" className={`${babyDoll.className} rounded-xl flex flex-wrap gap-4`} >
+                <div data-aos="fade-right" data-aos-duration="1000" className={`${babyDoll.className} rounded-xl flex flex-wrap gap-4`} >
                     <div className="w-full flex flex-col sm:flex-row gap-2 sm:justify-between">
-                        <div data-aos="fade-right" className="flex gap-4 items-center w-full sm:w-1/2">
+                        <div data-aos="fade-right" data-aos-duration="1000"  className="flex gap-4 items-center w-full sm:w-1/2">
                             {/* <Image
                                 src={pakaian}
                                 alt="Huruf Arab"
@@ -31,7 +31,7 @@ export default function RulesSection() {
                             </div>
                             <p className="hyphens-auto">Memakai pakaian sopan& menutup aurat</p>
                         </div>
-                        <div data-aos="fade-left" className="flex gap-4 items-center w-full sm:w-1/2">
+                        <div data-aos="fade-left" data-aos-duration="1000" className="flex gap-4 items-center w-full sm:w-1/2">
                             {/* <Image
                                 src={masjid}
                                 alt="Huruf Arab"
@@ -46,7 +46,7 @@ export default function RulesSection() {
                         </div>
                     </div>
                     <div className="w-full flex flex-col sm:flex-row gap-2 sm:justify-between">
-                        <div data-aos="fade-right" className="flex gap-4 items-center w-full sm:w-1/2">
+                        <div data-aos="fade-right" data-aos-duration="1000" className="flex gap-4 items-center w-full sm:w-1/2">
                             {/* <Image
                                 src={food}
                                 alt="Huruf Arab"
@@ -59,7 +59,7 @@ export default function RulesSection() {
                             </div>
                             <p className="hyphens-auto">Memperhatikan adab makan & minum</p>
                         </div>
-                        <div data-aos="fade-left" className="flex gap-4 items-center w-full sm:w-1/2">
+                        <div data-aos="fade-left" data-aos-duration="1000" className="flex gap-4 items-center w-full sm:w-1/2">
                             {/* <Image
                                 src={pray}
                                 alt="Huruf Arab"
